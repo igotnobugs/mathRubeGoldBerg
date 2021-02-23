@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>mathRubeGoldBerg</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3bxwz08zrd6tu</unique-id>
+    <saved-with-version>27500</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>400</width>
+        <height>533</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>Assets</first-layout>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Portrait</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Symbols">
+            <object-type name="SymbolAddition" sid="611968339685378">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="578533327795081" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="TiledBackground" sid="721714335125892">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="NumberShape" sid="280943205855593">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isCreated" sid="584032034651293" type="boolean" />
+                <instance-variable name="number" sid="102321621582140" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="968679404106537">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="103180769256192">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>NumberShape</type>
+                <type>TextShape</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="105973008934829" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.028" y="0.22" />
+                            <point x="0.364" y="0.024" />
+                            <point x="0.8" y="0.064" />
+                            <point x="1" y="0.5" />
+                            <point x="0.884" y="0.872" />
+                            <point x="0.5" y="1" />
+                            <point x="0.136" y="0.872" />
+                            <point x="0.012" y="0.604" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextShape" sid="113205862111542">
+            <plugin id="Text" />
+            <container>
+                <type>NumberShape</type>
+                <type>TextShape</type>
+            </container>
+        </object-type>
+        <object-type name="platform" sid="194304843600090">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="937804326183157">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512831600737306" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NumberDisplay" sid="324858850044272">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="number" sid="453853282057499" type="number" />
+            </instance-variables>
+            <container>
+                <type>NumberDisplay</type>
+                <type>TextDisplay</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958731773479573" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextDisplay" sid="425570235065312">
+            <plugin id="Text" />
+            <container>
+                <type>NumberDisplay</type>
+                <type>TextDisplay</type>
+            </container>
+        </object-type>
+        <object-type name="Touch" sid="370433708752165">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="ButtonPlay" sid="606058992566428">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="NumberTarget" sid="599367142858542">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="targetNumber" sid="512058793591668" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="634094059977643" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SymbolEquals" sid="314888487410765">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455504595386182" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ButtonReset" sid="296939445788613">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="TextStatus" sid="623514508698831">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ZoneDrop" sid="969314955336212">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="dropCount" sid="473897344502179" type="number" />
+            </instance-variables>
+            <container>
+                <type>ZoneDrop</type>
+                <type>ZoneDropCount</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549857479508361" speed="5">
+                    <frame duration="1" hotspotX="0.54" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ZoneDropCount" sid="462485389137214">
+            <plugin id="Text" />
+            <container>
+                <type>ZoneDrop</type>
+                <type>ZoneDropCount</type>
+            </container>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+        <layout>Assets.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="9">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

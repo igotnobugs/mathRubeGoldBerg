@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="isFinished" sid="785216222294153" static="0" type="number">0</variable>
+        <variable constant="0" name="isSimulating" sid="232007018114606" static="0" type="number">0</variable>
+        <event-block sid="922160269685457">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="210067844277446" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="988666675745021" type="NumberShape">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="762282374233901" type="NumberShape">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="968246240160284" title="NumberShapes">
+            <sub-events>
+                <event-block sid="463624648860599">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="480312581160028" type="System">
+                            <param id="0" name="Variable">isFinished</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="863975095932265" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="800002652520582">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="940961635120968" type="NumberShape" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="962042655118710" type="TextShape">
+                            <param id="0" name="Object">NumberShape</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="513787062280681" type="TextShape">
+                            <param id="0" name="Angle">NumberShape.Angle</param>
+                        </action>
+                        <action id="0" name="Set text" sid="713097388094408" type="TextDisplay">
+                            <param id="0" name="Text">NumberDisplay.number</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="665502028810415">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="593951377371038" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="385924986587518" type="TextShape">
+                            <param id="0" name="Object">NumberShape</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="820489418290114" type="TextShape">
+                            <param id="0" name="Angle">NumberShape.Angle</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When a number is cloned</comment>
+                <event-block sid="947028299210134">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="627437733595856" type="NumberShape">
+                            <param id="0" name="Instance variable">isCreated</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="668205436273464" type="NumberShape">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="979874660984266">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="356393294568858" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="804588135060111" type="NumberShape">
+                                    <param id="0" name="Instance variable">isCreated</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="703730308785060">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="261101420148091" type="NumberShape">
+                                            <param id="0" name="Object">ZoneDrop</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="644033109874374">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="545101298209754" type="ZoneDrop">
+                                                    <param id="0" name="Instance variable">dropCount</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="957983011962702" type="ZoneDrop">
+                                                    <param id="0" name="Instance variable">dropCount</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="614126650796206" type="ZoneDropCount">
+                                                    <param id="0" name="Text">ZoneDrop.dropCount</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="245853500303667">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="913099966540285" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="506767044972623" type="NumberShape" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="579790667456723">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="552379202690237" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="579478679928418" type="NumberShape" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="312072678152940" title="NumberDisplays">
+            <sub-events>
+                <event-block sid="991777926505232">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="395141747672784" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="912164549217977" type="TextDisplay">
+                            <param id="0" name="Object">NumberDisplay</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="411024069058429" type="TextDisplay">
+                            <param id="0" name="Text">NumberDisplay.number</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="902597768775475">
+                    <conditions>
+                        <condition id="16" name="On hold over object" sid="112577986488830" type="Touch">
+                            <param id="0" name="Object">NumberDisplay</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="136426482715515" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="574390772760704" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="802418015076939" type="System">
+                            <param id="0" name="Object to create">NumberShape</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="249190530580422" type="NumberShape">
+                            <param id="0" name="Instance variable">number</param>
+                            <param id="1" name="Value">NumberDisplay.number</param>
+                        </action>
+                        <action id="0" name="Set text" sid="830991589188613" type="TextShape">
+                            <param id="0" name="Text">NumberShape.number</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="751249090678846" type="NumberShape">
+                            <param id="0" name="Instance variable">isCreated</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="104326604534403" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="948347773355244" title="Puzzle Resolution">
+            <sub-events>
+                <event-block sid="969406304539837">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="207291730493426" type="NumberTarget">
+                            <param id="0" name="Object">NumberShape</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="508988543610618">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="101359111104547" type="NumberTarget">
+                                    <param id="0" name="Instance variable">targetNumber</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">NumberShape.number</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="580056158213760" type="System">
+                                    <param id="0" name="Variable">isSimulating</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="553028515294132" type="System">
+                                    <param id="0" name="Variable">isFinished</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="792442583267496" type="TextStatus">
+                                    <param id="0" name="Text">&quot;Success!&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="715702894628413" title="Buttons">
+            <sub-events>
+                <event-block sid="476643621713083">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="173447305177985" type="ButtonPlay" />
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="894386091163047" type="NumberShape">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="393309506201901" type="NumberShape">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="906385092731170" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="450673140405960" type="TextStatus">
+                            <param id="0" name="Text">&quot;Simulating...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="243138612084898">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="573820407823161" type="ButtonReset" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="762306167245312" type="System" />
+                        <action id="-21" name="Reset global variables" sid="864643417101359" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="922024533289393" title="Drop Zone">
+            <sub-events>
+                <event-block sid="800718567686477">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="699494187298456" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="774486954454899" type="ZoneDropCount">
+                            <param id="0" name="Object">ZoneDrop</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="911464205963407" type="ZoneDropCount">
+                            <param id="0" name="Text">ZoneDrop.dropCount</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
