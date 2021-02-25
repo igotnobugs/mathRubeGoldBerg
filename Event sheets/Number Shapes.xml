@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Number Shapes</name>
+    <events>
+        <comment>Dragable Numbers</comment>
+        <event-group description="" sid="764358953448380" title="Number Shapes">
+            <sub-events>
+                <event-block sid="435170796427137">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="725110323659882" type="System">
+                            <param id="0" name="Variable">isFinished</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="303193801134782" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="410368303271230">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="152191948017417" type="NumberShape" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="758571282217895" type="TextShape">
+                            <param id="0" name="Text">NumberDisplay.number</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="763989427004703" type="TextShape">
+                            <param id="0" name="Pin to">NumberShape</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>When a number is newly cloned</comment>
+                <event-block sid="267289405332530">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="897296795530161" type="NumberShape">
+                            <param id="0" name="Instance variable">isNewlyCreated</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="597590638635520" type="NumberShape">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="526523450887192">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="719725315992011" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="802353588374079" type="NumberShape">
+                                    <param id="0" name="Instance variable">isNewlyCreated</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="379512999382870">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="792103355949745" type="NumberShape">
+                                            <param id="0" name="Object">ZoneDrop</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="123094653996608">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="654483449793979" type="ZoneDrop">
+                                                    <param id="0" name="Instance variable">dropCount</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="359326647779612" type="ZoneDrop">
+                                                    <param id="0" name="Instance variable">dropCount</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="943434128318148" type="ZoneDropCount">
+                                                    <param id="0" name="Text">ZoneDrop.dropCount</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="877911080182226" type="NumberShape">
+                                                    <param id="0" name="Instance variable">dropZoneUID</param>
+                                                    <param id="1" name="Value">ZoneDrop.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="346039305696662">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="949986172751016" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="359737805659243" type="NumberShape" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="385596329753738">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="158519591020500" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="266245262626168">
+                                            <conditions>
+                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="836477171469793" type="NumberShape">
+                                                    <param id="0" name="Object">Machines</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="165318074890040" type="NumberShape" />
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="906671300834091">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="461174661383380" type="NumberShape" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="321784098585069">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="144731286253837" type="ZoneDrop">
+                                    <param id="0" name="Unique ID">NumberShape.dropZoneUID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Add to" sid="735447619494464" type="ZoneDrop">
+                                    <param id="0" name="Instance variable">dropCount</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="559460720138906" type="ZoneDropCount">
+                                    <param id="0" name="Text">ZoneDrop.dropCount</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="837899581442035">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="874523316385944" type="NumberShape" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="585951276163269">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="121166270619303" type="NumberShape">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="668693749335264">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="918222520686893" type="ZoneDrop">
+                                            <param id="0" name="Instance variable">dropCount</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="593536154716489" type="ZoneDrop">
+                                            <param id="0" name="Instance variable">dropCount</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="931730117672596" type="ZoneDropCount">
+                                            <param id="0" name="Text">ZoneDrop.dropCount</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="542626871736968" type="NumberShape">
+                                            <param id="0" name="Instance variable">dropZoneUID</param>
+                                            <param id="1" name="Value">ZoneDrop.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="557926989773731">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="738003045788584" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="125716738500195" type="NumberShape" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="213028409916050">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="907513211904510" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="331097779063380">
+                                    <conditions>
+                                        <condition id="1" inverted="1" name="Is overlapping another object" sid="410105802003943" type="NumberShape">
+                                            <param id="0" name="Object">Machines</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="531676747371157" type="NumberShape" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

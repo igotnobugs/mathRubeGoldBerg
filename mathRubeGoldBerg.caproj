@@ -11,6 +11,8 @@
     <saved-with-version>27500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -19,6 +21,9 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -30,7 +35,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Assets</first-layout>
+    <first-layout>Level 1</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -53,7 +58,72 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="578533327795081" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.539589" hotspotY="0.491124" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\add_math_symbols.png">
+                            <collision-poly>
+                                <point x="0.293255" y="0.292899" />
+                                <point x="0.539589" y="0.00591716" />
+                                <point x="0.780059" y="0.298817" />
+                                <point x="0.994135" y="0.491124" />
+                                <point x="0.782991" y="0.686391" />
+                                <point x="0.539589" y="0.994083" />
+                                <point x="0.293255" y="0.689349" />
+                                <point x="0.0058651" y="0.491124" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Buttons">
+            <object-type name="ButtonNextLayout" sid="620073305832601">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="ButtonPlay" sid="606058992566428">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="ButtonReset" sid="296939445788613">
+                <plugin id="Button" />
+            </object-type>
+            <object-type name="ButtonPreviousLayout" sid="451008977554361">
+                <plugin id="Button" />
+            </object-type>
+        </object-folder>
+        <object-folder name="Machines">
+            <object-type name="MachineAddition" sid="613851452642807">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573080795158530" speed="5">
+                        <frame duration="1" hotspotX="0.500938" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 4 (Addition).png">
+                            <image-point name="TextNumber" x="0.474672" y="0.208723" />
+                            <collision-poly>
+                                <point x="0" y="0.387834" />
+                                <point x="0.198334" y="0" />
+                                <point x="1" y="0.293976" />
+                                <point x="1" y="0.776401" />
+                                <point x="0.198334" y="1" />
+                                <point x="0" y="0.686298" />
+                                <point x="0" y="0.551144" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MachineSubtraction" sid="527275588233455">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="644782866101001" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 1 (Subrtaction).png">
+                            <image-point name="TextNumber" x="0.486381" y="0.20303" />
+                            <collision-poly>
+                                <point x="0" y="0.375161" />
+                                <point x="0.398637" y="0" />
+                                <point x="1" y="0.290173" />
+                                <point x="1" y="0.727009" />
+                                <point x="0.398637" y="1" />
+                                <point x="0" y="0.645421" />
+                                <point x="0" y="0.523039" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -65,8 +135,9 @@
         <object-type name="NumberShape" sid="280943205855593">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="isCreated" sid="584032034651293" type="boolean" />
+                <instance-variable name="isNewlyCreated" sid="584032034651293" type="boolean" />
                 <instance-variable name="number" sid="102321621582140" type="number" />
+                <instance-variable name="dropZoneUID" sid="782564057384307" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="968679404106537">
@@ -75,6 +146,12 @@
                 <behavior-type name="DragDrop" sid="103180769256192">
                     <behavior id="DragnDrop" />
                 </behavior-type>
+                <behavior-type name="Pin" sid="535035990972517">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="830157838282006">
+                    <behavior id="destroy" />
+                </behavior-type>
             </behaviors>
             <container>
                 <type>NumberShape</type>
@@ -82,16 +159,16 @@
             </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="105973008934829" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504532" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Circle.png">
                         <collision-poly>
-                            <point x="0.028" y="0.22" />
-                            <point x="0.364" y="0.024" />
-                            <point x="0.8" y="0.064" />
-                            <point x="1" y="0.5" />
-                            <point x="0.884" y="0.872" />
-                            <point x="0.5" y="1" />
-                            <point x="0.136" y="0.872" />
-                            <point x="0.012" y="0.604" />
+                            <point x="0.147147" y="0.148036" />
+                            <point x="0.5" y="0.00151057" />
+                            <point x="0.852853" y="0.148036" />
+                            <point x="0.998498" y="0.5" />
+                            <point x="0.852853" y="0.851964" />
+                            <point x="0.5" y="0.998489" />
+                            <point x="0.147147" y="0.851964" />
+                            <point x="0.0015015" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -99,6 +176,11 @@
         </object-type>
         <object-type name="TextShape" sid="113205862111542">
             <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="816481268315481">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
             <container>
                 <type>NumberShape</type>
                 <type>TextShape</type>
@@ -142,9 +224,6 @@
         <object-type name="Touch" sid="370433708752165">
             <plugin id="Touch" />
         </object-type>
-        <object-type name="ButtonPlay" sid="606058992566428">
-            <plugin id="Button" />
-        </object-type>
         <object-type name="NumberTarget" sid="599367142858542">
             <plugin id="Sprite" />
             <instance-variables>
@@ -160,12 +239,20 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455504595386182" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.586006" hotspotY="0.417293" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\equals_math_symbols.png">
+                        <collision-poly>
+                            <point x="0.253644" y="0.0037594" />
+                            <point x="0.58309" y="0.0037594" />
+                            <point x="0.883382" y="0.0451128" />
+                            <point x="0.997085" y="0.413534" />
+                            <point x="0.997085" y="0.932331" />
+                            <point x="0.58309" y="0.996241" />
+                            <point x="0.134111" y="0.981203" />
+                            <point x="0.0728863" y="0.413534" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="ButtonReset" sid="296939445788613">
-            <plugin id="Button" />
         </object-type>
         <object-type name="TextStatus" sid="623514508698831">
             <plugin id="Text" />
@@ -192,14 +279,77 @@
                 <type>ZoneDropCount</type>
             </container>
         </object-type>
+        <object-type name="ParticleHeld" sid="673517966910337">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="ParticleHeldFinished" sid="859822999643585">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="TextInstructions" sid="813781399919162">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextTitle" sid="566739315257799">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Function" sid="933093510685179">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="TextMachine" sid="893482404282761">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Pin" sid="179961094247540">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Machines" plugin-id="Sprite" sid="978109125656504">
+            <members>
+                <member>MachineAddition</member>
+                <member>MachineSubtraction</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="modifierNumber" sid="666660324630792" type="number" />
+                <instance-variable name="isNewlyCreated" sid="949386440217341" type="boolean" />
+                <instance-variable name="textMachineUID" sid="628815391280641" type="number" />
+                <instance-variable name="isChanged" sid="639468061816954" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="DragDrop" sid="868314797975403">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="197163282950700">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Symbols" plugin-id="Sprite" sid="661415060434851">
+            <members>
+                <member>SymbolAddition</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="symbolType" sid="756090174675456" type="string" />
+            </instance-variables>
+        </family>
+    </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Level 1.xml</layout>
+        <layout>Level 2.xml</layout>
+        <layout>Level 3.xml</layout>
         <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>AAA Main Event Sheet.xml</event-sheet>
+        <event-sheet>Number Shapes.xml</event-sheet>
+        <event-sheet>Machines.xml</event-sheet>
+        <event-sheet>Number Displays.xml</event-sheet>
+        <event-sheet>Puzzle Resolution.xml</event-sheet>
+        <event-sheet>Drop Zone.xml</event-sheet>
+        <event-sheet>Buttons.xml</event-sheet>
+        <event-sheet>Functions.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">
@@ -207,6 +357,7 @@
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Function" uid="44" />
     </global-instances>
     <sounds-folder />
     <music-folder />

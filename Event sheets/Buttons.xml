@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Buttons</name>
+    <events>
+        <event-group description="" sid="297970033065200" title="Buttons">
+            <sub-events>
+                <event-block sid="738052295870115">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="984936770692194" type="ButtonPlay" />
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="199906541352521" type="NumberShape">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="373655196221835" type="NumberShape">
+                            <param id="0" name="Mode">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="173433876286285" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="990928715531757" type="TextStatus">
+                            <param id="0" name="Text">&quot;Simulating...&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="749666545787501">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="898978837358196" type="ButtonReset" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="119483307708945" type="System" />
+                        <action id="-21" name="Reset global variables" sid="101655317572762" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="705320780552987">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="479152543084633" type="ButtonNextLayout" />
+                    </conditions>
+                    <actions>
+                        <action id="-43" name="Go to next/previous layout" sid="658105317861036" type="System">
+                            <param id="0" name="Which">0</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="148555664377142" type="System" />
+                        <action id="-21" name="Reset global variables" sid="835841631187236" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="956577634515250">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="864529324419460" type="ButtonPreviousLayout" />
+                    </conditions>
+                    <actions>
+                        <action id="-43" name="Go to next/previous layout" sid="907494296023541" type="System">
+                            <param id="0" name="Which">1</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="595586268392489" type="System" />
+                        <action id="-21" name="Reset global variables" sid="417060780419250" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

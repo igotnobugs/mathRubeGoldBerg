@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>AAA Main Event Sheet</name>
+    <events>
+        <variable constant="0" name="isFinished" sid="785216222294153" static="0" type="number">0</variable>
+        <variable constant="0" name="isSimulating" sid="232007018114606" static="0" type="number">0</variable>
+        <event-block sid="922160269685457">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="210067844277446" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="988666675745021" type="NumberShape">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action behavior="DragDrop" id="0" name="Set enabled" sid="762282374233901" type="NumberShape">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <include>Machines</include>
+        <include>Number Shapes</include>
+        <include>Number Displays</include>
+        <include>Puzzle Resolution</include>
+        <include>Drop Zone</include>
+        <include>Buttons</include>
+        <include>Functions</include>
+    </events>
+</c2eventsheet>

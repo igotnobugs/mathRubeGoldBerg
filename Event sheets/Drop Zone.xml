@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Drop Zone</name>
+    <events>
+        <event-group description="" sid="781690959617200" title="Drop Zone">
+            <sub-events>
+                <event-block sid="637607200205173">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="413616287480751" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="378507135878692" type="ZoneDropCount">
+                            <param id="0" name="Object">ZoneDrop</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="443216295295846" type="ZoneDropCount">
+                            <param id="0" name="Text">ZoneDrop.dropCount</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="659798889108741">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="263368353586375" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
