@@ -12,7 +12,7 @@
                     <actions>
                         <action id="-4" name="Set position to another object" sid="378507135878692" type="ZoneDropCount">
                             <param id="0" name="Object">ZoneDrop</param>
-                            <param id="1" name="Image point (optional)">0</param>
+                            <param id="1" name="Image point (optional)">1</param>
                         </action>
                         <action id="0" name="Set text" sid="443216295295846" type="ZoneDropCount">
                             <param id="0" name="Text">ZoneDrop.dropCount</param>

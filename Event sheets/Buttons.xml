@@ -5,58 +5,99 @@
     <events>
         <event-group description="" sid="297970033065200" title="Buttons">
             <sub-events>
-                <event-block sid="738052295870115">
+                <event-block sid="561358096297674">
                     <conditions>
-                        <condition id="0" name="On clicked" sid="984936770692194" type="ButtonPlay" />
+                        <condition id="0" name="On any touch start" sid="839181199044841" type="Touch" />
                     </conditions>
-                    <actions>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="199906541352521" type="NumberShape">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="373655196221835" type="NumberShape">
-                            <param id="0" name="Mode">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="173433876286285" type="System">
-                            <param id="0" name="Variable">isSimulating</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="0" name="Set text" sid="990928715531757" type="TextStatus">
-                            <param id="0" name="Text">&quot;Simulating...&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="749666545787501">
-                    <conditions>
-                        <condition id="0" name="On clicked" sid="898978837358196" type="ButtonReset" />
-                    </conditions>
-                    <actions>
-                        <action id="-26" name="Restart layout" sid="119483307708945" type="System" />
-                        <action id="-21" name="Reset global variables" sid="101655317572762" type="System" />
-                    </actions>
-                </event-block>
-                <event-block sid="705320780552987">
-                    <conditions>
-                        <condition id="0" name="On clicked" sid="479152543084633" type="ButtonNextLayout" />
-                    </conditions>
-                    <actions>
-                        <action id="-43" name="Go to next/previous layout" sid="658105317861036" type="System">
-                            <param id="0" name="Which">0</param>
-                        </action>
-                        <action id="-26" name="Restart layout" sid="148555664377142" type="System" />
-                        <action id="-21" name="Reset global variables" sid="835841631187236" type="System" />
-                    </actions>
-                </event-block>
-                <event-block sid="956577634515250">
-                    <conditions>
-                        <condition id="0" name="On clicked" sid="864529324419460" type="ButtonPreviousLayout" />
-                    </conditions>
-                    <actions>
-                        <action id="-43" name="Go to next/previous layout" sid="907494296023541" type="System">
-                            <param id="0" name="Which">1</param>
-                        </action>
-                        <action id="-26" name="Restart layout" sid="595586268392489" type="System" />
-                        <action id="-21" name="Reset global variables" sid="417060780419250" type="System" />
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="367493849456917">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="825371524900158" type="System">
+                                    <param id="0" name="Variable">isSimulating</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="973332678329431">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="291098483759020" type="Touch">
+                                            <param id="0" name="Object">ControlButton</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="748113676218267" type="NumberShape">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="225460514932072" type="NumberShape">
+                                            <param id="0" name="Mode">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="169938108111231" type="ControlButton">
+                                            <param id="0" name="Animation">&quot;Restart&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="449967924396103" type="System">
+                                            <param id="0" name="Variable">isSimulating</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="408089532639016">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="203585358306392" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="435761818802411">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="808624641244833" type="Touch">
+                                            <param id="0" name="Object">ControlButton</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="652342134453005" type="ControlButton">
+                                            <param id="0" name="Animation">&quot;Play&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-26" name="Restart layout" sid="648259490941149" type="System" />
+                                        <action id="-21" name="Reset global variables" sid="182841314188902" type="System" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="169253934516911">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="105656952146725" type="Touch">
+                                    <param id="0" name="Object">Next</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-43" name="Go to next/previous layout" sid="658105317861036" type="System">
+                                    <param id="0" name="Which">0</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="148555664377142" type="System" />
+                                <action id="-21" name="Reset global variables" sid="835841631187236" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="876967957407050">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="354357265063836" type="Touch">
+                                    <param id="0" name="Object">Previous</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-43" name="Go to next/previous layout" sid="907494296023541" type="System">
+                                    <param id="0" name="Which">1</param>
+                                </action>
+                                <action id="-26" name="Restart layout" sid="595586268392489" type="System" />
+                                <action id="-21" name="Reset global variables" sid="417060780419250" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
