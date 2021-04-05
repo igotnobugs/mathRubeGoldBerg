@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>AAA Main Event Sheet</name>
+    <name>Main Event Sheet</name>
     <events>
-        <variable constant="0" name="isFinished" sid="785216222294153" static="0" type="number">0</variable>
-        <variable constant="0" name="isSimulating" sid="232007018114606" static="0" type="number">0</variable>
+        <variable constant="0" name="actions" sid="659005813106633" static="0" type="number">0</variable>
+        <variable comment="actions &lt;= this means a perfect level" constant="0" name="actionsPerfect" sid="808755200895981" static="0" type="number">2</variable>
+        <variable comment="Puzzle Solved" constant="0" name="isFinished" sid="785216222294153" static="0" type="number">0</variable>
+        <variable comment="Puzzle is playing" constant="0" name="isSimulating" sid="232007018114606" static="0" type="number">0</variable>
         <event-block sid="922160269685457">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="210067844277446" type="System" />
@@ -22,8 +24,6 @@
         <include>Number Shapes</include>
         <include>Number Displays</include>
         <include>Puzzle Resolution</include>
-        <include>Drop Zone</include>
         <include>Buttons</include>
-        <include>Functions</include>
     </events>
 </c2eventsheet>

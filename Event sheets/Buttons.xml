@@ -42,7 +42,27 @@
                                             <param id="0" name="Variable">isSimulating</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="-42" name="Signal" sid="395385428711471" type="System">
+                                            <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
+                                        </action>
                                     </actions>
+                                    <sub-events>
+                                        <event-block sid="458011102497834">
+                                            <conditions>
+                                                <condition behavior="Physics" id="1" name="Compare velocity" sid="232881600123776" type="NumberShape">
+                                                    <param id="0" name="Which">1</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Physics" id="15" name="Set velocity" sid="652059677888084" type="NumberShape">
+                                                    <param id="0" name="X component">NumberShape.Physics.VelocityX</param>
+                                                    <param id="1" name="Y component">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
@@ -76,8 +96,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-43" name="Go to next/previous layout" sid="658105317861036" type="System">
-                                    <param id="0" name="Which">0</param>
+                                <action id="-2" name="Go to layout" sid="351632979926724" type="System">
+                                    <param id="0" name="Layout">Level Select</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="148555664377142" type="System" />
                                 <action id="-21" name="Reset global variables" sid="835841631187236" type="System" />

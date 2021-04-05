@@ -2,7 +2,7 @@
 <c2layout>
     <name>Assets</name>
     <sid>836670961828385</sid>
-    <event-sheet>AAA Main Event Sheet</event-sheet>
+    <event-sheet>Main Event Sheet</event-sheet>
     <size>
         <width>1708</width>
         <height>960</height>
@@ -107,7 +107,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MachineSubtraction" uid="32">
+                <instance type="Machine" uid="40">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -115,47 +115,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <machineType></machineType>
+                        <hasModifier>false</hasModifier>
                         <modifierNumber>0</modifierNumber>
-                        <isNewlyCreated>false</isNewlyCreated>
+                        <isNewlyCloned>true</isNewlyCloned>
+                        <isNewlyChanged>false</isNewlyChanged>
                         <textMachineUID>0</textMachineUID>
-                        <isChanged>false</isChanged>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="DragDrop">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>100</x>
-                        <y>330</y>
-                        <z>0</z>
-                        <width>66.208114624</width>
-                        <height>85.014305115</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="MachineAddition" uid="40">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <modifierNumber>0</modifierNumber>
-                        <isNewlyCreated>false</isNewlyCreated>
-                        <textMachineUID>0</textMachineUID>
-                        <isChanged>false</isChanged>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DragDrop">
@@ -216,9 +181,12 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <isNewlyCreated>false</isNewlyCreated>
                         <number>0</number>
                         <dropZoneUID>0</dropZoneUID>
+                        <isNewlyCreated>false</isNewlyCreated>
+                        <isNewlyChanged>false</isNewlyChanged>
+                        <isFraction>false</isFraction>
+                        <textUID>0</textUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -243,6 +211,7 @@
                         </behavior-instance>
                         <behavior-instance type="Pin" />
                         <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -277,11 +246,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>535</x>
-                        <y>414</y>
+                        <x>630</x>
+                        <y>345</y>
                         <z>0</z>
-                        <width>48</width>
-                        <height>42</height>
+                        <width>128</width>
+                        <height>58</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -399,8 +368,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>606</x>
-                        <y>416</y>
+                        <x>622</x>
+                        <y>419</y>
                         <z>0</z>
                         <width>250</width>
                         <height>42</height>
@@ -426,6 +395,33 @@
                         <z>0</z>
                         <width>46.432746887</width>
                         <height>46.432746887</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LevelSelectNumber" uid="54">
+                    <properties>
+                        <text>1</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-29,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>556</x>
+                        <y>661</y>
+                        <z>0</z>
+                        <width>52</width>
+                        <height>47</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

@@ -10,6 +10,7 @@
     <unique-id>3bxwz08zrd6tu</unique-id>
     <saved-with-version>27500</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
@@ -20,12 +21,16 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="setcolor">Set color</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -87,45 +92,125 @@
             <object-type name="ButtonPreviousLayout" sid="451008977554361">
                 <plugin id="Button" />
             </object-type>
-        </object-folder>
-        <object-folder name="Machines">
-            <object-type name="MachineAddition" sid="613851452642807">
+            <object-type name="ControlButton" sid="683958559256350">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="573080795158530" speed="5">
-                        <frame duration="1" hotspotX="0.500938" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 4 (Addition).png">
-                            <image-point name="TextNumber" x="0.474672" y="0.208723" />
+                    <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="420310781619530" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Restart" pingpong="0" repeatcount="1" repeatto="0" sid="280477164014380" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Next" sid="419785036877716">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671352493548963" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Previous" sid="311022761058913">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="183294373980794" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
-                                <point x="0" y="0.387834" />
-                                <point x="0.198334" y="0" />
-                                <point x="1" y="0.293976" />
-                                <point x="1" y="0.776401" />
-                                <point x="0.198334" y="1" />
-                                <point x="0" y="0.686298" />
-                                <point x="0" y="0.551144" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="MachineSubtraction" sid="527275588233455">
+            <object-type name="LevelSelectButton" sid="281851374736183">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="level" sid="282446108969386" type="number" />
+                    <instance-variable comment="-1 - locked, 0 - unsolved, 1 - solved, " name="state" sid="780891073797135" type="number" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <container>
+                    <type>LevelSelectButton</type>
+                    <type>LevelSelectNumber</type>
+                </container>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="644782866101001" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 1 (Subrtaction).png">
-                            <image-point name="TextNumber" x="0.486381" y="0.20303" />
-                            <collision-poly>
-                                <point x="0" y="0.375161" />
-                                <point x="0.398637" y="0" />
-                                <point x="1" y="0.290173" />
-                                <point x="1" y="0.727009" />
-                                <point x="0.398637" y="1" />
-                                <point x="0" y="0.645421" />
-                                <point x="0" y="0.523039" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="218047565886976" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Texts">
+            <object-type name="dropZoneText" sid="409939077989154">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="LevelSelectNumber" sid="325966664229172">
+                <plugin id="Text" />
+                <container>
+                    <type>LevelSelectButton</type>
+                    <type>LevelSelectNumber</type>
+                </container>
+            </object-type>
+            <object-type name="NormalText" sid="134359566987549">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextDisplay" sid="425570235065312">
+                <plugin id="Text" />
+                <container>
+                    <type>NumberDisplay</type>
+                    <type>TextDisplay</type>
+                </container>
+            </object-type>
+            <object-type name="TextInstructions" sid="813781399919162">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="FadeIn" sid="323153064914002">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="FadeOut" sid="681017288511357">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="TextMachine" sid="893482404282761">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="179961094247540">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="TextShape" sid="113205862111542">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="816481268315481">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>NumberShape</type>
+                    <type>TextShape</type>
+                </container>
+            </object-type>
+            <object-type name="TextStatus" sid="623514508698831">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextTitle" sid="566739315257799">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="ZoneDropCount" sid="462485389137214">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextStatusPerfect" sid="486639853131681">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-type name="TiledBackground" sid="721714335125892">
@@ -135,9 +220,12 @@
         <object-type name="NumberShape" sid="280943205855593">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="isNewlyCreated" sid="584032034651293" type="boolean" />
                 <instance-variable name="number" sid="102321621582140" type="number" />
                 <instance-variable name="dropZoneUID" sid="782564057384307" type="number" />
+                <instance-variable name="isNewlyCreated" sid="584032034651293" type="boolean" />
+                <instance-variable name="isNewlyChanged" sid="696031214991810" type="boolean" />
+                <instance-variable name="isFraction" sid="508389316688392" type="boolean" />
+                <instance-variable name="textUID" sid="726188454392591" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="968679404106537">
@@ -151,6 +239,9 @@
                 </behavior-type>
                 <behavior-type name="DestroyOutsideLayout" sid="830157838282006">
                     <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="173835595952832">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <container>
@@ -173,18 +264,6 @@
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="TextShape" sid="113205862111542">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Pin" sid="816481268315481">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>NumberShape</type>
-                <type>TextShape</type>
-            </container>
         </object-type>
         <object-type name="platform" sid="194304843600090">
             <plugin id="Sprite" />
@@ -213,13 +292,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="TextDisplay" sid="425570235065312">
-            <plugin id="Text" />
-            <container>
-                <type>NumberDisplay</type>
-                <type>TextDisplay</type>
-            </container>
         </object-type>
         <object-type name="Touch" sid="370433708752165">
             <plugin id="Touch" />
@@ -261,32 +333,24 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TextStatus" sid="623514508698831">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="ZoneDrop" sid="969314955336212">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="dropCount" sid="473897344502179" type="number" />
             </instance-variables>
-            <container>
-                <type>ZoneDrop</type>
-                <type>ZoneDropCount</type>
-            </container>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549857479508361" speed="5">
                     <frame duration="1" hotspotX="0.54" hotspotY="0.5">
                         <image-point name="counter" x="0.944" y="0.944" />
+                        <collision-poly>
+                            <point x="0" y="0.044" />
+                            <point x="1" y="0.04" />
+                            <point x="1" y="0.928" />
+                            <point x="0" y="0.928" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="ZoneDropCount" sid="462485389137214">
-            <plugin id="Text" />
-            <container>
-                <type>ZoneDrop</type>
-                <type>ZoneDropCount</type>
-            </container>
         </object-type>
         <object-type name="ParticleHeld" sid="673517966910337">
             <plugin id="Particles" />
@@ -296,82 +360,241 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
-        <object-type name="TextInstructions" sid="813781399919162">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="TextTitle" sid="566739315257799">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="Function" sid="933093510685179">
             <plugin id="Function" />
         </object-type>
-        <object-type name="TextMachine" sid="893482404282761">
-            <plugin id="Text" />
+        <object-type global="1" name="progress" sid="148138735249821">
+            <plugin id="Arr" />
+        </object-type>
+        <object-type name="Machine" sid="613851452642807">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="machineType" sid="323757254322351" type="string" />
+                <instance-variable name="hasModifier" sid="988548676151728" type="boolean" />
+                <instance-variable name="modifierNumber" sid="375546449315324" type="number" />
+                <instance-variable name="isNewlyCloned" sid="231001587024042" type="boolean" />
+                <instance-variable name="isNewlyChanged" sid="848369126373944" type="boolean" />
+                <instance-variable name="textMachineUID" sid="971956735506828" type="number" />
+            </instance-variables>
             <behaviors>
-                <behavior-type name="Pin" sid="179961094247540">
-                    <behavior id="Pin" />
+                <behavior-type name="DragDrop" sid="669418780452496">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="411984996702263">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
-        </object-type>
-        <object-type name="ControlButton" sid="683958559256350">
-            <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="420310781619530" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-                <animation framecount="1" loop="0" name="Restart" pingpong="0" repeatcount="1" repeatto="0" sid="280477164014380" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="dropZoneText" sid="409939077989154">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Next" sid="419785036877716">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671352493548963" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Previous" sid="311022761058913">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="183294373980794" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="573080795158530" speed="5">
+                    <frame duration="1" hotspotX="0.500938" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 4 (Addition).png">
+                        <image-point name="TextNumber" x="0.474672" y="0.208723" />
                         <collision-poly>
-                            <point x="0" y="1" />
+                            <point x="0" y="0.387834" />
+                            <point x="0.198334" y="0" />
+                            <point x="1" y="0.293976" />
+                            <point x="1" y="0.776401" />
+                            <point x="0.198334" y="1" />
+                            <point x="0" y="0.686298" />
+                            <point x="0" y="0.551144" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="610409258199748" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 1 (Subrtaction).png">
+                        <image-point name="TextNumber" x="0.453307" y="0.186364" />
+                        <collision-poly>
+                            <point x="0" y="0.378749" />
                             <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
+                            <point x="1" y="0.277923" />
+                            <point x="1" y="0.796164" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.699372" />
+                            <point x="0" y="0.554183" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="multiplication" pingpong="0" repeatcount="1" repeatto="0" sid="193154203987214" speed="5">
+                    <frame duration="1" hotspotX="0.447537" hotspotY="0.523734" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 2 (multiplication).png">
+                        <collision-poly>
+                            <point x="0.00642398" y="0.384494" />
+                            <point x="0.445396" y="0.00632911" />
+                            <point x="0.993576" y="0.30538" />
+                            <point x="0.955032" y="0.712025" />
+                            <point x="0.445396" y="0.971519" />
+                            <point x="0.0406852" y="0.636076" />
+                            <point x="0.0364026" y="0.522152" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="173224446937826" speed="5">
+                    <frame duration="1" hotspotX="0.394231" hotspotY="0.514516" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 3 (Division).png">
+                        <collision-poly>
+                            <point x="0.0730769" y="0.435484" />
+                            <point x="0.392308" y="0.0016129" />
+                            <point x="0.915385" y="0.266129" />
+                            <point x="0.926923" y="0.512903" />
+                            <point x="0.998077" y="0.830645" />
+                            <point x="0.392308" y="0.959677" />
+                            <point x="0.0403846" y="0.619355" />
+                            <point x="0.0730769" y="0.512903" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
-    </object-folder>
-    <families>
-        <family name="Machines" plugin-id="Sprite" sid="978109125656504">
-            <members>
-                <member>MachineAddition</member>
-                <member>MachineSubtraction</member>
-            </members>
-            <instance-variables>
-                <instance-variable name="modifierNumber" sid="666660324630792" type="number" />
-                <instance-variable name="isNewlyCreated" sid="949386440217341" type="boolean" />
-                <instance-variable name="textMachineUID" sid="628815391280641" type="number" />
-                <instance-variable name="isChanged" sid="639468061816954" type="boolean" />
-            </instance-variables>
+        <object-type name="Results" sid="424022475979778">
+            <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="DragDrop" sid="868314797975403">
-                    <behavior id="DragnDrop" />
-                </behavior-type>
-                <behavior-type name="Timer" sid="197163282950700">
-                    <behavior id="Timer" />
+                <behavior-type name="ShadowCaster" sid="587060749442205">
+                    <behavior id="shadowcaster" />
                 </behavior-type>
             </behaviors>
-        </family>
+            <container>
+                <type>Results</type>
+                <type>Shadow</type>
+                <type>ResultImage</type>
+                <type>TextResultPerfectTip</type>
+                <type>TextResultActions</type>
+                <type>TextResultsTitle</type>
+                <type>TextResult</type>
+                <type>ButtonNextLevel</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799439086439128" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="ResultsText" x="0.508" y="0.132" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Shadow" sid="296892949611676">
+            <plugin id="Sprite" />
+            <container>
+                <type>Results</type>
+                <type>Shadow</type>
+                <type>ResultImage</type>
+                <type>TextResultPerfectTip</type>
+                <type>TextResultActions</type>
+                <type>TextResultsTitle</type>
+                <type>TextResult</type>
+                <type>ButtonNextLevel</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="157081591779044" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextResultsTitle" sid="290647723578363">
+            <plugin id="Text" />
+            <container>
+                <type>Results</type>
+                <type>Shadow</type>
+                <type>ResultImage</type>
+                <type>TextResultPerfectTip</type>
+                <type>TextResultActions</type>
+                <type>TextResultsTitle</type>
+                <type>TextResult</type>
+                <type>ButtonNextLevel</type>
+            </container>
+        </object-type>
+        <object-type name="ResultImage" sid="759481806096430">
+            <plugin id="Sprite" />
+            <container>
+                <type>Results</type>
+                <type>Shadow</type>
+                <type>ResultImage</type>
+                <type>TextResultPerfectTip</type>
+                <type>TextResultActions</type>
+                <type>TextResultsTitle</type>
+                <type>TextResult</type>
+                <type>ButtonNextLevel</type>
+            </container>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Waiting" pingpong="0" repeatcount="1" repeatto="0" sid="338151510491266" speed="3">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Solved" pingpong="0" repeatcount="1" repeatto="0" sid="118887752116511" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.397163" />
+                </animation>
+                <animation framecount="1" loop="0" name="Perfect" pingpong="0" repeatcount="1" repeatto="0" sid="462179197948581" speed="5">
+                    <frame duration="1" hotspotX="0.498008" hotspotY="0.459227" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ButtonNextLevel" sid="979478307007977">
+            <plugin id="Sprite" />
+            <container>
+                <type>Results</type>
+                <type>Shadow</type>
+                <type>ResultImage</type>
+                <type>TextResultPerfectTip</type>
+                <type>TextResultActions</type>
+                <type>TextResultsTitle</type>
+                <type>TextResult</type>
+                <type>ButtonNextLevel</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="946926337896786" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextResultPerfectTip" sid="677444276716372">
+            <plugin id="Text" />
+            <container>
+                <type>Results</type>
+                <type>Shadow</type>
+                <type>ResultImage</type>
+                <type>TextResultPerfectTip</type>
+                <type>TextResultActions</type>
+                <type>TextResultsTitle</type>
+                <type>TextResult</type>
+                <type>ButtonNextLevel</type>
+            </container>
+        </object-type>
+        <object-type name="TextResultActions" sid="555264973847002">
+            <plugin id="Text" />
+            <container>
+                <type>Results</type>
+                <type>Shadow</type>
+                <type>ResultImage</type>
+                <type>TextResultPerfectTip</type>
+                <type>TextResultActions</type>
+                <type>TextResultsTitle</type>
+                <type>TextResult</type>
+                <type>ButtonNextLevel</type>
+            </container>
+        </object-type>
+        <object-type name="TextResult" sid="255866937571740">
+            <plugin id="Text" />
+            <container>
+                <type>Results</type>
+                <type>Shadow</type>
+                <type>ResultImage</type>
+                <type>TextResultPerfectTip</type>
+                <type>TextResultActions</type>
+                <type>TextResultsTitle</type>
+                <type>TextResult</type>
+                <type>ButtonNextLevel</type>
+            </container>
+        </object-type>
+        <object-type name="UIStar" sid="219978118856692">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217843952271500" speed="5">
+                    <frame duration="1" hotspotX="0.498008" hotspotY="0.527897" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextPerfectNeeded" sid="199090881476147">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families>
         <family name="Symbols" plugin-id="Sprite" sid="661415060434851">
             <members>
                 <member>SymbolAddition</member>
@@ -382,20 +605,23 @@
         </family>
     </families>
     <layout-folder>
+        <layout>Level Select.xml</layout>
         <layout>Level 1.xml</layout>
         <layout>Level 2.xml</layout>
         <layout>Level 3.xml</layout>
         <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>AAA Main Event Sheet.xml</event-sheet>
+        <event-sheet>Main Event Sheet.xml</event-sheet>
         <event-sheet>Number Shapes.xml</event-sheet>
         <event-sheet>Machines.xml</event-sheet>
         <event-sheet>Number Displays.xml</event-sheet>
         <event-sheet>Puzzle Resolution.xml</event-sheet>
-        <event-sheet>Drop Zone.xml</event-sheet>
         <event-sheet>Buttons.xml</event-sheet>
-        <event-sheet>Functions.xml</event-sheet>
+        <event-sheet>Level Select.xml</event-sheet>
+        <event-sheet>Level 1 Tutorial.xml</event-sheet>
+        <event-sheet>Level 2 Tutorial.xml</event-sheet>
+        <event-sheet>Level 3 Tutorial.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">

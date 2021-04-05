@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level 2 Tutorial</name>
+    <events>
+        <event-block sid="684288456727884">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="163540365917076" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="359542858726459" type="System">
+                    <param id="0" name="Variable">actionsPerfect</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="882958114628300">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="622493752292649" type="System">
+                            <param id="0" name="Object">TextInstructions</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="504429094693510" type="TextInstructions">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <include>Main Event Sheet</include>
+        <event-group description="" sid="531367633496005" title="Level 2 Tutorial">
+            <sub-events>
+                <variable constant="0" name="FailedDrop" sid="162445845169985" static="1" type="number">0</variable>
+                <variable constant="0" name="isDoingTheAction" sid="879813752820110" static="1" type="number">0</variable>
+                <variable constant="0" name="IntroOngoing" sid="646291264236469" static="1" type="number">1</variable>
+                <event-block sid="335569716548663">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="871440344600074" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="776076593310368" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>98 - To add numbers you need a machine</comment>
+                        <event-block sid="176584214010530">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="131134145336260" type="TextInstructions">
+                                    <param id="0" name="Unique ID">98</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="FadeIn" id="1" name="Start fade" sid="202694289715788" type="TextInstructions" />
+                                <action id="-16" name="Wait" sid="550468696789699" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
+                                <action behavior="FadeOut" id="1" name="Start fade" sid="871097603328471" type="TextInstructions" />
+                            </actions>
+                        </event-block>
+                        <comment>99 - You can clone a symbol</comment>
+                        <event-block sid="479048403580662">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="924366974000813" type="TextInstructions">
+                                    <param id="0" name="Unique ID">99</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="611912574593939" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="234518607820050">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="297221199304419" type="System">
+                                            <param id="0" name="Variable">isDoingTheAction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="343676101890906" type="TextInstructions" />
+                                        <action id="-16" name="Wait" sid="604362621963038" type="System">
+                                            <param id="0" name="Seconds">5</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="733719525419854" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>90 - tap and hold a plus sign to make a machine</comment>
+                        <event-block sid="870276816389194">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="366341751053903" type="TextInstructions">
+                                    <param id="0" name="Unique ID">90</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="349049440966461" type="System">
+                                    <param id="0" name="Seconds">9</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="952829221386965">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="141736454091180" type="System">
+                                            <param id="0" name="Variable">isDoingTheAction</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="430167936707061" type="System">
+                                            <param id="0" name="Variable">IntroOngoing</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="758175514312222" type="TextInstructions" />
+                                        <action id="-41" name="Wait for signal" sid="822112630782762" type="System">
+                                            <param id="0" name="Tag">&quot;SignalMachineCloned&quot;</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="722128641079067" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>89 - Drop the machine</comment>
+                        <event-block sid="835564472198827">
+                            <conditions />
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="915157078675062" type="System">
+                                    <param id="0" name="Tag">&quot;SignalMachineCloned&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="613699630027235" type="System">
+                                    <param id="0" name="Variable">isDoingTheAction</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="877080536505460">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="448179491411756" type="TextInstructions">
+                                            <param id="0" name="Unique ID">89</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="971707529806196" type="TextInstructions" />
+                                        <action id="-41" name="Wait for signal" sid="616773853317291" type="System">
+                                            <param id="0" name="Tag">&quot;SignalMachineDropped&quot;</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="826941804703693" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>88 - Clone a number</comment>
+                        <event-block sid="347006893231677">
+                            <conditions />
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="735657625177077" type="System">
+                                    <param id="0" name="Tag">&quot;SignalMachineDropped&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="443968599993029" type="System">
+                                    <param id="0" name="Variable">isDoingTheAction</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="277772336549505">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="736160042097237" type="TextInstructions">
+                                            <param id="0" name="Unique ID">88</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="663910002386234" type="TextInstructions" />
+                                        <action id="-41" name="Wait for signal" sid="966544864171423" type="System">
+                                            <param id="0" name="Tag">&quot;SignalNumberCloned&quot;</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="727989414528527" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>10 - Drop it above the machine</comment>
+                        <event-block sid="850390202288398">
+                            <conditions />
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="169249045425049" type="System">
+                                    <param id="0" name="Tag">&quot;SignalNumberCloned&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="818793485503696" type="System">
+                                    <param id="0" name="Variable">isDoingTheAction</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="488692370097649">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="584020390637677" type="TextInstructions">
+                                            <param id="0" name="Unique ID">10</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="839978314184145" type="TextInstructions" />
+                                        <action id="-41" name="Wait for signal" sid="850748702536861" type="System">
+                                            <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="756113840309295" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>17 - The first number that falls</comment>
+                        <event-block sid="934269048582978">
+                            <conditions />
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="405173195592784" type="System">
+                                    <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="226560123148941" type="System">
+                                    <param id="0" name="Variable">isDoingTheAction</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="482999335127560">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="359840001488482" type="TextInstructions">
+                                            <param id="0" name="Unique ID">17</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="484385586329359" type="TextInstructions" />
+                                        <action id="-16" name="Wait" sid="987292907529565" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="632668241844640" type="TextInstructions" />
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="920232946897162">
+                                            <conditions />
+                                            <actions />
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>19 - the next number</comment>
+                        <event-block sid="646656001279759">
+                            <conditions />
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="222453835320023" type="System">
+                                    <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="221056878713093" type="System">
+                                    <param id="0" name="Variable">isDoingTheAction</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="436997039345208">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="631534131134004" type="TextInstructions">
+                                            <param id="0" name="Unique ID">19</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="874929168823028" type="System">
+                                            <param id="0" name="Seconds">4</param>
+                                        </action>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="699212664479688" type="TextInstructions" />
+                                        <action id="-16" name="Wait" sid="781405466247989" type="System">
+                                            <param id="0" name="Seconds">5</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="692037423848010" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>26 - play</comment>
+                        <event-block sid="321685476560723">
+                            <conditions />
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="455766494807023" type="System">
+                                    <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="444205745262575" type="System">
+                                    <param id="0" name="Variable">isDoingTheAction</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="817673805929874">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="584746209375666" type="TextInstructions">
+                                            <param id="0" name="Unique ID">26</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Wait" sid="527285401291703" type="System">
+                                            <param id="0" name="Seconds">9</param>
+                                        </action>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="861647829742791" type="TextInstructions" />
+                                        <action id="-16" name="Wait" sid="830892367535758" type="System">
+                                            <param id="0" name="Seconds">5</param>
+                                        </action>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="611473065318108" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="730949680470890">
+                            <conditions />
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="691921476818227" type="System">
+                                    <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="986925656160338">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="437530732299548" type="TextInstructions">
+                                            <param id="0" name="Unique ID">26</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="831917322045102" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <comment>95 - can only drop</comment>
+                        <event-block sid="391311930851846">
+                            <conditions />
+                            <actions>
+                                <action id="-41" name="Wait for signal" sid="145502276029431" type="System">
+                                    <param id="0" name="Tag">&quot;SignalMachineFailed&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="895832916393285">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="905891751794043" type="TextInstructions">
+                                            <param id="0" name="Unique ID">95</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FadeIn" id="1" name="Start fade" sid="430973804039838" type="TextInstructions" />
+                                        <action id="-9" name="Set value" sid="782882781025388" type="System">
+                                            <param id="0" name="Variable">FailedDrop</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="204807528665024">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="400400243823269" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="947935115655866">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="586388365226323" type="System">
+                                    <param id="0" name="Variable">isDoingTheAction</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="708515558751848" type="System">
+                                    <param id="0" name="Variable">IntroOngoing</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="416665024124734">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="633023917946619" type="TextInstructions">
+                                            <param id="0" name="Unique ID">98</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="249137868750329" type="TextInstructions">
+                                            <param id="0" name="Text">&quot;...&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="656027179992470">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="762133756529099" type="TextInstructions">
+                                            <param id="0" name="Unique ID">99</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="565254774762781" type="TextInstructions">
+                                            <param id="0" name="Text">&quot;...&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="630375246885063">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="616351909066398" type="TextInstructions">
+                                            <param id="0" name="Unique ID">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="461353747957504" type="TextInstructions">
+                                            <param id="0" name="Text">&quot;...&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

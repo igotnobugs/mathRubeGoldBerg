@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level Select</name>
+    <events>
+        <event-block sid="501583689529931">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="516205871741595" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="964674849719711">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="464538974104585" type="System">
+                            <param id="0" name="Object">LevelSelectButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="126577866295191" type="progress">
+                            <param id="0" name="X">LevelSelectButton.level - 1</param>
+                            <param id="1" name="Value">LevelSelectButton.state</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="669447020672771" type="LevelSelectNumber">
+                            <param id="0" name="Object">LevelSelectButton</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="870772749477590" type="LevelSelectNumber">
+                            <param id="0" name="Text">LevelSelectButton.level</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="833779341912352">
+                            <conditions>
+                                <condition id="0" name="Compare at X" sid="412384079643003" type="progress">
+                                    <param id="0" name="X">LevelSelectButton.level - 1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="791733747055853" type="LevelSelectButton">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="198128527100551">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="589450028817268" type="System" />
+                                <condition id="0" name="Compare at X" sid="801255074820558" type="progress">
+                                    <param id="0" name="X">LevelSelectButton.level - 1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="269495842479443" type="LevelSelectButton">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="716659989809782" type="LevelSelectButton">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">25</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="490981442456001" type="LevelSelectButton">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">50</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="168804958843491">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="880278312737233" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="571256906369935" type="LevelSelectButton">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="728094588439941">
+            <conditions>
+                <condition id="3" name="On touched object" sid="542985010087922" type="Touch">
+                    <param id="0" name="Object">LevelSelectButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="428006483419860" type="System">
+                    <param id="0" name="Object to create">NumberShape</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">LevelSelectButton.X</param>
+                    <param id="3" name="Y">LevelSelectButton.Y</param>
+                </action>
+                <action id="-10" name="Set value" sid="961844236974690" type="NumberShape">
+                    <param id="0" name="Instance variable">number</param>
+                    <param id="1" name="Value">LevelSelectButton.level</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="498389249198064">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="713890670771961" type="System">
+                            <param id="0" name="Object">LevelSelectButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="720445131333648" type="LevelSelectButton" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="486960881409724">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="544190222671121" type="NumberShape">
+                    <param id="0" name="Object">NumberTarget</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="787419644710238" type="NumberShape">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="108718352810127" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="850224931509409" type="System">
+                    <param id="0" name="Layout">&quot;Level &quot; &amp; NumberShape.number </param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="361105124137706">
+            <conditions>
+                <condition id="-18" name="On created" sid="278983309429176" type="NumberShape" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="266378119280314" type="TextShape">
+                    <param id="0" name="Text">NumberDisplay.number + 1</param>
+                </action>
+                <action behavior="Pin" id="0" name="Pin to object" sid="743942373964014" type="TextShape">
+                    <param id="0" name="Pin to">NumberShape</param>
+                    <param id="1" name="Mode">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
