@@ -40,6 +40,9 @@
                         <action id="-15" name="Set visible" sid="937772652182253" type="ButtonNextLevel">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-16" name="Set opacity" sid="357476871194962" type="ButtonNextLevel">
+                            <param id="0" name="Opacity">25</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="161257284988012">
@@ -92,6 +95,11 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="539495319237150" type="NumberTarget">
                             <param id="0" name="Instance variable">isSolved</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="217307649011914" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -137,10 +145,6 @@
                                             <param id="0" name="Variable">isFinished</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="2" name="Set at X" sid="401260909153010" type="progress">
-                                            <param id="0" name="X">currentLevel</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
                                         <action id="4" name="Set animation" sid="461567639333152" type="ControlButton">
                                             <param id="0" name="Animation">&quot;Done&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -171,15 +175,31 @@
                                                 <condition id="-22" name="Else" sid="964925194227313" type="System" />
                                             </conditions>
                                             <actions>
+                                                <action id="2" name="Set at X" sid="321251669689514" type="progress">
+                                                    <param id="0" name="X">currentLevel - 1</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
                                                 <action id="0" name="Play" sid="454170385215281" type="Audio">
                                                     <param id="0" name="Audio file">Good Morning</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">-5</param>
                                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                                 </action>
-                                                <action id="2" name="Set at X" sid="321251669689514" type="progress">
-                                                    <param id="0" name="X">currentLevel - 1</param>
-                                                    <param id="1" name="Value">2</param>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="721609070517757">
+                                            <conditions />
+                                            <actions>
+                                                <action id="2" name="Set at X" sid="401260909153010" type="progress">
+                                                    <param id="0" name="X">currentLevel</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-36" name="Save" sid="853775170224313" type="System">
+                                                    <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Add to" sid="367003704513283" type="System">
+                                                    <param id="0" name="Variable">currentLevel</param>
+                                                    <param id="1" name="Value">1</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -252,7 +272,7 @@
                                     <param id="1" name="From">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="958307877187010" type="TextResult">
-                                    <param id="0" name="Text">&quot;SOVLED&quot;</param>
+                                    <param id="0" name="Text">&quot;SOLVED&quot;</param>
                                 </action>
                                 <action id="0" name="Set text" sid="431295370366270" type="TextResultPerfectTip">
                                     <param id="0" name="Text">&quot;Have less than &quot; &amp; actionsPerfect + 1 &amp; &quot; Actions for a Perfect Result&quot;</param>
@@ -297,17 +317,31 @@
                     <param id="0" name="Object">ButtonNextLevel</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="795120106750037" type="ButtonNextLevel" />
+                <condition id="-10" name="Compare opacity" sid="792577145226267" type="ButtonNextLevel">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="367003704513283" type="System">
-                    <param id="0" name="Variable">currentLevel</param>
-                    <param id="1" name="Value">1</param>
+                <action id="0" name="Play" sid="198898563195825" type="Audio">
+                    <param id="0" name="Audio file">Tango</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-43" name="Go to next/previous layout" sid="115879494131323" type="System">
                     <param id="0" name="Which">0</param>
                 </action>
-                <action id="-26" name="Restart layout" sid="421058227483666" type="System" />
-                <action id="-21" name="Reset global variables" sid="432034072503020" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="826717890076335">
+            <conditions>
+                <condition id="-28" name="On save complete" sid="124086064482003" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="658403861305986" type="ButtonNextLevel">
+                    <param id="0" name="Opacity">100</param>
+                </action>
             </actions>
         </event-block>
     </events>

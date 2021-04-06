@@ -34,6 +34,18 @@
                         <condition id="-2" name="On start of layout" sid="190149269145969" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="193467793831584" type="System">
+                            <param id="0" name="Variable">FailedDrop</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="122308014166617" type="System">
+                            <param id="0" name="Variable">isDoingTheAction</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="321240125013105" type="System">
+                            <param id="0" name="Variable">IntroOngoing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="937430186144106" type="System">
                             <param id="0" name="Seconds">0.2</param>
                         </action>

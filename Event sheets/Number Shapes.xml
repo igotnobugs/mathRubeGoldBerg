@@ -62,6 +62,12 @@
                                     </conditions>
                                     <actions>
                                         <action id="-9" name="Destroy" sid="910740904962951" type="NumberShape" />
+                                        <action id="0" name="Play" sid="387874673262426" type="Audio">
+                                            <param id="0" name="Audio file">Bass-ic Error</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="-42" name="Signal" sid="630494467214380" type="System">
                                             <param id="0" name="Tag">&quot;SignalNumberFailed&quot;</param>
                                         </action>
@@ -75,9 +81,6 @@
                                         <action id="-13" name="Set boolean" sid="802353588374079" type="NumberShape">
                                             <param id="0" name="Instance variable">isNewlyCreated</param>
                                             <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-42" name="Signal" sid="169673438507023" type="System">
-                                            <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
                                         </action>
                                         <action id="-27" name="Set effect enabled" sid="567038910637682" type="NumberShape">
                                             <param id="0" name="Mode">0</param>
@@ -94,6 +97,15 @@
                                         <action id="-27" name="Set effect enabled" sid="192456850460022" type="NumberShape">
                                             <param id="0" name="Mode">0</param>
                                             <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="525042742469754" type="Audio">
+                                            <param id="0" name="Audio file">Tin Tap</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-42" name="Signal" sid="169673438507023" type="System">
+                                            <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -178,6 +190,12 @@
                         <condition behavior="DragDrop" id="1" name="On drag start" sid="461174661383380" type="NumberShape" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="429542886094792" type="Audio">
+                            <param id="0" name="Audio file">Corked</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-27" name="Set effect enabled" sid="682417712029970" type="NumberShape">
                             <param id="0" name="Mode">1</param>
                             <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
@@ -201,6 +219,12 @@
                         <condition behavior="DragDrop" id="2" name="On drop" sid="874523316385944" type="NumberShape" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="170863121183689" type="Audio">
+                            <param id="0" name="Audio file">Tin Tap</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-27" name="Set effect enabled" sid="599270329010011" type="NumberShape">
                             <param id="0" name="Mode">0</param>
                             <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
@@ -226,6 +250,12 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="0" name="Play" sid="399829569105017" type="Audio">
+                                    <param id="0" name="Audio file">Bass-ic Error</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="531676747371157" type="NumberShape" />
                             </actions>
                         </event-block>
@@ -298,6 +328,55 @@
                     <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <comment>Param: 0 - Number, 1 - Layer</comment>
+        <event-block sid="684217573356672">
+            <conditions>
+                <condition id="0" name="On function" sid="713158594387823" type="Function">
+                    <param id="0" name="Name">&quot;createNumberShape&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="895411839327257">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="673984062176970" type="System">
+                            <param id="0" name="Object to create">NumberShape</param>
+                            <param id="1" name="Layer">Function.Param(1)</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.Y</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="310266490254952" type="NumberShape">
+                            <param id="0" name="Scale">1 / (10 + ControlButton.scaleDivide)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="389029505254832" type="NumberShape">
+                            <param id="0" name="Instance variable">number</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="710760491166393" type="NumberShape">
+                            <param id="0" name="Instance variable">textUID</param>
+                            <param id="1" name="Value">TextShape.UID</param>
+                        </action>
+                        <action id="0" name="Set text" sid="585453315220254" type="TextShape">
+                            <param id="0" name="Text">NumberShape.number</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="335768440895324" type="NumberShape">
+                            <param id="0" name="Instance variable">isNewlyCreated</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="720027039847798" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="259036091673655" type="System">
+                            <param id="0" name="Object to create">ParticleHeldFinished</param>
+                            <param id="1" name="Layer">Function.Param(1)</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

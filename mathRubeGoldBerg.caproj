@@ -319,8 +319,11 @@
         </object-type>
         <object-type name="platform" sid="194304843600090">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="isNewlyCreated" sid="409383826421685" type="boolean" />
+            </instance-variables>
             <behaviors>
-                <behavior-type name="Physics" sid="937804326183157">
+                <behavior-type name="Physics" sid="492566479487312">
                     <behavior id="Physics" />
                 </behavior-type>
             </behaviors>
@@ -437,59 +440,75 @@
                     <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="BlurVertical">
+                    <effect id="blurvertical" />
+                </effect-type>
+                <effect-type name="BlurHorizontal">
+                    <effect id="blurhorizontal" />
+                </effect-type>
+            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="573080795158530" speed="5">
-                    <frame duration="1" hotspotX="0.500938" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 4 (Addition).png">
-                        <image-point name="TextNumber" x="0.474672" y="0.208723" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Downloads\Assets_newer\Addition Machine.png">
+                        <image-point name="TextNumber" x="0.491525" y="0.176626" />
                         <collision-poly>
-                            <point x="0" y="0.387834" />
-                            <point x="0.198334" y="0" />
-                            <point x="1" y="0.293976" />
-                            <point x="1" y="0.776401" />
-                            <point x="0.198334" y="1" />
-                            <point x="0" y="0.686298" />
-                            <point x="0" y="0.551144" />
+                            <point x="0" y="0.300141" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0.183272" />
+                            <point x="1" y="0.783972" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.671779" />
+                            <point x="0" y="0.503489" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="610409258199748" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 1 (Subrtaction).png">
-                        <image-point name="TextNumber" x="0.486381" y="0.186364" />
+                    <frame duration="1" hotspotX="0.500536" hotspotY="0.500418" original-source="C:\Users\Jerry\Downloads\Assets_newer\Subtraction Machine.png">
+                        <image-point name="TextNumber" x="0.500536" y="0.169591" />
                         <collision-poly>
-                            <point x="0" y="0.378749" />
+                            <point x="0" y="0.341426" />
                             <point x="0" y="0" />
-                            <point x="1" y="0.277923" />
-                            <point x="1" y="0.796164" />
+                            <point x="1" y="0.222069" />
+                            <point x="1" y="0.835559" />
                             <point x="0" y="1" />
-                            <point x="0" y="0.699372" />
-                            <point x="0" y="0.554183" />
+                            <point x="0" y="0.720978" />
+                            <point x="0" y="0.549104" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="multiplication" pingpong="0" repeatcount="1" repeatto="0" sid="193154203987214" speed="5">
-                    <frame duration="1" hotspotX="0.498929" hotspotY="0.22943" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 2 (multiplication).png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500377" original-source="C:\Users\Jerry\Downloads\Assets_newer\Multiplication Machine.png">
+                        <image-point name="TextNumber" x="0.49591" y="0.234717" />
                         <collision-poly>
-                            <point x="0.00642398" y="0.384494" />
-                            <point x="0.445396" y="0.00632911" />
-                            <point x="0.993576" y="0.30538" />
-                            <point x="0.955032" y="0.712025" />
-                            <point x="0.445396" y="0.971519" />
-                            <point x="0.0406852" y="0.636076" />
-                            <point x="0.0364026" y="0.522152" />
+                            <point x="0" y="0.3727" />
+                            <point x="0.419319" y="0" />
+                            <point x="1" y="0.288093" />
+                            <point x="1" y="0.722973" />
+                            <point x="0.419319" y="1" />
+                            <point x="0" y="0.641751" />
+                            <point x="0" y="0.519917" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="173224446937826" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.214516" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 3 (Division).png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Downloads\Assets_newer\Division Machine.png">
+                        <image-point name="TextNumber" x="0.492" y="0.194631" />
                         <collision-poly>
-                            <point x="0.0730769" y="0.435484" />
-                            <point x="0.392308" y="0.0016129" />
-                            <point x="0.915385" y="0.266129" />
-                            <point x="0.926923" y="0.512903" />
-                            <point x="0.998077" y="0.830645" />
-                            <point x="0.392308" y="0.959677" />
-                            <point x="0.0403846" y="0.619355" />
-                            <point x="0.0730769" y="0.512903" />
+                            <point x="0" y="0.406108" />
+                            <point x="0.330462" y="0" />
+                            <point x="1" y="0.204786" />
+                            <point x="1" y="0.498141" />
+                            <point x="1" y="0.875859" />
+                            <point x="0.330462" y="1" />
+                            <point x="0" y="0.624686" />
+                            <point x="0" y="0.498141" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -719,6 +738,9 @@
         <object-type name="Audio" sid="404040250988219">
             <plugin id="Audio" />
         </object-type>
+        <object-type name="ButtonClearProgress" sid="344746627811297">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -735,7 +757,6 @@
         <layout>Level 10.xml</layout>
         <layout>Level 11.xml</layout>
         <layout>Level 12.xml</layout>
-        <layout>End Level.xml</layout>
         <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>
@@ -749,6 +770,7 @@
         <event-sheet>Level 1 Tutorial.xml</event-sheet>
         <event-sheet>Level 2 Tutorial.xml</event-sheet>
         <event-sheet>Level 3 Tutorial.xml</event-sheet>
+        <event-sheet>Platform.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="9">
@@ -780,6 +802,13 @@
         <file name="Bass-ic Error.ogg" />
         <file name="Popped.ogg" />
         <file name="Bing Bong.ogg" />
+        <file name="Burp.ogg" />
+        <file name="Circuit.ogg" />
+        <file name="Corked.ogg" />
+        <file name="Tin Tap.ogg" />
+        <file name="Tango.ogg" />
+        <file name="Boxing.ogg" />
+        <file name="Mouse.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="ether-vox-by-kevin-macleod-from-filmmusic-io.ogg" />

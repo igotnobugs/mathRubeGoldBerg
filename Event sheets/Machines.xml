@@ -5,109 +5,120 @@
     <events>
         <event-group description="" sid="519914849730548" title="Machines">
             <sub-events>
-                <event-block sid="907531165197836">
+                <variable constant="0" name="isTouchingSymbol" sid="751545012841370" static="1" type="number">0</variable>
+                <event-block sid="868784282211817">
                     <conditions>
-                        <condition behavior="DragDrop" id="2" name="On drop" sid="282193994148505" type="Machine" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="224642853840306">
-                            <conditions>
-                                <condition id="1" inverted="1" name="Is overlapping another object" sid="597256093356399" type="Machine">
-                                    <param id="0" name="Object">ZoneDrop</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="768231290074189" type="Machine" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="971261965982922">
-                    <conditions>
-                        <condition id="-14" name="Compare variable" sid="911577629765839" type="System">
-                            <param id="0" name="Variable">isSimulating</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
+                        <condition id="-2" name="On start of layout" sid="835418346990901" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="327793390623796" type="Machine">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="985538621092536">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="626740905674426" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="381260628174995" type="Machine">
-                            <param id="0" name="State">1</param>
+                        <action id="-9" name="Set value" sid="817524759975026" type="System">
+                            <param id="0" name="Variable">isTouchingSymbol</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <comment>Cloning</comment>
-                <event-block sid="380466385640873">
+                <event-block sid="191020225882129">
                     <conditions>
-                        <condition id="3" name="On touched object" sid="612653914654576" type="Touch">
-                            <param id="0" name="Object">SymbolMath</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="279525186278243" type="System">
-                            <param id="0" name="Object to create">ParticleHeld</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Touch.X</param>
-                            <param id="3" name="Y">Touch.Y</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="150875998426330">
-                    <conditions>
-                        <condition id="16" name="On hold over object" sid="989304969864120" type="Touch">
-                            <param id="0" name="Object">SymbolMath</param>
-                        </condition>
                         <condition id="-14" name="Compare variable" sid="203189315664273" type="System">
                             <param id="0" name="Variable">isSimulating</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="444297481097494" type="System">
+                            <param id="0" name="Variable">isFinished</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="108381740898704" type="System">
-                            <param id="0" name="Seconds">0.3</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="467183961790211" type="ParticleHeld" />
-                        <action id="-3" name="Create object" sid="373604548392594" type="System">
-                            <param id="0" name="Object to create">ParticleHeldFinished</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">Touch.X</param>
-                            <param id="3" name="Y">Touch.y</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="928207231151989">
-                            <conditions />
+                        <event-block sid="907410682887935">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="612653914654576" type="Touch">
+                                    <param id="0" name="Object">SymbolMath</param>
+                                </condition>
+                            </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="871142261267599" type="Function">
-                                    <param id="0" name="Name">&quot;createMachine&quot;</param>
-                                    <param id="1" name="Parameter {n}">SymbolMath.AnimationName</param>
+                                <action id="-3" name="Create object" sid="279525186278243" type="System">
+                                    <param id="0" name="Object to create">ParticleHeld</param>
+                                    <param id="1" name="Layer">&quot;NumberShapes&quot;</param>
+                                    <param id="2" name="X">Touch.X</param>
+                                    <param id="3" name="Y">Touch.Y</param>
                                 </action>
-                                <action id="0" name="Play" sid="993680871874130" type="Audio">
-                                    <param id="0" name="Audio file">Popped</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">0</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                </action>
-                                <action id="-10" name="Add to" sid="808763354513078" type="System">
-                                    <param id="0" name="Variable">actions</param>
+                                <action id="-9" name="Set value" sid="534478889501513" type="System">
+                                    <param id="0" name="Variable">isTouchingSymbol</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-42" name="Signal" sid="399577956182055" type="System">
-                                    <param id="0" name="Tag">&quot;SignalMachineCloned&quot;</param>
+                            </actions>
+                        </event-block>
+                        <event-block sid="112476047194387">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="211620659018722" type="Touch">
+                                    <param id="0" name="Object">SymbolMath</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="314203362984983" type="System">
+                                    <param id="0" name="Variable">isTouchingSymbol</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="749976269303851" type="ParticleHeld" />
+                                <action id="-9" name="Set value" sid="154990341771173" type="System">
+                                    <param id="0" name="Variable">isTouchingSymbol</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="259831148931288">
+                            <conditions>
+                                <condition id="16" name="On hold over object" sid="753453781442899" type="Touch">
+                                    <param id="0" name="Object">SymbolMath</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="131173730399989" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="399282919457652" type="ParticleHeld" />
+                                <action id="-9" name="Set value" sid="507150491708307" type="System">
+                                    <param id="0" name="Variable">isTouchingSymbol</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="640366519557328">
+                                    <conditions>
+                                        <condition id="2" name="Is in touch" sid="505964127290344" type="Touch" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="370361422620693" type="System">
+                                            <param id="0" name="Object to create">ParticleHeldFinished</param>
+                                            <param id="1" name="Layer">&quot;NumberShapes&quot;</param>
+                                            <param id="2" name="X">Touch.X</param>
+                                            <param id="3" name="Y">Touch.y</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="829115000136513" type="Function">
+                                            <param id="0" name="Name">&quot;createMachine&quot;</param>
+                                            <param id="1" name="Parameter {n}">SymbolMath.AnimationName{###}&quot;Machines&quot;</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="278857759772287" type="Audio">
+                                            <param id="0" name="Audio file">Popped</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="231703209518707" type="System">
+                                            <param id="0" name="Variable">actions</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-42" name="Signal" sid="117792399728383" type="System">
+                                            <param id="0" name="Tag">&quot;SignalMachineCloned&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -121,6 +132,10 @@
                         <action id="-3" name="Set position" sid="346936636056303" type="Machine">
                             <param id="0" name="X">Touch.X</param>
                             <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="233683109297338" type="Function">
+                            <param id="0" name="Name">&quot;setMachineEffectLifted&quot;</param>
+                            <param id="1" name="Parameter {n}">Machine.UID{###}1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -137,10 +152,16 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="515716709554508" type="Machine" />
-                                        <action id="0" name="Call function" sid="278198666813933" type="Function">
-                                            <param id="0" name="Name">&quot;changeTextMachine&quot;</param>
+                                        <action id="0" name="Call function" sid="956622465444158" type="Function">
+                                            <param id="0" name="Name">&quot;deleteTextMachine&quot;</param>
                                             <param id="1" name="Parameter {n}">Machine.textMachineUID</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="515716709554508" type="Machine" />
+                                        <action id="0" name="Play" sid="686842351556151" type="Audio">
+                                            <param id="0" name="Audio file">Bass-ic Error</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                         <action id="-42" name="Signal" sid="112816425030312" type="System">
                                             <param id="0" name="Tag">&quot;SignalMachineFailed&quot;</param>
@@ -152,9 +173,23 @@
                                         <condition id="-22" name="Else" sid="910601668401303" type="System" />
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Call function" sid="344424810469451" type="Function">
+                                            <param id="0" name="Name">&quot;toggleTextMachineGlow&quot;</param>
+                                            <param id="1" name="Parameter {n}">Machine.textMachineUID{###}1</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="801876052891551" type="Function">
+                                            <param id="0" name="Name">&quot;setMachineEffectLifted&quot;</param>
+                                            <param id="1" name="Parameter {n}">Machine.UID{###}0</param>
+                                        </action>
                                         <action id="-13" name="Set boolean" sid="177714640548013" type="Machine">
                                             <param id="0" name="Instance variable">isNewlyCloned</param>
                                             <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="516379683841076" type="Audio">
+                                            <param id="0" name="Audio file">Circuit</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                         <action id="-42" name="Signal" sid="903798673496186" type="System">
                                             <param id="0" name="Tag">&quot;SignalMachineDropped&quot;</param>
@@ -469,6 +504,83 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Drag and Drop</comment>
+                <event-block sid="575383951706742">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="837540230450856" type="Machine" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="788356257916478" type="Function">
+                            <param id="0" name="Name">&quot;setMachineEffectLifted&quot;</param>
+                            <param id="1" name="Parameter {n}">Machine.UID{###}1</param>
+                        </action>
+                        <action id="0" name="Play" sid="553644799513974" type="Audio">
+                            <param id="0" name="Audio file">Corked</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="192528232400822">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="613341087020340" type="Machine" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="896109251887384" type="Function">
+                            <param id="0" name="Name">&quot;setMachineEffectLifted&quot;</param>
+                            <param id="1" name="Parameter {n}">Machine.UID{###}0</param>
+                        </action>
+                        <action id="0" name="Play" sid="840816931571766" type="Audio">
+                            <param id="0" name="Audio file">Circuit</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="120061193117107">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="671413152894876" type="Machine">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="180087164733078" type="Machine" />
+                                <action id="0" name="Play" sid="843745085976663" type="Audio">
+                                    <param id="0" name="Audio file">Bass-ic Error</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="808841902764314">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="181530877221626" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="649719482637886" type="Machine">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="909715111581897">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="821261729483165" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="107400268059063" type="Machine">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-block sid="201034450869683">
@@ -484,12 +596,12 @@
                     <actions>
                         <action id="-3" name="Create object" sid="820796110886450" type="System">
                             <param id="0" name="Object to create">Machine</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">Function.Param(1)</param>
                             <param id="2" name="X">Touch.X</param>
                             <param id="3" name="Y">Touch.Y</param>
                         </action>
                         <action id="9" name="Set scale" sid="324228853642731" type="Machine">
-                            <param id="0" name="Scale">1 / (7 + ControlButton.scaleDivide)</param>
+                            <param id="0" name="Scale">1 / (13 + ControlButton.scaleDivide)</param>
                         </action>
                         <action id="4" name="Set animation" sid="293428344730468" type="Machine">
                             <param id="0" name="Animation">Function.Param(0)</param>
@@ -501,7 +613,7 @@
                         </action>
                         <action id="-3" name="Create object" sid="570349911963197" type="System">
                             <param id="0" name="Object to create">TextMachine</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">Function.Param(1)</param>
                             <param id="2" name="X">Machine.X</param>
                             <param id="3" name="Y">Machine.Y</param>
                         </action>
@@ -516,6 +628,10 @@
                         <action behavior="Pin" id="0" name="Pin to object" sid="511427538038124" type="TextMachine">
                             <param id="0" name="Pin to">Machine</param>
                             <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="229358095898026" type="Function">
+                            <param id="0" name="Name">&quot;toggleTextMachineGlow&quot;</param>
+                            <param id="1" name="Parameter {n}">Machine.textMachineUID{###}0</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="676603408659597" type="Machine">
                             <param id="0" name="Instance variable">isNewlyCloned</param>
@@ -591,6 +707,130 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="607390891837916" type="TextMachine" />
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="850835711341053">
+            <conditions>
+                <condition id="0" name="On function" sid="396473934031637" type="Function">
+                    <param id="0" name="Name">&quot;toggleTextMachineGlow&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="802900367902186">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="470239472446195" type="TextMachine">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="175778207971600">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="375551746317500" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="437400128964366" type="TextMachine">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="547474955167603" type="TextMachine">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="514237077388311">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="675657066970151" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="222937514255338" type="TextMachine">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="400396971900536" type="TextMachine">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="673091157643172">
+            <conditions>
+                <condition id="0" name="On function" sid="886316309374762" type="Function">
+                    <param id="0" name="Name">&quot;setMachineEffectLifted&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="829033717404522">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="861078708974308" type="Machine">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="946346533295406">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="332057648057378" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="342748964998596" type="Machine">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="945653583799050" type="Machine">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="556909431128710" type="Machine">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="645985651750678" type="Machine">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="778959391267916">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="296212709970694" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="937549509080185" type="Machine">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="290719391128549" type="Machine">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="119927491638346" type="Machine">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="517624441902870" type="Machine">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
