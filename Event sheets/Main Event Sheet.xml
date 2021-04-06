@@ -7,6 +7,7 @@
         <variable comment="actions &lt;= this means a perfect level" constant="0" name="actionsPerfect" sid="808755200895981" static="0" type="number">2</variable>
         <variable comment="Puzzle Solved" constant="0" name="isFinished" sid="785216222294153" static="0" type="number">0</variable>
         <variable comment="Puzzle is playing" constant="0" name="isSimulating" sid="232007018114606" static="0" type="number">0</variable>
+        <variable constant="0" name="currentLevel" sid="548098035864958" static="0" type="number">0</variable>
         <event-block sid="922160269685457">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="210067844277446" type="System" />
@@ -17,6 +18,10 @@
                 </action>
                 <action behavior="DragDrop" id="0" name="Set enabled" sid="762282374233901" type="NumberShape">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="244842889588820" type="System">
+                    <param id="0" name="Variable">actionsPerfect</param>
+                    <param id="1" name="Value">UIStarPerfectNeeded.actionPerfectAmount</param>
                 </action>
             </actions>
         </event-block>

@@ -88,6 +88,7 @@
                     </properties>
                     <instance-variables>
                         <targetNumber>3</targetNumber>
+                        <isSolved>false</isSolved>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -104,7 +105,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SymbolAddition" uid="85">
+                <instance type="SymbolMath" uid="85">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -112,7 +113,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <symbolType>addition</symbolType>
+                        <type>addition</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -319,7 +320,7 @@
                 </instance>
                 <instance type="TextTitle" uid="91">
                     <properties>
-                        <text>The Machine</text>
+                        <text>Level 2 - The Machine</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>
@@ -370,6 +371,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <scaleDivide>1</scaleDivide>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -381,33 +385,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextStatus" uid="93">
-                    <properties>
-                        <text>Level 1 Unsolved</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-21,700,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>84.575996399</x>
-                        <y>7.058000088</y>
-                        <z>0</z>
-                        <width>183</width>
-                        <height>33.451000214</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -476,33 +453,6 @@
                         <height>69</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextStatusPerfect" uid="96">
-                    <properties>
-                        <text>Actions: 0</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>88.303001404</x>
-                        <y>66.36000061</y>
-                        <z>0</z>
-                        <width>111.363998413</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -790,48 +740,90 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextPerfectNeeded" uid="21">
+                <instance type="TextStatusPerfect" uid="12">
                     <properties>
-                        <text>&lt; 2</text>
+                        <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-16</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
+                        <font>Arial,-29,700,0</font>
+                        <color>0,102,204</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Right</hotspot>
+                        <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>241.798995972</x>
-                        <y>66.164001465</y>
+                        <x>85.575996399</x>
+                        <y>43.175998688</y>
                         <z>0</z>
-                        <width>46.011413574</width>
-                        <height>30</height>
+                        <width>111.363876343</width>
+                        <height>59.092178345</height>
                         <depth>0</depth>
-                        <hotspotX>1</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIStar" uid="22">
+                <instance type="TextPerfectNeeded" uid="73">
+                    <properties>
+                        <text>99</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-24,700,0</font>
+                        <color>0,51,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="GlowHorizontal">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>243.098999023</x>
+                        <y>40.152000427</y>
+                        <z>0</z>
+                        <width>50.700973511</width>
+                        <height>35.929916382</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UIStarPerfectNeeded" uid="93">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <actionPerfectAmount>3</actionPerfectAmount>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>257.972991943</x>
-                        <y>66.689002991</y>
+                        <x>289.914001465</x>
+                        <y>40.578998566</y>
                         <z>0</z>
-                        <width>22.077651978</width>
-                        <height>20.494394302</height>
+                        <width>74.114433289</width>
+                        <height>68.799461365</height>
                         <depth>0</depth>
                         <hotspotX>0.498007983</hotspotX>
                         <hotspotY>0.527897</hotspotY>
@@ -911,33 +903,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextResultsTitle" uid="102">
-                    <properties>
-                        <text>RESULT</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-64,700,0</font>
-                        <color>255,255,153</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>207</x>
-                        <y>120</y>
-                        <z>0</z>
-                        <width>294</width>
-                        <height>95</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="ResultImage" uid="103">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -948,8 +913,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>254</y>
+                        <x>201.817993164</x>
+                        <y>244.908996582</y>
                         <z>0</z>
                         <width>167.454956055</width>
                         <height>167.454971313</height>
@@ -998,37 +963,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>160</x>
-                        <y>389</y>
+                        <y>381.726989746</y>
                         <z>0</z>
                         <width>228.859069824</width>
                         <height>58.359062195</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextResultActions" uid="106">
-                    <properties>
-                        <text>Actions: 0</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
-                        <color>255,255,153</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>190</x>
-                        <y>349</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>42</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1051,11 +989,38 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199</x>
-                        <y>172</y>
+                        <x>209.908004761</x>
+                        <y>150.182006836</y>
                         <z>0</z>
                         <width>274</width>
                         <height>88</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextResultActions" uid="21">
+                    <properties>
+                        <text>Actions: 0</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-48,700,0</font>
+                        <color>255,255,153</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>198.636001587</x>
+                        <y>106.726997375</y>
+                        <z>0</z>
+                        <width>284.545257568</width>
+                        <height>82.909393311</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

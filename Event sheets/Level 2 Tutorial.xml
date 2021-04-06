@@ -7,12 +7,7 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="163540365917076" type="System" />
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="359542858726459" type="System">
-                    <param id="0" name="Variable">actionsPerfect</param>
-                    <param id="1" name="Value">3</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <event-block sid="882958114628300">
                     <conditions>

@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Puzzle Resolution</name>
     <events>
+        <variable constant="0" name="numberOfLines" sid="618807276270947" static="0" type="number">0</variable>
         <event-block sid="632471206571661">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="962231816019961" type="System" />
@@ -11,9 +12,6 @@
                 <action id="-4" name="Set layer visible" sid="984791997704157" type="System">
                     <param id="0" name="Layer">&quot;Results&quot;</param>
                     <param id="1" name="Visibility">0</param>
-                </action>
-                <action id="0" name="Set text" sid="158153125533020" type="TextStatus">
-                    <param id="0" name="Text">LayoutName &amp; &quot; Unsolved&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -30,20 +28,26 @@
                         <action id="-15" name="Set visible" sid="240031468133751" type="ResultImage">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="146659540589038" type="TextResultsTitle">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="505806862029216" type="TextResult">
+                        <action id="-15" name="Set visible" sid="223459155062107" type="TextResultActions">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="201796363801808" type="TextResultPerfectTip">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="223459155062107" type="TextResultActions">
+                        <action id="-15" name="Set visible" sid="976199665498800" type="TextResult">
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="937772652182253" type="ButtonNextLevel">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="161257284988012">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="951774380360761" type="System">
+                            <param id="0" name="Variable">numberOfLines</param>
+                            <param id="1" name="Value">NumberTarget.Count</param>
                         </action>
                     </actions>
                 </event-block>
@@ -55,10 +59,10 @@
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="228498410940930" type="TextStatusPerfect">
-                    <param id="0" name="Text">&quot;Actions: &quot; &amp; actions</param>
+                    <param id="0" name="Text">actions</param>
                 </action>
                 <action id="0" name="Set text" sid="393281597165177" type="TextPerfectNeeded">
-                    <param id="0" name="Text">&quot;&lt; &quot; &amp; actionsPerfect + 1 &amp; &quot; for&quot;</param>
+                    <param id="0" name="Text">actionsPerfect</param>
                 </action>
             </actions>
             <sub-events>
@@ -85,6 +89,9 @@
                         <condition id="0" name="On collision with another object" sid="613098947477555" type="NumberTarget">
                             <param id="0" name="Object">NumberShape</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="539495319237150" type="NumberTarget">
+                            <param id="0" name="Instance variable">isSolved</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -97,22 +104,88 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="726299880069897" type="System">
-                                    <param id="0" name="Variable">isSimulating</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="737252954492567" type="System">
-                                    <param id="0" name="Variable">isFinished</param>
+                                <action id="-11" name="Subtract from" sid="248021012973691" type="System">
+                                    <param id="0" name="Variable">numberOfLines</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Set text" sid="546174430089172" type="TextStatus">
-                                    <param id="0" name="Text">LayoutName &amp;  &quot; Solved!&quot;</param>
+                                <action id="-13" name="Set boolean" sid="829613272646029" type="NumberTarget">
+                                    <param id="0" name="Instance variable">isSolved</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-4" name="Set layer visible" sid="734669984200930" type="System">
-                                    <param id="0" name="Layer">&quot;Results&quot;</param>
-                                    <param id="1" name="Visibility">1</param>
+                                <action id="0" name="Play" sid="468848164638259" type="Audio">
+                                    <param id="0" name="Audio file">Nursery</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="324089810758156">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="568243273277075" type="System">
+                                            <param id="0" name="Variable">numberOfLines</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="726299880069897" type="System">
+                                            <param id="0" name="Variable">isSimulating</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="737252954492567" type="System">
+                                            <param id="0" name="Variable">isFinished</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="2" name="Set at X" sid="401260909153010" type="progress">
+                                            <param id="0" name="X">currentLevel</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="461567639333152" type="ControlButton">
+                                            <param id="0" name="Animation">&quot;Done&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-4" name="Set layer visible" sid="734669984200930" type="System">
+                                            <param id="0" name="Layer">&quot;Results&quot;</param>
+                                            <param id="1" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="737476389163703">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="493624483706774" type="System">
+                                                    <param id="0" name="Variable">actions</param>
+                                                    <param id="1" name="Comparison">4</param>
+                                                    <param id="2" name="Value">actionsPerfect</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="2" name="Set at X" sid="604336877718897" type="progress">
+                                                    <param id="0" name="X">currentLevel - 1</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="201517499256689">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="964925194227313" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Play" sid="454170385215281" type="Audio">
+                                                    <param id="0" name="Audio file">Good Morning</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">-5</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="2" name="Set at X" sid="321251669689514" type="progress">
+                                                    <param id="0" name="X">currentLevel - 1</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -148,29 +221,20 @@
                         <action id="-16" name="Wait" sid="856892291104185" type="System">
                             <param id="0" name="Seconds">0.33</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="810323150454597" type="TextResultsTitle">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="709715468332329" type="System">
-                            <param id="0" name="Seconds">0.33</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="397363380189836" type="TextResultActions">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="781592032395031" type="System">
-                            <param id="0" name="Seconds">0.66</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="174558664785506" type="TextResultPerfectTip">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="966645557301244" type="ButtonNextLevel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="339673103198748" type="TextResult">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Set text" sid="720024124250938" type="TextResultActions">
                             <param id="0" name="Text">&quot;Actions: &quot; &amp; actions</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="709715468332329" type="System">
+                            <param id="0" name="Seconds">0.33</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="174558664785506" type="TextResultPerfectTip">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="339673103198748" type="TextResult">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -212,6 +276,17 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="430427718703440">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="781592032395031" type="System">
+                                    <param id="0" name="Seconds">0.33</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="966645557301244" type="ButtonNextLevel">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
@@ -221,8 +296,13 @@
                 <condition id="17" name="On tap object" sid="783197671946674" type="Touch">
                     <param id="0" name="Object">ButtonNextLevel</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="795120106750037" type="ButtonNextLevel" />
             </conditions>
             <actions>
+                <action id="-10" name="Add to" sid="367003704513283" type="System">
+                    <param id="0" name="Variable">currentLevel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
                 <action id="-43" name="Go to next/previous layout" sid="115879494131323" type="System">
                     <param id="0" name="Which">0</param>
                 </action>

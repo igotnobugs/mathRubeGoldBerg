@@ -7,12 +7,7 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="609669910158676" type="System" />
             </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="861140011546264" type="System">
-                    <param id="0" name="Variable">actionsPerfect</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
+            <actions />
             <sub-events>
                 <event-block sid="160460561303192">
                     <conditions>
@@ -110,7 +105,7 @@
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Set text" sid="299858297152117" type="TextInstructions">
-                                            <param id="0" name="Text">&quot;Tap and Hold &quot; &amp; newline &amp; &quot;any number to clone it&quot;</param>
+                                            <param id="0" name="Text">&quot;Tap and Hold &quot; &amp; newline &amp; &quot;any number below to clone it&quot;</param>
                                         </action>
                                         <action behavior="FadeIn" id="1" name="Start fade" sid="376976256112497" type="TextInstructions" />
                                         <action id="-41" name="Wait for signal" sid="846828013054687" type="System">

@@ -11,7 +11,9 @@
     <saved-with-version>27500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -29,6 +31,10 @@
         <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
+        <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
+        <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
+        <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
     </used-effects>
     <configurations>
@@ -58,27 +64,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-folder name="Symbols">
-            <object-type name="SymbolAddition" sid="611968339685378">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="578533327795081" speed="5">
-                        <frame duration="1" hotspotX="0.539589" hotspotY="0.491124" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\add_math_symbols.png">
-                            <collision-poly>
-                                <point x="0.293255" y="0.292899" />
-                                <point x="0.539589" y="0.00591716" />
-                                <point x="0.780059" y="0.298817" />
-                                <point x="0.994135" y="0.491124" />
-                                <point x="0.782991" y="0.686391" />
-                                <point x="0.539589" y="0.994083" />
-                                <point x="0.293255" y="0.689349" />
-                                <point x="0.0058651" y="0.491124" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-        </object-folder>
+        <object-folder name="Symbols" />
         <object-folder name="Buttons">
             <object-type name="ButtonNextLayout" sid="620073305832601">
                 <plugin id="Button" />
@@ -94,11 +80,41 @@
             </object-type>
             <object-type name="ControlButton" sid="683958559256350">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="scaleDivide" sid="694495292233071" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="420310781619530" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="1" loop="0" name="Restart" pingpong="0" repeatcount="1" repeatto="0" sid="280477164014380" speed="5">
+                    <animation framecount="4" loop="1" name="Restart" pingpong="0" repeatcount="1" repeatto="0" sid="280477164014380" speed="1.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Done" pingpong="0" repeatcount="1" repeatto="0" sid="962167392546793" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -130,7 +146,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="level" sid="282446108969386" type="number" />
-                    <instance-variable comment="-1 - locked, 0 - unsolved, 1 - solved, " name="state" sid="780891073797135" type="number" />
+                    <instance-variable comment="-1 - locked, 0 - unsolved, 1 - solved, 2 perfect" name="state" sid="780891073797135" type="number" />
                 </instance-variables>
                 <effects>
                     <effect-type name="SetColor">
@@ -187,6 +203,14 @@
                         <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="GlowVertical">
+                        <effect id="glowvertical" />
+                    </effect-type>
+                    <effect-type name="GlowHorizontal">
+                        <effect id="glowhorizontal" />
+                    </effect-type>
+                </effects>
             </object-type>
             <object-type name="TextShape" sid="113205862111542">
                 <plugin id="Text" />
@@ -244,13 +268,41 @@
                     <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="BlurVertical">
+                    <effect id="blurvertical" />
+                </effect-type>
+                <effect-type name="BlurHorizontal">
+                    <effect id="blurhorizontal" />
+                </effect-type>
+            </effects>
             <container>
                 <type>NumberShape</type>
                 <type>TextShape</type>
             </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="105973008934829" speed="5">
+                <animation framecount="1" loop="0" name="positive" pingpong="0" repeatcount="1" repeatto="0" sid="105973008934829" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504532" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Circle.png">
+                        <collision-poly>
+                            <point x="0.147147" y="0.148036" />
+                            <point x="0.5" y="0.00151057" />
+                            <point x="0.852853" y="0.148036" />
+                            <point x="0.998498" y="0.5" />
+                            <point x="0.852853" y="0.851964" />
+                            <point x="0.5" y="0.998489" />
+                            <point x="0.147147" y="0.851964" />
+                            <point x="0.0015015" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="negative" pingpong="0" repeatcount="1" repeatto="0" sid="354189714190907" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504532">
                         <collision-poly>
                             <point x="0.147147" y="0.148036" />
                             <point x="0.5" y="0.00151057" />
@@ -300,6 +352,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="targetNumber" sid="512058793591668" type="number" />
+                <instance-variable name="isSolved" sid="997209283721367" type="boolean" />
             </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="634094059977643" speed="5">
@@ -401,7 +454,7 @@
                 </animation>
                 <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="610409258199748" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 1 (Subrtaction).png">
-                        <image-point name="TextNumber" x="0.453307" y="0.186364" />
+                        <image-point name="TextNumber" x="0.486381" y="0.186364" />
                         <collision-poly>
                             <point x="0" y="0.378749" />
                             <point x="0" y="0" />
@@ -414,7 +467,7 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="multiplication" pingpong="0" repeatcount="1" repeatto="0" sid="193154203987214" speed="5">
-                    <frame duration="1" hotspotX="0.447537" hotspotY="0.523734" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 2 (multiplication).png">
+                    <frame duration="1" hotspotX="0.498929" hotspotY="0.22943" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 2 (multiplication).png">
                         <collision-poly>
                             <point x="0.00642398" y="0.384494" />
                             <point x="0.445396" y="0.00632911" />
@@ -427,7 +480,7 @@
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="173224446937826" speed="5">
-                    <frame duration="1" hotspotX="0.394231" hotspotY="0.514516" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 3 (Division).png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.214516" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\Assets_\Machine 3 (Division).png">
                         <collision-poly>
                             <point x="0.0730769" y="0.435484" />
                             <point x="0.392308" y="0.0016129" />
@@ -455,7 +508,6 @@
                 <type>ResultImage</type>
                 <type>TextResultPerfectTip</type>
                 <type>TextResultActions</type>
-                <type>TextResultsTitle</type>
                 <type>TextResult</type>
                 <type>ButtonNextLevel</type>
             </container>
@@ -475,7 +527,6 @@
                 <type>ResultImage</type>
                 <type>TextResultPerfectTip</type>
                 <type>TextResultActions</type>
-                <type>TextResultsTitle</type>
                 <type>TextResult</type>
                 <type>ButtonNextLevel</type>
             </container>
@@ -487,16 +538,6 @@
         </object-type>
         <object-type name="TextResultsTitle" sid="290647723578363">
             <plugin id="Text" />
-            <container>
-                <type>Results</type>
-                <type>Shadow</type>
-                <type>ResultImage</type>
-                <type>TextResultPerfectTip</type>
-                <type>TextResultActions</type>
-                <type>TextResultsTitle</type>
-                <type>TextResult</type>
-                <type>ButtonNextLevel</type>
-            </container>
         </object-type>
         <object-type name="ResultImage" sid="759481806096430">
             <plugin id="Sprite" />
@@ -506,7 +547,6 @@
                 <type>ResultImage</type>
                 <type>TextResultPerfectTip</type>
                 <type>TextResultActions</type>
-                <type>TextResultsTitle</type>
                 <type>TextResult</type>
                 <type>ButtonNextLevel</type>
             </container>
@@ -533,7 +573,6 @@
                 <type>ResultImage</type>
                 <type>TextResultPerfectTip</type>
                 <type>TextResultActions</type>
-                <type>TextResultsTitle</type>
                 <type>TextResult</type>
                 <type>ButtonNextLevel</type>
             </container>
@@ -551,7 +590,6 @@
                 <type>ResultImage</type>
                 <type>TextResultPerfectTip</type>
                 <type>TextResultActions</type>
-                <type>TextResultsTitle</type>
                 <type>TextResult</type>
                 <type>ButtonNextLevel</type>
             </container>
@@ -564,7 +602,6 @@
                 <type>ResultImage</type>
                 <type>TextResultPerfectTip</type>
                 <type>TextResultActions</type>
-                <type>TextResultsTitle</type>
                 <type>TextResult</type>
                 <type>ButtonNextLevel</type>
             </container>
@@ -577,13 +614,15 @@
                 <type>ResultImage</type>
                 <type>TextResultPerfectTip</type>
                 <type>TextResultActions</type>
-                <type>TextResultsTitle</type>
                 <type>TextResult</type>
                 <type>ButtonNextLevel</type>
             </container>
         </object-type>
-        <object-type name="UIStar" sid="219978118856692">
+        <object-type name="UIStarPerfectNeeded" sid="219978118856692">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="actionPerfectAmount" sid="154472957551361" type="number" />
+            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217843952271500" speed="5">
                     <frame duration="1" hotspotX="0.498008" hotspotY="0.527897" />
@@ -592,23 +631,111 @@
         </object-type>
         <object-type name="TextPerfectNeeded" sid="199090881476147">
             <plugin id="Text" />
+            <effects>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+            </effects>
+        </object-type>
+        <object-type name="SymbolMath" sid="611968339685378">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="type" sid="950827614070137" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="578533327795081" speed="5">
+                    <frame duration="1" hotspotX="0.539589" hotspotY="0.491124" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\add_math_symbols.png">
+                        <collision-poly>
+                            <point x="0.293255" y="0.292899" />
+                            <point x="0.539589" y="0.00591716" />
+                            <point x="0.780059" y="0.298817" />
+                            <point x="0.994135" y="0.491124" />
+                            <point x="0.782991" y="0.686391" />
+                            <point x="0.539589" y="0.994083" />
+                            <point x="0.293255" y="0.689349" />
+                            <point x="0.0058651" y="0.491124" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="339833593477880" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502577" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\subtract_math_symbols.png">
+                        <collision-poly>
+                            <point x="0.431034" y="0.404639" />
+                            <point x="0.568965" y="0.404639" />
+                            <point x="0.951149" y="0.5" />
+                            <point x="0.729885" y="0.742268" />
+                            <point x="0.270115" y="0.742268" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="multiplication" pingpong="0" repeatcount="1" repeatto="0" sid="790713351679724" speed="5">
+                    <frame duration="1" hotspotX="0.551515" hotspotY="0.489297" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\multiply_math_symbols.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.088685" />
+                            <point x="0.551515" y="0.0672783" />
+                            <point x="0.842424" y="0.214067" />
+                            <point x="0.848485" y="0.489297" />
+                            <point x="0.930303" y="0.853211" />
+                            <point x="0.551515" y="0.816514" />
+                            <point x="0.2" y="0.825688" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="224727166835765" speed="5">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.51312" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\divide_math_symbols.png">
+                        <collision-poly>
+                            <point x="0.255072" y="0.306122" />
+                            <point x="0.507246" y="0.0408163" />
+                            <point x="0.75942" y="0.306122" />
+                            <point x="0.994203" y="0.510204" />
+                            <point x="0.727536" y="0.685131" />
+                            <point x="0.507246" y="0.973761" />
+                            <point x="0.286957" y="0.685131" />
+                            <point x="0.0057971" y="0.510204" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LevelStats" sid="212739021152141">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="111345988572499" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Dictionary" sid="748457670784618">
+            <plugin id="Dictionary" />
+        </object-type>
+        <object-type name="MachineExplosion" sid="567355126393940">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="Audio" sid="404040250988219">
+            <plugin id="Audio" />
         </object-type>
     </object-folder>
-    <families>
-        <family name="Symbols" plugin-id="Sprite" sid="661415060434851">
-            <members>
-                <member>SymbolAddition</member>
-            </members>
-            <instance-variables>
-                <instance-variable name="symbolType" sid="756090174675456" type="string" />
-            </instance-variables>
-        </family>
-    </families>
+    <families />
     <layout-folder>
         <layout>Level Select.xml</layout>
         <layout>Level 1.xml</layout>
         <layout>Level 2.xml</layout>
         <layout>Level 3.xml</layout>
+        <layout>Level 4.xml</layout>
+        <layout>Level 5.xml</layout>
+        <layout>Level 6.xml</layout>
+        <layout>Level 7.xml</layout>
+        <layout>Level 8.xml</layout>
+        <layout>Level 9.xml</layout>
+        <layout>Level 10.xml</layout>
+        <layout>Level 11.xml</layout>
+        <layout>Level 12.xml</layout>
+        <layout>End Level.xml</layout>
         <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>
@@ -630,9 +757,33 @@
             </properties>
         </global-instance>
         <global-instance type="Function" uid="44" />
+        <global-instance type="Audio" uid="277">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
-    <music-folder />
+    <sounds-folder>
+        <file name="Good Morning.ogg" />
+        <file name="Nursery.ogg" />
+        <file name="Power.ogg" />
+        <file name="Pong.ogg" />
+        <file name="Bass-ic Error.ogg" />
+        <file name="Popped.ogg" />
+        <file name="Bing Bong.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="ether-vox-by-kevin-macleod-from-filmmusic-io.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

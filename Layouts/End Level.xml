@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Level Select</name>
-    <sid>759223403952208</sid>
+    <name>End Level</name>
+    <sid>971145960696572</sid>
     <event-sheet>Level Select</event-sheet>
     <size>
         <width>400</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="126993596714914">
+        <layer name="Layer 0" sid="305766104033590">
             <initially-visible>1</initially-visible>
             <background-color>255,255,204</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ZoneDrop" uid="25">
+                <instance type="ZoneDrop" uid="258">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -54,7 +54,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="194">
+                <instance type="LevelSelectButton" uid="259">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -77,8 +77,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>354</x>
-                        <y>308</y>
+                        <x>157</x>
+                        <y>405</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -89,7 +89,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="195">
+                <instance type="LevelSelectButton" uid="260">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -112,8 +112,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>57</x>
-                        <y>393</y>
+                        <x>247</x>
+                        <y>416</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -124,7 +124,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="196">
+                <instance type="LevelSelectButton" uid="261">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -147,8 +147,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>136</x>
-                        <y>393</y>
+                        <x>323</x>
+                        <y>408</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -159,37 +159,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextTitle" uid="315">
-                    <properties>
-                        <text>Ether Vox - Kevic MacLeod</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Narrow,-13,400,1</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Bottom</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>10</x>
-                        <y>0</y>
-                        <z>0</z>
-                        <width>390</width>
-                        <height>23</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Layer 1" sid="952323074990070">
+        <layer name="Layer 1" sid="185385791293906">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -205,7 +178,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="LevelSelectButton" uid="53">
+                <instance type="LevelSelectButton" uid="262">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -228,8 +201,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>45</x>
-                        <y>221</y>
+                        <x>66</x>
+                        <y>227</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -240,7 +213,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NormalText" uid="55">
+                <instance type="NormalText" uid="263">
                     <properties>
                         <text>LEVEL SELECT</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -267,7 +240,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="56">
+                <instance type="LevelSelectButton" uid="264">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -290,8 +263,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>124</x>
-                        <y>225</y>
+                        <x>147</x>
+                        <y>239</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -302,7 +275,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="59">
+                <instance type="LevelSelectButton" uid="265">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -325,8 +298,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>203</x>
-                        <y>224</y>
+                        <x>233</x>
+                        <y>238</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -337,7 +310,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="61">
+                <instance type="LevelSelectButton" uid="266">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -360,8 +333,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>274</x>
-                        <y>221</y>
+                        <x>320</x>
+                        <y>238</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -372,7 +345,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="62">
+                <instance type="LevelSelectButton" uid="267">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -395,8 +368,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>358</x>
-                        <y>216</y>
+                        <x>75</x>
+                        <y>317</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -407,7 +380,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NormalText" uid="63">
+                <instance type="NormalText" uid="268">
                     <properties>
                         <text>Math RGB</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -422,8 +395,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>197</x>
-                        <y>52</y>
+                        <x>191</x>
+                        <y>34</y>
                         <z>0</z>
                         <width>302</width>
                         <height>59</height>
@@ -434,7 +407,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="64">
+                <instance type="LevelSelectButton" uid="269">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -457,8 +430,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>49</x>
-                        <y>312</y>
+                        <x>158</x>
+                        <y>329</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -469,7 +442,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="65">
+                <instance type="LevelSelectButton" uid="270">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -492,8 +465,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>129</x>
-                        <y>305</y>
+                        <x>236</x>
+                        <y>330</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -504,7 +477,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="66">
+                <instance type="LevelSelectButton" uid="271">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -527,8 +500,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>202</x>
-                        <y>305</y>
+                        <x>320</x>
+                        <y>328</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -539,7 +512,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectButton" uid="67">
+                <instance type="LevelSelectButton" uid="272">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -562,8 +535,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>274</x>
-                        <y>316</y>
+                        <x>61</x>
+                        <y>403</y>
                         <z>0</z>
                         <width>54.990909576</width>
                         <height>54.990909576</height>
@@ -574,7 +547,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ControlButton" uid="68">
+                <instance type="ControlButton" uid="273">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -587,8 +560,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199</x>
-                        <y>148</y>
+                        <x>195</x>
+                        <y>155</y>
                         <z>0</z>
                         <width>59.991664886</width>
                         <height>59.991664886</height>
@@ -599,7 +572,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberTarget" uid="69">
+                <instance type="NumberTarget" uid="274">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -625,7 +598,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextTitle" uid="70">
+                <instance type="TextTitle" uid="275">
                     <properties>
                         <text>Choose your level. Press the Play button to automatically choose the next level.</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -643,7 +616,7 @@
                         <x>3</x>
                         <y>512</y>
                         <z>0</z>
-                        <width>406</width>
+                        <width>390</width>
                         <height>23</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -656,15 +629,6 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances>
-        <instance type="progress" uid="60">
-            <properties>
-                <width>12</width>
-                <height>1</height>
-                <depth>1</depth>
-            </properties>
-        </instance>
-        <instance type="Dictionary" uid="126" />
-    </nonworld-instances>
+    <nonworld-instances />
     <effects />
 </c2layout>

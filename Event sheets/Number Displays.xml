@@ -52,6 +52,12 @@
                             <param id="0" name="Seconds">0.3</param>
                         </action>
                         <action id="-9" name="Destroy" sid="931039308132648" type="ParticleHeld" />
+                        <action id="0" name="Play" sid="570942962979270" type="Audio">
+                            <param id="0" name="Audio file">Popped</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="532273021104807">
@@ -64,6 +70,9 @@
                                     <param id="1" name="Layer">0</param>
                                     <param id="2" name="X">Touch.X</param>
                                     <param id="3" name="Y">Touch.Y</param>
+                                </action>
+                                <action id="9" name="Set scale" sid="716198070439633" type="NumberShape">
+                                    <param id="0" name="Scale">1 / (10 + ControlButton.scaleDivide)</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="219074167714074" type="NumberShape">
                                     <param id="0" name="Instance variable">number</param>
