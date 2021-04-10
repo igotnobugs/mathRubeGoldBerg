@@ -21,7 +21,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="244842889588820" type="System">
                     <param id="0" name="Variable">actionsPerfect</param>
-                    <param id="1" name="Value">UIStarPerfectNeeded.actionPerfectAmount</param>
+                    <param id="1" name="Value">ControlButton.actionPerfectAmount</param>
                 </action>
                 <action id="-9" name="Set value" sid="998238375769214" type="System">
                     <param id="0" name="Variable">isSimulating</param>

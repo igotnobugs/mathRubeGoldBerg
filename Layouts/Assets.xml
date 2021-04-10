@@ -448,6 +448,8 @@
                     </properties>
                     <instance-variables>
                         <scaleDivide>1</scaleDivide>
+                        <actionPerfectAmount>0</actionPerfectAmount>
+                        <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

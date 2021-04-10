@@ -87,6 +87,18 @@
         </event-block>
         <event-group description="" sid="946183932425305" title="Puzzle Resolution">
             <sub-events>
+                <variable constant="0" name="currentSumOfNumbers" sid="646131406947568" static="1" type="number">0</variable>
+                <event-block sid="787975038312621">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="451339748387825" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="660020892124899" type="System">
+                            <param id="0" name="Variable">currentSumOfNumbers</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="795727564643052">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="613098947477555" type="NumberTarget">
@@ -103,8 +115,166 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="941648096602553">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="829136658463326" type="NumberTarget">
+                                    <param id="0" name="Instance variable">anyNumber</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="391972097657655" type="System">
+                                    <param id="0" name="Variable">numberOfLines</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="320392995256958" type="NumberTarget">
+                                    <param id="0" name="Instance variable">isSolved</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="614268375767503" type="NumberShape">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="391107091075665">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="106509009667972" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="205533576635116" type="NumberTarget">
+                                    <param id="0" name="Instance variable">letGameDecide</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="251392893032559">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="585435399126353" type="System">
+                                            <param id="0" name="Variable">numberOfLines</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="439086935257472">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="831671227821660" type="NumberTarget">
+                                                    <param id="0" name="Instance variable">onTheOtherSide</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="599485373029413">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="977924192268187" type="System">
+                                                            <param id="0" name="First value">ControlButton.sumOfRedLines</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">currentSumOfNumbers - NumberShape.number</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-11" name="Subtract from" sid="951796159617041" type="System">
+                                                            <param id="0" name="Variable">currentSumOfNumbers</param>
+                                                            <param id="1" name="Value">NumberShape.number</param>
+                                                        </action>
+                                                        <action id="-11" name="Subtract from" sid="893489882938716" type="System">
+                                                            <param id="0" name="Variable">numberOfLines</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="568389229671181" type="NumberTarget">
+                                                            <param id="0" name="Instance variable">isSolved</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action behavior="Physics" id="27" name="Set enabled" sid="266579573736310" type="NumberShape">
+                                                            <param id="0" name="Mode">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="396896777740499">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="476688844962995" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="996031927490152">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="276748799382185" type="System">
+                                                            <param id="0" name="First value">ControlButton.sumOfRedLines</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">currentSumOfNumbers + NumberShape.number</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-10" name="Add to" sid="276621072326878" type="System">
+                                                            <param id="0" name="Variable">currentSumOfNumbers</param>
+                                                            <param id="1" name="Value">NumberShape.number</param>
+                                                        </action>
+                                                        <action id="-11" name="Subtract from" sid="762601113608649" type="System">
+                                                            <param id="0" name="Variable">numberOfLines</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="942979208071330" type="NumberTarget">
+                                                            <param id="0" name="Instance variable">isSolved</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action behavior="Physics" id="27" name="Set enabled" sid="393393677911063" type="NumberShape">
+                                                            <param id="0" name="Mode">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="299926644625639">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="330727286057201" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="130075070353384" type="System">
+                                            <param id="0" name="Variable">numberOfLines</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="465461292259752" type="NumberTarget">
+                                            <param id="0" name="Instance variable">isSolved</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Physics" id="27" name="Set enabled" sid="309445066974923" type="NumberShape">
+                                            <param id="0" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="284889121101563">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="773765092003450" type="NumberTarget">
+                                                    <param id="0" name="Instance variable">onTheOtherSide</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="353409798539763" type="System">
+                                                    <param id="0" name="Variable">currentSumOfNumbers</param>
+                                                    <param id="1" name="Value">NumberShape.number</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="755303635352863">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="267761349953778" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Add to" sid="179844372976700" type="System">
+                                                    <param id="0" name="Variable">currentSumOfNumbers</param>
+                                                    <param id="1" name="Value">NumberShape.number</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="240422763294425">
                             <conditions>
+                                <condition id="-22" name="Else" sid="885953069732446" type="System" />
                                 <condition id="-7" name="Compare instance variable" sid="104350413388169" type="NumberTarget">
                                     <param id="0" name="Instance variable">targetNumber</param>
                                     <param id="1" name="Comparison">0</param>
@@ -120,92 +290,142 @@
                                     <param id="0" name="Instance variable">isSolved</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Play" sid="468848164638259" type="Audio">
+                                <action behavior="Physics" id="27" name="Set enabled" sid="343319234814088" type="NumberShape">
+                                    <param id="0" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="324089810758156">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="568243273277075" type="System">
+                                    <param id="0" name="Variable">numberOfLines</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="579621922315157" type="System">
+                                    <param id="0" name="Variable">currentSumOfNumbers</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ControlButton.sumOfRedLines</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="136453393628191" type="Audio">
                                     <param id="0" name="Audio file">Nursery</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
+                                <action id="-9" name="Set value" sid="726299880069897" type="System">
+                                    <param id="0" name="Variable">isSimulating</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="737252954492567" type="System">
+                                    <param id="0" name="Variable">isFinished</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="461567639333152" type="ControlButton">
+                                    <param id="0" name="Animation">&quot;Done&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-4" name="Set layer visible" sid="734669984200930" type="System">
+                                    <param id="0" name="Layer">&quot;Results&quot;</param>
+                                    <param id="1" name="Visibility">1</param>
+                                </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="324089810758156">
+                                <event-block sid="737476389163703">
                                     <conditions>
-                                        <condition id="-14" name="Compare variable" sid="568243273277075" type="System">
-                                            <param id="0" name="Variable">numberOfLines</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
+                                        <condition id="-14" name="Compare variable" sid="493624483706774" type="System">
+                                            <param id="0" name="Variable">actions</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">actionsPerfect</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="726299880069897" type="System">
-                                            <param id="0" name="Variable">isSimulating</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                        <action id="-9" name="Set value" sid="737252954492567" type="System">
-                                            <param id="0" name="Variable">isFinished</param>
+                                        <action id="2" name="Set at X" sid="604336877718897" type="progress">
+                                            <param id="0" name="X">currentLevel - 1</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="4" name="Set animation" sid="461567639333152" type="ControlButton">
-                                            <param id="0" name="Animation">&quot;Done&quot;</param>
-                                            <param id="1" name="From">1</param>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="201517499256689">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="964925194227313" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Set at X" sid="321251669689514" type="progress">
+                                            <param id="0" name="X">currentLevel - 1</param>
+                                            <param id="1" name="Value">2</param>
                                         </action>
-                                        <action id="-4" name="Set layer visible" sid="734669984200930" type="System">
-                                            <param id="0" name="Layer">&quot;Results&quot;</param>
-                                            <param id="1" name="Visibility">1</param>
+                                        <action id="0" name="Play" sid="454170385215281" type="Audio">
+                                            <param id="0" name="Audio file">Good Morning</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-5</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="737476389163703">
-                                            <conditions>
-                                                <condition id="-14" name="Compare variable" sid="493624483706774" type="System">
-                                                    <param id="0" name="Variable">actions</param>
-                                                    <param id="1" name="Comparison">4</param>
-                                                    <param id="2" name="Value">actionsPerfect</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="2" name="Set at X" sid="604336877718897" type="progress">
-                                                    <param id="0" name="X">currentLevel - 1</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="201517499256689">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="964925194227313" type="System" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="2" name="Set at X" sid="321251669689514" type="progress">
-                                                    <param id="0" name="X">currentLevel - 1</param>
-                                                    <param id="1" name="Value">2</param>
-                                                </action>
-                                                <action id="0" name="Play" sid="454170385215281" type="Audio">
-                                                    <param id="0" name="Audio file">Good Morning</param>
-                                                    <param id="2" name="Loop">0</param>
-                                                    <param id="3" name="Volume">-5</param>
-                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="721609070517757">
-                                            <conditions />
-                                            <actions>
-                                                <action id="2" name="Set at X" sid="401260909153010" type="progress">
-                                                    <param id="0" name="X">currentLevel</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action id="-36" name="Save" sid="853775170224313" type="System">
-                                                    <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
-                                                </action>
-                                                <action id="-10" name="Add to" sid="367003704513283" type="System">
-                                                    <param id="0" name="Variable">currentLevel</param>
-                                                    <param id="1" name="Value">1</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
+                                </event-block>
+                                <comment>When levels are increased in an existing playthrough</comment>
+                                <event-block sid="859024474979597">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="336024014465390" type="System">
+                                            <param id="0" name="First value">numberOfLevels</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">progress.Width</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="5" name="Push" sid="967517394546498" type="progress">
+                                            <param id="0" name="Where">0</param>
+                                            <param id="1" name="Value">-1</param>
+                                            <param id="2" name="Axis">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="129333070626683">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="106523801225820" type="System">
+                                            <param id="0" name="First value">progress.At(currentLevel)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="2" name="Set at X" sid="401260909153010" type="progress">
+                                            <param id="0" name="X">currentLevel</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="721609070517757">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-36" name="Save" sid="853775170224313" type="System">
+                                            <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="367003704513283" type="System">
+                                            <param id="0" name="Variable">currentLevel</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="613563087987329">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="572194011197036" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="371447368316958" type="NumberTarget">
+                                    <param id="0" name="Instance variable">isSolved</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="959063787629026" type="Audio">
+                                    <param id="0" name="Audio file">Pong</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -343,6 +563,110 @@
                     <param id="0" name="Opacity">100</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="710268238964301">
+            <conditions>
+                <condition id="0" name="On function" sid="560979024770076" type="Function">
+                    <param id="0" name="Name">&quot;checkIsSolved&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="318505536388144">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="371742802023197" type="System">
+                            <param id="0" name="Variable">numberOfLines</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="420871519829417" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="773464289245917" type="System">
+                            <param id="0" name="Variable">isFinished</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="231263415077399" type="ControlButton">
+                            <param id="0" name="Animation">&quot;Done&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="994007697004369" type="System">
+                            <param id="0" name="Layer">&quot;Results&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="534722865002179">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="399147697136714" type="System">
+                                    <param id="0" name="Variable">actions</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">actionsPerfect</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="225132273038320" type="progress">
+                                    <param id="0" name="X">currentLevel - 1</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="742751728689770">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="459627029706591" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Set at X" sid="672666947109370" type="progress">
+                                    <param id="0" name="X">currentLevel - 1</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="0" name="Play" sid="492103353809273" type="Audio">
+                                    <param id="0" name="Audio file">Good Morning</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-5</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>When levels are increased in an existing playthrough</comment>
+                        <event-block sid="569874997015624">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="597471703407810" type="System">
+                                    <param id="0" name="First value">numberOfLevels</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">progress.Width</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="874187784586004" type="progress">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">-1</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="738572314805304">
+                            <conditions />
+                            <actions>
+                                <action id="2" name="Set at X" sid="289158820755545" type="progress">
+                                    <param id="0" name="X">currentLevel</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-36" name="Save" sid="870772359734871" type="System">
+                                    <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="785303164427136" type="System">
+                                    <param id="0" name="Variable">currentLevel</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

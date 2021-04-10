@@ -153,7 +153,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <letGameDecide>false</letGameDecide>
+                        <anyNumber>false</anyNumber>
                         <targetNumber>8</targetNumber>
+                        <onTheOtherSide>false</onTheOtherSide>
                         <isSolved>false</isSolved>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -307,6 +310,8 @@
                     </properties>
                     <instance-variables>
                         <scaleDivide>1</scaleDivide>
+                        <actionPerfectAmount>3</actionPerfectAmount>
+                        <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -406,9 +411,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <actionPerfectAmount>3</actionPerfectAmount>
-                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

@@ -82,6 +82,8 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="scaleDivide" sid="694495292233071" type="number" />
+                    <instance-variable name="actionPerfectAmount" sid="870836679168127" type="number" />
+                    <instance-variable comment="Sum of the numbers that are set to letGameDecide, if a number is on the other side, subtract" name="sumOfRedLines" sid="237154514697300" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="420310781619530" speed="5">
@@ -354,7 +356,10 @@
         <object-type name="NumberTarget" sid="599367142858542">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="targetNumber" sid="512058793591668" type="number" />
+                <instance-variable comment="used for multiple red lines that can allow different values, ignores target number" name="letGameDecide" sid="758674216303565" type="boolean" />
+                <instance-variable comment="any number is acceptable - ignores target number" name="anyNumber" sid="145636919518578" type="boolean" />
+                <instance-variable comment="only a specific is acceptable" name="targetNumber" sid="512058793591668" type="number" />
+                <instance-variable comment="is this line in the right side? -" name="onTheOtherSide" sid="358590556251092" type="boolean" />
                 <instance-variable name="isSolved" sid="997209283721367" type="boolean" />
             </instance-variables>
             <animation-folder>
@@ -639,9 +644,6 @@
         </object-type>
         <object-type name="UIStarPerfectNeeded" sid="219978118856692">
             <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="actionPerfectAmount" sid="154472957551361" type="number" />
-            </instance-variables>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217843952271500" speed="5">
                     <frame duration="1" hotspotX="0.498008" hotspotY="0.527897" />
@@ -741,6 +743,9 @@
         <object-type name="ButtonClearProgress" sid="344746627811297">
             <plugin id="Button" />
         </object-type>
+        <object-type name="ButtonUnlockAll" sid="710665126871757">
+            <plugin id="Button" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -757,6 +762,8 @@
         <layout>Level 10.xml</layout>
         <layout>Level 11.xml</layout>
         <layout>Level 12.xml</layout>
+        <layout>Level 13.xml</layout>
+        <layout>Level 14.xml</layout>
         <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>

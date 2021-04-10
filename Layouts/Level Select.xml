@@ -62,7 +62,10 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <letGameDecide>false</letGameDecide>
+                        <anyNumber>false</anyNumber>
                         <targetNumber>1</targetNumber>
+                        <onTheOtherSide>false</onTheOtherSide>
                         <isSolved>false</isSolved>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -391,6 +394,8 @@
                     </properties>
                     <instance-variables>
                         <scaleDivide>1</scaleDivide>
+                        <actionPerfectAmount>0</actionPerfectAmount>
+                        <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -722,6 +727,100 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="ButtonUnlockAll" uid="342">
+                    <properties>
+                        <type>Button</type>
+                        <text>Unlock All</text>
+                        <tooltip></tooltip>
+                        <initial-visibility>Visible</initial-visibility>
+                        <enabled>Yes</enabled>
+                        <auto-font-size>No</auto-font-size>
+                        <id-optional></id-optional>
+                        <checked>No</checked>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>321.095611572</x>
+                        <y>474.955657959</y>
+                        <z>0</z>
+                        <width>66.215423584</width>
+                        <height>11.602783203</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                    </world>
+                </instance>
+                <instance type="LevelSelectButton" uid="343">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <level>13</level>
+                        <state>-1</state>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0.25</blue>
+                                <green>0.25</green>
+                                <red>0.5</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>209.525619507</x>
+                        <y>392.311004639</y>
+                        <z>0</z>
+                        <width>54.990909576</width>
+                        <height>54.990909576</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LevelSelectButton" uid="360">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <level>14</level>
+                        <state>-1</state>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>0.25</blue>
+                                <green>0.25</green>
+                                <red>0.5</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>282.252807617</x>
+                        <y>402.229034424</y>
+                        <z>0</z>
+                        <width>54.990909576</width>
+                        <height>54.990909576</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -747,7 +846,7 @@
     <nonworld-instances>
         <instance type="progress" uid="60">
             <properties>
-                <width>12</width>
+                <width>1</width>
                 <height>1</height>
                 <depth>1</depth>
             </properties>
