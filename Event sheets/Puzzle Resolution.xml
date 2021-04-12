@@ -61,11 +61,11 @@
                 <condition id="-1" name="Every tick" sid="797251383909786" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="228498410940930" type="TextStatusPerfect">
+                <action disabled="1" id="0" name="Set text" sid="228498410940930" type="TextStatusPerfect">
                     <param id="0" name="Text">actions</param>
                 </action>
                 <action id="0" name="Set text" sid="393281597165177" type="TextPerfectNeeded">
-                    <param id="0" name="Text">actionsPerfect</param>
+                    <param id="0" name="Text">actions &amp; &quot; / &quot; &amp; actionsPerfect</param>
                 </action>
             </actions>
             <sub-events>
@@ -78,7 +78,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-16" name="Set opacity" sid="720140309901276" type="TextStatusPerfect">
+                        <action id="-16" name="Set opacity" sid="720140309901276" type="TextPerfectNeeded">
                             <param id="0" name="Opacity">50</param>
                         </action>
                     </actions>

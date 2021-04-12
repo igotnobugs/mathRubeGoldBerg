@@ -78,7 +78,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="131173730399989" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="131173730399989" type="System">
                                     <param id="0" name="Seconds">0.3</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="399282919457652" type="ParticleHeld" />

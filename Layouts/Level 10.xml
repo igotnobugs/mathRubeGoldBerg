@@ -450,33 +450,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextStatusPerfect" uid="284">
-                    <properties>
-                        <text>0</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-29,700,0</font>
-                        <color>0,102,204</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>85.575996399</x>
-                        <y>43.175998688</y>
-                        <z>0</z>
-                        <width>111.363876343</width>
-                        <height>59.092178345</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="UIStarPerfectNeeded" uid="285">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -526,7 +499,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>243.098999023</x>
+                        <x>203.098999023</x>
                         <y>40.152000427</y>
                         <z>0</z>
                         <width>50.700973511</width>
