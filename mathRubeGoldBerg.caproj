@@ -764,6 +764,16 @@
         <layout>Level 12.xml</layout>
         <layout>Level 13.xml</layout>
         <layout>Level 14.xml</layout>
+        <layout>Level 15 (Single - Sub).xml</layout>
+        <layout>Level 16 (Single - Sub).xml</layout>
+        <layout>Level 17 (Single - Add).xml</layout>
+        <layout>Level 18 (Double - Sub).xml</layout>
+        <layout>Level 19 (Double - Add).xml</layout>
+        <layout>Level 20 (Double - Add).xml</layout>
+        <layout>Level 21 (Single - Div).xml</layout>
+        <layout>Level 22 (Single - Div).xml</layout>
+        <layout>Level 23 (2D x 1D - Mult).xml</layout>
+        <layout>Level 24 (2D x 1D - Mult).xml</layout>
         <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>
