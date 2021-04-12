@@ -344,7 +344,7 @@
                 </instance>
                 <instance type="TextTitle" uid="41">
                     <properties>
-                        <text>Level 1 - Where is the other one?</text>
+                        <text>Where is the other one?</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

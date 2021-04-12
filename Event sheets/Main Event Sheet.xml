@@ -35,6 +35,9 @@
                     <param id="0" name="Variable">actions</param>
                     <param id="1" name="Value">0</param>
                 </action>
+                <action id="0" name="Set text" sid="477595727268598" type="TextTitle">
+                    <param id="0" name="Text">LayoutName &amp; &quot; - &quot; &amp; TextTitle.Text</param>
+                </action>
             </actions>
         </event-block>
         <include>Machines</include>

@@ -634,7 +634,7 @@
                 </instance>
                 <instance type="TextTitle" uid="57">
                     <properties>
-                        <text>Level 3 - Flip it over</text>
+                        <text>Flip it over</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

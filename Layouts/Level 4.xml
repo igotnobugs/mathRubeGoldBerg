@@ -352,7 +352,7 @@
                 </instance>
                 <instance type="TextTitle" uid="128">
                     <properties>
-                        <text>Level 4</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

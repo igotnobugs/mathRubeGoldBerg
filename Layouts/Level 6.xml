@@ -413,7 +413,7 @@
                 </instance>
                 <instance type="TextTitle" uid="159">
                     <properties>
-                        <text>Level 6 - Decimals</text>
+                        <text>Decimals</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

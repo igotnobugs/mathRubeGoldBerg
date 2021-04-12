@@ -413,7 +413,7 @@
                 </instance>
                 <instance type="TextTitle" uid="179">
                     <properties>
-                        <text>Level 7 - Power of Two&apos;s</text>
+                        <text>Power of Two&apos;s</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

@@ -413,7 +413,7 @@
                 </instance>
                 <instance type="TextTitle" uid="202">
                     <properties>
-                        <text>Level 8 - Fragile Machines</text>
+                        <text>Fragile Machines</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

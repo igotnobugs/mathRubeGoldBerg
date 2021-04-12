@@ -513,7 +513,7 @@
                 </instance>
                 <instance type="TextTitle" uid="307">
                     <properties>
-                        <text>Level 12 - Twice the work of one</text>
+                        <text>Twice the work of one</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

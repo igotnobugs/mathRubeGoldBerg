@@ -418,7 +418,7 @@
                 </instance>
                 <instance type="TextTitle" uid="352">
                     <properties>
-                        <text>Level 14 - You decide the result</text>
+                        <text>You decide the result</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

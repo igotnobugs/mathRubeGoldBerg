@@ -513,7 +513,7 @@
                 </instance>
                 <instance type="TextTitle" uid="243">
                     <properties>
-                        <text>Level 11 - Long Chain</text>
+                        <text>Long Chain</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

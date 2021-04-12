@@ -468,7 +468,7 @@
                 </instance>
                 <instance type="TextTitle" uid="332">
                     <properties>
-                        <text>Level 13 - The result is the same</text>
+                        <text>The result is the same</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

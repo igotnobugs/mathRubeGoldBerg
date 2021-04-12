@@ -513,7 +513,7 @@
                 </instance>
                 <instance type="TextTitle" uid="283">
                     <properties>
-                        <text>Level 10 - You can clone anything except the equal sign</text>
+                        <text>You can clone anything except the equal sign</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

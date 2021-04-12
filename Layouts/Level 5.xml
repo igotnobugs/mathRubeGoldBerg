@@ -413,7 +413,7 @@
                 </instance>
                 <instance type="TextTitle" uid="135">
                     <properties>
-                        <text>Level 5</text>
+                        <text>You can tap the equal sign to play the puzzle as well</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>
