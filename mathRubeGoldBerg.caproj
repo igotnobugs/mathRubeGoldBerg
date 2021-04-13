@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3bxwz08zrd6tu</unique-id>
-    <saved-with-version>27500</saved-with-version>
+    <saved-with-version>27900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
@@ -746,6 +746,44 @@
         <object-type name="ButtonUnlockAll" sid="710665126871757">
             <plugin id="Button" />
         </object-type>
+        <object-type name="LeftParenthesis" sid="145894193070422">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="317250447389442" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\sandr\Downloads\LeftParenthesis..png">
+                        <collision-poly>
+                            <point x="0.346667" y="0.114035" />
+                            <point x="0.5" y="0.0482456" />
+                            <point x="0.9" y="0.0328947" />
+                            <point x="0.44" y="0.5" />
+                            <point x="0.946667" y="0.982456" />
+                            <point x="0.5" y="0.934211" />
+                            <point x="0.373333" y="0.877193" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightParenthesis" sid="368071615194389">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="162950838383857" speed="5">
+                    <frame duration="1" hotspotX="0.503448" hotspotY="0.501094" original-source="C:\Users\sandr\Downloads\RightParenthesis.png">
+                        <collision-poly>
+                            <point x="0.0482759" y="0.0153173" />
+                            <point x="0.496552" y="0.083151" />
+                            <point x="0.606897" y="0.124726" />
+                            <point x="0.993103" y="0.498906" />
+                            <point x="0.641379" y="0.886214" />
+                            <point x="0.496552" y="0.947484" />
+                            <point x="0.0758621" y="0.97593" />
+                            <point x="0.57931" y="0.498906" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -774,6 +812,12 @@
         <layout>Level 22 (Single - Div).xml</layout>
         <layout>Level 23 (2D x 1D - Mult).xml</layout>
         <layout>Level 24 (2D x 1D - Mult).xml</layout>
+        <layout>Level 25 (Double - Sub).xml</layout>
+        <layout>Level 26 (2D x 1D Mult).xml</layout>
+        <layout>Level 27 (Mixed 3 #, 1 blank).xml</layout>
+        <layout>Level 28 (Mixed 3 #, 1 blank).xml</layout>
+        <layout>Level 29 (2D1D div).xml</layout>
+        <layout>Level 30 (2D 1D div).xml</layout>
         <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>
