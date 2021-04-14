@@ -24,6 +24,23 @@
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="177812443163409">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="447822156167113" type="NumberDisplay">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="234934667353679" type="NumberDisplay">
+                                    <param id="0" name="Animation">&quot;negative&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <comment>Cloning the numbers</comment>
                 <event-block sid="843732029863597">

@@ -359,7 +359,10 @@
                 <type>TextDisplay</type>
             </container>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="958731773479573" speed="5">
+                <animation framecount="1" loop="0" name="positive" pingpong="0" repeatcount="1" repeatto="0" sid="958731773479573" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="negative" pingpong="0" repeatcount="1" repeatto="0" sid="378354036364314" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -473,58 +476,21 @@
                 <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="573080795158530" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Downloads\Assets_newer\Addition Machine.png">
                         <image-point name="TextNumber" x="0.491525" y="0.176626" />
-                        <collision-poly>
-                            <point x="0" y="0.300141" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0.183272" />
-                            <point x="1" y="0.783972" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.671779" />
-                            <point x="0" y="0.503489" />
-                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="610409258199748" speed="5">
                     <frame duration="1" hotspotX="0.500536" hotspotY="0.500418" original-source="C:\Users\Jerry\Downloads\Assets_newer\Subtraction Machine.png">
                         <image-point name="TextNumber" x="0.500536" y="0.169591" />
-                        <collision-poly>
-                            <point x="0" y="0.341426" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0.222069" />
-                            <point x="1" y="0.835559" />
-                            <point x="0" y="1" />
-                            <point x="0" y="0.720978" />
-                            <point x="0" y="0.549104" />
-                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="multiplication" pingpong="0" repeatcount="1" repeatto="0" sid="193154203987214" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.500377" original-source="C:\Users\Jerry\Downloads\Assets_newer\Multiplication Machine.png">
                         <image-point name="TextNumber" x="0.49591" y="0.234717" />
-                        <collision-poly>
-                            <point x="0" y="0.3727" />
-                            <point x="0.419319" y="0" />
-                            <point x="1" y="0.288093" />
-                            <point x="1" y="0.722973" />
-                            <point x="0.419319" y="1" />
-                            <point x="0" y="0.641751" />
-                            <point x="0" y="0.519917" />
-                        </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="173224446937826" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Downloads\Assets_newer\Division Machine.png">
                         <image-point name="TextNumber" x="0.492" y="0.194631" />
-                        <collision-poly>
-                            <point x="0" y="0.406108" />
-                            <point x="0.330462" y="0" />
-                            <point x="1" y="0.204786" />
-                            <point x="1" y="0.498141" />
-                            <point x="1" y="0.875859" />
-                            <point x="0.330462" y="1" />
-                            <point x="0" y="0.624686" />
-                            <point x="0" y="0.498141" />
-                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
@@ -694,11 +660,11 @@
                 <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="339833593477880" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.502577" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\subtract_math_symbols.png">
                         <collision-poly>
-                            <point x="0.431034" y="0.404639" />
-                            <point x="0.568965" y="0.404639" />
+                            <point x="0.0775858" y="0.363402" />
+                            <point x="0.83908" y="0.345361" />
                             <point x="0.951149" y="0.5" />
-                            <point x="0.729885" y="0.742268" />
-                            <point x="0.270115" y="0.742268" />
+                            <point x="0.712644" y="0.634021" />
+                            <point x="0.272989" y="0.649485" />
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
@@ -816,22 +782,23 @@
         <layout>Level 12.xml</layout>
         <layout>Level 13.xml</layout>
         <layout>Level 14.xml</layout>
-        <layout>Level 15 (Single - Sub).xml</layout>
-        <layout>Level 16 (Single - Sub).xml</layout>
-        <layout>Level 17 (Single - Add).xml</layout>
-        <layout>Level 18 (Double - Sub).xml</layout>
-        <layout>Level 19 (Double - Add).xml</layout>
-        <layout>Level 20 (Double - Add).xml</layout>
-        <layout>Level 21 (Single - Div).xml</layout>
-        <layout>Level 22 (Single - Div).xml</layout>
-        <layout>Level 23 (2D x 1D - Mult).xml</layout>
-        <layout>Level 24 (2D x 1D - Mult).xml</layout>
+        <layout>Level 15.xml</layout>
+        <layout>Level 16.xml</layout>
+        <layout>Level 17.xml</layout>
+        <layout>Level 18.xml</layout>
+        <layout>Level 19.xml</layout>
+        <layout>Level 20.xml</layout>
+        <layout>Level 21.xml</layout>
+        <layout>Level 22.xml</layout>
+        <layout>Level 23.xml</layout>
+        <layout>Level 10 mix.xml</layout>
+        <layout>Level 11 mix.xml</layout>
+        <layout>Level 12 mix.xml</layout>
+        <layout>Level 13 mix.xml</layout>
+        <layout>Level 9 extra.xml</layout>
         <layout>Level 25 (Double - Sub).xml</layout>
-        <layout>Level 26 (2D x 1D Mult).xml</layout>
         <layout>Level 27 (Mixed 3 #, 1 blank).xml</layout>
         <layout>Level 28 (Mixed 3 #, 1 blank).xml</layout>
-        <layout>Level 29 (2D1D div).xml</layout>
-        <layout>Level 30 (2D 1D div).xml</layout>
         <layout>Level 31 (WP1O - add).xml</layout>
         <layout>Level 32 (WP1O - sub).xml</layout>
         <layout>Level 33 (WP1O - mult).xml</layout>
