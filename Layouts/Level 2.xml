@@ -836,7 +836,7 @@
                 </instance>
                 <instance type="TextTitle" uid="91">
                     <properties>
-                        <text>Level 2 - The Machine</text>
+                        <text>The Machine</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

@@ -3,8 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level Select</name>
     <events>
-        <variable constant="0" name="levelGroup" sid="906126917990752" static="0" type="number">1</variable>
-        <variable constant="0" name="levelGroupMax" sid="391541195235073" static="0" type="number">5</variable>
+        <variable constant="0" name="levelGroupCurrent" sid="906126917990752" static="0" type="number">1</variable>
+        <variable constant="1" name="levelGroupMax" sid="391541195235073" static="0" type="number">7</variable>
         <variable comment="is automatically counted based on the number of buttons" constant="0" name="numberOfLevels" sid="245093674660638" static="0" type="number">0</variable>
         <comment></comment>
         <event-block sid="182472866135035">
@@ -50,6 +50,10 @@
                 </action>
                 <action id="4" name="Preload" sid="814811908317089" type="Audio">
                     <param id="0" name="Audio file">Power</param>
+                </action>
+                <action id="0" name="Call function" sid="434095344449678" type="Function">
+                    <param id="0" name="Name">&quot;hideLevelGroupsButOne&quot;</param>
+                    <param id="1" name="Parameter {n}">levelGroupCurrent</param>
                 </action>
             </actions>
             <sub-events>
@@ -179,7 +183,7 @@
                     <param id="0" name="Object">LevelSelectButton</param>
                 </condition>
                 <condition id="-16" name="Is on layer" sid="937749599999607" type="LevelSelectButton">
-                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroup</param>
+                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroupCurrent</param>
                 </condition>
             </conditions>
             <actions />
@@ -717,15 +721,15 @@
             </conditions>
             <actions>
                 <action id="-4" name="Set layer visible" sid="549145459093162" type="System">
-                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroup</param>
+                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroupCurrent</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
                 <action id="-10" name="Add to" sid="168914670320794" type="System">
-                    <param id="0" name="Variable">levelGroup</param>
+                    <param id="0" name="Variable">levelGroupCurrent</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-4" name="Set layer visible" sid="958432815436005" type="System">
-                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroup</param>
+                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroupCurrent</param>
                     <param id="1" name="Visibility">1</param>
                 </action>
             </actions>
@@ -739,15 +743,15 @@
             </conditions>
             <actions>
                 <action id="-4" name="Set layer visible" sid="173057860577558" type="System">
-                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroup</param>
+                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroupCurrent</param>
                     <param id="1" name="Visibility">0</param>
                 </action>
                 <action id="-11" name="Subtract from" sid="440092206408828" type="System">
-                    <param id="0" name="Variable">levelGroup</param>
+                    <param id="0" name="Variable">levelGroupCurrent</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-4" name="Set layer visible" sid="823948357030628" type="System">
-                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroup</param>
+                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroupCurrent</param>
                     <param id="1" name="Visibility">1</param>
                 </action>
             </actions>
@@ -761,7 +765,7 @@
                 <event-block sid="163383634432396">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="272941292225970" type="System">
-                            <param id="0" name="Variable">levelGroup</param>
+                            <param id="0" name="Variable">levelGroupCurrent</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -785,9 +789,9 @@
                 <event-block sid="611017750779052">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="366072627937501" type="System">
-                            <param id="0" name="Variable">levelGroup</param>
+                            <param id="0" name="Variable">levelGroupCurrent</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">levelGroupMax</param>
+                            <param id="2" name="Value">LEVELGROUPMAX</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -805,6 +809,43 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="518855541896179">
+            <conditions>
+                <condition id="0" name="On function" sid="869522345490993" type="Function">
+                    <param id="0" name="Name">&quot;hideLevelGroupsButOne&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="858764927030861">
+                    <conditions>
+                        <condition id="-10" name="For" sid="715996281541241" type="System">
+                            <param id="0" name="Name">&quot;cycleLevelGroups&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">levelGroupMax</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="660382732016191">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="334555107423841" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">loopindex</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="655081935111093" type="System">
+                                    <param id="0" name="Layer">&quot;Level Group &quot; &amp; loopindex</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>

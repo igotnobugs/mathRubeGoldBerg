@@ -454,8 +454,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>723.783630371</x>
-                        <y>59.216369629</y>
+                        <x>486</x>
+                        <y>149</y>
                         <z>0</z>
                         <width>46.432746887</width>
                         <height>46.432746887</height>
@@ -481,8 +481,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>556</x>
-                        <y>661</y>
+                        <x>497</x>
+                        <y>554</y>
                         <z>0</z>
                         <width>52</width>
                         <height>47</height>
