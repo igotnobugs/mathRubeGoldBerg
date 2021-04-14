@@ -87,6 +87,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -359,6 +368,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -680,6 +698,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1.5</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -931,7 +958,7 @@
                         <parameters>
                             <hue>0.8</hue>
                             <luminosity>1</luminosity>
-                            <saturation>2.5</saturation>
+                            <saturation>2</saturation>
                         </parameters>
                     </effect-instance>
                 </effect-type>
@@ -963,6 +990,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1246,6 +1282,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1529,6 +1574,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1788,7 +1842,7 @@
         </layer>
         <layer name="Level Group 1" sid="768642843198534">
             <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
+            <background-color>255,255,204</background-color>
             <transparent>1</transparent>
             <parallax>
                 <x>1</x>
@@ -1812,6 +1866,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2081,7 +2144,7 @@
                 </instance>
                 <instance type="NormalText" uid="330">
                     <properties>
-                        <text>v 0.9</text>
+                        <text>v 0.95</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-11,400,0</font>
                         <color>0,0,0</color>
@@ -2174,30 +2237,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ButtonUnlockAll" uid="342">
-                    <properties>
-                        <type>Button</type>
-                        <text>Unlock All</text>
-                        <tooltip></tooltip>
-                        <initial-visibility>Visible</initial-visibility>
-                        <enabled>Yes</enabled>
-                        <auto-font-size>No</auto-font-size>
-                        <id-optional></id-optional>
-                        <checked>No</checked>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>321.095611572</x>
-                        <y>474.955657959</y>
-                        <z>0</z>
-                        <width>66.215423584</width>
-                        <height>11.602783203</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                     </world>
                 </instance>
                 <instance type="Next" uid="804">

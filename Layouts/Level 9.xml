@@ -39,6 +39,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0.05</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>2</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -312,7 +321,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <scaleDivide>1</scaleDivide>
+                        <scaleDivide>2</scaleDivide>
                         <actionPerfectAmount>3</actionPerfectAmount>
                         <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>

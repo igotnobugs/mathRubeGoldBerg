@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level Select</name>
     <events>
+        <variable constant="0" name="redLineTaps" sid="760236699950142" static="0" type="number">0</variable>
         <variable constant="0" name="levelGroupCurrent" sid="906126917990752" static="0" type="number">1</variable>
         <variable constant="1" name="levelGroupMax" sid="391541195235073" static="0" type="number">7</variable>
         <variable comment="is automatically counted based on the number of buttons" constant="0" name="numberOfLevels" sid="245093674660638" static="0" type="number">0</variable>
@@ -54,6 +55,10 @@
                 <action id="0" name="Call function" sid="434095344449678" type="Function">
                     <param id="0" name="Name">&quot;hideLevelGroupsButOne&quot;</param>
                     <param id="1" name="Parameter {n}">levelGroupCurrent</param>
+                </action>
+                <action id="-9" name="Set value" sid="212038109727871" type="System">
+                    <param id="0" name="Variable">redLineTaps</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
             <sub-events>
@@ -555,163 +560,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="733453906153009">
-            <conditions>
-                <condition id="0" name="On clicked" sid="219005234658386" type="ButtonUnlockAll" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="365466146783380">
-                    <conditions>
-                        <condition id="-11" name="For Each" sid="416253243112914" type="System">
-                            <param id="0" name="Object">LevelSelectButton</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="835476589819577" type="LevelSelectButton">
-                            <param id="0" name="Instance variable">state</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="431948855929449">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="151906268446812" type="LevelSelectButton">
-                                    <param id="0" name="Instance variable">state</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">-1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Set effect enabled" sid="497690162899477" type="LevelSelectButton">
-                                    <param id="0" name="Mode">1</param>
-                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="343335878677996" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">50</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="298594146381477" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">25</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="672671735602220" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">25</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="798976886600973">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="309528942991811" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="947212858116824" type="LevelSelectButton">
-                                    <param id="0" name="Instance variable">state</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Set effect enabled" sid="429827709361324" type="LevelSelectButton">
-                                    <param id="0" name="Mode">1</param>
-                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="276859968123233" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">25</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="229619375657861" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">25</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="638986656077757" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">75</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="175402720966627">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="587188594187731" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="130221589626703" type="LevelSelectButton">
-                                    <param id="0" name="Instance variable">state</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Set effect enabled" sid="404095562215827" type="LevelSelectButton">
-                                    <param id="0" name="Mode">1</param>
-                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="375841862914429" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">25</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="600355754009049" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">50</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="442447670099034" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">25</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="938220863220671">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="971856511475771" type="System" />
-                                <condition id="-7" name="Compare instance variable" sid="917413703304717" type="LevelSelectButton">
-                                    <param id="0" name="Instance variable">state</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Set effect enabled" sid="536848562465566" type="LevelSelectButton">
-                                    <param id="0" name="Mode">1</param>
-                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="916532683855444" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">0</param>
-                                    <param id="2" name="Value">75</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="274739725654066" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">1</param>
-                                    <param id="2" name="Value">75</param>
-                                </action>
-                                <action id="-28" name="Set effect parameter" sid="279405906338008" type="LevelSelectButton">
-                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                                    <param id="1" name="Parameter index">2</param>
-                                    <param id="2" name="Value">25</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="320840601663765">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="410762395857672" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-27" name="Set effect enabled" sid="653719845274137" type="LevelSelectButton">
-                                    <param id="0" name="Mode">0</param>
-                                    <param id="1" name="Effect">&quot;SetColor&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="917249891906076">
             <conditions>
                 <condition id="3" name="On touched object" sid="392811875388218" type="Touch">
@@ -844,6 +692,183 @@
                                     <param id="1" name="Visibility">0</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Tapping red line 3 times unlock all levels</comment>
+        <event-block sid="376104047206192">
+            <conditions>
+                <condition id="3" name="On touched object" sid="925802974858276" type="Touch">
+                    <param id="0" name="Object">NumberTarget</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="571871729286481" type="System">
+                    <param id="0" name="Variable">redLineTaps</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="892996108329483">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="881552378008438" type="System">
+                            <param id="0" name="Variable">redLineTaps</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="851977847280385">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="152174309850751" type="System">
+                                    <param id="0" name="Object">LevelSelectButton</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="993927656271564" type="LevelSelectButton">
+                                    <param id="0" name="Instance variable">state</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="140765095614619">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="810212433994820" type="LevelSelectButton">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="706427680984756" type="LevelSelectButton">
+                                            <param id="0" name="Mode">1</param>
+                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="709612777124191" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">50</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="394912420865745" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">25</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="820021451514632" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">2</param>
+                                            <param id="2" name="Value">25</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="259352393638967">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="472663979294695" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="351923197265011" type="LevelSelectButton">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="234699444372089" type="LevelSelectButton">
+                                            <param id="0" name="Mode">1</param>
+                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="246717957761819" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">25</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="486308975252448" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">25</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="217070458356018" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">2</param>
+                                            <param id="2" name="Value">75</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="596404389330053">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="569895694173041" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="263773670157566" type="LevelSelectButton">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="652071709902338" type="LevelSelectButton">
+                                            <param id="0" name="Mode">1</param>
+                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="169831848299447" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">25</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="859171980841065" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">50</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="257694265639893" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">2</param>
+                                            <param id="2" name="Value">25</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="106397241082403">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="966089838350698" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="902815966360530" type="LevelSelectButton">
+                                            <param id="0" name="Instance variable">state</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="542323982082726" type="LevelSelectButton">
+                                            <param id="0" name="Mode">1</param>
+                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="996041202035708" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">0</param>
+                                            <param id="2" name="Value">75</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="697461942269439" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">1</param>
+                                            <param id="2" name="Value">75</param>
+                                        </action>
+                                        <action id="-28" name="Set effect parameter" sid="993783883277697" type="LevelSelectButton">
+                                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                            <param id="1" name="Parameter index">2</param>
+                                            <param id="2" name="Value">25</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="752005586092025">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="848582297618403" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="543522239710828" type="LevelSelectButton">
+                                            <param id="0" name="Mode">0</param>
+                                            <param id="1" name="Effect">&quot;SetColor&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

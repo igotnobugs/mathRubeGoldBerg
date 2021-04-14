@@ -39,6 +39,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0.65</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1.5</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -103,9 +112,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <letGameDecide>true</letGameDecide>
+                        <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
-                        <targetNumber>-1</targetNumber>
+                        <targetNumber>-2</targetNumber>
                         <onTheOtherSide>false</onTheOtherSide>
                         <isSolved>false</isSolved>
                     </instance-variables>
@@ -211,24 +220,20 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberTarget" uid="346">
+                <instance type="NumberDisplay" uid="346">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>negative</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <letGameDecide>true</letGameDecide>
-                        <anyNumber>false</anyNumber>
-                        <targetNumber>3</targetNumber>
-                        <onTheOtherSide>true</onTheOtherSide>
-                        <isSolved>false</isSolved>
+                        <number>-9</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>350</x>
+                        <x>356</x>
                         <y>476</y>
                         <z>0</z>
                         <width>58</width>
@@ -267,9 +272,9 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <scaleDivide>4</scaleDivide>
-                        <actionPerfectAmount>4</actionPerfectAmount>
-                        <sumOfRedLines>7</sumOfRedLines>
+                        <scaleDivide>1</scaleDivide>
+                        <actionPerfectAmount>3</actionPerfectAmount>
+                        <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -371,7 +376,7 @@
                 </instance>
                 <instance type="TextTitle" uid="352">
                     <properties>
-                        <text>You decide the result</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

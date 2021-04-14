@@ -39,6 +39,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0.05</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>2</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -123,12 +132,12 @@
                 <instance type="NumberDisplay" uid="447">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>negative</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <number>24</number>
+                        <number>-24</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -155,7 +164,7 @@
                     <instance-variables>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
-                        <targetNumber>74</targetNumber>
+                        <targetNumber>26</targetNumber>
                         <onTheOtherSide>false</onTheOtherSide>
                         <isSolved>false</isSolved>
                     </instance-variables>

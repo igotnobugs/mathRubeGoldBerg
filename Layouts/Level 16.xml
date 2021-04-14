@@ -39,6 +39,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0.75</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>3</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -86,8 +95,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>122.741287231</x>
-                        <y>475</y>
+                        <x>115</x>
+                        <y>479</y>
                         <z>0</z>
                         <width>53.974925995</width>
                         <height>53.4842453</height>
@@ -162,8 +171,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>197.587081909</x>
-                        <y>479.082702637</y>
+                        <x>184</x>
+                        <y>478</y>
                         <z>0</z>
                         <width>65.91129303</width>
                         <height>65.91129303</height>
@@ -262,7 +271,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <scaleDivide>0.1</scaleDivide>
+                        <scaleDivide>1</scaleDivide>
                         <actionPerfectAmount>3</actionPerfectAmount>
                         <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>
@@ -366,7 +375,7 @@
                 </instance>
                 <instance type="TextTitle" uid="572">
                     <properties>
-                        <text>Decimals</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Narrow,-13,400,1</font>
                         <color>0,0,0</color>

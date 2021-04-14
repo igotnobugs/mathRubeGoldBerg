@@ -39,6 +39,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0.8</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>2</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -86,8 +95,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>122.741287231</x>
-                        <y>475</y>
+                        <x>118</x>
+                        <y>479</y>
                         <z>0</z>
                         <width>56.428337097</width>
                         <height>56.101211548</height>
@@ -108,8 +117,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>278</x>
-                        <y>472</y>
+                        <x>270</x>
+                        <y>474</y>
                         <z>0</z>
                         <width>60.368000031</width>
                         <height>46.816001892</height>
@@ -133,8 +142,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199.841003418</x>
-                        <y>476.82699585</y>
+                        <x>189</x>
+                        <y>476</y>
                         <z>0</z>
                         <width>57.445625305</width>
                         <height>57.445625305</height>
@@ -187,8 +196,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>44.716999054</x>
-                        <y>475.24899292</y>
+                        <x>45</x>
+                        <y>477</y>
                         <z>0</z>
                         <width>57.445625305</width>
                         <height>57.445625305</height>
@@ -263,7 +272,7 @@
                     </properties>
                     <instance-variables>
                         <scaleDivide>1</scaleDivide>
-                        <actionPerfectAmount>3</actionPerfectAmount>
+                        <actionPerfectAmount>1</actionPerfectAmount>
                         <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

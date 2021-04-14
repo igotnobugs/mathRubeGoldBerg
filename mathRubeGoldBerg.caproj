@@ -412,6 +412,11 @@
             <instance-variables>
                 <instance-variable name="dropCount" sid="473897344502179" type="number" />
             </instance-variables>
+            <effects>
+                <effect-type name="AdjustHSL">
+                    <effect id="hsladjust" />
+                </effect-type>
+            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549857479508361" speed="5">
                     <frame duration="1" hotspotX="0.54" hotspotY="0.5">
@@ -799,6 +804,9 @@
         <layout>Level 29.xml</layout>
         <layout>Level 30.xml</layout>
         <layout>Level 31.xml</layout>
+        <layout>Level 32.xml</layout>
+        <layout>Level 33.xml</layout>
+        <layout>Level 34.xml</layout>
         <layout>Level 35.xml</layout>
         <layout>Level 36.xml</layout>
         <layout>Level 37.xml</layout>

@@ -39,6 +39,15 @@
                     <instance-variables>
                         <dropCount>5</dropCount>
                     </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0.8</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>2</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -76,12 +85,12 @@
                 <instance type="SymbolMath" uid="483">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>multiplication</initial-animation>
+                        <initial-animation>division</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <type>multiplication</type>
+                        <type>division</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -89,11 +98,11 @@
                         <x>122.741287231</x>
                         <y>475</y>
                         <z>0</z>
-                        <width>53.97492981</width>
-                        <height>53.4842453</height>
+                        <width>56.428337097</width>
+                        <height>56.101211548</height>
                         <depth>0</depth>
-                        <hotspotX>0.551515162</hotspotX>
-                        <hotspotY>0.489296645</hotspotY>
+                        <hotspotX>0.507246375</hotspotX>
+                        <hotspotY>0.513119519</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -123,18 +132,18 @@
                 <instance type="NumberDisplay" uid="485">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>negative</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <number>5</number>
+                        <number>-5</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199.841003418</x>
-                        <y>476.82699585</y>
+                        <x>350</x>
+                        <y>477</y>
                         <z>0</z>
                         <width>57.445625305</width>
                         <height>57.445625305</height>
@@ -155,15 +164,15 @@
                     <instance-variables>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
-                        <targetNumber>125</targetNumber>
+                        <targetNumber>-5</targetNumber>
                         <onTheOtherSide>false</onTheOtherSide>
                         <isSolved>false</isSolved>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>354.611999512</x>
-                        <y>482.838989258</y>
+                        <x>196</x>
+                        <y>478</y>
                         <z>0</z>
                         <width>65.91129303</width>
                         <height>65.91129303</height>
@@ -263,7 +272,7 @@
                     </properties>
                     <instance-variables>
                         <scaleDivide>1</scaleDivide>
-                        <actionPerfectAmount>1</actionPerfectAmount>
+                        <actionPerfectAmount>3</actionPerfectAmount>
                         <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
