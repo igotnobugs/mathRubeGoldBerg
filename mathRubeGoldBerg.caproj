@@ -784,6 +784,15 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Text" sid="316621532790019">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextSentence2" sid="488831793415810">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TextSentence3" sid="647178314303485">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -818,6 +827,12 @@
         <layout>Level 28 (Mixed 3 #, 1 blank).xml</layout>
         <layout>Level 29 (2D1D div).xml</layout>
         <layout>Level 30 (2D 1D div).xml</layout>
+        <layout>Level 31 (WP1O - add).xml</layout>
+        <layout>Level 32 (WP1O - sub).xml</layout>
+        <layout>Level 33 (WP1O - mult).xml</layout>
+        <layout>Level 34 (WP1O - div).xml</layout>
+        <layout>Level 35 (WP2O - addsub).xml</layout>
+        <layout>Level 36 (WP2O - multdiv).xml</layout>
         <layout>Assets.xml</layout>
     </layout-folder>
     <event-folder>

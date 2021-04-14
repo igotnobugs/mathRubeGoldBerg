@@ -310,7 +310,7 @@
                     </properties>
                     <instance-variables>
                         <scaleDivide>1</scaleDivide>
-                        <actionPerfectAmount>1</actionPerfectAmount>
+                        <actionPerfectAmount>3</actionPerfectAmount>
                         <sumOfRedLines>0</sumOfRedLines>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
