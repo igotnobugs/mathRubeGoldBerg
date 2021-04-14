@@ -383,7 +383,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Next" uid="272">
+                <instance type="Back" uid="272">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -393,15 +393,15 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>364</x>
-                        <y>31</y>
+                        <x>360</x>
+                        <y>40</y>
                         <z>0</z>
-                        <width>56.497787476</width>
-                        <height>56.497787476</height>
+                        <width>65</width>
+                        <height>65</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-1.570796371</angle>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -415,8 +415,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>293.289001465</x>
-                        <y>41.599998474</y>
+                        <x>285</x>
+                        <y>40</y>
                         <z>0</z>
                         <width>74.114433289</width>
                         <height>68.799461365</height>

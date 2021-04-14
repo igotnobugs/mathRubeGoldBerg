@@ -101,32 +101,10 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LeftParenthesis" uid="607">
+                <instance type="Parenthesis" uid="608">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>156.659088135</x>
-                        <y>480.353973389</y>
-                        <z>0</z>
-                        <width>16.490501404</width>
-                        <height>50.131126404</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="RightParenthesis" uid="608">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
+                        <initial-animation>RightParenthesis</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
@@ -136,10 +114,32 @@
                         <x>285.450256348</x>
                         <y>481.011901855</y>
                         <z>0</z>
-                        <width>15.864619255</width>
+                        <width>15.864618301</width>
                         <height>50.000907898</height>
                         <depth>0</depth>
                         <hotspotX>0.503448248</hotspotX>
+                        <hotspotY>0.501094103</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Parenthesis" uid="607">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>LeftParenthesis</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>153</x>
+                        <y>480</y>
+                        <z>0</z>
+                        <width>16.4116745</width>
+                        <height>50.000907898</height>
+                        <depth>0</depth>
+                        <hotspotX>0.50666666</hotspotX>
                         <hotspotY>0.501094103</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -422,7 +422,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Next" uid="619">
+                <instance type="Back" uid="619">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -440,7 +440,7 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>-1.570796371</angle>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
