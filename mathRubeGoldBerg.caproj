@@ -769,6 +769,21 @@
         <object-type name="TextSentence3" sid="647178314303485">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Sprite" sid="814971637221466">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="218054405638692" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HoldBar" sid="670067897809787">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="max_width" sid="939995948657059" type="number" />
+            </instance-variables>
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -813,6 +828,7 @@
         <layout>Level 38.xml</layout>
         <layout>Level 39.xml</layout>
         <layout>Level 40.xml</layout>
+        <layout>TestLevel.xml</layout>
         <layout>Assets.xml</layout>
         <layout>Level 25 (Double - Sub).xml</layout>
     </layout-folder>

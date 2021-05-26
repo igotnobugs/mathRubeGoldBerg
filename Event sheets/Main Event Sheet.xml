@@ -8,6 +8,7 @@
         <variable comment="Puzzle Solved" constant="0" name="isFinished" sid="785216222294153" static="0" type="number">0</variable>
         <variable comment="Puzzle is playing" constant="0" name="isSimulating" sid="232007018114606" static="0" type="number">0</variable>
         <variable constant="0" name="currentLevel" sid="548098035864958" static="0" type="number">0</variable>
+        <variable constant="0" name="isPlayInteractable" sid="128674764038129" static="0" type="number">0</variable>
         <event-block sid="922160269685457">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="210067844277446" type="System" />
@@ -37,6 +38,9 @@
                 </action>
                 <action id="0" name="Set text" sid="477595727268598" type="TextTitle">
                     <param id="0" name="Text">LayoutName &amp; &quot; - &quot; &amp; TextTitle.Text</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="946432745044506" type="ControlButton">
+                    <param id="0" name="Opacity">20</param>
                 </action>
             </actions>
         </event-block>
