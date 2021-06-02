@@ -56,20 +56,7 @@
                                             <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
                                         </action>
                                         <action behavior="Rotate" id="1" name="Set acceleration" sid="751450391517549" type="ControlButton">
-                                            <param id="0" name="Acceleration">2000</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="568863227883940" type="System">
-                                            <param id="0" name="Seconds">0.8</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="169938108111231" type="ControlButton">
-                                            <param id="0" name="Animation">&quot;Restart&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="Rotate" id="1" name="Set acceleration" sid="235056978257724" type="ControlButton">
-                                            <param id="0" name="Acceleration">0</param>
-                                        </action>
-                                        <action behavior="Rotate" id="0" name="Set speed" sid="158460024273786" type="ControlButton">
-                                            <param id="0" name="Speed">90</param>
+                                            <param id="0" name="Acceleration">3000</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -85,6 +72,30 @@
                                                 <action behavior="Physics" id="15" name="Set velocity" sid="652059677888084" type="NumberShape">
                                                     <param id="0" name="X component">NumberShape.Physics.VelocityX</param>
                                                     <param id="1" name="Y component">3</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="838377361127639">
+                                            <conditions />
+                                            <actions>
+                                                <action id="-16" name="Wait" sid="923365732017435" type="System">
+                                                    <param id="0" name="Seconds">0.3</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="515771603763911" type="ControlButton">
+                                                    <param id="0" name="Animation">&quot;Restart&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action behavior="Rotate" id="1" name="Set acceleration" sid="841922818994353" type="ControlButton">
+                                                    <param id="0" name="Acceleration">-1800</param>
+                                                </action>
+                                                <action id="-16" name="Wait" sid="689632397550148" type="System">
+                                                    <param id="0" name="Seconds">0.4</param>
+                                                </action>
+                                                <action behavior="Rotate" id="1" name="Set acceleration" sid="805747104720086" type="ControlButton">
+                                                    <param id="0" name="Acceleration">0</param>
+                                                </action>
+                                                <action behavior="Rotate" id="0" name="Set speed" sid="887406790578834" type="ControlButton">
+                                                    <param id="0" name="Speed">90</param>
                                                 </action>
                                             </actions>
                                         </event-block>

@@ -263,7 +263,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ControlButton" uid="13">
+                <instance type="ControlButton" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -298,7 +298,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Back" uid="18">
+                <instance type="Back" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -320,7 +320,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIStarPerfectNeeded" uid="20">
+                <instance type="UIStarPerfectNeeded" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -342,7 +342,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextPerfectNeeded" uid="22">
+                <instance type="TextPerfectNeeded" uid="33">
                     <properties>
                         <text>99</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -381,7 +381,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextTitle" uid="24">
+                <instance type="TextTitle" uid="34">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -408,7 +408,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HoldBar" uid="27">
+                <instance type="HoldBar" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
