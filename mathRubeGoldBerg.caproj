@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
@@ -86,39 +87,47 @@
                     <instance-variable name="actionPerfectAmount" sid="870836679168127" type="number" />
                     <instance-variable comment="Sum of the numbers that are set to letGameDecide, if a number is on the other side, subtract" name="sumOfRedLines" sid="237154514697300" type="number" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Rotate" sid="723776685526959">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="420310781619530" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
-                    <animation framecount="4" loop="1" name="Restart" pingpong="0" repeatcount="1" repeatto="0" sid="280477164014380" speed="1.5">
+                    <animation framecount="1" loop="1" name="Restart" pingpong="0" repeatcount="1" repeatto="0" sid="280477164014380" speed="1.5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
-                            </collision-poly>
-                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Done" pingpong="0" repeatcount="1" repeatto="0" sid="962167392546793" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="RestartOld" pingpong="0" repeatcount="1" repeatto="0" sid="303230241418208" speed="1.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -846,13 +855,13 @@
         <event-sheet>Platform.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Touch" uid="9">
+        <global-instance type="Touch" uid="1022">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="44" />
-        <global-instance type="Audio" uid="277">
+        <global-instance type="Function" uid="1023" />
+        <global-instance type="Audio" uid="1024">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
