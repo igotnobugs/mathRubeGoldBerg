@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ParticleHeld" uid="229">
+                <instance type="ParticleHeld" uid="987">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>360</spray-cone>
@@ -68,7 +68,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ParticleHeldFinished" uid="230">
+                <instance type="ParticleHeldFinished" uid="988">
                     <properties>
                         <rate>25</rate>
                         <spray-cone>360</spray-cone>
@@ -107,7 +107,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Machine" uid="258">
+                <instance type="Machine" uid="989">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -168,7 +168,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ZoneDropCount" uid="259">
+                <instance type="ZoneDropCount" uid="990">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -195,7 +195,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberShape" uid="277">
+                <instance type="NumberShape" uid="991">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -272,7 +272,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextShape" uid="393">
+                <instance type="TextShape" uid="992">
                     <properties>
                         <text>9999999</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -302,7 +302,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextDisplay" uid="394">
+                <instance type="TextDisplay" uid="993">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -329,7 +329,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextTitle" uid="395">
+                <instance type="TextTitle" uid="994">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -356,7 +356,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextMachine" uid="396">
+                <instance type="TextMachine" uid="995">
                     <properties>
                         <text>...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -398,7 +398,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="platform" uid="397">
+                <instance type="platform" uid="996">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -439,7 +439,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ControlButton" uid="431">
+                <instance type="ControlButton" uid="997">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -474,7 +474,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LevelSelectNumber" uid="432">
+                <instance type="LevelSelectNumber" uid="998">
                     <properties>
                         <text>1</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -501,7 +501,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MachineExplosion" uid="433">
+                <instance type="MachineExplosion" uid="999">
                     <properties>
                         <rate>50</rate>
                         <spray-cone>360</spray-cone>
@@ -540,7 +540,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NormalText" uid="434">
+                <instance type="NormalText" uid="1000">
                     <properties>
                         <text>YOU REACH THE END! GO BACK!</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -567,7 +567,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Back" uid="435">
+                <instance type="Back" uid="1001">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -589,7 +589,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextStatusPerfect" uid="542">
+                <instance type="TextStatusPerfect" uid="1002">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>

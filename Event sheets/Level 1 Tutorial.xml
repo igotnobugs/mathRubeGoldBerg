@@ -243,6 +243,16 @@
                                 </action>
                             </actions>
                             <sub-events>
+                                <event-block sid="962927682377818">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="707851947067898" type="TextInstructions">
+                                            <param id="0" name="Unique ID">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="FadeOut" id="1" name="Start fade" sid="185077305137640" type="TextInstructions" />
+                                    </actions>
+                                </event-block>
                                 <event-block sid="643602333208844">
                                     <conditions>
                                         <condition id="-14" name="Pick by unique ID" sid="540564609725422" type="TextInstructions">

@@ -82,6 +82,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="TutorialBox" uid="1025">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>205</x>
+                        <y>149</y>
+                        <z>0</z>
+                        <width>465</width>
+                        <height>121</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="NumberTarget" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -213,7 +235,7 @@
                         <text>The correct number must land on the red line. Restart the puzzle to try again.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>102,102,51</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -260,7 +282,7 @@
                         <text>You can only drop them in this Green Area</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-24,400,0</font>
-                        <color>102,102,51</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -290,8 +312,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>203</x>
-                        <y>129</y>
+                        <x>198</x>
+                        <y>148</y>
                         <z>0</z>
                         <width>374</width>
                         <height>69</height>
@@ -307,7 +329,7 @@
                         <text>Tap and Hold a number to clone it</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>0,0,204</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -337,8 +359,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>207</x>
-                        <y>264</y>
+                        <x>200</x>
+                        <y>150</y>
                         <z>0</z>
                         <width>445</width>
                         <height>85</height>
@@ -354,7 +376,7 @@
                         <text>Press the play button</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>204,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -384,8 +406,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199</x>
-                        <y>265</y>
+                        <x>194</x>
+                        <y>152</y>
                         <z>0</z>
                         <width>311</width>
                         <height>130</height>
@@ -401,7 +423,7 @@
                         <text>Drop the number</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>51,102,51</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -431,8 +453,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>218</x>
-                        <y>261</y>
+                        <x>215</x>
+                        <y>153</y>
                         <z>0</z>
                         <width>487</width>
                         <height>53</height>
@@ -448,7 +470,7 @@
                         <text>You need to place the correct number in the red line.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>51,102,51</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -478,8 +500,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>198</x>
-                        <y>260</y>
+                        <x>192</x>
+                        <y>155</y>
                         <z>0</z>
                         <width>444</width>
                         <height>77</height>
@@ -495,7 +517,7 @@
                         <text>To solve the incomplete equation</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>255,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -525,8 +547,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199</x>
-                        <y>266</y>
+                        <x>202</x>
+                        <y>152</y>
                         <z>0</z>
                         <width>408</width>
                         <height>77</height>

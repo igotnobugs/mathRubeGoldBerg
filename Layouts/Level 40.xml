@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ZoneDrop" uid="793">
+                <instance type="ZoneDrop" uid="818">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -63,7 +63,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextInstructions" uid="794">
+                <instance type="TextInstructions" uid="819">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -129,7 +129,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="SymbolMath" uid="795">
+                <instance type="SymbolMath" uid="820">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>multiplication</initial-animation>
@@ -154,7 +154,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SymbolEquals" uid="796">
+                <instance type="SymbolEquals" uid="821">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -176,7 +176,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberDisplay" uid="797">
+                <instance type="NumberDisplay" uid="822">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -201,7 +201,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberTarget" uid="798">
+                <instance type="NumberTarget" uid="823">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -230,7 +230,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberDisplay" uid="799">
+                <instance type="NumberDisplay" uid="824">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -255,7 +255,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="800">
+                <instance type="TextSentence2" uid="825">
                     <properties>
                         <text>If a candy costs</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -282,7 +282,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="801">
+                <instance type="TextSentence2" uid="826">
                     <properties>
                         <text>pesos and the</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -309,7 +309,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberDisplay" uid="802">
+                <instance type="NumberDisplay" uid="827">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -334,7 +334,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="803">
+                <instance type="TextSentence2" uid="828">
                     <properties>
                         <text>candies,</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -361,7 +361,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="806">
+                <instance type="TextSentence2" uid="829">
                     <properties>
                         <text>If they only bought</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -388,7 +388,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberDisplay" uid="807">
+                <instance type="NumberDisplay" uid="830">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -413,7 +413,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="808">
+                <instance type="TextSentence2" uid="847">
                     <properties>
                         <text>candies,</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -440,7 +440,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="809">
+                <instance type="TextSentence2" uid="848">
                     <properties>
                         <text>how many should each have to equally share the candy?</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -467,7 +467,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="811">
+                <instance type="TextSentence2" uid="849">
                     <properties>
                         <text>friends would like a total of</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -494,7 +494,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="812">
+                <instance type="TextSentence2" uid="850">
                     <properties>
                         <text>how much would it cost?</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -521,7 +521,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NumberTarget" uid="816">
+                <instance type="NumberTarget" uid="851">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -550,7 +550,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="817">
+                <instance type="TextSentence2" uid="868">
                     <properties>
                         <text>pesos</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -577,7 +577,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextSentence2" uid="818">
+                <instance type="TextSentence2" uid="869">
                     <properties>
                         <text>candies</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -643,193 +643,193 @@
             <instances />
             <effects />
         </layer>
-      <layer name="UI" sid="724622656921293">
-        <initially-visible>1</initially-visible>
-        <background-color>255,255,255</background-color>
-        <transparent>1</transparent>
-        <parallax>
-          <x>1</x>
-          <y>1</y>
-        </parallax>
-        <zoom-rate>1</zoom-rate>
-        <opacity>1</opacity>
-        <force-own-texture>0</force-own-texture>
-        <global>0</global>
-        <use-render-cells>0</use-render-cells>
-        <blend-mode>0</blend-mode>
-        <effect-fallback>0</effect-fallback>
-        <instances>
-          <instance type="ControlButton" uid="45">
-            <properties>
-              <initial-visibility>Visible</initial-visibility>
-              <initial-animation>Default</initial-animation>
-              <initial-frame>0</initial-frame>
-              <collisions>Enabled</collisions>
-            </properties>
-            <instance-variables>
-              <scaleDivide>1</scaleDivide>
-              <actionPerfectAmount>6</actionPerfectAmount>
-              <sumOfRedLines>0</sumOfRedLines>
-            </instance-variables>
-            <behavior-instances>
-              <behavior-instance type="Rotate">
-                <properties>
-                  <speed>0</speed>
-                  <acceleration>0</acceleration>
-                </properties>
-              </behavior-instance>
-            </behavior-instances>
+        <layer name="UI" sid="724622656921293">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <world>
-              <x>40</x>
-              <y>40</y>
-              <z>0</z>
-              <width>59.991664886</width>
-              <height>59.991664886</height>
-              <depth>0</depth>
-              <hotspotX>0.5</hotspotX>
-              <hotspotY>0.5</hotspotY>
-              <angle>0</angle>
-              <opacity>1</opacity>
-            </world>
-          </instance>
-          <instance type="Back" uid="54">
-            <properties>
-              <initial-visibility>Visible</initial-visibility>
-              <initial-animation>Default</initial-animation>
-              <initial-frame>0</initial-frame>
-              <collisions>Enabled</collisions>
-            </properties>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <world>
-              <x>360</x>
-              <y>40</y>
-              <z>0</z>
-              <width>65</width>
-              <height>65</height>
-              <depth>0</depth>
-              <hotspotX>0.5</hotspotX>
-              <hotspotY>0.5</hotspotY>
-              <angle>-1.570796371</angle>
-              <opacity>1</opacity>
-            </world>
-          </instance>
-          <instance type="UIStarPerfectNeeded" uid="217">
-            <properties>
-              <initial-visibility>Visible</initial-visibility>
-              <initial-animation>Default</initial-animation>
-              <initial-frame>0</initial-frame>
-              <collisions>Enabled</collisions>
-            </properties>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <world>
-              <x>203.393692017</x>
-              <y>43.008575439</y>
-              <z>0</z>
-              <width>81.29875946</width>
-              <height>75.47039032</height>
-              <depth>0</depth>
-              <hotspotX>0.498007983</hotspotX>
-              <hotspotY>0.527897</hotspotY>
-              <angle>0</angle>
-              <opacity>1</opacity>
-            </world>
-          </instance>
-          <instance type="TextPerfectNeeded" uid="223">
-            <properties>
-              <text>99</text>
-              <initial-visibility>Visible</initial-visibility>
-              <font>Arial,-24,700,0</font>
-              <color>0,51,255</color>
-              <horizontal-alignment>Center</horizontal-alignment>
-              <vertical-alignment>Center</vertical-alignment>
-              <hotspot>Center</hotspot>
-              <wrapping>Word</wrapping>
-              <line-height>0</line-height>
-            </properties>
-            <effect-instances>
-              <effect-instance type="GlowHorizontal">
-                <parameters>
-                  <intensity>1</intensity>
-                </parameters>
-              </effect-instance>
-              <effect-instance type="GlowVertical">
-                <parameters>
-                  <intensity>1</intensity>
-                </parameters>
-              </effect-instance>
-            </effect-instances>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <world>
-              <x>198.407974243</x>
-              <y>41.052780151</y>
-              <z>0</z>
-              <width>50.700973511</width>
-              <height>35.929916382</height>
-              <depth>0</depth>
-              <hotspotX>0.5</hotspotX>
-              <hotspotY>0.5</hotspotY>
-              <angle>0</angle>
-              <opacity>1</opacity>
-            </world>
-          </instance>
-          <instance type="TextTitle" uid="225">
-            <properties>
-              <text></text>
-              <initial-visibility>Visible</initial-visibility>
-              <font>Arial Narrow,-13,400,1</font>
-              <color>0,0,0</color>
-              <horizontal-alignment>Left</horizontal-alignment>
-              <vertical-alignment>Bottom</vertical-alignment>
-              <hotspot>Top-left</hotspot>
-              <wrapping>Word</wrapping>
-              <line-height>0</line-height>
-            </properties>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <world>
-              <x>4</x>
-              <y>514</y>
-              <z>0</z>
-              <width>390</width>
-              <height>23</height>
-              <depth>0</depth>
-              <hotspotX>0</hotspotX>
-              <hotspotY>0</hotspotY>
-              <angle>0</angle>
-              <opacity>1</opacity>
-            </world>
-          </instance>
-          <instance type="HoldBar" uid="226">
-            <properties>
-              <initial-visibility>Visible</initial-visibility>
-              <hotspot>Top-left</hotspot>
-            </properties>
-            <instance-variables>
-              <max_width>397</max_width>
-            </instance-variables>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <world>
-              <x>1</x>
-              <y>402</y>
-              <z>0</z>
-              <width>16</width>
-              <height>16</height>
-              <depth>0</depth>
-              <hotspotX>0</hotspotX>
-              <hotspotY>0</hotspotY>
-              <angle>0</angle>
-              <opacity>1</opacity>
-            </world>
-          </instance>
-        </instances>
-        <effects />
-      </layer>
+            <instances>
+                <instance type="ControlButton" uid="870">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <scaleDivide>1</scaleDivide>
+                        <actionPerfectAmount>6</actionPerfectAmount>
+                        <sumOfRedLines>0</sumOfRedLines>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>0</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>40</x>
+                        <y>40</y>
+                        <z>0</z>
+                        <width>59.991664886</width>
+                        <height>59.991664886</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Back" uid="871">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>360</x>
+                        <y>40</y>
+                        <z>0</z>
+                        <width>65</width>
+                        <height>65</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UIStarPerfectNeeded" uid="872">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>203.393692017</x>
+                        <y>43.008575439</y>
+                        <z>0</z>
+                        <width>81.29875946</width>
+                        <height>75.47039032</height>
+                        <depth>0</depth>
+                        <hotspotX>0.498007983</hotspotX>
+                        <hotspotY>0.527897</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextPerfectNeeded" uid="894">
+                    <properties>
+                        <text>99</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-24,700,0</font>
+                        <color>0,51,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <effect-instances>
+                        <effect-instance type="GlowHorizontal">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>198.407974243</x>
+                        <y>41.052780151</y>
+                        <z>0</z>
+                        <width>50.700973511</width>
+                        <height>35.929916382</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextTitle" uid="895">
+                    <properties>
+                        <text></text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial Narrow,-13,400,1</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4</x>
+                        <y>514</y>
+                        <z>0</z>
+                        <width>390</width>
+                        <height>23</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="HoldBar" uid="896">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <instance-variables>
+                        <max_width>397</max_width>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1</x>
+                        <y>402</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="Results" sid="583870926931461">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
@@ -846,7 +846,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Shadow" uid="824">
+                <instance type="Shadow" uid="897">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -868,7 +868,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Results" uid="825">
+                <instance type="Results" uid="898">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -899,7 +899,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ResultImage" uid="826">
+                <instance type="ResultImage" uid="916">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Waiting</initial-animation>
@@ -921,7 +921,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ButtonNextLevel" uid="827">
+                <instance type="ButtonNextLevel" uid="917">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -943,7 +943,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextResultPerfectTip" uid="828">
+                <instance type="TextResultPerfectTip" uid="918">
                     <properties>
                         <text>Have less than 1 Actions for a Perfect Result</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -970,7 +970,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextResult" uid="829">
+                <instance type="TextResult" uid="919">
                     <properties>
                         <text>SOLVED</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -997,7 +997,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextResultActions" uid="830">
+                <instance type="TextResultActions" uid="920">
                     <properties>
                         <text>Actions: 0</text>
                         <initial-visibility>Visible</initial-visibility>

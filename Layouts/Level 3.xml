@@ -82,6 +82,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="TutorialBox" uid="1027">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>195</x>
+                        <y>150</y>
+                        <z>0</z>
+                        <width>465</width>
+                        <height>121</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="NumberDisplay" uid="43">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -260,7 +282,7 @@
                         <text>Take a look at the equation and see what needs to be done.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>51,51,204</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -290,8 +312,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>202</x>
-                        <y>247</y>
+                        <x>206</x>
+                        <y>153</y>
                         <z>0</z>
                         <width>377</width>
                         <height>130</height>
@@ -307,7 +329,7 @@
                         <text>You need a number less than any of these.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>51,102,51</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -337,8 +359,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>192</x>
-                        <y>250</y>
+                        <x>196</x>
+                        <y>145</y>
                         <z>0</z>
                         <width>363</width>
                         <height>124</height>
@@ -354,7 +376,7 @@
                         <text>Good luck! Aim for the stars!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>204,0,0</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -384,8 +406,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>197</x>
-                        <y>238</y>
+                        <x>200</x>
+                        <y>149</y>
                         <z>0</z>
                         <width>487</width>
                         <height>97</height>
@@ -401,7 +423,7 @@
                         <text>Drag a number or a machine over to the equal sign</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>0,0,204</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -431,8 +453,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>202</x>
-                        <y>243</y>
+                        <x>204</x>
+                        <y>147</y>
                         <z>0</z>
                         <width>392</width>
                         <height>103</height>
@@ -448,7 +470,7 @@
                         <text>There is also no minus sign to clone.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>51,51,204</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -478,8 +500,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>197</x>
-                        <y>254</y>
+                        <x>204</x>
+                        <y>145</y>
                         <z>0</z>
                         <width>311</width>
                         <height>130</height>
@@ -495,7 +517,7 @@
                         <text>But...</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>51,102,51</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -525,8 +547,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>195</x>
-                        <y>242</y>
+                        <x>198</x>
+                        <y>145</y>
                         <z>0</z>
                         <width>363</width>
                         <height>124</height>
@@ -542,7 +564,7 @@
                         <text>It switches signs!</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>51,102,51</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -572,8 +594,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>205</x>
-                        <y>245</y>
+                        <x>199</x>
+                        <y>147</y>
                         <z>0</z>
                         <width>487</width>
                         <height>97</height>
@@ -589,7 +611,7 @@
                         <text>If you move a number or a symbol to the other side of an equation.</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-29,400,0</font>
-                        <color>51,51,204</color>
+                        <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -619,8 +641,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>202</x>
-                        <y>247</y>
+                        <x>196</x>
+                        <y>151</y>
                         <z>0</z>
                         <width>311</width>
                         <height>154</height>
