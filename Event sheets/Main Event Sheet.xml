@@ -42,6 +42,9 @@
                 <action id="-16" name="Set opacity" sid="946432745044506" type="ControlButton">
                     <param id="0" name="Opacity">20</param>
                 </action>
+                <action id="-5" name="Set width" sid="494941759163280" type="HoldBar">
+                    <param id="0" name="Width">0</param>
+                </action>
             </actions>
         </event-block>
         <include>Machines</include>

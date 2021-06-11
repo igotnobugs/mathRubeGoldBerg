@@ -23,9 +23,6 @@
                             <param id="0" name="Variable">isTouchingNumberDisplay</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-5" name="Set width" sid="643833605441316" type="HoldBar">
-                            <param id="0" name="Width">0</param>
-                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="177812443163409">
