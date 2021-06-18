@@ -323,6 +323,12 @@
                                     <param id="0" name="Variable">isFinished</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action behavior="Rotate" id="0" name="Set speed" sid="575604844484926" type="ControlButton">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="371089984870576" type="ControlButton">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
                                 <action id="4" name="Set animation" sid="461567639333152" type="ControlButton">
                                     <param id="0" name="Animation">&quot;Done&quot;</param>
                                     <param id="1" name="From">1</param>

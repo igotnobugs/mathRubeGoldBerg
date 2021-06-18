@@ -282,7 +282,7 @@
                         <text>You can only drop them in this Green Area</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-24,400,0</font>
-                        <color>255,255,255</color>
+                        <color>255,0,51</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Center</hotspot>
@@ -312,11 +312,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>198</x>
-                        <y>148</y>
+                        <x>201.1822052</x>
+                        <y>388.908752441</y>
                         <z>0</z>
-                        <width>374</width>
-                        <height>69</height>
+                        <width>373.091186523</width>
+                        <height>67.181716919</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
