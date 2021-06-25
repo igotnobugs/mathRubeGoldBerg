@@ -173,7 +173,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="456139326679183">
+        <event-block disabled="1" sid="456139326679183">
             <conditions>
                 <condition id="-5" name="Compare width" sid="188928518455848" type="HoldBar">
                     <param id="0" name="Comparison">0</param>

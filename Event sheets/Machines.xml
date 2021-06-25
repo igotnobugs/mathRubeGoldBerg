@@ -155,6 +155,10 @@
                         <action id="-5" name="Set width" sid="574202958722947" type="HoldBar">
                             <param id="0" name="Width">0</param>
                         </action>
+                        <action id="0" name="Call function" sid="382734845787626" type="Function">
+                            <param id="0" name="Name">&quot;glowDropZone&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="552146984759549">
@@ -164,6 +168,10 @@
                             <actions>
                                 <action id="-5" name="Set width" sid="758755870463209" type="HoldBar">
                                     <param id="0" name="Width">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="256102334601438" type="Function">
+                                    <param id="0" name="Name">&quot;glowDropZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -222,7 +230,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="854965216915536">
+                <event-block disabled="1" sid="854965216915536">
                     <conditions>
                         <condition id="-5" name="Compare width" sid="936820099733017" type="HoldBar">
                             <param id="0" name="Comparison">0</param>
@@ -264,7 +272,11 @@
                                     <param id="0" name="Name">&quot;changeTextMachine&quot;</param>
                                     <param id="1" name="Parameter {n}">Machine.textMachineUID{###}NumberShape.number</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="912457069477011" type="NumberShape" />
+                                <action id="-3" name="Set position" sid="931968376950682" type="NumberShape">
+                                    <param id="0" name="X">-9999</param>
+                                    <param id="1" name="Y">-9999</param>
+                                </action>
+                                <action disabled="1" id="-9" name="Destroy" sid="912457069477011" type="NumberShape" />
                                 <action id="-13" name="Set boolean" sid="883521153045937" type="Machine">
                                     <param id="0" name="Instance variable">hasModifier</param>
                                     <param id="1" name="Value">1</param>

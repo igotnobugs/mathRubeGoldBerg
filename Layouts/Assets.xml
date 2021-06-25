@@ -209,6 +209,9 @@
                         <isNewlyChanged>false</isNewlyChanged>
                         <isFraction>false</isFraction>
                         <textUID>0</textUID>
+                        <xPast>0</xPast>
+                        <yPast>0</yPast>
+                        <numPast>0</numPast>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -232,7 +235,6 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Pin" />
-                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Timer" />
                     </behavior-instances>
                     <effect-instances>

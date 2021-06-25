@@ -107,6 +107,14 @@
                                         <action id="-42" name="Signal" sid="169673438507023" type="System">
                                             <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
                                         </action>
+                                        <action id="-10" name="Set value" sid="959380968454594" type="NumberShape">
+                                            <param id="0" name="Instance variable">xPast</param>
+                                            <param id="1" name="Value">NumberShape.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="700186426173114" type="NumberShape">
+                                            <param id="0" name="Instance variable">yPast</param>
+                                            <param id="1" name="Value">NumberShape.Y</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -212,6 +220,10 @@
                             <param id="0" name="Mode">1</param>
                             <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
                         </action>
+                        <action id="0" name="Call function" sid="665761860218804" type="Function">
+                            <param id="0" name="Name">&quot;glowDropZone&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="837899581442035">
@@ -240,6 +252,18 @@
                         <action id="-27" name="Set effect enabled" sid="738456537443106" type="NumberShape">
                             <param id="0" name="Mode">0</param>
                             <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="389820600706934" type="Function">
+                            <param id="0" name="Name">&quot;glowDropZone&quot;</param>
+                            <param id="1" name="Parameter {n}">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="363112946026013" type="NumberShape">
+                            <param id="0" name="Instance variable">xPast</param>
+                            <param id="1" name="Value">NumberShape.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="498961285311079" type="NumberShape">
+                            <param id="0" name="Instance variable">yPast</param>
+                            <param id="1" name="Value">NumberShape.Y</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -374,6 +398,14 @@
                             <param id="2" name="X">Touch.X</param>
                             <param id="3" name="Y">Touch.y</param>
                         </action>
+                        <action id="0" name="Call function" sid="213815701522385" type="Function">
+                            <param id="0" name="Name">&quot;glowDropZone&quot;</param>
+                            <param id="1" name="Parameter {n}">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="140413220396851" type="NumberShape">
+                            <param id="0" name="Instance variable">numPast</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="516795133328806">
@@ -394,6 +426,32 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="634123967050695">
+            <conditions>
+                <condition id="-4" name="Is outside layout" sid="562171205434400" type="NumberShape" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="27" name="Set enabled" sid="751654107374403" type="NumberShape">
+                    <param id="0" name="Mode">0</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="471756961449497" type="NumberShape">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="412561183495880" type="NumberShape">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="273785008833863" type="NumberShape">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="687477516084618" type="NumberShape">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

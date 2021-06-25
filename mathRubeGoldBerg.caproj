@@ -28,12 +28,12 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
-        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
         <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
+        <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
         <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
         <effect author="Scirra" id="hsladjust">Adjust HSL</effect>
@@ -275,6 +275,9 @@
                 <instance-variable name="isNewlyChanged" sid="696031214991810" type="boolean" />
                 <instance-variable name="isFraction" sid="508389316688392" type="boolean" />
                 <instance-variable name="textUID" sid="726188454392591" type="number" />
+                <instance-variable name="xPast" sid="708184350568969" type="number" />
+                <instance-variable name="yPast" sid="277236994912608" type="number" />
+                <instance-variable name="numPast" sid="761008604316938" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Physics" sid="968679404106537">
@@ -285,9 +288,6 @@
                 </behavior-type>
                 <behavior-type name="Pin" sid="535035990972517">
                     <behavior id="Pin" />
-                </behavior-type>
-                <behavior-type name="DestroyOutsideLayout" sid="830157838282006">
-                    <behavior id="destroy" />
                 </behavior-type>
                 <behavior-type name="Timer" sid="173835595952832">
                     <behavior id="Timer" />
@@ -424,6 +424,15 @@
             <effects>
                 <effect-type name="AdjustHSL">
                     <effect id="hsladjust" />
+                </effect-type>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
                 </effect-type>
             </effects>
             <animation-folder>

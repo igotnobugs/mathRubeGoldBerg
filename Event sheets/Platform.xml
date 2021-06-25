@@ -80,9 +80,29 @@
                             </conditions>
                             <actions>
                                 <action id="-9" name="Destroy" sid="772520801127130" type="ParticleHeld" />
+                                <action id="-5" name="Set width" sid="142923694792360" type="HoldBar">
+                                    <param id="0" name="Width">0</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="679229964130261" type="System">
                                     <param id="0" name="Variable">isTouchingRedLine</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="986797547407238">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="302812955662387" type="Touch">
+                                    <param id="0" name="Object">NumberTarget</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="609390873666823" type="System">
+                                    <param id="0" name="Variable">isTouchingRedLine</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="660304719689242" type="HoldBar">
+                                    <param id="0" name="Width">HoldBar.Width + 15</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -93,10 +113,13 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="732813789220787" type="System">
+                                <action disabled="1" id="-16" name="Wait" sid="732813789220787" type="System">
                                     <param id="0" name="Seconds">0.3</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="720436200138565" type="ParticleHeld" />
+                                <action id="-5" name="Set width" sid="897187233530573" type="HoldBar">
+                                    <param id="0" name="Width">0</param>
+                                </action>
                                 <action id="-9" name="Set value" sid="380587119092979" type="System">
                                     <param id="0" name="Variable">isTouchingRedLine</param>
                                     <param id="1" name="Value">0</param>
@@ -134,6 +157,10 @@
                                             <param id="0" name="Variable">actions</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="291218113804682" type="Function">
+                                            <param id="0" name="Name">&quot;glowDropZone&quot;</param>
+                                            <param id="1" name="Parameter {n}">1</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -157,7 +184,12 @@
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="521507520951769" type="Touch" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Call function" sid="723277697280915" type="Function">
+                                    <param id="0" name="Name">&quot;glowDropZone&quot;</param>
+                                    <param id="1" name="Parameter {n}">0</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="885140576262550">
                                     <conditions>
