@@ -271,12 +271,12 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="634094059977643" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\Art Assets\EvenShorterRedBar.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\ShortRedBar.png">
                             <collision-poly>
-                                <point x="0" y="0.641303" />
-                                <point x="1" y="0.64101" />
-                                <point x="0.996" y="0.868558" />
-                                <point x="0.014" y="0.854558" />
+                                <point x="0" y="1" />
+                                <point x="1" y="1" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -322,7 +322,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="578533327795081" speed="5">
-                        <frame duration="1" hotspotX="0.539589" hotspotY="0.491124" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\add_math_symbols.png">
+                        <frame duration="1" hotspotX="0.498753" hotspotY="0.402948" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\PlusIcon.png">
                             <collision-poly>
                                 <point x="0.293255" y="0.292899" />
                                 <point x="0.539589" y="0.00591716" />
@@ -336,7 +336,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="339833593477880" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502577" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\subtract_math_symbols.png">
+                        <frame duration="1" hotspotX="0.506234" hotspotY="0.279188" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\MinusIcon.png">
                             <collision-poly>
                                 <point x="0.0775858" y="0.363402" />
                                 <point x="0.83908" y="0.345361" />
@@ -348,7 +348,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="multiplication" pingpong="0" repeatcount="1" repeatto="0" sid="790713351679724" speed="5">
-                        <frame duration="1" hotspotX="0.551515" hotspotY="0.489297" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\multiply_math_symbols.png">
+                        <frame duration="1" hotspotX="0.503741" hotspotY="0.383292" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\MultiplyIcon.png">
                             <collision-poly>
                                 <point x="0.136364" y="0.088685" />
                                 <point x="0.551515" y="0.0672783" />
@@ -361,7 +361,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="224727166835765" speed="5">
-                        <frame duration="1" hotspotX="0.507246" hotspotY="0.51312" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\divide_math_symbols.png">
+                        <frame duration="1" hotspotX="0.501247" hotspotY="0.395577" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\DivideIcon.png">
                             <collision-poly>
                                 <point x="0.255072" y="0.306122" />
                                 <point x="0.507246" y="0.0408163" />
@@ -380,7 +380,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="455504595386182" speed="5">
-                        <frame duration="1" hotspotX="0.586006" hotspotY="0.417293" original-source="C:\Users\Jerry\Desktop\mathRGB Assets\symbols\equals_math_symbols.png">
+                        <frame duration="1" hotspotX="0.496183" hotspotY="0.386167" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\EuqalIcon.png">
                             <collision-poly>
                                 <point x="0.206997" y="0.255639" />
                                 <point x="0.752187" y="0.263158" />
@@ -417,7 +417,7 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="218047565886976" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\Art Assets\CircleShape3.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.442857" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\CircleShapeWhite.png">
                             <collision-poly>
                                 <point x="0.151951" y="0.141491" />
                                 <point x="0.498973" y="0.00191205" />
@@ -840,7 +840,7 @@
             </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549857479508361" speed="5">
-                    <frame duration="1" hotspotX="0.54" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\Art Assets\DropArea.png">
+                    <frame duration="1" hotspotX="0.54" hotspotY="0.5" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\DropArea.png">
                         <image-point name="counter" x="0.944" y="0.944" />
                         <collision-poly>
                             <point x="0" y="0.044" />
