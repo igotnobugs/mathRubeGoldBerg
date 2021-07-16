@@ -34,7 +34,6 @@
     <used-effects>
         <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
         <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
-        <effect author="Scirra" id="brightness">Brightness</effect>
         <effect author="Scirra" id="glowhorizontal">Glow Horizontal</effect>
         <effect author="Scirra" id="glowvertical">Glow Vertical</effect>
         <effect author="Scirra" id="hsladjust">Adjust HSL</effect>
@@ -827,15 +826,6 @@
             <effects>
                 <effect-type name="AdjustHSL">
                     <effect id="hsladjust" />
-                </effect-type>
-                <effect-type name="GlowHorizontal">
-                    <effect id="glowhorizontal" />
-                </effect-type>
-                <effect-type name="GlowVertical">
-                    <effect id="glowvertical" />
-                </effect-type>
-                <effect-type name="Brightness">
-                    <effect id="brightness" />
                 </effect-type>
             </effects>
             <animation-folder>

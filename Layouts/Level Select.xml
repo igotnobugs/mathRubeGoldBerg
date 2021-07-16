@@ -97,21 +97,6 @@
                                 <saturation>1</saturation>
                             </parameters>
                         </effect-instance>
-                        <effect-instance type="GlowHorizontal">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
                     </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -339,21 +324,6 @@
                                 <hue>0</hue>
                                 <luminosity>1</luminosity>
                                 <saturation>1</saturation>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowHorizontal">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -625,21 +595,6 @@
                                 <saturation>1.5</saturation>
                             </parameters>
                         </effect-instance>
-                        <effect-instance type="GlowHorizontal">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
                     </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -878,21 +833,6 @@
                                 <hue>0</hue>
                                 <luminosity>1</luminosity>
                                 <saturation>1</saturation>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowHorizontal">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1135,21 +1075,6 @@
                                 <saturation>1</saturation>
                             </parameters>
                         </effect-instance>
-                        <effect-instance type="GlowHorizontal">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
                     </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1390,21 +1315,6 @@
                                 <saturation>1</saturation>
                             </parameters>
                         </effect-instance>
-                        <effect-instance type="GlowHorizontal">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
-                            </parameters>
-                        </effect-instance>
                     </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1643,21 +1553,6 @@
                                 <hue>0</hue>
                                 <luminosity>1</luminosity>
                                 <saturation>1</saturation>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowHorizontal">
-                            <parameters>
-                                <intensity>0</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>0</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="Brightness">
-                            <parameters>
-                                <brightness>1</brightness>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -1980,8 +1875,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>196</x>
-                        <y>140</y>
+                        <x>198.727798462</x>
+                        <y>158.181640625</y>
                         <z>0</z>
                         <width>78.949028015</width>
                         <height>84.228294373</height>

@@ -85,41 +85,13 @@
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-27" name="Set effect enabled" sid="270230206599538" type="ZoneDrop">
-                            <param id="0" name="Mode">1</param>
-                            <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
-                        </action>
-                        <action id="-27" name="Set effect enabled" sid="273214557828623" type="ZoneDrop">
-                            <param id="0" name="Mode">1</param>
-                            <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="959090661183511" type="ZoneDrop">
-                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">105</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="930897155442821">
                     <conditions>
                         <condition id="-22" name="Else" sid="999228849305976" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="-27" name="Set effect enabled" sid="308552087413274" type="ZoneDrop">
-                            <param id="0" name="Mode">0</param>
-                            <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
-                        </action>
-                        <action id="-27" name="Set effect enabled" sid="774652765565616" type="ZoneDrop">
-                            <param id="0" name="Mode">0</param>
-                            <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="911654345848672" type="ZoneDrop">
-                            <param id="0" name="Effect">&quot;Brightness&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">100</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
