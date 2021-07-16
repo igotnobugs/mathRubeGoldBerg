@@ -829,6 +829,12 @@
                             <param id="0" name="Variable">redLineTaps</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="0" name="Play" sid="368693079096537" type="Audio">
+                            <param id="0" name="Audio file">Corked</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="892996108329483">
@@ -839,7 +845,14 @@
                                     <param id="2" name="Value">4</param>
                                 </condition>
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="0" name="Play" sid="439399344316688" type="Audio">
+                                    <param id="0" name="Audio file">Circuit</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="851977847280385">
                                     <conditions>
@@ -852,58 +865,10 @@
                                             <param id="0" name="Instance variable">state</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
+                                        <action id="-16" name="Set opacity" sid="182819693428679" type="LevelSelectButton">
+                                            <param id="0" name="Opacity">100</param>
+                                        </action>
                                     </actions>
-                                    <sub-events>
-                                        <event-block sid="140765095614619">
-                                            <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="810212433994820" type="LevelSelectButton">
-                                                    <param id="0" name="Instance variable">state</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">-1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                        <event-block sid="259352393638967">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="472663979294695" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="351923197265011" type="LevelSelectButton">
-                                                    <param id="0" name="Instance variable">state</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">0</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                        <event-block sid="596404389330053">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="569895694173041" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="263773670157566" type="LevelSelectButton">
-                                                    <param id="0" name="Instance variable">state</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">1</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                        <event-block sid="106397241082403">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="966089838350698" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="902815966360530" type="LevelSelectButton">
-                                                    <param id="0" name="Instance variable">state</param>
-                                                    <param id="1" name="Comparison">5</param>
-                                                    <param id="2" name="Value">2</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                        <event-block sid="752005586092025">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="848582297618403" type="System" />
-                                            </conditions>
-                                            <actions />
-                                        </event-block>
-                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

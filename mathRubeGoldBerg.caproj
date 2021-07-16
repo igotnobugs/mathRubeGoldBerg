@@ -273,10 +273,10 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="634094059977643" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\ShortRedBar.png">
                             <collision-poly>
-                                <point x="0" y="1" />
-                                <point x="1" y="1" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
+                                <point x="0" y="0.64" />
+                                <point x="1" y="0.628" />
+                                <point x="1" y="0.82" />
+                                <point x="0" y="0.82" />
                             </collision-poly>
                         </frame>
                     </animation>
