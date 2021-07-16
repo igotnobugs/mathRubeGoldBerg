@@ -46,8 +46,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199</x>
-                        <y>475.5</y>
+                        <x>200.502716064</x>
+                        <y>468.840240479</y>
                         <z>0</z>
                         <width>380</width>
                         <height>67</height>
@@ -55,7 +55,7 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0.25</opacity>
                     </world>
                 </instance>
             </instances>
@@ -86,6 +86,8 @@
                     </properties>
                     <instance-variables>
                         <dropCount>5</dropCount>
+                        <xPosition>0</xPosition>
+                        <yPosition>0</yPosition>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -114,11 +116,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>223</x>
-                        <y>292</y>
+                        <x>215</x>
+                        <y>290</y>
                         <z>0</z>
-                        <width>528</width>
-                        <height>369</height>
+                        <width>455</width>
+                        <height>370</height>
                         <depth>0</depth>
                         <hotspotX>0.540000021</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -140,15 +142,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -178,15 +171,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -216,15 +200,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -254,15 +229,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -292,15 +258,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -330,15 +287,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -382,6 +330,8 @@
                     </properties>
                     <instance-variables>
                         <dropCount>5</dropCount>
+                        <xPosition>0</xPosition>
+                        <yPosition>0</yPosition>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -410,11 +360,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>223</x>
-                        <y>292</y>
+                        <x>215</x>
+                        <y>290</y>
                         <z>0</z>
-                        <width>528</width>
-                        <height>369</height>
+                        <width>455</width>
+                        <height>370</height>
                         <depth>0</depth>
                         <hotspotX>0.540000021</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -436,15 +386,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -474,15 +415,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -512,15 +444,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -550,15 +473,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -588,15 +502,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -626,15 +531,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -664,15 +560,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -727,6 +614,8 @@
                     </properties>
                     <instance-variables>
                         <dropCount>5</dropCount>
+                        <xPosition>0</xPosition>
+                        <yPosition>0</yPosition>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -755,11 +644,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>223</x>
-                        <y>292</y>
+                        <x>215</x>
+                        <y>290</y>
                         <z>0</z>
-                        <width>528</width>
-                        <height>369</height>
+                        <width>455</width>
+                        <height>370</height>
                         <depth>0</depth>
                         <hotspotX>0.540000021</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -781,15 +670,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -819,15 +699,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -857,15 +728,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -895,15 +757,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -933,15 +786,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -971,15 +815,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1034,6 +869,8 @@
                     </properties>
                     <instance-variables>
                         <dropCount>5</dropCount>
+                        <xPosition>0</xPosition>
+                        <yPosition>0</yPosition>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -1062,11 +899,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>223</x>
-                        <y>292</y>
+                        <x>215</x>
+                        <y>290</y>
                         <z>0</z>
-                        <width>528</width>
-                        <height>369</height>
+                        <width>455</width>
+                        <height>370</height>
                         <depth>0</depth>
                         <hotspotX>0.540000021</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1088,15 +925,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1126,15 +954,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1164,15 +983,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1202,15 +1012,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1240,15 +1041,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1278,15 +1070,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1341,6 +1124,8 @@
                     </properties>
                     <instance-variables>
                         <dropCount>5</dropCount>
+                        <xPosition>0</xPosition>
+                        <yPosition>0</yPosition>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -1369,11 +1154,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>223</x>
-                        <y>292</y>
+                        <x>215</x>
+                        <y>290</y>
                         <z>0</z>
-                        <width>528</width>
-                        <height>369</height>
+                        <width>455</width>
+                        <height>370</height>
                         <depth>0</depth>
                         <hotspotX>0.540000021</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1395,15 +1180,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1433,15 +1209,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1471,15 +1238,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1509,15 +1267,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1547,15 +1296,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1585,15 +1325,6 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1648,6 +1379,8 @@
                     </properties>
                     <instance-variables>
                         <dropCount>5</dropCount>
+                        <xPosition>0</xPosition>
+                        <yPosition>0</yPosition>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -1676,11 +1409,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>223</x>
-                        <y>292</y>
+                        <x>215</x>
+                        <y>290</y>
                         <z>0</z>
-                        <width>528</width>
-                        <height>369</height>
+                        <width>455</width>
+                        <height>370</height>
                         <depth>0</depth>
                         <hotspotX>0.540000021</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -1702,19 +1435,10 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>198</x>
+                        <x>196</x>
                         <y>247</y>
                         <z>0</z>
                         <width>54.990909576</width>
@@ -1740,19 +1464,10 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>112</x>
+                        <x>110</x>
                         <y>321</y>
                         <z>0</z>
                         <width>54.990909576</width>
@@ -1778,19 +1493,10 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>196</x>
+                        <x>194</x>
                         <y>325</y>
                         <z>0</z>
                         <width>54.990909576</width>
@@ -1816,19 +1522,10 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>280</x>
+                        <x>278</x>
                         <y>325</y>
                         <z>0</z>
                         <width>54.990909576</width>
@@ -1854,19 +1551,10 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>195</x>
+                        <x>193</x>
                         <y>401</y>
                         <z>0</z>
                         <width>54.990909576</width>
@@ -1892,19 +1580,10 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.25</green>
-                                <red>0.5</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>357</x>
+                        <x>355</x>
                         <y>405</y>
                         <z>0</z>
                         <width>54.990909576</width>
@@ -1955,6 +1634,8 @@
                     </properties>
                     <instance-variables>
                         <dropCount>5</dropCount>
+                        <xPosition>0</xPosition>
+                        <yPosition>0</yPosition>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -1966,12 +1647,12 @@
                         </effect-instance>
                         <effect-instance type="GlowHorizontal">
                             <parameters>
-                                <intensity>1</intensity>
+                                <intensity>0</intensity>
                             </parameters>
                         </effect-instance>
                         <effect-instance type="GlowVertical">
                             <parameters>
-                                <intensity>1</intensity>
+                                <intensity>0</intensity>
                             </parameters>
                         </effect-instance>
                         <effect-instance type="Brightness">
@@ -1983,11 +1664,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>223</x>
-                        <y>292</y>
+                        <x>215</x>
+                        <y>290</y>
                         <z>0</z>
-                        <width>528</width>
-                        <height>369</height>
+                        <width>455</width>
+                        <height>370</height>
                         <depth>0</depth>
                         <hotspotX>0.540000021</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2009,23 +1690,14 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.75</green>
-                                <red>0.75</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>72</x>
-                        <y>287</y>
+                        <x>87.03351593</x>
+                        <y>301.696228027</y>
                         <z>0</z>
-                        <width>54.990909576</width>
-                        <height>54.990909576</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2047,23 +1719,14 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.25</blue>
-                                <green>0.5</green>
-                                <red>0.25</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>190</x>
-                        <y>285</y>
+                        <x>203.636642456</x>
+                        <y>300.487030029</y>
                         <z>0</z>
-                        <width>54.990909576</width>
-                        <height>54.990909576</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2085,23 +1748,14 @@
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="SetColor">
-                            <parameters>
-                                <blue>0.75</blue>
-                                <green>0.25</green>
-                                <red>0.25</red>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>308</x>
-                        <y>287</y>
+                        <x>316.324523926</x>
+                        <y>302.629699707</y>
                         <z>0</z>
-                        <width>54.990909576</width>
-                        <height>54.990909576</height>
+                        <width>60</width>
+                        <height>60</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2139,68 +1793,14 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="NormalText" uid="55">
-                    <properties>
-                        <text>LEVEL SELECT</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Narrow,-37,700,0</font>
-                        <color>102,102,204</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>202</x>
-                        <y>90</y>
-                        <z>0</z>
-                        <width>302</width>
-                        <height>59</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="NormalText" uid="63">
                     <properties>
-                        <text>Math RGB</text>
+                        <text>&quot;Time is gold&quot;</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-32,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>197</x>
-                        <y>52</y>
-                        <z>0</z>
-                        <width>302</width>
-                        <height>59</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextTitle" uid="70">
-                    <properties>
-                        <text>Choose your level. Press the Play button to automatically choose the next level.</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Narrow,-13,400,1</font>
+                        <font>Arial,-13.6,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Bottom</vertical-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
@@ -2208,14 +1808,41 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3</x>
-                        <y>512</y>
+                        <x>7.360977173</x>
+                        <y>507.703918457</y>
                         <z>0</z>
-                        <width>406</width>
-                        <height>23</height>
+                        <width>186.416152954</width>
+                        <height>23.294250488</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextTitle" uid="70">
+                    <properties>
+                        <text>M a t h   R G B</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial Black,-48,900,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>188.275497437</x>
+                        <y>55.532875061</y>
+                        <z>0</z>
+                        <width>403.411743164</width>
+                        <height>75.384216309</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2224,7 +1851,7 @@
                     <properties>
                         <text>Ether Vox - Kevin MacLeod</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Narrow,-13,400,1</font>
+                        <font>Arial,-13.6,400,1</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Bottom</vertical-alignment>
@@ -2235,10 +1862,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>398</x>
-                        <y>2</y>
+                        <x>394</x>
+                        <y>493</y>
                         <z>0</z>
-                        <width>162.942001343</width>
+                        <width>319.866027832</width>
                         <height>23</height>
                         <depth>0</depth>
                         <hotspotX>1</hotspotX>
@@ -2253,7 +1880,7 @@
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-11,400,0</font>
                         <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -2262,8 +1889,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4.565948486</x>
-                        <y>22.889945984</y>
+                        <x>267</x>
+                        <y>516</y>
                         <z>0</z>
                         <width>128.446426392</width>
                         <height>16.851196289</height>
@@ -2307,8 +1934,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2.913589478</x>
-                        <y>2.22895813</y>
+                        <x>263</x>
+                        <y>512</y>
                         <z>0</z>
                         <width>98.445579529</width>
                         <height>16.563072205</height>
@@ -2336,18 +1963,31 @@
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199</x>
-                        <y>148</y>
+                        <x>201.054733276</x>
+                        <y>154.763031006</y>
                         <z>0</z>
-                        <width>59.991664886</width>
-                        <height>59.991664886</height>
+                        <width>78.949028015</width>
+                        <height>84.228294373</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.398176283</hotspotX>
+                        <hotspotY>0.381766379</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2359,11 +1999,26 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>1</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>364</x>
-                        <y>153</y>
+                        <x>349.835144043</x>
+                        <y>159.431838989</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -2381,11 +2036,26 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>37</x>
-                        <y>160</y>
+                        <x>56.87877655</x>
+                        <y>157.021209717</y>
                         <z>0</z>
                         <width>61.449165344</width>
                         <height>61.449165344</height>

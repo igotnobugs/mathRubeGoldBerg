@@ -38,6 +38,8 @@
                     </properties>
                     <instance-variables>
                         <dropCount>5</dropCount>
+                        <xPosition>0</xPosition>
+                        <yPosition>0</yPosition>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
@@ -237,10 +239,10 @@
                         <y>487.75289917</y>
                         <z>0</z>
                         <width>35.649536133</width>
-                        <height>35.649536133</height>
+                        <height>36.36252594</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501960814</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -287,10 +289,10 @@
                         <y>486.036834717</y>
                         <z>0</z>
                         <width>35.649536133</width>
-                        <height>35.649536133</height>
+                        <height>36.36252594</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501960814</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -337,10 +339,10 @@
                         <y>486.425720215</y>
                         <z>0</z>
                         <width>35.649536133</width>
-                        <height>35.649536133</height>
+                        <height>36.36252594</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501960814</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -362,10 +364,10 @@
                         <y>486.863983154</y>
                         <z>0</z>
                         <width>35.649536133</width>
-                        <height>35.649536133</height>
+                        <height>36.36252594</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.501960814</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -488,6 +490,19 @@
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -495,11 +510,11 @@
                         <x>40</x>
                         <y>40</y>
                         <z>0</z>
-                        <width>59.991664886</width>
-                        <height>59.991664886</height>
+                        <width>78.949028015</width>
+                        <height>84.228294373</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.398176283</hotspotX>
+                        <hotspotY>0.381766379</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

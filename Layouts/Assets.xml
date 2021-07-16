@@ -265,11 +265,11 @@
                         <x>179</x>
                         <y>284</y>
                         <z>0</z>
-                        <width>57.163146973</width>
-                        <height>56.819824219</height>
+                        <width>56.819824219</width>
+                        <height>57.163146973</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504531741</hotspotY>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -278,7 +278,7 @@
                     <properties>
                         <text>9999999</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-35,700,0</font>
+                        <font>Arial Black,-26.4,900,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -308,7 +308,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-37,700,0</font>
+                        <font>Arial,-32,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -460,6 +460,19 @@
                                 <acceleration>0</acceleration>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>50</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -467,11 +480,11 @@
                         <x>486</x>
                         <y>149</y>
                         <z>0</z>
-                        <width>46.432746887</width>
-                        <height>46.432746887</height>
+                        <width>61.105495453</width>
+                        <height>65.191581726</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.398176283</hotspotX>
+                        <hotspotY>0.381766379</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -480,14 +493,17 @@
                     <properties>
                         <text>1</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-29,400,0</font>
-                        <color>0,0,0</color>
+                        <font>Arial,-29.6,700,0</font>
+                        <color>0,0,102</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
