@@ -94,6 +94,23 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="797483695625972">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="711100789956030" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="640014829685027" type="UIStarPerfectNeeded">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="210904271136096" type="UIStarPerfectNeeded">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="619596104019498" type="TextPerfectNeeded">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <event-group description="" sid="946183932425305" title="Puzzle Resolution">

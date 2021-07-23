@@ -697,6 +697,9 @@
                     <behavior-type name="Timer" sid="411984996702263">
                         <behavior id="Timer" />
                     </behavior-type>
+                    <behavior-type name="Pin" sid="510912590848832">
+                        <behavior id="Pin" />
+                    </behavior-type>
                 </behaviors>
                 <effects>
                     <effect-type name="GlowVertical">
@@ -922,6 +925,17 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549857479508361" speed="5">
                     <frame duration="1" hotspotX="0.54" hotspotY="0.5" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\DropArea.png">
+                        <image-point name="counter" x="0.944" y="0.944" />
+                        <collision-poly>
+                            <point x="0" y="0.044" />
+                            <point x="1" y="0.04" />
+                            <point x="1" y="0.928" />
+                            <point x="0" y="0.928" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="444980590056275" speed="5">
+                    <frame duration="1" hotspotX="0.54" hotspotY="0.5">
                         <image-point name="counter" x="0.944" y="0.944" />
                         <collision-poly>
                             <point x="0" y="0.044" />

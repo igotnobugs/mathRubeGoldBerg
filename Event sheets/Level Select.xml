@@ -688,7 +688,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="293351085704992" title="Navigation by Touch">
+        <event-group description="" disabled="1" sid="293351085704992" title="Navigation by Touch">
             <sub-events>
                 <variable constant="0" name="xTouch" sid="529224387060941" static="1" type="number">0</variable>
                 <event-block sid="959526937453183">

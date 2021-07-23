@@ -558,6 +558,7 @@
                             <param id="3" name="Volume">0</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="605936605625773" type="Machine" />
                     </actions>
                 </event-block>
                 <event-block sid="192528232400822">

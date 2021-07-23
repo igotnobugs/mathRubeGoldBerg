@@ -224,6 +224,7 @@
                             <param id="0" name="Name">&quot;glowDropZone&quot;</param>
                             <param id="1" name="Parameter {n}">1</param>
                         </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="340288780764596" type="NumberShape" />
                     </actions>
                 </event-block>
                 <event-block sid="837899581442035">

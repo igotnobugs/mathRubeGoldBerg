@@ -130,6 +130,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
                         <effect-instance type="GlowVertical">

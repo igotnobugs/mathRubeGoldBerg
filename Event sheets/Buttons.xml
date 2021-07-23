@@ -264,5 +264,281 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="836912910247367" title="Reset by Gesture">
+            <sub-events>
+                <variable constant="0" name="isTouchingDropZone" sid="130268761599203" static="1" type="number">0</variable>
+                <variable constant="0" name="isDragging" sid="310771491697374" static="1" type="number">0</variable>
+                <variable constant="0" name="xTouch" sid="706292916379390" static="1" type="number">0</variable>
+                <event-block sid="553250414148760">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="911351651071828" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="116974092300908" type="System">
+                            <param id="0" name="Variable">xTouch</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="484526662641933" type="System">
+                            <param id="0" name="Variable">isTouchingDropZone</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="317170326939211" type="System">
+                            <param id="0" name="Variable">isDragging</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="646257639235232" type="ZoneDrop">
+                            <param id="0" name="Instance variable">xPosition</param>
+                            <param id="1" name="Value">ZoneDrop.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="384151497026302" type="ZoneDrop">
+                            <param id="0" name="Instance variable">yPosition</param>
+                            <param id="1" name="Value">ZoneDrop.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="445439281825193">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="888373726359825" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="990357542042910" type="System">
+                            <param id="0" name="Variable">isFinished</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="512245330317865">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="444506424590864" type="Touch">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                                <condition id="4" inverted="1" name="Is touching object" sid="699246053539395" type="Touch">
+                                    <param id="0" name="Object">NumberShape</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="200379030257256" type="System">
+                                    <param id="0" name="Variable">isTouchingDropZone</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="157114649765844">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="842813015439010" type="Touch">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="323224592419537" type="System">
+                                    <param id="0" name="Variable">isTouchingDropZone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="704759148626326" type="HoldBar">
+                                    <param id="0" name="Width">HoldBar.Width + HOLD_TIME_SPEED</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="691548120385791">
+                                    <conditions>
+                                        <condition id="-5" name="Compare width" sid="954474664529550" type="HoldBar">
+                                            <param id="0" name="Comparison">5</param>
+                                            <param id="1" name="Width">HoldBar.max_width</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="284255208092862" type="System">
+                                            <param id="0" name="Variable">isTouchingDropZone</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-5" name="Set width" sid="177381398523852" type="HoldBar">
+                                            <param id="0" name="Width">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="552151007975227">
+                                            <conditions>
+                                                <condition id="2" name="Is in touch" sid="311115358063841" type="Touch" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="301473600500150" type="System">
+                                                    <param id="0" name="Variable">xTouch</param>
+                                                    <param id="1" name="Value">ZoneDrop.X - Touch.X</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="302017872924672" type="System">
+                                                    <param id="0" name="Variable">isDragging</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="623155737431551" type="HoldBar">
+                                                    <param id="0" name="Width">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="559733365749039">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="978322484518806" type="System">
+                                                            <param id="0" name="Object">NumberShape</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Pin" id="0" name="Pin to object" sid="382873161788327" type="NumberShape">
+                                                            <param id="0" name="Pin to">ZoneDrop</param>
+                                                            <param id="1" name="Mode">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="333867755981303">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="310553646990393" type="System">
+                                                            <param id="0" name="Object">Machine</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Pin" id="0" name="Pin to object" sid="724948632462446" type="Machine">
+                                                            <param id="0" name="Pin to">ZoneDrop</param>
+                                                            <param id="1" name="Mode">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="546083066002545">
+                            <conditions>
+                                <condition id="4" inverted="1" name="Is touching object" sid="519465210646073" type="Touch">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="814888616497498" type="System">
+                                    <param id="0" name="Variable">isTouchingDropZone</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="267554521326759" type="HoldBar">
+                                    <param id="0" name="Width">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="499837235504839" type="System">
+                                    <param id="0" name="Variable">isTouchingDropZone</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="513445618645106">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="403660862536786" type="System">
+                            <param id="0" name="Variable">isDragging</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="276944385750267">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="259021263297225" type="Touch" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="339027280571725" type="System">
+                                    <param id="0" name="Variable">isDragging</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <comment>Reset</comment>
+                                <event-block sid="300438450528321">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="389902543048131" type="ZoneDrop">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">20</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="371079071683569" type="ZoneDrop">
+                                            <param id="0" name="Instance variable">xPosition</param>
+                                            <param id="1" name="Value">ZoneDrop.xPosition - xPositionOutside</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="378766161751760">
+                            <conditions>
+                                <condition id="4" name="Is touching object" sid="653681025000009" type="Touch">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="249829978528263" type="ZoneDrop">
+                                    <param id="0" name="X">xTouch + Touch.X</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="745344718294673">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="864754579431023" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="400441383259122" type="ZoneDrop">
+                            <param id="0" name="X">lerp(ZoneDrop.X, ZoneDrop.xPosition, 0.5)</param>
+                            <param id="1" name="Y">lerp(ZoneDrop.Y, ZoneDrop.yPosition, 0.5)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="834475460302476">
+                    <conditions>
+                        <condition id="-3" inverted="1" name="Is on-screen" sid="311008917821343" type="ZoneDrop" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="980043546161891" type="ZoneDrop">
+                            <param id="0" name="X">ZoneDrop.xPosition + (xPositionOutside * 3/2)</param>
+                            <param id="1" name="Y">ZoneDrop.yPosition</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="484307314333807" type="ZoneDrop">
+                            <param id="0" name="Instance variable">xPosition</param>
+                            <param id="1" name="Value">ZoneDrop.xPosition + xPositionOutside</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="930524619655734" type="System">
+                            <param id="0" name="Variable">actions</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="860798677206865">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="980982136451956" type="System">
+                                    <param id="0" name="Object">NumberShape</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="725112011398150" type="NumberShape" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="201190053144156">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="468120624603772" type="System">
+                                    <param id="0" name="Object">Machine</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="556365752162581" type="Machine" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
