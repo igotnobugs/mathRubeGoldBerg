@@ -506,8 +506,8 @@
                         <width>81.29875946</width>
                         <height>75.47039032</height>
                         <depth>0</depth>
-                        <hotspotX>0.498007983</hotspotX>
-                        <hotspotY>0.527897</hotspotY>
+                        <hotspotX>0.501992047</hotspotX>
+                        <hotspotY>0.502145946</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -524,18 +524,6 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
-                    <effect-instances>
-                        <effect-instance type="GlowHorizontal">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -658,17 +646,26 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="AdjustHSL">
+                            <parameters>
+                                <hue>0</hue>
+                                <luminosity>1</luminosity>
+                                <saturation>1</saturation>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>206</x>
                         <y>251</y>
                         <z>0</z>
-                        <width>334</width>
-                        <height>378</height>
+                        <width>367.399993896</width>
+                        <height>415.799987793</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.50181818</hotspotX>
+                        <hotspotY>0.50181818</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

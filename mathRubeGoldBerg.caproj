@@ -95,6 +95,11 @@
                         <behavior id="shadowcaster" />
                     </behavior-type>
                 </behaviors>
+                <effects>
+                    <effect-type name="AdjustHSL">
+                        <effect id="hsladjust" />
+                    </effect-type>
+                </effects>
                 <container>
                     <type>Results</type>
                     <type>Shadow</type>
@@ -106,8 +111,18 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799439086439128" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="ResultsText" x="0.508" y="0.132" />
+                        <frame duration="1" hotspotX="0.501818" hotspotY="0.501818" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\DropArea.png">
+                            <image-point name="ResultsText" x="0.509091" y="0.130909" />
+                            <collision-poly>
+                                <point x="0.0164225" y="0.0164153" />
+                                <point x="0.499778" y="0.000443656" />
+                                <point x="0.983577" y="0.0164153" />
+                                <point x="1" y="0.5" />
+                                <point x="0.983577" y="0.983585" />
+                                <point x="0.499778" y="0.999556" />
+                                <point x="0.0164225" y="0.983585" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -165,10 +180,28 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="Solved" pingpong="0" repeatcount="1" repeatto="0" sid="118887752116511" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.397163" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.396667" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\CheckIcon.png">
+                            <collision-poly>
+                                <point x="0.398551" y="0.436508" />
+                                <point x="0.5" y="0.311508" />
+                                <point x="0.911232" y="0.0972222" />
+                                <point x="0.5" y="0.652778" />
+                                <point x="0.235507" y="0.742063" />
+                                <point x="0.0923913" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Perfect" pingpong="0" repeatcount="1" repeatto="0" sid="462179197948581" speed="5">
-                        <frame duration="1" hotspotX="0.498008" hotspotY="0.459227" />
+                        <frame duration="1" hotspotX="0.496667" hotspotY="0.46" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\SmileStar.png">
+                            <collision-poly>
+                                <point x="0.498525" y="0" />
+                                <point x="0.955752" y="0.5" />
+                                <point x="0.846608" y="0.840491" />
+                                <point x="0.498525" y="0.883436" />
+                                <point x="0.159292" y="0.834356" />
+                                <point x="0.0471976" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -566,7 +599,16 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Done" pingpong="0" repeatcount="1" repeatto="0" sid="962167392546793" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\CheckIcon.png">
+                            <collision-poly>
+                                <point x="0.398551" y="0.436508" />
+                                <point x="0.5" y="0.311508" />
+                                <point x="0.911232" y="0.0972222" />
+                                <point x="0.5" y="0.652778" />
+                                <point x="0.235507" y="0.742063" />
+                                <point x="0.0923913" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                     <animation framecount="4" loop="1" name="RestartOld" pingpong="0" repeatcount="1" repeatto="0" sid="303230241418208" speed="1.5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -608,20 +650,33 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217843952271500" speed="5">
-                        <frame duration="1" hotspotX="0.498008" hotspotY="0.527897" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\Art Assets\StarIcon.png" />
+                        <frame duration="1" hotspotX="0.501992" hotspotY="0.502146" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\SmileStar.png">
+                            <collision-poly>
+                                <point x="0.498525" y="0" />
+                                <point x="0.955752" y="0.5" />
+                                <point x="0.846608" y="0.840491" />
+                                <point x="0.498525" y="0.883436" />
+                                <point x="0.159292" y="0.834356" />
+                                <point x="0.0471976" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Fail" pingpong="0" repeatcount="1" repeatto="0" sid="129860081488060" speed="5">
+                        <frame duration="1" hotspotX="0.501992" hotspotY="0.502146" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\SadStar.png">
+                            <collision-poly>
+                                <point x="0.498525" y="0" />
+                                <point x="0.955752" y="0.5" />
+                                <point x="0.846608" y="0.840491" />
+                                <point x="0.498525" y="0.883436" />
+                                <point x="0.159292" y="0.834356" />
+                                <point x="0.0471976" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="TextPerfectNeeded" sid="199090881476147">
                 <plugin id="Text" />
-                <effects>
-                    <effect-type name="GlowHorizontal">
-                        <effect id="glowhorizontal" />
-                    </effect-type>
-                    <effect-type name="GlowVertical">
-                        <effect id="glowvertical" />
-                    </effect-type>
-                </effects>
             </object-type>
         </object-folder>
         <object-folder name="Cloned">
@@ -659,23 +714,59 @@
                 </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="573080795158530" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Downloads\Assets_newer\Addition Machine.png">
-                            <image-point name="TextNumber" x="0.491525" y="0.176626" />
+                        <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineAdd.png">
+                            <image-point name="TextNumber" x="0.491844" y="0.176667" />
+                            <collision-poly>
+                                <point x="0.120452" y="0.106667" />
+                                <point x="0.499373" y="0.0166667" />
+                                <point x="0.879548" y="0.106667" />
+                                <point x="0.894605" y="0.5" />
+                                <point x="0.843162" y="0.861111" />
+                                <point x="0.156838" y="0.861111" />
+                                <point x="0.105395" y="0.5" />
+                            </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="610409258199748" speed="5">
-                        <frame duration="1" hotspotX="0.500536" hotspotY="0.500418" original-source="C:\Users\Jerry\Downloads\Assets_newer\Subtraction Machine.png">
-                            <image-point name="TextNumber" x="0.500536" y="0.169591" />
+                        <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineSub.png">
+                            <image-point name="TextNumber" x="0.491844" y="0.176667" />
+                            <collision-poly>
+                                <point x="0.120452" y="0.106667" />
+                                <point x="0.499373" y="0.0166667" />
+                                <point x="0.879548" y="0.106667" />
+                                <point x="0.894605" y="0.5" />
+                                <point x="0.843162" y="0.861111" />
+                                <point x="0.156838" y="0.861111" />
+                                <point x="0.105395" y="0.5" />
+                            </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="multiplication" pingpong="0" repeatcount="1" repeatto="0" sid="193154203987214" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.500377" original-source="C:\Users\Jerry\Downloads\Assets_newer\Multiplication Machine.png">
-                            <image-point name="TextNumber" x="0.49591" y="0.234717" />
+                        <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineMult.png">
+                            <image-point name="TextNumber" x="0.491844" y="0.176667" />
+                            <collision-poly>
+                                <point x="0.120452" y="0.106667" />
+                                <point x="0.499373" y="0.0166667" />
+                                <point x="0.879548" y="0.106667" />
+                                <point x="0.894605" y="0.5" />
+                                <point x="0.843162" y="0.861111" />
+                                <point x="0.156838" y="0.861111" />
+                                <point x="0.105395" y="0.5" />
+                            </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="173224446937826" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jerry\Downloads\Assets_newer\Division Machine.png">
-                            <image-point name="TextNumber" x="0.492" y="0.194631" />
+                        <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineDiv.png">
+                            <image-point name="TextNumber" x="0.491844" y="0.176667" />
+                            <collision-poly>
+                                <point x="0.120452" y="0.106667" />
+                                <point x="0.499373" y="0.0166667" />
+                                <point x="0.879548" y="0.106667" />
+                                <point x="0.894605" y="0.5" />
+                                <point x="0.843162" y="0.861111" />
+                                <point x="0.156838" y="0.861111" />
+                                <point x="0.105395" y="0.5" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>

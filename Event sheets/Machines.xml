@@ -639,7 +639,7 @@
                             <param id="3" name="Y">Touch.Y</param>
                         </action>
                         <action id="9" name="Set scale" sid="324228853642731" type="Machine">
-                            <param id="0" name="Scale">1 / (13 + ControlButton.scaleDivide)</param>
+                            <param id="0" name="Scale">1 / (10 + ControlButton.scaleDivide)</param>
                         </action>
                         <action id="4" name="Set animation" sid="293428344730468" type="Machine">
                             <param id="0" name="Animation">Function.Param(0)</param>

@@ -85,6 +85,13 @@
                         <action id="-16" name="Set opacity" sid="720140309901276" type="TextPerfectNeeded">
                             <param id="0" name="Opacity">50</param>
                         </action>
+                        <action id="4" name="Set animation" sid="284386208124047" type="UIStarPerfectNeeded">
+                            <param id="0" name="Animation">&quot;Fail&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="834129217592378" type="UIStarPerfectNeeded">
+                            <param id="0" name="Opacity">75</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
