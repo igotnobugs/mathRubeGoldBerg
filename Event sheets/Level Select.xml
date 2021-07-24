@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level Select</name>
     <events>
+        <variable constant="0" name="levelVarsLoaded" sid="928252785121424" static="0" type="number">0</variable>
         <variable constant="0" name="xPositionOutside" sid="604083870091784" static="0" type="number">475</variable>
         <variable constant="0" name="redLineTaps" sid="760236699950142" static="0" type="number">0</variable>
         <variable constant="0" name="levelGroupCurrent" sid="906126917990752" static="0" type="number">1</variable>

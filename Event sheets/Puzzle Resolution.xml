@@ -65,9 +65,6 @@
                 <condition id="-1" name="Every tick" sid="797251383909786" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="0" name="Set text" sid="228498410940930" type="TextStatusPerfect">
-                    <param id="0" name="Text">actions</param>
-                </action>
                 <action id="0" name="Set text" sid="393281597165177" type="TextPerfectNeeded">
                     <param id="0" name="Text">actions &amp; &quot; / &quot; &amp; actionsPerfect</param>
                 </action>
@@ -193,7 +190,7 @@
                                                 <event-block sid="599485373029413">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="977924192268187" type="System">
-                                                            <param id="0" name="First value">ControlButton.sumOfRedLines</param>
+                                                            <param id="0" name="First value">sumOfRedLines</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">currentSumOfNumbers - NumberShape.number</param>
                                                         </condition>
@@ -227,7 +224,7 @@
                                                 <event-block sid="996031927490152">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="276748799382185" type="System">
-                                                            <param id="0" name="First value">ControlButton.sumOfRedLines</param>
+                                                            <param id="0" name="First value">sumOfRedLines</param>
                                                             <param id="1" name="Comparison">0</param>
                                                             <param id="2" name="Second value">currentSumOfNumbers + NumberShape.number</param>
                                                         </condition>
@@ -333,7 +330,7 @@
                                 <condition id="-14" name="Compare variable" sid="579621922315157" type="System">
                                     <param id="0" name="Variable">currentSumOfNumbers</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">ControlButton.sumOfRedLines</param>
+                                    <param id="2" name="Value">sumOfRedLines</param>
                                 </condition>
                             </conditions>
                             <actions>

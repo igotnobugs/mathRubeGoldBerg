@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Main Event Sheet</name>
     <events>
+        <variable constant="0" name="scaleDivide" sid="565604305027667" static="0" type="number">0</variable>
+        <variable constant="0" name="sumOfRedLines" sid="761812542380434" static="0" type="number">0</variable>
         <variable constant="0" name="actions" sid="659005813106633" static="0" type="number">0</variable>
         <variable comment="actions &lt;= this means a perfect level" constant="0" name="actionsPerfect" sid="808755200895981" static="0" type="number">2</variable>
         <variable comment="Puzzle Solved" constant="0" name="isFinished" sid="785216222294153" static="0" type="number">0</variable>
@@ -20,10 +22,6 @@
                 </action>
                 <action behavior="DragDrop" id="0" name="Set enabled" sid="762282374233901" type="NumberShape">
                     <param id="0" name="State">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="244842889588820" type="System">
-                    <param id="0" name="Variable">actionsPerfect</param>
-                    <param id="1" name="Value">ControlButton.actionPerfectAmount</param>
                 </action>
                 <action id="-9" name="Set value" sid="998238375769214" type="System">
                     <param id="0" name="Variable">isSimulating</param>
@@ -51,6 +49,95 @@
                     <param id="1" name="Parameter {n}">0</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="684924912542476">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="317775427970641" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="570842784032615">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="540698443545109" type="System">
+                            <param id="0" name="Variable">levelVarsLoaded</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="215528144851902" type="AJAX">
+                            <param id="0" name="Tag">&quot;levelVars&quot;</param>
+                            <param id="1" name="File">LevelVars.txt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="837598678727592">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="361174539102603" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="528227400626983" type="Function">
+                            <param id="0" name="Name">&quot;setLevelVariables&quot;</param>
+                            <param id="1" name="Parameter {n}">tokenat(levelVarsArray.At(currentLevel-1),0,&quot;|&quot;){###}tokenat(levelVarsArray.At(currentLevel-1),1,&quot;|&quot;){###}tokenat(levelVarsArray.At(currentLevel-1),2,&quot;|&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="820485029281512">
+            <conditions>
+                <condition id="0" name="On completed" sid="377896443378465" type="AJAX">
+                    <param id="0" name="Tag">&quot;levelVars&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="idx" sid="831721634306934" static="0" type="number">0</variable>
+                <event-block sid="617378301933102">
+                    <conditions>
+                        <condition id="-23" name="While" sid="147628629163653" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="595906725663549">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="380134015970431" type="System">
+                                    <param id="0" name="First value">tokenat(AJAX.LastData, idx, newline)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="532536544790953" type="levelVarsArray">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">tokenat(AJAX.LastData, idx, newline)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="434501222256901" type="System">
+                                    <param id="0" name="Variable">idx</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="594244164064181">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="718295265464456" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="778134744522563" type="System">
+                                    <param id="0" name="Variable">levelVarsLoaded</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="668977583019311" type="Function">
+                                    <param id="0" name="Name">&quot;setLevelVariables&quot;</param>
+                                    <param id="1" name="Parameter {n}">tokenat(levelVarsArray.At(currentLevel-1),0,&quot;|&quot;){###}tokenat(levelVarsArray.At(currentLevel-1),1,&quot;|&quot;){###}tokenat(levelVarsArray.At(currentLevel-1),2,&quot;|&quot;)</param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="982144180041314" type="System" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <include>Machines</include>
         <include>Number Shapes</include>
@@ -94,6 +181,28 @@
                     <actions />
                 </event-block>
             </sub-events>
+        </event-block>
+        <comment>Actions for Perfect | Scaling of Machines | Sum of Red Lines</comment>
+        <event-block sid="130090557114362">
+            <conditions>
+                <condition id="0" name="On function" sid="247575162566399" type="Function">
+                    <param id="0" name="Name">&quot;setLevelVariables&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="375238773326590" type="System">
+                    <param id="0" name="Variable">actionsPerfect</param>
+                    <param id="1" name="Value">Function.Param(0)</param>
+                </action>
+                <action id="-9" name="Set value" sid="677790670465923" type="System">
+                    <param id="0" name="Variable">scaleDivide</param>
+                    <param id="1" name="Value">Function.Param(1)</param>
+                </action>
+                <action id="-9" name="Set value" sid="118134842696765" type="System">
+                    <param id="0" name="Variable">sumOfRedLines</param>
+                    <param id="1" name="Value">Function.Param(2)</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

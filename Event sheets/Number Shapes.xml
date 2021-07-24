@@ -372,9 +372,6 @@
                             <param id="2" name="X">Touch.X</param>
                             <param id="3" name="Y">Touch.Y</param>
                         </action>
-                        <action id="9" name="Set scale" sid="310266490254952" type="NumberShape">
-                            <param id="0" name="Scale">1 / (10 + ControlButton.scaleDivide)</param>
-                        </action>
                         <action id="-10" name="Set value" sid="389029505254832" type="NumberShape">
                             <param id="0" name="Instance variable">number</param>
                             <param id="1" name="Value">Function.Param(0)</param>

@@ -1846,11 +1846,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <scaleDivide>1</scaleDivide>
-                        <actionPerfectAmount>0</actionPerfectAmount>
-                        <sumOfRedLines>0</sumOfRedLines>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
                             <properties>
@@ -1982,6 +1977,24 @@
             <instances />
             <effects />
         </layer>
+        <layer name="UI" sid="151039492237629">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
     </layers>
     <nonworld-instances>
         <instance type="progress" uid="60">
@@ -1992,6 +2005,13 @@
             </properties>
         </instance>
         <instance type="Dictionary" uid="126" />
+        <instance type="levelVarsArray" uid="1033">
+            <properties>
+                <width>0</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
     </nonworld-instances>
     <effects />
 </c2layout>

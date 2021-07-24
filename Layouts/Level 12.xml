@@ -273,11 +273,6 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <instance-variables>
-                        <scaleDivide>1</scaleDivide>
-                        <actionPerfectAmount>3</actionPerfectAmount>
-                        <sumOfRedLines>0</sumOfRedLines>
-                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Rotate">
                             <properties>

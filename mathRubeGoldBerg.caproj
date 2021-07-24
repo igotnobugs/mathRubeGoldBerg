@@ -10,6 +10,7 @@
     <unique-id>3bxwz08zrd6tu</unique-id>
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Button" version="1">Button</plugin>
@@ -558,11 +559,6 @@
             </object-type>
             <object-type name="ControlButton" sid="683958559256350">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="scaleDivide" sid="694495292233071" type="number" />
-                    <instance-variable name="actionPerfectAmount" sid="870836679168127" type="number" />
-                    <instance-variable comment="Sum of the numbers that are set to letGameDecide, if a number is on the other side, subtract" name="sumOfRedLines" sid="237154514697300" type="number" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="Rotate" sid="723776685526959">
                         <behavior id="Rotate" />
@@ -970,6 +966,12 @@
         <object-type name="ButtonClearProgress" sid="344746627811297">
             <plugin id="Button" />
         </object-type>
+        <object-type name="AJAX" sid="328314083368328">
+            <plugin id="AJAX" />
+        </object-type>
+        <object-type global="1" name="levelVarsArray" sid="274723328699179">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1052,6 +1054,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="AJAX" uid="1032" />
     </global-instances>
     <sounds-folder>
         <file name="Good Morning.ogg" />
@@ -1081,5 +1084,6 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="LevelVars.txt" />
     </files-folder>
 </c2project>
