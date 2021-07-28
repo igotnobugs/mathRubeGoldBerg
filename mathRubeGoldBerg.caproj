@@ -424,13 +424,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TextDisplay" sid="425570235065312">
-                <plugin id="Text" />
-                <container>
-                    <type>NumberDisplay</type>
-                    <type>TextDisplay</type>
-                </container>
-            </object-type>
         </object-folder>
         <object-folder name="LevelSelect">
             <object-type name="LevelSelectButton" sid="281851374736183">
@@ -540,9 +533,38 @@
             <object-type name="TextTitle" sid="566739315257799">
                 <plugin id="Text" />
             </object-type>
+            <object-type name="TextDisplay" sid="425570235065312">
+                <plugin id="Text" />
+                <container>
+                    <type>NumberDisplay</type>
+                    <type>TextDisplay</type>
+                </container>
+            </object-type>
+            <object-type name="LevelSelectPlayButton" sid="693522810265215">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="517936159280322">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Play" pingpong="0" repeatcount="1" repeatto="0" sid="869937311702643" speed="5">
+                        <frame duration="1" hotspotX="0.398176" hotspotY="0.381766" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\Art Assets\PlayButton.png">
+                            <collision-poly>
+                                <point x="0.12462" y="0.116809" />
+                                <point x="0.24924" y="0.02849" />
+                                <point x="0.87842" y="0.364672" />
+                                <point x="0.756839" y="0.498576" />
+                                <point x="0.161094" y="0.752137" />
+                                <point x="0.12462" y="0.498576" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="PuzzleUI">
-            <object-type name="Back" sid="419785036877716">
+            <object-type global="1" name="Back" sid="419785036877716">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671352493548963" speed="5">
@@ -557,14 +579,11 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="ControlButton" sid="683958559256350">
+            <object-type global="1" name="ControlButton" sid="683958559256350">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Rotate" sid="723776685526959">
                         <behavior id="Rotate" />
-                    </behavior-type>
-                    <behavior-type name="Sine" sid="523286001052055">
-                        <behavior id="Sin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -635,14 +654,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="HoldBar" sid="670067897809787">
+            <object-type global="1" name="HoldBar" sid="670067897809787">
                 <plugin id="TiledBg" />
                 <instance-variables>
                     <instance-variable name="max_width" sid="939995948657059" type="number" />
                 </instance-variables>
                 <texture />
             </object-type>
-            <object-type name="UIStarPerfectNeeded" sid="219978118856692">
+            <object-type global="1" name="UIStarPerfectNeeded" sid="219978118856692">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="217843952271500" speed="5">
@@ -671,7 +690,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="TextPerfectNeeded" sid="199090881476147">
+            <object-type global="1" name="TextPerfectNeeded" sid="199090881476147">
                 <plugin id="Text" />
             </object-type>
         </object-folder>

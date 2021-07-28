@@ -24,6 +24,17 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="680684175599999">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="381916701483972" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="875326167448387" type="System">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-group description="" sid="640629152270729" title="Setting up the Level Select Menu">
             <sub-events>
                 <comment>Preload sounds reset some values</comment>
@@ -69,7 +80,7 @@
                                     <param id="0" name="Variable">redLineTaps</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
-                                <action behavior="Sine" id="0" name="Set active" sid="526958515763808" type="ControlButton">
+                                <action behavior="Sine" id="0" name="Set active" sid="526958515763808" type="LevelSelectPlayButton">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -389,7 +400,7 @@
                                             <param id="0" name="Name">&quot;createLevelNumberShapes&quot;</param>
                                             <param id="1" name="Parameter {n}">LevelSelectButton.level{###}&quot;MovingElements&quot;</param>
                                         </action>
-                                        <action id="-9" name="Destroy" sid="215422346193143" type="ControlButton" />
+                                        <action id="-9" name="Destroy" sid="215422346193143" type="LevelSelectPlayButton" />
                                         <action id="0" name="Play" sid="715590550314282" type="Audio">
                                             <param id="0" name="Audio file">Bing Bong</param>
                                             <param id="2" name="Loop">0</param>
@@ -423,10 +434,6 @@
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="850495499346230">
-                                    <conditions />
-                                    <actions />
-                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
@@ -436,7 +443,7 @@
                         <event-block sid="505520939614113">
                             <conditions>
                                 <condition id="3" name="On touched object" sid="258590593057635" type="Touch">
-                                    <param id="0" name="Object">ControlButton</param>
+                                    <param id="0" name="Object">LevelSelectPlayButton</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -481,7 +488,7 @@
                                                     </conditions>
                                                     <actions>
                                                         <action id="-9" name="Destroy" sid="384374030005181" type="LevelSelectButton" />
-                                                        <action id="-9" name="Destroy" sid="412496660910337" type="ControlButton" />
+                                                        <action id="-9" name="Destroy" sid="252114295900581" type="LevelSelectPlayButton" />
                                                         <action id="-24" name="Stop loop" sid="301945370135614" type="System" />
                                                     </actions>
                                                 </event-block>
