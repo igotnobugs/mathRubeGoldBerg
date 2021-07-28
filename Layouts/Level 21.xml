@@ -161,6 +161,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>true</anyNumber>
                         <targetNumber>-1</targetNumber>
@@ -190,6 +191,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <number>0</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -215,6 +217,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <type>multiplication</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -240,6 +243,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <number>3</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -302,6 +306,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <type>addition</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -327,6 +332,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
                         <targetNumber>3</targetNumber>

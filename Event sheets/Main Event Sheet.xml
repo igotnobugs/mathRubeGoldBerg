@@ -20,9 +20,6 @@
                 <action behavior="Physics" id="27" name="Set enabled" sid="988666675745021" type="NumberShape">
                     <param id="0" name="Mode">0</param>
                 </action>
-                <action behavior="DragDrop" id="0" name="Set enabled" sid="762282374233901" type="NumberShape">
-                    <param id="0" name="State">1</param>
-                </action>
                 <action id="-9" name="Set value" sid="998238375769214" type="System">
                     <param id="0" name="Variable">isSimulating</param>
                     <param id="1" name="Value">0</param>
@@ -43,10 +40,6 @@
                 </action>
                 <action id="-5" name="Set width" sid="494941759163280" type="HoldBar">
                     <param id="0" name="Width">0</param>
-                </action>
-                <action id="0" name="Call function" sid="545921616279715" type="Function">
-                    <param id="0" name="Name">&quot;glowDropZone&quot;</param>
-                    <param id="1" name="Parameter {n}">0</param>
                 </action>
             </actions>
         </event-block>
@@ -139,10 +132,8 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <include>Machines</include>
-        <include>Number Shapes</include>
-        <include>Number Displays</include>
-        <include>Platform</include>
+        <include>Cloneable</include>
+        <include>Dropable</include>
         <include>Puzzle Resolution</include>
         <include>Buttons</include>
         <event-block sid="902229789542878">
@@ -155,32 +146,6 @@
                     <param id="0" name="Layout">Level Select</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="960872787068722">
-            <conditions>
-                <condition id="0" name="On function" sid="126471672120070" type="Function">
-                    <param id="0" name="Name">&quot;glowDropZone&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="443586922391960">
-                    <conditions>
-                        <condition id="1" name="Compare parameter" sid="626623002533758" type="Function">
-                            <param id="0" name="Index">0</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block sid="930897155442821">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="999228849305976" type="System" />
-                    </conditions>
-                    <actions />
-                </event-block>
-            </sub-events>
         </event-block>
         <comment>Actions for Perfect | Scaling of Machines | Sum of Red Lines</comment>
         <event-block sid="130090557114362">

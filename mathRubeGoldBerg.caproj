@@ -682,35 +682,14 @@
                     <instance-variable name="machineType" sid="323757254322351" type="string" />
                     <instance-variable name="hasModifier" sid="988548676151728" type="boolean" />
                     <instance-variable name="modifierNumber" sid="375546449315324" type="number" />
-                    <instance-variable name="isNewlyCloned" sid="231001587024042" type="boolean" />
                     <instance-variable name="isNewlyChanged" sid="848369126373944" type="boolean" />
                     <instance-variable name="textMachineUID" sid="971956735506828" type="number" />
                 </instance-variables>
                 <behaviors>
-                    <behavior-type name="DragDrop" sid="669418780452496">
-                        <behavior id="DragnDrop" />
-                    </behavior-type>
                     <behavior-type name="Timer" sid="411984996702263">
                         <behavior id="Timer" />
                     </behavior-type>
-                    <behavior-type name="Pin" sid="510912590848832">
-                        <behavior id="Pin" />
-                    </behavior-type>
                 </behaviors>
-                <effects>
-                    <effect-type name="GlowVertical">
-                        <effect id="glowvertical" />
-                    </effect-type>
-                    <effect-type name="GlowHorizontal">
-                        <effect id="glowhorizontal" />
-                    </effect-type>
-                    <effect-type name="BlurVertical">
-                        <effect id="blurvertical" />
-                    </effect-type>
-                    <effect-type name="BlurHorizontal">
-                        <effect id="blurhorizontal" />
-                    </effect-type>
-                </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="573080795158530" speed="5">
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineAdd.png">
@@ -775,42 +754,19 @@
                 <instance-variables>
                     <instance-variable name="number" sid="102321621582140" type="number" />
                     <instance-variable name="dropZoneUID" sid="782564057384307" type="number" />
-                    <instance-variable name="isNewlyCreated" sid="584032034651293" type="boolean" />
                     <instance-variable name="isNewlyChanged" sid="696031214991810" type="boolean" />
                     <instance-variable name="isFraction" sid="508389316688392" type="boolean" />
                     <instance-variable name="textUID" sid="726188454392591" type="number" />
-                    <instance-variable name="xPast" sid="708184350568969" type="number" />
-                    <instance-variable name="yPast" sid="277236994912608" type="number" />
                     <instance-variable name="numPast" sid="761008604316938" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="968679404106537">
                         <behavior id="Physics" />
                     </behavior-type>
-                    <behavior-type name="DragDrop" sid="103180769256192">
-                        <behavior id="DragnDrop" />
-                    </behavior-type>
-                    <behavior-type name="Pin" sid="535035990972517">
-                        <behavior id="Pin" />
-                    </behavior-type>
                     <behavior-type name="Timer" sid="173835595952832">
                         <behavior id="Timer" />
                     </behavior-type>
                 </behaviors>
-                <effects>
-                    <effect-type name="GlowVertical">
-                        <effect id="glowvertical" />
-                    </effect-type>
-                    <effect-type name="GlowHorizontal">
-                        <effect id="glowhorizontal" />
-                    </effect-type>
-                    <effect-type name="BlurVertical">
-                        <effect id="blurvertical" />
-                    </effect-type>
-                    <effect-type name="BlurHorizontal">
-                        <effect id="blurhorizontal" />
-                    </effect-type>
-                </effects>
                 <container>
                     <type>NumberShape</type>
                     <type>TextShape</type>
@@ -848,9 +804,6 @@
             </object-type>
             <object-type name="platform" sid="194304843600090">
                 <plugin id="Sprite" />
-                <instance-variables>
-                    <instance-variable name="isNewlyCreated" sid="409383826421685" type="boolean" />
-                </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="492566479487312">
                         <behavior id="Physics" />
@@ -973,7 +926,52 @@
             <plugin id="Arr" />
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Cloneable" plugin-id="Sprite" sid="247692594437331">
+            <members>
+                <member>NumberDisplay</member>
+                <member>NumberTarget</member>
+                <member>SymbolMath</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="sharedVariableText" sid="784066295615737" type="string" />
+            </instance-variables>
+        </family>
+        <family name="Dropable" plugin-id="Sprite" sid="986628886324206">
+            <members>
+                <member>Machine</member>
+                <member>NumberShape</member>
+                <member>platform</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="isNew" sid="385656523037699" type="boolean" />
+                <instance-variable name="xPastPosition" sid="976012087543108" type="number" />
+                <instance-variable name="yPastPosition" sid="722733430913112" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="142161754742323">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="DragDrop" sid="835719681496186">
+                    <behavior id="DragnDrop" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+                <effect-type name="BlurHorizontal">
+                    <effect id="blurhorizontal" />
+                </effect-type>
+                <effect-type name="BlurVertical">
+                    <effect id="blurvertical" />
+                </effect-type>
+            </effects>
+        </family>
+    </families>
     <layout-folder>
         <layout>Level Select.xml</layout>
         <layout>Level 1.xml</layout>
@@ -1019,19 +1017,18 @@
         <layout>TestLevel.xml</layout>
         <layout>Assets.xml</layout>
         <layout>Level 25 (Double - Sub).xml</layout>
+        <layout>Level 99.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Main Event Sheet.xml</event-sheet>
-        <event-sheet>Number Shapes.xml</event-sheet>
-        <event-sheet>Machines.xml</event-sheet>
-        <event-sheet>Number Displays.xml</event-sheet>
         <event-sheet>Puzzle Resolution.xml</event-sheet>
         <event-sheet>Buttons.xml</event-sheet>
         <event-sheet>Level Select.xml</event-sheet>
         <event-sheet>Level 1 Tutorial.xml</event-sheet>
         <event-sheet>Level 2 Tutorial.xml</event-sheet>
         <event-sheet>Level 3 Tutorial.xml</event-sheet>
-        <event-sheet>Platform.xml</event-sheet>
+        <event-sheet>Cloneable.xml</event-sheet>
+        <event-sheet>Dropable.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="1022">

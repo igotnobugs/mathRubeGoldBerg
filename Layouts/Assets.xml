@@ -115,14 +115,17 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <isNew>true</isNew>
+                        <xPastPosition>0</xPastPosition>
+                        <yPastPosition>0</yPastPosition>
                         <machineType></machineType>
                         <hasModifier>false</hasModifier>
                         <modifierNumber>0</modifierNumber>
-                        <isNewlyCloned>true</isNewlyCloned>
                         <isNewlyChanged>false</isNewlyChanged>
                         <textMachineUID>0</textMachineUID>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
                         <behavior-instance type="DragDrop">
                             <properties>
                                 <axes>Both</axes>
@@ -130,25 +133,24 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>0.5</intensity>
-                            </parameters>
-                        </effect-instance>
                         <effect-instance type="GlowHorizontal">
                             <parameters>
                                 <intensity>0.5</intensity>
                             </parameters>
                         </effect-instance>
-                        <effect-instance type="BlurVertical">
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>0.5</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="BlurHorizontal">
                             <parameters>
                                 <intensity>0.25</intensity>
                             </parameters>
                         </effect-instance>
-                        <effect-instance type="BlurHorizontal">
+                        <effect-instance type="BlurVertical">
                             <parameters>
                                 <intensity>0.25</intensity>
                             </parameters>
@@ -204,17 +206,24 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <isNew>true</isNew>
+                        <xPastPosition>0</xPastPosition>
+                        <yPastPosition>0</yPastPosition>
                         <number>0</number>
                         <dropZoneUID>0</dropZoneUID>
-                        <isNewlyCreated>false</isNewlyCreated>
                         <isNewlyChanged>false</isNewlyChanged>
                         <isFraction>false</isFraction>
                         <textUID>0</textUID>
-                        <xPast>0</xPast>
-                        <yPast>0</yPast>
                         <numPast>0</numPast>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>No</immovable>
@@ -229,34 +238,27 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DragDrop">
-                            <properties>
-                                <axes>Both</axes>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
                         <behavior-instance type="Timer" />
                     </behavior-instances>
                     <effect-instances>
-                        <effect-instance type="GlowVertical">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
                         <effect-instance type="GlowHorizontal">
                             <parameters>
-                                <intensity>1</intensity>
+                                <intensity>0.5</intensity>
                             </parameters>
                         </effect-instance>
-                        <effect-instance type="BlurVertical">
+                        <effect-instance type="GlowVertical">
                             <parameters>
-                                <intensity>0.05</intensity>
+                                <intensity>0.5</intensity>
                             </parameters>
                         </effect-instance>
                         <effect-instance type="BlurHorizontal">
                             <parameters>
-                                <intensity>0.05</intensity>
+                                <intensity>0.25</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="BlurVertical">
+                            <parameters>
+                                <intensity>0.25</intensity>
                             </parameters>
                         </effect-instance>
                     </effect-instances>
@@ -409,9 +411,18 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <isNewlyCreated>false</isNewlyCreated>
+                        <isNew>true</isNew>
+                        <xPastPosition>0</xPastPosition>
+                        <yPastPosition>0</yPastPosition>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>Yes</immovable>
@@ -427,6 +438,28 @@
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="GlowHorizontal">
+                            <parameters>
+                                <intensity>0.5</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>0.5</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="BlurHorizontal">
+                            <parameters>
+                                <intensity>0.25</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="BlurVertical">
+                            <parameters>
+                                <intensity>0.25</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

@@ -532,9 +532,6 @@
                         <event-block sid="250266048150759">
                             <conditions />
                             <actions>
-                                <action behavior="DragDrop" id="0" name="Set enabled" sid="224236635586600" type="NumberShape">
-                                    <param id="0" name="State">0</param>
-                                </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="743942373964014" type="TextShape">
                                     <param id="0" name="Pin to">NumberShape</param>
                                     <param id="1" name="Mode">0</param>

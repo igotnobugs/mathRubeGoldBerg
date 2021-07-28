@@ -1,0 +1,1104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Dropable</name>
+    <events>
+        <event-group description="Though some are still set here specifically" sid="557097239052396" title="Dropable Shared Behavior">
+            <sub-events>
+                <event-block sid="676720940284311">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="151964982555406" type="Dropable">
+                            <param id="0" name="Instance variable">isNew</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="212197078215303" type="Dropable">
+                            <param id="0" name="X">Touch.X</param>
+                            <param id="1" name="Y">Touch.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="486998908912886" type="Function">
+                            <param id="0" name="Name">&quot;setLiftedEffect&quot;</param>
+                            <param id="1" name="Parameter {n}">Dropable.UID{###}1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="189342252126505">
+                            <conditions>
+                                <condition id="1" name="On any touch end" sid="408548253710233" type="Touch" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="945004412566940">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="425438951129219" type="Dropable">
+                                            <param id="0" name="Object">ZoneDrop</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="290510971824127" type="Dropable">
+                                            <param id="0" name="Instance variable">isNew</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="109027505087197" type="Function">
+                                            <param id="0" name="Name">&quot;setLiftedEffect&quot;</param>
+                                            <param id="1" name="Parameter {n}">Dropable.UID{###}0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="516883683009941" type="Dropable">
+                                            <param id="0" name="Instance variable">xPastPosition</param>
+                                            <param id="1" name="Value">Dropable.X</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="413638849020837" type="Dropable">
+                                            <param id="0" name="Instance variable">yPastPosition</param>
+                                            <param id="1" name="Value">Dropable.Y</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>Differentiate</comment>
+                                        <event-block sid="763856542650093">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="181387064068981" type="Machine">
+                                                    <param id="0" name="Object">ZoneDrop</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Play" sid="434648523545194" type="Audio">
+                                                    <param id="0" name="Audio file">Circuit</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="495292287507078" type="Function">
+                                                    <param id="0" name="Name">&quot;toggleTextMachineGlow&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Machine.textMachineUID{###}1</param>
+                                                </action>
+                                                <action id="-42" name="Signal" sid="912411735298392" type="System">
+                                                    <param id="0" name="Tag">&quot;SignalMachineDropped&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="517811308387061">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="201274634045291" type="NumberShape">
+                                                    <param id="0" name="Object">ZoneDrop</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Play" sid="964807822992164" type="Audio">
+                                                    <param id="0" name="Audio file">Tin Tap</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-42" name="Signal" sid="811010869574245" type="System">
+                                                    <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="352107991196343">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="752658624690017" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="202624092878971" type="Dropable" />
+                                        <action id="0" name="Play" sid="866545463350423" type="Audio">
+                                            <param id="0" name="Audio file">Bass-ic Error</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <comment>Differentiate</comment>
+                                        <event-block sid="986916645757853">
+                                            <conditions>
+                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="869932067522528" type="Machine">
+                                                    <param id="0" name="Object">ZoneDrop</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action disabled="1" id="0" name="Call function" sid="152421486614487" type="Function">
+                                                    <param id="0" name="Name">&quot;deleteTextMachine&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Machine.textMachineUID</param>
+                                                </action>
+                                                <action id="-42" name="Signal" sid="366273987868656" type="System">
+                                                    <param id="0" name="Tag">&quot;SignalMachineFailed&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="157548962472244">
+                                            <conditions>
+                                                <condition id="1" inverted="1" name="Is overlapping another object" sid="147843275696502" type="NumberShape">
+                                                    <param id="0" name="Object">ZoneDrop</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-42" name="Signal" sid="414561174379455" type="System">
+                                                    <param id="0" name="Tag">&quot;SignalNumberFailed&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="891309967833980">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="283400915513998" type="Dropable" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="799265635297686" type="Audio">
+                            <param id="0" name="Audio file">Corked</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="658037049213788" type="Function">
+                            <param id="0" name="Name">&quot;setLiftedEffect&quot;</param>
+                            <param id="1" name="Parameter {n}">Dropable.UID{###}1</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="489586044229298" type="Dropable" />
+                    </actions>
+                </event-block>
+                <event-block sid="353667908928875">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="707441912899789" type="Dropable" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="339373625307242" type="Function">
+                            <param id="0" name="Name">&quot;setLiftedEffect&quot;</param>
+                            <param id="1" name="Parameter {n}">Dropable.UID{###}0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="336578718576794" type="Dropable">
+                            <param id="0" name="Instance variable">xPastPosition</param>
+                            <param id="1" name="Value">Dropable.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="992897324893094" type="Dropable">
+                            <param id="0" name="Instance variable">yPastPosition</param>
+                            <param id="1" name="Value">Dropable.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Differentiate</comment>
+                        <event-block sid="992215698892355">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="807819277746627" type="Dropable">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="463186535667716" type="Dropable" />
+                                <action id="0" name="Play" sid="986924270006052" type="Audio">
+                                    <param id="0" name="Audio file">Bass-ic Error</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="735572863457227">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="877419213299313" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="321147714549160" type="Dropable">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="725961831586485">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="187736141025083" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="370989920597838" type="Dropable">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="868586332934161">
+            <conditions>
+                <condition id="0" name="On function" sid="491571842841214" type="Function">
+                    <param id="0" name="Name">&quot;setLiftedEffect&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="540775785629796">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="915264496791865" type="Dropable">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="342902203295464">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                        <event-block sid="456693709765292">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="846112548797959" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="616022675143579">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="602343666924994" type="System" />
+                            </conditions>
+                            <actions />
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="660280430365706" title="Machine Specific">
+            <sub-events>
+                <variable constant="0" name="machineToTranspose" sid="407285314477666" static="0" type="number">0</variable>
+                <event-block sid="499496809480936">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="795864666166547" type="Machine">
+                            <param id="0" name="Object">SymbolEquals</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="818972835631607" type="Machine">
+                            <param id="0" name="Instance variable">isNewlyChanged</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="375625890270019" type="Machine">
+                            <param id="0" name="Instance variable">isNewlyChanged</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="863096635801295" type="Machine">
+                            <param id="0" name="Duration">1.0</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;changeCooldown&quot;</param>
+                        </action>
+                        <action id="-42" name="Signal" sid="941168689658038" type="System">
+                            <param id="0" name="Tag">&quot;SignalTransposed&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="350274638268581" type="System">
+                            <param id="0" name="Variable">machineToTranspose</param>
+                            <param id="1" name="Value">Machine.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Turn addition to subtraction and vice-versa</comment>
+                        <event-block sid="252087823508818">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="271587939547396" type="Machine">
+                                    <param id="0" name="Instance variable">machineType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;addition&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="917786509027374" type="Function">
+                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;subtraction&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="158302101515833">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="992191390032125" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="883153777328426" type="Machine">
+                                    <param id="0" name="Instance variable">machineType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;subtraction&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="138068420269509" type="Function">
+                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;addition&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="407103296674051">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="275013254948786" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="643004782708231" type="Machine">
+                                    <param id="0" name="Instance variable">machineType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;multiplication&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="240292482351288" type="Function">
+                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;division&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="598390045031481">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="368873370384306" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="226585504802422" type="Machine">
+                                    <param id="0" name="Instance variable">machineType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;division&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="419263069979994" type="Function">
+                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;multiplication&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="730421896952965">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="674260308336181" type="Machine">
+                            <param id="0" name="Tag">&quot;changeCooldown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="163733135945307" type="Machine">
+                            <param id="0" name="Tag">&quot;changeCooldown&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="768693329770992" type="Machine">
+                            <param id="0" name="Instance variable">isNewlyChanged</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Numbers colliding with a machine, first number becomes the modifier.</comment>
+                <event-block sid="568366509194530">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="572496976034489" type="Machine">
+                            <param id="0" name="Object">NumberShape</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="980168115826451" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="256508546721139">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="386804814477359" type="Machine">
+                                    <param id="0" name="Instance variable">hasModifier</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="748541966782765" type="Machine">
+                                    <param id="0" name="Instance variable">modifierNumber</param>
+                                    <param id="1" name="Value">NumberShape.number</param>
+                                </action>
+                                <action id="0" name="Call function" sid="239825336036488" type="Function">
+                                    <param id="0" name="Name">&quot;changeTextMachine&quot;</param>
+                                    <param id="1" name="Parameter {n}">Machine.textMachineUID{###}NumberShape.number</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="241717980274131" type="NumberShape">
+                                    <param id="0" name="X">-9999</param>
+                                    <param id="1" name="Y">-9999</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="813399730311498" type="Machine">
+                                    <param id="0" name="Instance variable">hasModifier</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="279043248511087" type="Audio">
+                                    <param id="0" name="Audio file">Pong</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="566337377041808">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="119735892100898" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="817957457850821" type="Audio">
+                                    <param id="0" name="Audio file">Power</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="848502128674338">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="486159088645770" type="Machine">
+                                            <param id="0" name="Instance variable">machineType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;addition&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Add to" sid="541387909202379" type="NumberShape">
+                                            <param id="0" name="Instance variable">number</param>
+                                            <param id="1" name="Value">Machine.modifierNumber</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="729466895789174">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="247490265512797" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="532891101216410" type="Machine">
+                                            <param id="0" name="Instance variable">machineType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;subtraction&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-12" name="Subtract from" sid="113385651997381" type="NumberShape">
+                                            <param id="0" name="Instance variable">number</param>
+                                            <param id="1" name="Value">Machine.modifierNumber</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="411206355061691">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="506206439709599" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="981357500293372" type="Machine">
+                                            <param id="0" name="Instance variable">machineType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;multiplication&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="199013768634425" type="NumberShape">
+                                            <param id="0" name="Instance variable">number</param>
+                                            <param id="1" name="Value">NumberShape.number * Machine.modifierNumber</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="421179106377055">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="452535981444540" type="System" />
+                                        <condition id="-7" name="Compare instance variable" sid="263223935312563" type="Machine">
+                                            <param id="0" name="Instance variable">machineType</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;division&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="422442051041241">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="822298966266606" type="Machine">
+                                                    <param id="0" name="Instance variable">modifierNumber</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="180049277689510" type="Function">
+                                                    <param id="0" name="Name">&quot;deleteTextMachine&quot;</param>
+                                                    <param id="1" name="Parameter {n}">Machine.textMachineUID</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="974359972646046" type="Audio">
+                                                    <param id="0" name="Audio file">Bass-ic Error</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="303434904492204" type="Machine" />
+                                                <action id="-3" name="Create object" sid="114513273452329" type="System">
+                                                    <param id="0" name="Object to create">MachineExplosion</param>
+                                                    <param id="1" name="Layer">0</param>
+                                                    <param id="2" name="X">Machine.X</param>
+                                                    <param id="3" name="Y">Machine.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="891983655081083">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="480251049831626" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="829569249988337" type="NumberShape">
+                                                    <param id="0" name="Instance variable">number</param>
+                                                    <param id="1" name="Value">NumberShape.number / Machine.modifierNumber</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="500165983967689">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Set text" sid="856393205224587" type="TextShape">
+                                            <param id="0" name="Text">NumberShape.number</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="453553047386132">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="563447158137431" type="NumberShape">
+                                            <param id="0" name="Instance variable">number</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="508472417318673" type="NumberShape">
+                                            <param id="0" name="Animation">&quot;negative&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="747978153887466">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="915063228512168" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="503004476217148" type="NumberShape">
+                                            <param id="0" name="Animation">&quot;positive&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="536493263584611">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="330478710481973" type="Machine" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="793957253248742">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="851240401970506" type="Machine">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="220252297516449" type="Audio">
+                                    <param id="0" name="Audio file">Circuit</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Machine Functions</comment>
+        <event-block sid="515962215964103">
+            <conditions>
+                <condition id="0" name="On function" sid="400097857496319" type="Function">
+                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="707128198236971">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="532210821425063" type="Machine">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="303816457009532" type="Machine">
+                            <param id="0" name="Animation">Function.Param(1)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="552356792759376" type="Machine">
+                            <param id="0" name="Instance variable">machineType</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="135663643936359">
+            <conditions>
+                <condition id="0" name="On function" sid="365137709776791" type="Function">
+                    <param id="0" name="Name">&quot;changeTextMachine&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="351187644791588">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="144356359790906" type="TextMachine">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="970259698837906" type="TextMachine">
+                            <param id="0" name="Text">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="927417096079298">
+            <conditions>
+                <condition id="0" name="On function" sid="652469208433624" type="Function">
+                    <param id="0" name="Name">&quot;deleteTextMachine&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="763162445675850">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="445033405193094" type="TextMachine">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="326624468631334" type="TextMachine" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="534359146123683">
+            <conditions>
+                <condition id="0" name="On function" sid="502572603716372" type="Function">
+                    <param id="0" name="Name">&quot;toggleTextMachineGlow&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="456486485494642">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="422720713389362" type="TextMachine">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="748724200969679">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="564627799350877" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="511653922236431" type="TextMachine">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="616859902438045" type="TextMachine">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="477302781680486">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="744933040956821" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="951346839540980" type="TextMachine">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                                </action>
+                                <action id="-27" name="Set effect enabled" sid="902389528165326" type="TextMachine">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="695379481852183" title="Number Shapes Specific">
+            <sub-events>
+                <comment>When a number is newly cloned</comment>
+                <event-block sid="499754983654647">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="932177798791868" type="NumberShape" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="735454414872863" type="TextShape">
+                            <param id="0" name="Text">NumberDisplay.number</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="585429899366405" type="TextShape">
+                            <param id="0" name="Pin to">NumberShape</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="961882240167036">
+                    <conditions>
+                        <condition behavior="DragDrop" id="2" name="On drop" sid="611302478531090" type="NumberShape" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="375550798583667">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="299197547894382" type="NumberShape">
+                                    <param id="0" name="Object">ZoneDrop</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="262821331220091" type="Audio">
+                                    <param id="0" name="Audio file">Tin Tap</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Transposing numbers</comment>
+                <event-block sid="233024802584688">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="951221731354718" type="NumberShape">
+                            <param id="0" name="Object">SymbolEquals</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="912755350185947" type="NumberShape">
+                            <param id="0" name="Instance variable">isNewlyChanged</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="823876180870248" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="878399603431479" type="NumberShape">
+                            <param id="0" name="Instance variable">number</param>
+                            <param id="1" name="Value">NumberShape.number * -1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="287865114187594" type="Function">
+                            <param id="0" name="Name">&quot;changeTextShape&quot;</param>
+                            <param id="1" name="Parameter {n}">NumberShape.textUID{###}NumberShape.number</param>
+                        </action>
+                        <action id="-42" name="Signal" sid="758057348286746" type="System">
+                            <param id="0" name="Tag">&quot;SignalTransposed&quot;</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>Turn it into a negative</comment>
+                        <event-block sid="782273505649598">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="476981435563644" type="NumberShape">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="510134737068555" type="NumberShape">
+                                    <param id="0" name="Animation">&quot;negative&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="243606511386276">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="698267821619044" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="865459566013653" type="NumberShape">
+                                    <param id="0" name="Animation">&quot;positive&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="442778521544106">
+                            <conditions />
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="883785527089529" type="NumberShape">
+                                    <param id="0" name="Instance variable">isNewlyChanged</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="417964134128272" type="NumberShape">
+                                    <param id="0" name="Duration">1.0</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;changeCooldown&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="735540022229502">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="126362728669913" type="System">
+                            <param id="0" name="Variable">isFinished</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="813204010956910" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="234537838372020">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="834619302529993" type="NumberShape">
+                            <param id="0" name="Tag">&quot;changeCooldown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="548619896743763" type="NumberShape">
+                            <param id="0" name="Instance variable">isNewlyChanged</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="745291792349838">
+                    <conditions>
+                        <condition behavior="Physics" id="4" name="Is enabled" sid="114024886431934" type="NumberShape" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="811801289218225" type="NumberShape">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="180742287905498" type="NumberShape">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="114688012099289" type="NumberShape">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="578735306624296" type="NumberShape">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="918805069373981">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="380712344331283" type="NumberShape" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="856432254047547" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="402418457543836" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="607435647395671" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="121689767149310" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
+                        </action>
+                        <action id="-27" name="Set effect enabled" sid="119523955362951" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Number Shape Functions</comment>
+        <event-block sid="667774710673962">
+            <conditions>
+                <condition id="0" name="On function" sid="120944674483739" type="Function">
+                    <param id="0" name="Name">&quot;changeTextShape&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="947902716846484">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="276424298959015" type="TextShape">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="523954432911264" type="TextShape">
+                            <param id="0" name="Text">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="688189401784994">
+            <conditions>
+                <condition id="0" name="On function" sid="887799069568546" type="Function">
+                    <param id="0" name="Name">&quot;toggleNumberShapeEffect&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-group description="" sid="410338811050650" title="Platform Specific">
+            <sub-events>
+                <variable constant="0" name="distanceToOriginDragDrop" sid="668817430593965" static="0" type="number">50</variable>
+                <variable constant="0" name="isMovingRedLine" sid="610589599590425" static="1" type="number">0</variable>
+                <variable constant="0" name="isRotatingRedLine" sid="959970162290225" static="1" type="number">0</variable>
+                <variable constant="0" name="currentPlatformControlled" sid="661304068782468" static="1" type="number">0</variable>
+                <event-block sid="162463667331619">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="725342098346462" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="846739957538407" type="System">
+                            <param id="0" name="Variable">currentPlatformControlled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="115779654141173" type="System">
+                            <param id="0" name="Variable">isMovingRedLine</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="291575926031870" type="System">
+                            <param id="0" name="Variable">isRotatingRedLine</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="585236358934750">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="913044195713813" type="platform">
+                            <param id="0" name="Instance variable">isNew</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="348898056737075">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="434762784569118" type="Touch">
+                                    <param id="0" name="Object">platform</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="747384591982610" type="System">
+                                    <param id="0" name="Variable">currentPlatformControlled</param>
+                                    <param id="1" name="Value">platform.UID</param>
+                                </action>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="512235385468197" type="platform">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="746255857279935">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="412108366765923" type="System">
+                                            <param id="0" name="First value">distance(platform.X,platform.Y,Touch.X,Touch.Y)</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">distanceToOriginDragDrop</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="690846427132380" type="System">
+                                            <param id="0" name="Variable">isMovingRedLine</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="264505529980874">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="431959086942006" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="589400392164649" type="System">
+                                            <param id="0" name="Variable">isRotatingRedLine</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="268936274026257">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="801540455681719" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="209101750174908">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="700995091833258" type="platform">
+                                    <param id="0" name="Unique ID">currentPlatformControlled</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="145089865948145">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="690884314226972" type="System">
+                                            <param id="0" name="Variable">isMovingRedLine</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="957711748309669" type="platform">
+                                            <param id="0" name="X">Touch.X</param>
+                                            <param id="1" name="Y">Touch.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="792961712387486">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="522190174210180" type="System" />
+                                        <condition id="-14" name="Compare variable" sid="164214911456499" type="System">
+                                            <param id="0" name="Variable">isRotatingRedLine</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-22" name="Set angle toward position" sid="494634680696135" type="platform">
+                                            <param id="0" name="X">Touch.X</param>
+                                            <param id="1" name="Y">Touch.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="180060930904196">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="804312660376488" type="Touch" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="902856784684854">
+                            <conditions />
+                            <actions>
+                                <action id="-9" name="Set value" sid="861893442072383" type="System">
+                                    <param id="0" name="Variable">currentPlatformControlled</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="701894603826305" type="System">
+                                    <param id="0" name="Variable">isMovingRedLine</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="200284403573905" type="System">
+                                    <param id="0" name="Variable">isRotatingRedLine</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

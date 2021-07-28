@@ -139,6 +139,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <type>division</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -186,6 +187,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
                         <targetNumber>2.5</targetNumber>
@@ -215,6 +217,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <number>2</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -240,6 +243,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <type>addition</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -265,6 +269,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <number>3</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -290,6 +295,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <type>multiplication</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -315,6 +321,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <number>1</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -340,6 +347,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <number>4</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

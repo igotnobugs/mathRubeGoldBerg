@@ -92,6 +92,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <type>division</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -139,6 +140,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <number>-60</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -164,6 +166,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
                         <targetNumber>-3</targetNumber>
@@ -193,6 +196,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <sharedVariableText></sharedVariableText>
                         <number>20</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

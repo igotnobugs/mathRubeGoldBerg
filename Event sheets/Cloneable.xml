@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Cloneable</name>
+    <events>
+        <event-group description="Though some are still set here specifically" sid="458635917331069" title="Cloneable Shared Behavior">
+            <sub-events>
+                <variable constant="0" name="isCloneableTouched" sid="601706860395252" static="1" type="number">0</variable>
+                <event-block sid="937796453141767">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="748591310222907" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="330502330850454" type="System">
+                            <param id="0" name="Variable">isCloneableTouched</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="596845713888784">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="734873965586713" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="987374305605159" type="System">
+                            <param id="0" name="Variable">isFinished</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="906160991240614">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="192511085035176" type="Touch">
+                                    <param id="0" name="Object">Cloneable</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="940260187940644" type="System">
+                                    <param id="0" name="Object to create">ParticleHeld</param>
+                                    <param id="1" name="Layer">&quot;NumberShapes&quot;</param>
+                                    <param id="2" name="X">Touch.X</param>
+                                    <param id="3" name="Y">Touch.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="209862859828497" type="System">
+                                    <param id="0" name="Variable">isCloneableTouched</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="509476771636438">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="770048110430719" type="System">
+                                    <param id="0" name="Variable">isCloneableTouched</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="710593277822059">
+                                    <conditions>
+                                        <condition id="4" name="Is touching object" sid="706586377737801" type="Touch">
+                                            <param id="0" name="Object">Cloneable</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="130476902266677" type="HoldBar">
+                                            <param id="0" name="Width">HoldBar.Width + HOLD_TIME_SPEED</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="674745926868909">
+                                            <conditions>
+                                                <condition id="-5" name="Compare width" sid="965634508801889" type="HoldBar">
+                                                    <param id="0" name="Comparison">5</param>
+                                                    <param id="1" name="Width">HoldBar.max_width</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Destroy" sid="974785694225494" type="ParticleHeld" />
+                                                <action id="-9" name="Set value" sid="485408420953855" type="System">
+                                                    <param id="0" name="Variable">isCloneableTouched</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="909320786726870" type="HoldBar">
+                                                    <param id="0" name="Width">0</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="577082819604316">
+                                                    <conditions>
+                                                        <condition id="2" name="Is in touch" sid="946753969357539" type="Touch" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Play" sid="880161650439634" type="Audio">
+                                                            <param id="0" name="Audio file">Popped</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                        </action>
+                                                        <action id="-10" name="Add to" sid="392255931292701" type="System">
+                                                            <param id="0" name="Variable">actions</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="857024545808331" type="System">
+                                                            <param id="0" name="Object to create">ParticleHeldFinished</param>
+                                                            <param id="1" name="Layer">&quot;NumberShapes&quot;</param>
+                                                            <param id="2" name="X">Touch.X</param>
+                                                            <param id="3" name="Y">Touch.y</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <comment>Differentiate between objects in Family</comment>
+                                                        <event-block sid="467034006464323">
+                                                            <conditions>
+                                                                <condition id="4" name="Is touching object" sid="841552310013506" type="Touch">
+                                                                    <param id="0" name="Object">SymbolMath</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="827602522176116" type="Function">
+                                                                    <param id="0" name="Name">&quot;createMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Cloneable.AnimationName{###}&quot;Machines&quot;</param>
+                                                                </action>
+                                                                <action id="-42" name="Signal" sid="666047880098802" type="System">
+                                                                    <param id="0" name="Tag">&quot;SignalMachineCloned&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="631714626796434">
+                                                            <conditions>
+                                                                <condition id="4" name="Is touching object" sid="376062418330685" type="Touch">
+                                                                    <param id="0" name="Object">NumberDisplay</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="614652402640420" type="Function">
+                                                                    <param id="0" name="Name">&quot;createNumberShape&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">NumberDisplay.number{###}&quot;NumberShapes&quot;</param>
+                                                                </action>
+                                                                <action id="-16" name="Set opacity" sid="825754684587320" type="ControlButton">
+                                                                    <param id="0" name="Opacity">100</param>
+                                                                </action>
+                                                                <action id="-10" name="Add to" sid="445999060598845" type="System">
+                                                                    <param id="0" name="Variable">isPlayInteractable</param>
+                                                                    <param id="1" name="Value">1</param>
+                                                                </action>
+                                                                <action id="-42" name="Signal" sid="784820506217706" type="System">
+                                                                    <param id="0" name="Tag">&quot;SignalNumberCloned&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="822923791454788">
+                                                            <conditions>
+                                                                <condition id="4" name="Is touching object" sid="400742339265523" type="Touch">
+                                                                    <param id="0" name="Object">NumberTarget</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-3" name="Create object" sid="601317935231419" type="System">
+                                                                    <param id="0" name="Object to create">ParticleHeldFinished</param>
+                                                                    <param id="1" name="Layer">0</param>
+                                                                    <param id="2" name="X">Touch.X</param>
+                                                                    <param id="3" name="Y">Touch.y</param>
+                                                                </action>
+                                                                <action id="-3" name="Create object" sid="938293483802347" type="System">
+                                                                    <param id="0" name="Object to create">platform</param>
+                                                                    <param id="1" name="Layer">0</param>
+                                                                    <param id="2" name="X">Touch.X</param>
+                                                                    <param id="3" name="Y">Touch.Y</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="226928003994979">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="190822060055119" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="154964598006950" type="HoldBar">
+                                            <param id="0" name="Width">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="951549378767636" type="System">
+                                            <param id="0" name="Variable">isCloneableTouched</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="543532001749718" type="ParticleHeld" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="754602211547253" title="Number Display Specific">
+            <sub-events>
+                <event-block sid="136362003881384">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="591818933898726" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="212757002023926" type="TextDisplay">
+                            <param id="0" name="Object">NumberDisplay</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="417209572513947" type="TextDisplay">
+                            <param id="0" name="Text">NumberDisplay.number</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="686620848917397">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="621576308975394" type="NumberDisplay">
+                                    <param id="0" name="Instance variable">number</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="895321567883607" type="NumberDisplay">
+                                    <param id="0" name="Animation">&quot;negative&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="502301122187609" title="Math Symbol Specific" />
+        <event-block sid="684311982449977">
+            <conditions>
+                <condition id="0" name="On function" sid="937080896660012" type="Function">
+                    <param id="0" name="Name">&quot;createMachine&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="130991352416518">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="212493488563279" type="System">
+                            <param id="0" name="Object to create">Machine</param>
+                            <param id="1" name="Layer">Function.Param(1)</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.Y</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="151179503843016" type="Machine">
+                            <param id="0" name="Scale">1 / (10 + scaleDivide)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="346236890793343" type="Machine">
+                            <param id="0" name="Animation">Function.Param(0)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="127993714746830" type="Machine">
+                            <param id="0" name="Instance variable">machineType</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="764530137776983" type="System">
+                            <param id="0" name="Object to create">TextMachine</param>
+                            <param id="1" name="Layer">Function.Param(1)</param>
+                            <param id="2" name="X">Machine.X</param>
+                            <param id="3" name="Y">Machine.Y</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="373297392385629" type="TextMachine">
+                            <param id="0" name="Object">Machine</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="828348482730573" type="Machine">
+                            <param id="0" name="Instance variable">textMachineUID</param>
+                            <param id="1" name="Value">TextMachine.UID</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="903637522360262" type="TextMachine">
+                            <param id="0" name="Pin to">Machine</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="739794787048083" type="Function">
+                            <param id="0" name="Name">&quot;toggleTextMachineGlow&quot;</param>
+                            <param id="1" name="Parameter {n}">Machine.textMachineUID{###}0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="773452622358087">
+            <conditions>
+                <condition id="0" name="On function" sid="423285438871856" type="Function">
+                    <param id="0" name="Name">&quot;createNumberShape&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="243081142607976">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="217765364857138" type="System">
+                            <param id="0" name="Object to create">NumberShape</param>
+                            <param id="1" name="Layer">Function.Param(1)</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="811790480065688" type="NumberShape">
+                            <param id="0" name="Instance variable">number</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="231702874228073" type="NumberShape">
+                            <param id="0" name="Instance variable">textUID</param>
+                            <param id="1" name="Value">TextShape.UID</param>
+                        </action>
+                        <action id="0" name="Set text" sid="695950389172453" type="TextShape">
+                            <param id="0" name="Text">NumberShape.number</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="741325683303384" type="NumberShape">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="163668322015032" type="System">
+                            <param id="0" name="Object to create">ParticleHeldFinished</param>
+                            <param id="1" name="Layer">Function.Param(1)</param>
+                            <param id="2" name="X">Touch.X</param>
+                            <param id="3" name="Y">Touch.y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="166733173212037" type="NumberShape">
+                            <param id="0" name="Instance variable">numPast</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="217540713455410">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="423864130530399" type="System">
+                                    <param id="0" name="First value">Function.Param(0)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="940054152083659" type="NumberShape">
+                                    <param id="0" name="Animation">&quot;negative&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
