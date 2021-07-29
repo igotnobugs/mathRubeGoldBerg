@@ -81,6 +81,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="PerfectStarContainer" uid="70">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>199.604278564</x>
+                        <y>43.292579651</y>
+                        <z>0</z>
+                        <width>187.923370361</width>
+                        <height>58.616695404</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="UIStarPerfectNeeded" uid="1049">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -91,8 +113,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>238.770507813</x>
-                        <y>38.373573303</y>
+                        <x>261.131469727</x>
+                        <y>39.530208588</y>
                         <z>0</z>
                         <width>81.29875946</width>
                         <height>75.47039032</height>
@@ -105,7 +127,7 @@
                 </instance>
                 <instance type="TextPerfectNeeded" uid="1050">
                     <properties>
-                        <text>99</text>
+                        <text>99 / 99</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Black,-29.6,900,0</font>
                         <color>0,51,255</color>
@@ -118,10 +140,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>153.206817627</x>
-                        <y>41.375556946</y>
+                        <x>167.471511841</x>
+                        <y>46.773300171</y>
                         <z>0</z>
-                        <width>91.196784973</width>
+                        <width>117.41368866</width>
                         <height>44.194320679</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1859,33 +1881,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextTitle" uid="70">
-                    <properties>
-                        <text>M a t h   R G B</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Black,-48,900,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>201.967391968</x>
-                        <y>55.532875061</y>
-                        <z>0</z>
-                        <width>403.411743164</width>
-                        <height>75.384216309</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="TextTitle" uid="315">
                     <properties>
                         <text>Ether Vox - Kevin MacLeod</text>
@@ -1936,6 +1931,28 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TitleSprite" uid="1052">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>201.852966309</x>
+                        <y>67.428291321</y>
+                        <z>0</z>
+                        <width>393.665771484</width>
+                        <height>127.322753906</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

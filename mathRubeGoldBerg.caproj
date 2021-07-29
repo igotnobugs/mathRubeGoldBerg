@@ -944,6 +944,43 @@
         <object-type global="1" name="levelVarsArray" sid="274723328699179">
             <plugin id="Arr" />
         </object-type>
+        <object-type name="TitleSprite" sid="914302158454643">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="306841068183114" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\TitleWithCircle.png">
+                        <collision-poly>
+                            <point x="0.0714286" y="0.220848" />
+                            <point x="0.5" y="0" />
+                            <point x="0.922286" y="0.240283" />
+                            <point x="0.958286" y="0.5" />
+                            <point x="0.967429" y="0.899293" />
+                            <point x="0.5" y="0.886926" />
+                            <point x="0.0234286" y="0.927562" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="PerfectStarContainer" sid="579869092768361">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894944377197363" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\DropAreaWhite.png">
+                        <collision-poly>
+                            <point x="0.0164225" y="0.0164153" />
+                            <point x="0.499778" y="0.000443656" />
+                            <point x="0.983577" y="0.0164153" />
+                            <point x="1" y="0.5" />
+                            <point x="0.983577" y="0.983585" />
+                            <point x="0.499778" y="0.999556" />
+                            <point x="0.0164225" y="0.983585" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Cloneable" plugin-id="Sprite" sid="247692594437331">
