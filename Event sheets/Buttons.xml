@@ -359,7 +359,7 @@
                             </conditions>
                             <actions>
                                 <action id="-5" name="Set width" sid="704759148626326" type="HoldBar">
-                                    <param id="0" name="Width">HoldBar.Width + HOLD_TIME_SPEED</param>
+                                    <param id="0" name="Width">HoldBar.Width + (HOLD_TIME_SPEED * 2/3)</param>
                                 </action>
                             </actions>
                             <sub-events>

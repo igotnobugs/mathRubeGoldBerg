@@ -140,6 +140,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <type>subtraction</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -188,6 +189,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <number>12</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -214,6 +216,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>0</actionCost>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
                         <targetNumber>9</targetNumber>
@@ -244,6 +247,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <number>3</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>

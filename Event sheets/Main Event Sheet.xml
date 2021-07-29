@@ -95,6 +95,9 @@
                         <action id="-8" name="Set angle" sid="748360996838677" type="ControlButton">
                             <param id="0" name="Angle">0</param>
                         </action>
+                        <action id="-1" name="Set X" sid="639582549868965" type="EqualBorder">
+                            <param id="0" name="X">SymbolEquals.X</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

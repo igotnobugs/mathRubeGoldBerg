@@ -93,6 +93,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <type>division</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -141,6 +142,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>0</actionCost>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
                         <targetNumber>1.6</targetNumber>
@@ -171,6 +173,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <number>5</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -197,6 +200,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <type>division</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -223,6 +227,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <number>-1</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -249,6 +254,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <number>-2</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -275,6 +281,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <number>4</number>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -301,6 +308,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
+                        <actionCost>1</actionCost>
                         <type>multiplication</type>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
