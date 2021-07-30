@@ -134,6 +134,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Timer" />
                     </behavior-instances>
                     <effect-instances>
@@ -228,6 +229,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>No</immovable>
@@ -294,6 +296,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -323,6 +326,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -350,6 +356,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -378,6 +387,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <effect-instances>
@@ -429,6 +439,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Physics">
                             <properties>
                                 <immovable>Yes</immovable>
@@ -489,10 +500,24 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Rotate">
                             <properties>
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>10</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -592,6 +617,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -614,6 +642,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -641,6 +672,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>

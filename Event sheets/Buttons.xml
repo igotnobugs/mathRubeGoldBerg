@@ -3,9 +3,20 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Buttons</name>
     <events>
-        <variable constant="0" name="WAIT" sid="959796219954524" static="0" type="number">0</variable>
         <event-group description="" sid="297970033065200" title="Buttons">
             <sub-events>
+                <variable constant="0" name="WAIT" sid="959796219954524" static="1" type="number">0</variable>
+                <event-block sid="229205573655749">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="843938067042718" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="951637016075267" type="System">
+                            <param id="0" name="Variable">WAIT</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="561358096297674">
                     <conditions>
                         <condition id="0" name="On any touch start" sid="839181199044841" type="Touch" />
@@ -142,8 +153,6 @@
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                         </action>
-                                        <action disabled="1" id="-21" name="Reset global variables" sid="182841314188902" type="System" />
-                                        <action disabled="1" id="-26" name="Restart layout" sid="648259490941149" type="System" />
                                         <action id="4" name="Set animation" sid="652342134453005" type="ControlButton">
                                             <param id="0" name="Animation">&quot;Play&quot;</param>
                                             <param id="1" name="From">1</param>
@@ -169,6 +178,9 @@
                                                 <action id="-9" name="Set value" sid="403078357775214" type="System">
                                                     <param id="0" name="Variable">WAIT</param>
                                                     <param id="1" name="Value">0</param>
+                                                </action>
+                                                <action id="-42" name="Signal" sid="235508065869862" type="System">
+                                                    <param id="0" name="Tag">&quot;SignalPuzzleReset&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -201,22 +213,6 @@
                                                     <actions>
                                                         <action behavior="Physics" id="27" name="Set enabled" sid="472460683611550" type="NumberShape">
                                                             <param id="0" name="Mode">0</param>
-                                                        </action>
-                                                        <action disabled="1" id="-27" name="Set effect enabled" sid="176132916691643" type="NumberShape">
-                                                            <param id="0" name="Mode">0</param>
-                                                            <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
-                                                        </action>
-                                                        <action disabled="1" id="-27" name="Set effect enabled" sid="457228265295288" type="NumberShape">
-                                                            <param id="0" name="Mode">0</param>
-                                                            <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
-                                                        </action>
-                                                        <action disabled="1" id="-27" name="Set effect enabled" sid="784632537966976" type="NumberShape">
-                                                            <param id="0" name="Mode">0</param>
-                                                            <param id="1" name="Effect">&quot;BlurVertical&quot;</param>
-                                                        </action>
-                                                        <action disabled="1" id="-27" name="Set effect enabled" sid="794604929301601" type="NumberShape">
-                                                            <param id="0" name="Mode">0</param>
-                                                            <param id="1" name="Effect">&quot;BlurHorizontal&quot;</param>
                                                         </action>
                                                         <action id="-10" name="Set value" sid="105637438920837" type="NumberShape">
                                                             <param id="0" name="Instance variable">number</param>
@@ -276,7 +272,6 @@
                                     <param id="0" name="Layout">Level Select</param>
                                 </action>
                                 <action id="-26" name="Restart layout" sid="148555664377142" type="System" />
-                                <action disabled="1" id="-21" name="Reset global variables" sid="835841631187236" type="System" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -288,6 +283,7 @@
                 <variable constant="0" name="isTouchingDropZone" sid="130268761599203" static="1" type="number">0</variable>
                 <variable constant="0" name="isDragging" sid="310771491697374" static="1" type="number">0</variable>
                 <variable constant="0" name="xTouch" sid="706292916379390" static="1" type="number">0</variable>
+                <variable constant="0" name="xPositionClear" sid="547268255321500" static="0" type="number">475</variable>
                 <event-block sid="553250414148760">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="911351651071828" type="System" />
@@ -472,7 +468,7 @@
                                     <actions>
                                         <action id="-10" name="Set value" sid="371079071683569" type="ZoneDrop">
                                             <param id="0" name="Instance variable">xPosition</param>
-                                            <param id="1" name="Value">ZoneDrop.xPosition - xPositionOutside</param>
+                                            <param id="1" name="Value">ZoneDrop.xPosition - xPositionClear</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -509,12 +505,12 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="980043546161891" type="ZoneDrop">
-                            <param id="0" name="X">ZoneDrop.xPosition + (xPositionOutside * 3/2)</param>
+                            <param id="0" name="X">ZoneDrop.xPosition + (xPositionClear * 3/2)</param>
                             <param id="1" name="Y">ZoneDrop.yPosition</param>
                         </action>
                         <action id="-10" name="Set value" sid="484307314333807" type="ZoneDrop">
                             <param id="0" name="Instance variable">xPosition</param>
-                            <param id="1" name="Value">ZoneDrop.xPosition + xPositionOutside</param>
+                            <param id="1" name="Value">ZoneDrop.xPosition +  xPositionClear</param>
                         </action>
                         <action id="-9" name="Set value" sid="930524619655734" type="System">
                             <param id="0" name="Variable">actions</param>

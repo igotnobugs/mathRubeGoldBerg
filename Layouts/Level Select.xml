@@ -2,7 +2,7 @@
 <c2layout>
     <name>Level Select</name>
     <sid>759223403952208</sid>
-    <event-sheet>Level Select</event-sheet>
+    <event-sheet>Level Select Sheet</event-sheet>
     <size>
         <width>400</width>
         <height>550</height>
@@ -37,10 +37,24 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Rotate">
                             <properties>
                                 <speed>0</speed>
                                 <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>10</magnitude>
+                                <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -66,6 +80,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -88,6 +105,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -110,6 +130,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -137,6 +160,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -182,19 +208,22 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>313</x>
-                        <y>265</y>
+                        <x>309</x>
+                        <y>439</y>
                         <z>0</z>
-                        <width>11</width>
-                        <height>362</height>
+                        <width>5</width>
+                        <height>350</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.500281692</hotspotY>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.400000006</opacity>
+                        <opacity>0.200000003</opacity>
                     </world>
                 </instance>
             </instances>
@@ -232,17 +261,45 @@
                         <onTheOtherSide>false</onTheOtherSide>
                         <isSolved>false</isSolved>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Size</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="GlowHorizontal">
+                            <parameters>
+                                <intensity>2</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>2</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.502716064</x>
-                        <y>468.840240479</y>
+                        <x>197.398147583</x>
+                        <y>488.709136963</y>
                         <z>0</z>
                         <width>380</width>
                         <height>67</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.75999999</hotspotY>
                         <angle>0</angle>
                         <opacity>0.25</opacity>
                     </world>
@@ -278,6 +335,9 @@
                         <xPosition>0</xPosition>
                         <yPosition>0</yPosition>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
                             <parameters>
@@ -507,6 +567,9 @@
                         <xPosition>0</xPosition>
                         <yPosition>0</yPosition>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
                             <parameters>
@@ -776,6 +839,9 @@
                         <xPosition>0</xPosition>
                         <yPosition>0</yPosition>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
                             <parameters>
@@ -1016,6 +1082,9 @@
                         <xPosition>0</xPosition>
                         <yPosition>0</yPosition>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
                             <parameters>
@@ -1256,6 +1325,9 @@
                         <xPosition>0</xPosition>
                         <yPosition>0</yPosition>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
                             <parameters>
@@ -1496,6 +1568,9 @@
                         <xPosition>0</xPosition>
                         <yPosition>0</yPosition>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
                             <parameters>
@@ -1736,6 +1811,9 @@
                         <xPosition>0</xPosition>
                         <yPosition>0</yPosition>
                     </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <effect-instances>
                         <effect-instance type="AdjustHSL">
                             <parameters>
@@ -1879,7 +1957,7 @@
             <instances>
                 <instance type="NormalText" uid="63">
                     <properties>
-                        <text>&quot;Time is gold&quot;</text>
+                        <text>&quot;Step by step&quot;</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-13.6,400,0</font>
                         <color>0,0,0</color>
@@ -1889,6 +1967,9 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1906,7 +1987,7 @@
                 </instance>
                 <instance type="TextTitle" uid="315">
                     <properties>
-                        <text>Ether Vox - Kevin MacLeod</text>
+                        <text>Rainbow Day Games - the green orbs</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-13.6,400,1</font>
                         <color>0,0,0</color>
@@ -1916,43 +1997,19 @@
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>394</x>
-                        <y>493</y>
+                        <x>398.346496582</x>
+                        <y>493.000915527</y>
                         <z>0</z>
                         <width>319.866027832</width>
                         <height>23</height>
                         <depth>0</depth>
                         <hotspotX>1</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NormalText" uid="330">
-                    <properties>
-                        <text>v 0.95</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-11,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>267</x>
-                        <y>516</y>
-                        <z>0</z>
-                        <width>128.446426392</width>
-                        <height>16.851196289</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -1965,17 +2022,50 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>201.852966309</x>
-                        <y>67.428291321</y>
+                        <x>199.369110107</x>
+                        <y>68.669746399</y>
                         <z>0</z>
                         <width>393.665771484</width>
                         <height>127.322753906</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TextVersion" uid="0">
+                    <properties>
+                        <text>v 0.95</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-10.4,400,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-right</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>399.315551758</x>
+                        <y>0.708774567</y>
+                        <z>0</z>
+                        <width>171.54737854</width>
+                        <height>14.228496552</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -2010,11 +2100,14 @@
                         <id-optional></id-optional>
                         <checked>No</checked>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>263</x>
-                        <y>512</y>
+                        <x>297.771484375</x>
+                        <y>513.241394043</y>
                         <z>0</z>
                         <width>98.445579529</width>
                         <height>16.563072205</height>
@@ -2031,6 +2124,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>Yes</active-on-start>
@@ -2068,6 +2162,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>Yes</active-on-start>
@@ -2105,6 +2200,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="NoSave" />
                         <behavior-instance type="Sine">
                             <properties>
                                 <active-on-start>Yes</active-on-start>

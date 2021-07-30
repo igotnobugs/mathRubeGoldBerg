@@ -25,6 +25,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
@@ -85,6 +86,9 @@
                 <plugin id="Text" />
             </object-type>
             <object-type name="TextStatusPerfect" sid="486639853131681">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="TextVersion" sid="293789124386072">
                 <plugin id="Text" />
             </object-type>
         </object-folder>
@@ -304,7 +308,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="634094059977643" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\ShortRedBar.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.76" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\ShortRedBar.png">
                             <collision-poly>
                                 <point x="0" y="0.64" />
                                 <point x="1" y="0.628" />
@@ -419,6 +423,59 @@
                                 <point x="0.752187" y="0.263158" />
                                 <point x="0.758018" y="0.778196" />
                                 <point x="0.204082" y="0.781955" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="EqualBorder" sid="620886616886354">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842017227346489" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\ShorterRedBar.png">
+                            <collision-poly>
+                                <point x="0.115385" y="0.991549" />
+                                <point x="0.00769231" y="0.500282" />
+                                <point x="0.130769" y="0.00957745" />
+                                <point x="0.769231" y="0.0169014" />
+                                <point x="0.776923" y="0.983662" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ZoneDrop" sid="969314955336212">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="dropCount" sid="473897344502179" type="number" />
+                    <instance-variable name="xPosition" sid="443141934755311" type="number" />
+                    <instance-variable name="yPosition" sid="623238584083710" type="number" />
+                </instance-variables>
+                <effects>
+                    <effect-type name="AdjustHSL">
+                        <effect id="hsladjust" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549857479508361" speed="5">
+                        <frame duration="1" hotspotX="0.54" hotspotY="0.5" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\DropArea.png">
+                            <image-point name="counter" x="0.944" y="0.944" />
+                            <collision-poly>
+                                <point x="0" y="0.044" />
+                                <point x="1" y="0.04" />
+                                <point x="1" y="0.928" />
+                                <point x="0" y="0.928" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="444980590056275" speed="5">
+                        <frame duration="1" hotspotX="0.54" hotspotY="0.5">
+                            <image-point name="counter" x="0.944" y="0.944" />
+                            <collision-poly>
+                                <point x="0" y="0.044" />
+                                <point x="1" y="0.04" />
+                                <point x="1" y="0.928" />
+                                <point x="0" y="0.928" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -562,6 +619,24 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="TitleSprite" sid="914302158454643">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="306841068183114" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\TitleWithCircle.png">
+                            <collision-poly>
+                                <point x="0.0714286" y="0.220848" />
+                                <point x="0.5" y="0" />
+                                <point x="0.922286" y="0.240283" />
+                                <point x="0.958286" y="0.5" />
+                                <point x="0.967429" y="0.899293" />
+                                <point x="0.5" y="0.886926" />
+                                <point x="0.0234286" y="0.927562" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="PuzzleUI">
             <object-type global="1" name="Back" sid="419785036877716">
@@ -584,6 +659,9 @@
                 <behaviors>
                     <behavior-type name="Rotate" sid="723776685526959">
                         <behavior id="Rotate" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="845774730489804">
+                        <behavior id="Sin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -692,6 +770,38 @@
             </object-type>
             <object-type global="1" name="TextPerfectNeeded" sid="199090881476147">
                 <plugin id="Text" />
+            </object-type>
+            <object-type global="1" name="PerfectStarContainer" sid="579869092768361">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894944377197363" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\DropAreaWhite.png">
+                            <collision-poly>
+                                <point x="0.0164225" y="0.0164153" />
+                                <point x="0.499778" y="0.000443656" />
+                                <point x="0.983577" y="0.0164153" />
+                                <point x="1" y="0.5" />
+                                <point x="0.983577" y="0.983585" />
+                                <point x="0.499778" y="0.999556" />
+                                <point x="0.0164225" y="0.983585" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="TutorialBox" sid="543314366537089">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="FadeOut" sid="955936215784494">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373951528492627" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Cloned">
@@ -878,43 +988,6 @@
         <object-type name="Touch" sid="370433708752165">
             <plugin id="Touch" />
         </object-type>
-        <object-type name="ZoneDrop" sid="969314955336212">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="dropCount" sid="473897344502179" type="number" />
-                <instance-variable name="xPosition" sid="443141934755311" type="number" />
-                <instance-variable name="yPosition" sid="623238584083710" type="number" />
-            </instance-variables>
-            <effects>
-                <effect-type name="AdjustHSL">
-                    <effect id="hsladjust" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="549857479508361" speed="5">
-                    <frame duration="1" hotspotX="0.54" hotspotY="0.5" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\DropArea.png">
-                        <image-point name="counter" x="0.944" y="0.944" />
-                        <collision-poly>
-                            <point x="0" y="0.044" />
-                            <point x="1" y="0.04" />
-                            <point x="1" y="0.928" />
-                            <point x="0" y="0.928" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="444980590056275" speed="5">
-                    <frame duration="1" hotspotX="0.54" hotspotY="0.5">
-                        <image-point name="counter" x="0.944" y="0.944" />
-                        <collision-poly>
-                            <point x="0" y="0.044" />
-                            <point x="1" y="0.04" />
-                            <point x="1" y="0.928" />
-                            <point x="0" y="0.928" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Function" sid="933093510685179">
             <plugin id="Function" />
         </object-type>
@@ -927,75 +1000,19 @@
         <object-type name="Audio" sid="404040250988219">
             <plugin id="Audio" />
         </object-type>
-        <object-type name="TutorialBox" sid="543314366537089">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="373951528492627" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="ButtonClearProgress" sid="344746627811297">
             <plugin id="Button" />
+            <behaviors>
+                <behavior-type name="NoSave" sid="658674749452775">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="AJAX" sid="328314083368328">
             <plugin id="AJAX" />
         </object-type>
         <object-type global="1" name="levelVarsArray" sid="274723328699179">
             <plugin id="Arr" />
-        </object-type>
-        <object-type name="TitleSprite" sid="914302158454643">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="306841068183114" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\TitleWithCircle.png">
-                        <collision-poly>
-                            <point x="0.0714286" y="0.220848" />
-                            <point x="0.5" y="0" />
-                            <point x="0.922286" y="0.240283" />
-                            <point x="0.958286" y="0.5" />
-                            <point x="0.967429" y="0.899293" />
-                            <point x="0.5" y="0.886926" />
-                            <point x="0.0234286" y="0.927562" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type global="1" name="PerfectStarContainer" sid="579869092768361">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="894944377197363" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\DropAreaWhite.png">
-                        <collision-poly>
-                            <point x="0.0164225" y="0.0164153" />
-                            <point x="0.499778" y="0.000443656" />
-                            <point x="0.983577" y="0.0164153" />
-                            <point x="1" y="0.5" />
-                            <point x="0.983577" y="0.983585" />
-                            <point x="0.499778" y="0.999556" />
-                            <point x="0.0164225" y="0.983585" />
-                            <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type global="1" name="EqualBorder" sid="620886616886354">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842017227346489" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500282" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\ShorterRedBar.png">
-                        <collision-poly>
-                            <point x="0.115385" y="0.991549" />
-                            <point x="0.00769231" y="0.500282" />
-                            <point x="0.130769" y="0.00957745" />
-                            <point x="0.769231" y="0.0169014" />
-                            <point x="0.776923" y="0.983662" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -1009,6 +1026,19 @@
                 <instance-variable name="sharedVariableText" sid="784066295615737" type="string" />
                 <instance-variable name="actionCost" sid="947926120854522" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Sine" sid="989405719199113">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="GlowHorizontal">
+                    <effect id="glowhorizontal" />
+                </effect-type>
+                <effect-type name="GlowVertical">
+                    <effect id="glowvertical" />
+                </effect-type>
+            </effects>
         </family>
         <family name="Dropable" plugin-id="Sprite" sid="986628886324206">
             <members>
@@ -1045,6 +1075,62 @@
                     <effect id="blurvertical" />
                 </effect-type>
             </effects>
+        </family>
+        <family name="NoSaveSprites" plugin-id="Sprite" sid="481627958709162">
+            <members>
+                <member>Back</member>
+                <member>ButtonNextLevel</member>
+                <member>ControlButton</member>
+                <member>EqualBorder</member>
+                <member>LevelSelectPlayButton</member>
+                <member>Machine</member>
+                <member>Next</member>
+                <member>NumberDisplay</member>
+                <member>NumberShape</member>
+                <member>NumberTarget</member>
+                <member>Parenthesis</member>
+                <member>PerfectStarContainer</member>
+                <member>platform</member>
+                <member>Previous</member>
+                <member>ResultImage</member>
+                <member>Results</member>
+                <member>Shadow</member>
+                <member>SymbolEquals</member>
+                <member>SymbolMath</member>
+                <member>TitleSprite</member>
+                <member>TutorialBox</member>
+                <member>UIStarPerfectNeeded</member>
+                <member>ZoneDrop</member>
+            </members>
+            <behaviors>
+                <behavior-type name="NoSave" sid="202705876935705">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="NoSaveText" plugin-id="Text" sid="711894427764059">
+            <members>
+                <member>NormalText</member>
+                <member>TextDisplay</member>
+                <member>TextInstructions</member>
+                <member>TextMachine</member>
+                <member>TextPerfectNeeded</member>
+                <member>TextResult</member>
+                <member>TextResultActions</member>
+                <member>TextResultPerfectTip</member>
+                <member>TextResultsTitle</member>
+                <member>TextSentence2</member>
+                <member>TextSentence3</member>
+                <member>TextShape</member>
+                <member>TextStatusPerfect</member>
+                <member>TextTitle</member>
+                <member>TextVersion</member>
+            </members>
+            <behaviors>
+                <behavior-type name="NoSave" sid="668353059621415">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
@@ -1098,7 +1184,7 @@
         <event-sheet>Main Event Sheet.xml</event-sheet>
         <event-sheet>Puzzle Resolution.xml</event-sheet>
         <event-sheet>Buttons.xml</event-sheet>
-        <event-sheet>Level Select.xml</event-sheet>
+        <event-sheet>Level Select Sheet.xml</event-sheet>
         <event-sheet>Level 1 Tutorial.xml</event-sheet>
         <event-sheet>Level 2 Tutorial.xml</event-sheet>
         <event-sheet>Level 3 Tutorial.xml</event-sheet>
@@ -1129,6 +1215,30 @@
         <global-instance type="AJAX" uid="1032" />
     </global-instances>
     <sounds-folder>
+        <sound-folder name="Voice">
+            <file name="TutorialVoice - Lvl1Part1.ogg" />
+            <file name="TutorialVoice - Lvl1Part2.ogg" />
+            <file name="TutorialVoice - Lvl1Part3.ogg" />
+            <file name="TutorialVoice - Lvl1Part4.ogg" />
+            <file name="TutorialVoice - Lvl1Part5.ogg" />
+            <file name="TutorialVoice - Lvl2Part1.ogg" />
+            <file name="TutorialVoice - Lvl2Part2.ogg" />
+            <file name="TutorialVoice - Lvl2Part3.ogg" />
+            <file name="TutorialVoice - Lvl2Part4.ogg" />
+            <file name="TutorialVoice - Lvl2Part5.ogg" />
+            <file name="TutorialVoice - Lvl2Part6.ogg" />
+            <file name="TutorialVoice - Lvl2Part7.ogg" />
+            <file name="TutorialVoice - Lvl2Part8.ogg" />
+            <file name="TutorialVoice - Lvl2Part9.ogg" />
+            <file name="TutorialVoice - Lvl3Part1.ogg" />
+            <file name="TutorialVoice - Lvl3Part2.ogg" />
+            <file name="TutorialVoice - Lvl3Part3.ogg" />
+            <file name="TutorialVoice - Lvl3Part4.ogg" />
+            <file name="TutorialVoice - Lvl3Part5.ogg" />
+            <file name="TutorialVoice - Lvl3Part6.ogg" />
+            <file name="TutorialVoice - Lvl3Part7.ogg" />
+            <file name="TutorialVoice - Lvl3Part8.ogg" />
+        </sound-folder>
         <file name="Good Morning.ogg" />
         <file name="Nursery.ogg" />
         <file name="Power.ogg" />
@@ -1146,6 +1256,7 @@
     </sounds-folder>
     <music-folder>
         <file name="ether-vox-by-kevin-macleod-from-filmmusic-io.ogg" />
+        <file name="Rainbow Day Games by the green orbs.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">

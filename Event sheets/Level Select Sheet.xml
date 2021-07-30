@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Level Select</name>
+    <name>Level Select Sheet</name>
     <events>
+        <variable comment="arbitrary" constant="1" name="GAME_VERSION" sid="127888593440677" static="0" type="number">0.97</variable>
+        <variable comment="is saveGame version is outdated will not load save" constant="1" name="IS_MAJOR_VERSION" sid="688710626586006" static="0" type="number">1</variable>
         <variable constant="0" name="levelVarsLoaded" sid="928252785121424" static="0" type="number">0</variable>
-        <variable constant="0" name="xPositionOutside" sid="604083870091784" static="0" type="number">475</variable>
-        <variable constant="0" name="redLineTaps" sid="760236699950142" static="0" type="number">0</variable>
         <variable constant="0" name="levelGroupCurrent" sid="906126917990752" static="0" type="number">1</variable>
-        <variable constant="1" name="levelGroupMax" sid="391541195235073" static="0" type="number">7</variable>
         <variable comment="is automatically counted based on the number of buttons" constant="0" name="numberOfLevels" sid="245093674660638" static="0" type="number">0</variable>
-        <comment>When Game is loaded, create save used to Reset the game, and load the save created from playing</comment>
+        <variable constant="1" name="levelGroupMax" sid="391541195235073" static="0" type="number">7</variable>
+        <comment>When Game is loaded, create save used to Reset the game, and load the save created from playing if version is curret</comment>
         <event-block sid="182472866135035">
             <conditions>
                 <condition id="-25" name="On loader layout complete" sid="455622497253749" type="System" />
@@ -23,6 +23,46 @@
                     <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
                 </action>
             </actions>
+            <sub-events>
+                <comment>check version load past save if allowed</comment>
+                <event-block disabled="1" sid="989197436947316">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="934025710898413" type="Dictionary">
+                            <param id="0" name="Key">&quot;saveGameVersion&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">GAME_VERSION</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block disabled="1" sid="963117851977780">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="768640228417358" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="894743839891531" type="Dictionary">
+                            <param id="0" name="Key">&quot;saveGameVersion&quot;</param>
+                            <param id="1" name="Value">GAME_VERSION</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="518186273390930">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="776996134582417" type="System">
+                                    <param id="0" name="Variable">IS_MAJOR_VERSION</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-37" name="Load" sid="972385333062223" type="System">
+                                    <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="680684175599999">
             <conditions>
@@ -32,6 +72,12 @@
                 <action id="-4" name="Set layer visible" sid="875326167448387" type="System">
                     <param id="0" name="Layer">&quot;UI&quot;</param>
                     <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="587448812252572" type="TextVersion">
+                    <param id="0" name="Text">&quot;v&quot; &amp; GAME_VERSION</param>
+                </action>
+                <action id="6" name="Stop" sid="923665851472388" type="Audio">
+                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -76,10 +122,6 @@
                                     <param id="0" name="Name">&quot;hideLevelGroupsButOne&quot;</param>
                                     <param id="1" name="Parameter {n}">levelGroupCurrent</param>
                                 </action>
-                                <action id="-9" name="Set value" sid="212038109727871" type="System">
-                                    <param id="0" name="Variable">redLineTaps</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
                                 <action behavior="Sine" id="0" name="Set active" sid="526958515763808" type="LevelSelectPlayButton">
                                     <param id="0" name="State">1</param>
                                 </action>
@@ -93,10 +135,21 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="447287055441788" type="Audio">
-                                    <param id="0" name="Audio file">ether-vox-by-kevin-macleod-from-filmmusic-io</param>
+                                    <param id="0" name="Audio file">Rainbow Day Games by the green orbs</param>
                                     <param id="2" name="Loop">1</param>
                                     <param id="3" name="Volume">-10</param>
                                     <param id="1" name="Tag (optional)">&quot;mainMusic&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="636350303929394">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="203829814898289" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set volume" sid="498326586205589" type="Audio">
+                                    <param id="0" name="Tag">&quot;mainMusic&quot;</param>
+                                    <param id="1" name="dB">-10</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -696,6 +749,7 @@
         <event-group description="" disabled="1" sid="293351085704992" title="Navigation by Touch">
             <sub-events>
                 <variable constant="0" name="xTouch" sid="529224387060941" static="1" type="number">0</variable>
+                <variable constant="0" name="xPositionOutside" sid="604083870091784" static="0" type="number">475</variable>
                 <event-block sid="959526937453183">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="751861195706381" type="System" />
@@ -811,14 +865,15 @@
         </event-group>
         <event-group description="" sid="921717216750162" title="Debug">
             <sub-events>
-                <comment>Clicking clear loads the Reset Save slot</comment>
-                <event-block sid="472813363420277">
+                <variable constant="0" name="redLineTaps" sid="760236699950142" static="1" type="number">0</variable>
+                <event-block sid="971779694148388">
                     <conditions>
-                        <condition id="0" name="On clicked" sid="108332316513282" type="ButtonClearProgress" />
+                        <condition id="-2" name="On start of layout" sid="970024115342544" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-37" name="Load" sid="514394935862634" type="System">
-                            <param id="0" name="Slot">&quot;mathRGBreset&quot;</param>
+                        <action id="-9" name="Set value" sid="426254173985486" type="System">
+                            <param id="0" name="Variable">redLineTaps</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -878,6 +933,17 @@
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <comment>Clicking clear loads the Reset Save slot</comment>
+                <event-block sid="472813363420277">
+                    <conditions>
+                        <condition id="0" name="On clicked" sid="108332316513282" type="ButtonClearProgress" />
+                    </conditions>
+                    <actions>
+                        <action id="-37" name="Load" sid="514394935862634" type="System">
+                            <param id="0" name="Slot">&quot;mathRGBreset&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

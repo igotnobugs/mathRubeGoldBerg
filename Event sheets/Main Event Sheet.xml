@@ -12,6 +12,23 @@
         <variable constant="0" name="currentLevel" sid="548098035864958" static="0" type="number">0</variable>
         <variable constant="0" name="isPlayInteractable" sid="128674764038129" static="0" type="number">0</variable>
         <variable constant="1" name="HOLD_TIME_SPEED" sid="550948806176408" static="0" type="number">15</variable>
+        <event-block sid="645867142254665">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="412837848269132" type="System" />
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="755566124909067" type="System">
+                    <param id="0" name="Slot">&quot;mathRGBreset&quot;</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="838457714030838" type="System" />
+                <action id="-37" name="Load" sid="808788411132972" type="System">
+                    <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="449479832985534" type="System">
+                    <param id="0" name="Layout">Level Select</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="922160269685457">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="210067844277446" type="System" />
@@ -40,6 +57,21 @@
                 </action>
                 <action id="-5" name="Set width" sid="494941759163280" type="HoldBar">
                     <param id="0" name="Width">0</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="803703898450617" type="Cloneable">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;GlowHorizontal&quot;</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="263692346154786" type="Cloneable">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
+                </action>
+                <action id="3" name="Set volume" sid="475255432706147" type="Audio">
+                    <param id="0" name="Tag">&quot;mainMusic&quot;</param>
+                    <param id="1" name="dB">-10</param>
+                </action>
+                <action id="6" name="Stop" sid="377825006047387" type="Audio">
+                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                 </action>
             </actions>
         </event-block>
