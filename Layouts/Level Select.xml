@@ -226,6 +226,84 @@
                         <opacity>0.200000003</opacity>
                     </world>
                 </instance>
+                <instance type="Wall" uid="10">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-10.77986908</x>
+                        <y>275.402099609</y>
+                        <z>0</z>
+                        <width>16.943405151</width>
+                        <height>583.883300781</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="Wall" uid="17">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>Yes</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>411.774688721</x>
+                        <y>284.889190674</y>
+                        <z>0</z>
+                        <width>16.943405151</width>
+                        <height>583.883300781</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -804,7 +882,7 @@
                     <effect-instance type="AdjustHSL">
                         <parameters>
                             <hue>0.25</hue>
-                            <luminosity>0.75</luminosity>
+                            <luminosity>0.8</luminosity>
                             <saturation>1.5</saturation>
                         </parameters>
                     </effect-instance>
@@ -1047,8 +1125,8 @@
                     <effect-instance type="AdjustHSL">
                         <parameters>
                             <hue>0.8</hue>
-                            <luminosity>1</luminosity>
-                            <saturation>2</saturation>
+                            <luminosity>0.8</luminosity>
+                            <saturation>1.25</saturation>
                         </parameters>
                     </effect-instance>
                 </effect-type>
@@ -1290,8 +1368,8 @@
                     <effect-instance type="AdjustHSL">
                         <parameters>
                             <hue>0.75</hue>
-                            <luminosity>1</luminosity>
-                            <saturation>3</saturation>
+                            <luminosity>0.8</luminosity>
+                            <saturation>2</saturation>
                         </parameters>
                     </effect-instance>
                 </effect-type>
@@ -1533,7 +1611,7 @@
                     <effect-instance type="AdjustHSL">
                         <parameters>
                             <hue>0.65</hue>
-                            <luminosity>1</luminosity>
+                            <luminosity>0.8</luminosity>
                             <saturation>1.5</saturation>
                         </parameters>
                     </effect-instance>
@@ -1776,8 +1854,8 @@
                     <effect-instance type="AdjustHSL">
                         <parameters>
                             <hue>0.05</hue>
-                            <luminosity>1</luminosity>
-                            <saturation>2</saturation>
+                            <luminosity>0.8</luminosity>
+                            <saturation>1.5</saturation>
                         </parameters>
                     </effect-instance>
                 </effect-type>
@@ -2031,10 +2109,10 @@
                         <x>199.369110107</x>
                         <y>68.669746399</y>
                         <z>0</z>
-                        <width>393.665771484</width>
-                        <height>127.322753906</height>
+                        <width>396.140228271</width>
+                        <height>130.921981812</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.500283957</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

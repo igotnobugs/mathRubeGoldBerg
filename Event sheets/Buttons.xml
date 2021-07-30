@@ -62,6 +62,9 @@
                                         <action behavior="Physics" id="27" name="Set enabled" sid="225460514932072" type="NumberShape">
                                             <param id="0" name="Mode">1</param>
                                         </action>
+                                        <action behavior="Physics" id="9" name="Set angular velocity" sid="321932894915625" type="NumberShape">
+                                            <param id="0" name="Angular velocity">0</param>
+                                        </action>
                                         <action id="-9" name="Set value" sid="449967924396103" type="System">
                                             <param id="0" name="Variable">isSimulating</param>
                                             <param id="1" name="Value">1</param>
@@ -71,6 +74,10 @@
                                         </action>
                                         <action behavior="Rotate" id="1" name="Set acceleration" sid="751450391517549" type="ControlButton">
                                             <param id="0" name="Acceleration">3000</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="212638911149997" type="NumberShape">
+                                            <param id="0" name="Animation">replace(NumberShape.AnimationName,&quot;Placed&quot;,&quot;&quot;)</param>
+                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -183,33 +190,25 @@
                                                     <param id="0" name="Tag">&quot;SignalPuzzleReset&quot;</param>
                                                 </action>
                                             </actions>
-                                        </event-block>
-                                        <event-block sid="747935728335966">
-                                            <conditions>
-                                                <condition id="-11" name="For Each" sid="395836890641868" type="System">
-                                                    <param id="0" name="Object">Dropable</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action behavior="DragDrop" id="0" name="Set enabled" sid="438929421363915" type="Dropable">
-                                                    <param id="0" name="State">1</param>
-                                                </action>
-                                                <action id="-3" name="Set position" sid="258714819337479" type="Dropable">
-                                                    <param id="0" name="X">Dropable.xPastPosition</param>
-                                                    <param id="1" name="Y">Dropable.yPastPosition</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="446030824871432" type="Function">
-                                                    <param id="0" name="Name">&quot;setLiftedEffect&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Dropable.UID{###}0</param>
-                                                </action>
-                                            </actions>
                                             <sub-events>
-                                                <event-block sid="884028214866926">
-                                                    <conditions>
-                                                        <condition id="-11" name="For Each" sid="154338136618290" type="System">
-                                                            <param id="0" name="Object">NumberShape</param>
-                                                        </condition>
-                                                    </conditions>
+                                                <event-block sid="176655079989985">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="438929421363915" type="Dropable">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="258714819337479" type="Dropable">
+                                                            <param id="0" name="X">Dropable.xPastPosition</param>
+                                                            <param id="1" name="Y">Dropable.yPastPosition</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="446030824871432" type="Function">
+                                                            <param id="0" name="Name">&quot;setLiftedEffect&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Dropable.UID{###}0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="482910559775138">
+                                                    <conditions />
                                                     <actions>
                                                         <action behavior="Physics" id="27" name="Set enabled" sid="472460683611550" type="NumberShape">
                                                             <param id="0" name="Mode">0</param>
@@ -221,14 +220,49 @@
                                                         <action id="0" name="Set text" sid="783386141076886" type="TextShape">
                                                             <param id="0" name="Text">NumberShape.number</param>
                                                         </action>
+                                                        <action id="-8" name="Set angle" sid="209108546162234" type="NumberShape">
+                                                            <param id="0" name="Angle">0</param>
+                                                        </action>
                                                     </actions>
+                                                    <sub-events>
+                                                        <event-block sid="451135654072553">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="379077240338498" type="NumberShape">
+                                                                    <param id="0" name="Instance variable">number</param>
+                                                                    <param id="1" name="Comparison">2</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="697742328570309" type="NumberShape">
+                                                                    <param id="0" name="Animation">&quot;negative&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="593457665390891" type="NumberShape">
+                                                                    <param id="0" name="Animation">NumberShape.AnimationName &amp; &quot;Placed&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="191956122055512">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="683949130752476" type="System" />
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="4" name="Set animation" sid="621140597399056" type="NumberShape">
+                                                                    <param id="0" name="Animation">&quot;positive&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                                <action id="4" name="Set animation" sid="404797151817765" type="NumberShape">
+                                                                    <param id="0" name="Animation">NumberShape.AnimationName &amp; &quot;Placed&quot;</param>
+                                                                    <param id="1" name="From">1</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
                                                 </event-block>
-                                                <event-block sid="106784504081958">
-                                                    <conditions>
-                                                        <condition id="-11" name="For Each" sid="659872575326438" type="System">
-                                                            <param id="0" name="Object">Machine</param>
-                                                        </condition>
-                                                    </conditions>
+                                                <event-block sid="868193114389159">
+                                                    <conditions />
                                                     <actions>
                                                         <action id="-10" name="Set value" sid="406496001025581" type="Machine">
                                                             <param id="0" name="Instance variable">modifierNumber</param>

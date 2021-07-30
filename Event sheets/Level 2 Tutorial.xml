@@ -40,7 +40,11 @@
                             <param id="0" name="Name">&quot;startTutorial2&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="6" name="Stop" sid="568134108584563" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="563574054900717">
                             <conditions>

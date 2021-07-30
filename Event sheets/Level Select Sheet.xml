@@ -3,8 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level Select Sheet</name>
     <events>
-        <variable comment="arbitrary" constant="1" name="GAME_VERSION" sid="127888593440677" static="0" type="number">0.97</variable>
+        <variable constant="1" name="GAME_VERSION" sid="127888593440677" static="0" type="number">0.98</variable>
         <variable comment="is saveGame version is outdated will not load save" constant="1" name="IS_MAJOR_VERSION" sid="688710626586006" static="0" type="number">1</variable>
+        <variable constant="0" name="currentVersion" sid="861146851509307" static="0" type="number">0</variable>
         <variable constant="0" name="levelVarsLoaded" sid="928252785121424" static="0" type="number">0</variable>
         <variable constant="0" name="levelGroupCurrent" sid="906126917990752" static="0" type="number">1</variable>
         <variable comment="is automatically counted based on the number of buttons" constant="0" name="numberOfLevels" sid="245093674660638" static="0" type="number">0</variable>
@@ -23,46 +24,6 @@
                     <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
                 </action>
             </actions>
-            <sub-events>
-                <comment>check version load past save if allowed</comment>
-                <event-block disabled="1" sid="989197436947316">
-                    <conditions>
-                        <condition id="0" name="Compare value" sid="934025710898413" type="Dictionary">
-                            <param id="0" name="Key">&quot;saveGameVersion&quot;</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">GAME_VERSION</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
-                <event-block disabled="1" sid="963117851977780">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="768640228417358" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Add key" sid="894743839891531" type="Dictionary">
-                            <param id="0" name="Key">&quot;saveGameVersion&quot;</param>
-                            <param id="1" name="Value">GAME_VERSION</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="518186273390930">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="776996134582417" type="System">
-                                    <param id="0" name="Variable">IS_MAJOR_VERSION</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-37" name="Load" sid="972385333062223" type="System">
-                                    <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="680684175599999">
             <conditions>
@@ -75,9 +36,6 @@
                 </action>
                 <action id="0" name="Set text" sid="587448812252572" type="TextVersion">
                     <param id="0" name="Text">&quot;v&quot; &amp; GAME_VERSION</param>
-                </action>
-                <action id="6" name="Stop" sid="923665851472388" type="Audio">
-                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -587,7 +545,11 @@
                     <conditions>
                         <condition id="-18" name="On created" sid="278983309429176" type="NumberShape" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="334137624383183" type="NumberShape">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="250266048150759">
                             <conditions />

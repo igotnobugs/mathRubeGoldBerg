@@ -51,8 +51,17 @@
                         <condition id="0" name="On function" sid="677048613685875" type="Function">
                             <param id="0" name="Name">&quot;startTutorial1&quot;</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="773002229050061" type="System">
+                            <param id="0" name="Variable">IntroOngoing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="6" name="Stop" sid="867186798309788" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="401752793744301">
                             <conditions>
@@ -63,7 +72,7 @@
                             <actions>
                                 <action behavior="FadeIn" id="1" name="Start fade" sid="242383926547962" type="TextInstructions" />
                                 <action id="-16" name="Wait" sid="254487535259556" type="System">
-                                    <param id="0" name="Seconds">0.2</param>
+                                    <param id="0" name="Seconds">1</param>
                                 </action>
                                 <action id="0" name="Set text" sid="121845061461111" type="TextInstructions">
                                     <param id="0" name="Text">&quot;To complete the equation&quot;</param>
@@ -74,14 +83,20 @@
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="915451036756060" type="System">
+                                    <param id="0" name="Seconds">3</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="331949769444251">
-                                    <conditions />
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="118328051829537" type="System">
+                                            <param id="0" name="Variable">IntroOngoing</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
                                     <actions>
-                                        <action id="-16" name="Wait" sid="915451036756060" type="System">
-                                            <param id="0" name="Seconds">3</param>
-                                        </action>
                                         <action id="6" name="Stop" sid="855546700972776" type="Audio">
                                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                         </action>
@@ -105,14 +120,20 @@
                                             <param id="0" name="Mode">1</param>
                                             <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
                                         </action>
+                                        <action id="-16" name="Wait" sid="113842795627238" type="System">
+                                            <param id="0" name="Seconds">3</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="990401994291458">
-                                            <conditions />
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="748465675311565" type="System">
+                                                    <param id="0" name="Variable">IntroOngoing</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                            </conditions>
                                             <actions>
-                                                <action id="-16" name="Wait" sid="113842795627238" type="System">
-                                                    <param id="0" name="Seconds">3</param>
-                                                </action>
                                                 <action id="6" name="Stop" sid="137985056832048" type="Audio">
                                                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                 </action>
@@ -147,14 +168,20 @@
                                                     <param id="0" name="Mode">1</param>
                                                     <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
                                                 </action>
+                                                <action id="-41" name="Wait for signal" sid="289040296256366" type="System">
+                                                    <param id="0" name="Tag">&quot;SignalNumberCloned&quot;</param>
+                                                </action>
                                             </actions>
                                             <sub-events>
                                                 <event-block sid="410158245423396">
-                                                    <conditions />
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="690732303004602" type="System">
+                                                            <param id="0" name="Variable">IntroOngoing</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
                                                     <actions>
-                                                        <action id="-41" name="Wait for signal" sid="289040296256366" type="System">
-                                                            <param id="0" name="Tag">&quot;SignalNumberCloned&quot;</param>
-                                                        </action>
                                                         <action id="6" name="Stop" sid="856822155270611" type="Audio">
                                                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                         </action>
@@ -178,14 +205,20 @@
                                                         <action id="0" name="Set text" sid="575388958677037" type="TextInstructions">
                                                             <param id="0" name="Text">&quot;Drop it in the area&quot;</param>
                                                         </action>
+                                                        <action id="-41" name="Wait for signal" sid="156933254821361" type="System">
+                                                            <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
+                                                        </action>
                                                     </actions>
                                                     <sub-events>
                                                         <event-block sid="569183973633137">
-                                                            <conditions />
+                                                            <conditions>
+                                                                <condition id="-14" name="Compare variable" sid="606687829717710" type="System">
+                                                                    <param id="0" name="Variable">IntroOngoing</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">1</param>
+                                                                </condition>
+                                                            </conditions>
                                                             <actions>
-                                                                <action id="-41" name="Wait for signal" sid="156933254821361" type="System">
-                                                                    <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
-                                                                </action>
                                                                 <action id="6" name="Stop" sid="751062900566130" type="Audio">
                                                                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                                 </action>
@@ -213,14 +246,20 @@
                                                                 </action>
                                                                 <action behavior="FadeOut" id="1" name="Start fade" sid="185077305137640" type="TextInstructions" />
                                                                 <action behavior="FadeOut" id="1" name="Start fade" sid="170273417799038" type="TutorialBox" />
+                                                                <action id="-16" name="Wait" sid="532009906147740" type="System">
+                                                                    <param id="0" name="Seconds">3</param>
+                                                                </action>
                                                             </actions>
                                                             <sub-events>
                                                                 <event-block sid="931878762776411">
-                                                                    <conditions />
+                                                                    <conditions>
+                                                                        <condition id="-14" name="Compare variable" sid="903159134281928" type="System">
+                                                                            <param id="0" name="Variable">IntroOngoing</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">1</param>
+                                                                        </condition>
+                                                                    </conditions>
                                                                     <actions>
-                                                                        <action id="-16" name="Wait" sid="532009906147740" type="System">
-                                                                            <param id="0" name="Seconds">3</param>
-                                                                        </action>
                                                                         <action behavior="FadeIn" id="1" name="Start fade" sid="786461713419520" type="TextInstructions" />
                                                                         <action id="0" name="Set text" sid="709532429748862" type="TextInstructions">
                                                                             <param id="0" name="Text">&quot;The correct number must land on the red line. Restart the puzzle to try again.&quot;</param>
@@ -271,6 +310,10 @@
                         <action id="-41" name="Wait for signal" sid="842146444776914" type="System">
                             <param id="0" name="Tag">&quot;SignalPuzzleReset&quot;</param>
                         </action>
+                        <action id="-9" name="Set value" sid="748233560869609" type="System">
+                            <param id="0" name="Variable">IntroOngoing</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                         <action behavior="Sine" id="0" name="Set active" sid="653516268239693" type="ControlButton">
                             <param id="0" name="State">0</param>
                         </action>
@@ -278,9 +321,34 @@
                             <param id="0" name="Width">80</param>
                             <param id="1" name="Height">80</param>
                         </action>
+                        <action id="6" name="Stop" sid="966122324426050" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="130200309963369" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="481356479438586" type="System">
+                            <param id="0" name="Variable">IntroOngoing</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="0" name="Call function" sid="462014624796203" type="Function">
                             <param id="0" name="Name">&quot;startTutorial1&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="391354202052004">
+                    <conditions />
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="678624760888682" type="System">
+                            <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="690897434829810" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="136747917060999" type="System">
+                            <param id="0" name="Variable">IntroOngoing</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>

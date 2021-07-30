@@ -486,9 +486,6 @@
                         <condition id="-4" name="Trigger once while true" sid="644387598255177" type="System" />
                     </conditions>
                     <actions>
-                        <action id="6" name="Stop" sid="225593348896158" type="Audio">
-                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
-                        </action>
                         <action id="3" name="Start" sid="426036451967842" type="ResultImage">
                             <param id="0" name="From">1</param>
                         </action>

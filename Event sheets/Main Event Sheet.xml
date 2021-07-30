@@ -130,6 +130,16 @@
                         <action id="-1" name="Set X" sid="639582549868965" type="EqualBorder">
                             <param id="0" name="X">SymbolEquals.X</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="870643445607126" type="Wall">
+                            <param id="0" name="Pin to">ZoneDrop</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="611270902223059" type="System">
+                            <param id="0" name="Object to create">RedLineParticles</param>
+                            <param id="1" name="Layer">&quot;Background&quot;</param>
+                            <param id="2" name="X">NumberTarget.X</param>
+                            <param id="3" name="Y">NumberTarget.Y</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>

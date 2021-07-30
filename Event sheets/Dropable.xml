@@ -96,6 +96,10 @@
                                                 <action id="-42" name="Signal" sid="811010869574245" type="System">
                                                     <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
                                                 </action>
+                                                <action id="4" name="Set animation" sid="442461388908431" type="NumberShape">
+                                                    <param id="0" name="Animation">NumberShape.AnimationName &amp; &quot;Placed&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -307,7 +311,7 @@
         <event-group description="" sid="660280430365706" title="Machine Specific">
             <sub-events>
                 <variable constant="0" name="machineToTranspose" sid="407285314477666" static="0" type="number">0</variable>
-                <event-block sid="499496809480936">
+                <event-block disabled="1" sid="499496809480936">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="795864666166547" type="Machine">
                             <param id="0" name="Object">SymbolEquals</param>
@@ -401,216 +405,255 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="764162167710003">
+                <event-block sid="451895612696815">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="484752040492199" type="Machine">
-                            <param id="0" name="Comparison">3</param>
-                            <param id="1" name="X co-ordinate">SymbolEquals.X</param>
+                        <condition id="-14" name="Compare variable" sid="371926247031219" type="System">
+                            <param id="0" name="Variable">isSimulating</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="700074080313143">
+                        <event-block any="1" sid="408358004140573">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="210772991792541" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="109735893158044" type="Machine">
+                                    <param id="0" name="Instance variable">isNew</param>
+                                </condition>
+                                <condition behavior="DragDrop" id="0" name="Is dragging" sid="574414343147629" type="Machine" />
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block disabled="1" sid="505365494754253">
+                                <event-block sid="764162167710003">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="476951155362894" type="Machine">
-                                            <param id="0" name="Instance variable">WAITTRANSPOSE</param>
+                                        <condition id="-1" name="Compare X" sid="484752040492199" type="Machine">
+                                            <param id="0" name="Comparison">3</param>
+                                            <param id="1" name="X co-ordinate">SymbolEquals.X</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="512580228695885" type="Machine">
+                                            <param id="0" name="Instance variable">isLeftOfEquals</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="311590875123015" type="Machine">
-                                            <param id="0" name="Instance variable">WAITTRANSPOSE</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="957783210384736">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="965763414396729" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="902493102960577" type="System">
-                                            <param id="0" name="Variable">machineToTranspose</param>
-                                            <param id="1" name="Value">Machine.UID</param>
+                                        <action id="-13" name="Set boolean" sid="668311611667137" type="Machine">
+                                            <param id="0" name="Instance variable">isLeftOfEquals</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block disabled="1" sid="426625262405113">
+                                        <event-block sid="700074080313143">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="982937569284868" type="Machine">
-                                                    <param id="0" name="Instance variable">machineType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;addition&quot;</param>
-                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="210772991792541" type="System" />
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="941413120844019" type="Function">
-                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;subtraction&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="235975545042029">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="394866415443541" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="517346295213081" type="Machine">
-                                                    <param id="0" name="Instance variable">machineType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;subtraction&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="199036578893494" type="Function">
-                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;addition&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="660654021581763">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="434576400378279" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="362051208095614" type="Machine">
-                                                    <param id="0" name="Instance variable">machineType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;multiplication&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="709874265358684" type="Function">
-                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;division&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="714185451532021">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="261243483633224" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="276919231070832" type="Machine">
-                                                    <param id="0" name="Instance variable">machineType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;division&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="956002134083992" type="Function">
-                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;multiplication&quot;</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="505365494754253">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="476951155362894" type="Machine">
+                                                            <param id="0" name="Instance variable">WAITTRANSPOSE</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="311590875123015" type="Machine">
+                                                            <param id="0" name="Instance variable">WAITTRANSPOSE</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="957783210384736">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="965763414396729" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="902493102960577" type="System">
+                                                            <param id="0" name="Variable">machineToTranspose</param>
+                                                            <param id="1" name="Value">Machine.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="426625262405113">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="982937569284868" type="Machine">
+                                                                    <param id="0" name="Instance variable">machineType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;addition&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="941413120844019" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;subtraction&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="235975545042029">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="394866415443541" type="System" />
+                                                                <condition id="-7" name="Compare instance variable" sid="517346295213081" type="Machine">
+                                                                    <param id="0" name="Instance variable">machineType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;subtraction&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="199036578893494" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;addition&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="660654021581763">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="434576400378279" type="System" />
+                                                                <condition id="-7" name="Compare instance variable" sid="362051208095614" type="Machine">
+                                                                    <param id="0" name="Instance variable">machineType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;multiplication&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="709874265358684" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;division&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="714185451532021">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="261243483633224" type="System" />
+                                                                <condition id="-7" name="Compare instance variable" sid="276919231070832" type="Machine">
+                                                                    <param id="0" name="Instance variable">machineType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;division&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="956002134083992" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;multiplication&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="997618620693570">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="468015686823709" type="System" />
-                        <condition id="-1" name="Compare X" sid="573483487625187" type="Machine">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">SymbolEquals.X</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="818952840114202">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="203826533577731" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="354617730648580">
+                                <event-block sid="997618620693570">
                                     <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="143925367617623" type="Machine">
-                                            <param id="0" name="Instance variable">WAITTRANSPOSE</param>
+                                        <condition id="-22" name="Else" sid="468015686823709" type="System" />
+                                        <condition id="-1" name="Compare X" sid="573483487625187" type="Machine">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">SymbolEquals.X</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="838954069034021" type="Machine">
+                                            <param id="0" name="Instance variable">isLeftOfEquals</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-13" name="Set boolean" sid="696568292498293" type="Machine">
-                                            <param id="0" name="Instance variable">WAITTRANSPOSE</param>
+                                        <action id="-13" name="Set boolean" sid="900360650626724" type="Machine">
+                                            <param id="0" name="Instance variable">isLeftOfEquals</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="819695718989194">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="881255235244839" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-9" name="Set value" sid="759730081985538" type="System">
-                                            <param id="0" name="Variable">machineToTranspose</param>
-                                            <param id="1" name="Value">Machine.UID</param>
-                                        </action>
-                                    </actions>
                                     <sub-events>
-                                        <event-block disabled="1" sid="393524560731068">
+                                        <event-block sid="818952840114202">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="998182948887766" type="Machine">
-                                                    <param id="0" name="Instance variable">machineType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;addition&quot;</param>
-                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="203826533577731" type="System" />
                                             </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="890829114530259" type="Function">
-                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;subtraction&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="492824590212871">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="181091739742064" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="663275869356164" type="Machine">
-                                                    <param id="0" name="Instance variable">machineType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;subtraction&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="295668448131910" type="Function">
-                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;addition&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="880752042533845">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="596611399219388" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="637004110918987" type="Machine">
-                                                    <param id="0" name="Instance variable">machineType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;multiplication&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="771918047434492" type="Function">
-                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;division&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block disabled="1" sid="570617462523628">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="182945003736760" type="System" />
-                                                <condition id="-7" name="Compare instance variable" sid="307676233211486" type="Machine">
-                                                    <param id="0" name="Instance variable">machineType</param>
-                                                    <param id="1" name="Comparison">0</param>
-                                                    <param id="2" name="Value">&quot;division&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="0" name="Call function" sid="247559554064931" type="Function">
-                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;multiplication&quot;</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="354617730648580">
+                                                    <conditions>
+                                                        <condition id="-8" name="Is boolean instance variable set" sid="143925367617623" type="Machine">
+                                                            <param id="0" name="Instance variable">WAITTRANSPOSE</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="696568292498293" type="Machine">
+                                                            <param id="0" name="Instance variable">WAITTRANSPOSE</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="819695718989194">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="881255235244839" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="759730081985538" type="System">
+                                                            <param id="0" name="Variable">machineToTranspose</param>
+                                                            <param id="1" name="Value">Machine.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="393524560731068">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="998182948887766" type="Machine">
+                                                                    <param id="0" name="Instance variable">machineType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;addition&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="890829114530259" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;subtraction&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="492824590212871">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="181091739742064" type="System" />
+                                                                <condition id="-7" name="Compare instance variable" sid="663275869356164" type="Machine">
+                                                                    <param id="0" name="Instance variable">machineType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;subtraction&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="295668448131910" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;addition&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="880752042533845">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="596611399219388" type="System" />
+                                                                <condition id="-7" name="Compare instance variable" sid="637004110918987" type="Machine">
+                                                                    <param id="0" name="Instance variable">machineType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;multiplication&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="771918047434492" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;division&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="570617462523628">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="182945003736760" type="System" />
+                                                                <condition id="-7" name="Compare instance variable" sid="307676233211486" type="Machine">
+                                                                    <param id="0" name="Instance variable">machineType</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">&quot;division&quot;</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="0" name="Call function" sid="247559554064931" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">machineToTranspose{###}&quot;multiplication&quot;</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -689,6 +732,14 @@
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action behavior="Physics" id="15" name="Set velocity" sid="180571234168550" type="NumberShape">
+                                    <param id="0" name="X component">0</param>
+                                    <param id="1" name="Y component">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="948830913559166" type="NumberShape">
+                                    <param id="0" name="Object">Machine</param>
+                                    <param id="1" name="Image point (optional)">0</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -998,11 +1049,27 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="871565073266551">
+                    <conditions>
+                        <condition behavior="DragDrop" id="1" name="On drag start" sid="759392919965787" type="NumberShape" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="993374341652600" type="NumberShape">
+                            <param id="0" name="Animation">replace(NumberShape.AnimationName,&quot;Placed&quot;,&quot;&quot;)</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="961882240167036">
                     <conditions>
                         <condition behavior="DragDrop" id="2" name="On drop" sid="611302478531090" type="NumberShape" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="4" name="Set animation" sid="481645314796162" type="NumberShape">
+                            <param id="0" name="Animation">NumberShape.AnimationName &amp; &quot;Placed&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="375550798583667">
                             <conditions>
@@ -1021,12 +1088,6 @@
                                     <param id="0" name="Opacity">20</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="637109510069542">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="449230266089916" type="System" />
-                            </conditions>
-                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1327,7 +1388,6 @@
         <event-group description="" sid="410338811050650" title="Platform Specific">
             <sub-events>
                 <variable constant="0" name="distanceToOriginDragDrop" sid="668817430593965" static="0" type="number">50</variable>
-                <variable constant="0" name="isMovingRedLine" sid="610589599590425" static="1" type="number">0</variable>
                 <variable constant="0" name="isRotatingRedLine" sid="959970162290225" static="1" type="number">0</variable>
                 <variable constant="0" name="currentPlatformControlled" sid="661304068782468" static="1" type="number">0</variable>
                 <event-block sid="162463667331619">
@@ -1337,10 +1397,6 @@
                     <actions>
                         <action id="-9" name="Set value" sid="846739957538407" type="System">
                             <param id="0" name="Variable">currentPlatformControlled</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="115779654141173" type="System">
-                            <param id="0" name="Variable">isMovingRedLine</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="291575926031870" type="System">
@@ -1382,9 +1438,8 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Set value" sid="690846427132380" type="System">
-                                            <param id="0" name="Variable">isMovingRedLine</param>
-                                            <param id="1" name="Value">1</param>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="121509563322845" type="platform">
+                                            <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1396,6 +1451,9 @@
                                         <action id="-9" name="Set value" sid="589400392164649" type="System">
                                             <param id="0" name="Variable">isRotatingRedLine</param>
                                             <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="DragDrop" id="0" name="Set enabled" sid="746802043355941" type="platform">
+                                            <param id="0" name="State">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1410,7 +1468,6 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
-                        <condition id="-1" name="Every tick" sid="801540455681719" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
@@ -1419,41 +1476,18 @@
                                 <condition id="-14" name="Pick by unique ID" sid="700995091833258" type="platform">
                                     <param id="0" name="Unique ID">currentPlatformControlled</param>
                                 </condition>
+                                <condition id="-14" name="Compare variable" sid="164214911456499" type="System">
+                                    <param id="0" name="Variable">isRotatingRedLine</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="145089865948145">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="690884314226972" type="System">
-                                            <param id="0" name="Variable">isMovingRedLine</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Set position" sid="957711748309669" type="platform">
-                                            <param id="0" name="X">Touch.X</param>
-                                            <param id="1" name="Y">Touch.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="792961712387486">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="522190174210180" type="System" />
-                                        <condition id="-14" name="Compare variable" sid="164214911456499" type="System">
-                                            <param id="0" name="Variable">isRotatingRedLine</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-22" name="Set angle toward position" sid="494634680696135" type="platform">
-                                            <param id="0" name="X">Touch.X</param>
-                                            <param id="1" name="Y">Touch.Y</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="494634680696135" type="platform">
+                                    <param id="0" name="X">Touch.X</param>
+                                    <param id="1" name="Y">Touch.Y</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1468,10 +1502,6 @@
                             <actions>
                                 <action id="-9" name="Set value" sid="861893442072383" type="System">
                                     <param id="0" name="Variable">currentPlatformControlled</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="701894603826305" type="System">
-                                    <param id="0" name="Variable">isMovingRedLine</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="-9" name="Set value" sid="200284403573905" type="System">

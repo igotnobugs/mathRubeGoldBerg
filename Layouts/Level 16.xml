@@ -131,7 +131,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>115</x>
-                        <y>479</y>
+                        <y>483.507598877</y>
                         <z>0</z>
                         <width>65.587715149</width>
                         <height>66.569076538</height>
@@ -156,7 +156,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>278</x>
-                        <y>472</y>
+                        <y>476.507598877</y>
                         <z>0</z>
                         <width>69.167999268</width>
                         <height>61.072002411</height>
@@ -211,7 +211,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>350.502105713</x>
-                        <y>484.263580322</y>
+                        <y>488.771179199</y>
                         <z>0</z>
                         <width>57.445625305</width>
                         <height>58.594539642</height>
@@ -269,8 +269,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>184</x>
-                        <y>478</y>
+                        <x>193.015823364</x>
+                        <y>505.046844482</y>
                         <z>0</z>
                         <width>65.91129303</width>
                         <height>65.91129303</height>
@@ -324,8 +324,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>45.820877075</x>
-                        <y>477.580535889</y>
+                        <x>45.820861816</x>
+                        <y>482.088134766</y>
                         <z>0</z>
                         <width>57.445625305</width>
                         <height>58.594539642</height>

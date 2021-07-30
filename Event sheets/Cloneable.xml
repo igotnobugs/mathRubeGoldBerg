@@ -173,6 +173,9 @@
                                                                     <param id="2" name="X">Touch.X</param>
                                                                     <param id="3" name="Y">Touch.Y</param>
                                                                 </action>
+                                                                <action id="-42" name="Signal" sid="561725491477166" type="System">
+                                                                    <param id="0" name="Tag">&quot;SignalGirderCloned&quot;</param>
+                                                                </action>
                                                             </actions>
                                                         </event-block>
                                                     </sub-events>
@@ -289,6 +292,22 @@
                             <param id="1" name="Parameter {n}">Machine.textMachineUID{###}0</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="380034934088120">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="540795665054822" type="Machine">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">SymbolEquals.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="317484439152457" type="Machine">
+                                    <param id="0" name="Instance variable">isLeftOfEquals</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
