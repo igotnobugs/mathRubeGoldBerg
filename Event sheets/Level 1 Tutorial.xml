@@ -324,7 +324,7 @@
                         <action id="6" name="Stop" sid="966122324426050" type="Audio">
                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                         </action>
-                        <action id="-16" name="Wait" sid="130200309963369" type="System">
+                        <action disabled="1" id="-16" name="Wait" sid="130200309963369" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="-9" name="Set value" sid="481356479438586" type="System">
@@ -335,6 +335,7 @@
                             <param id="0" name="Name">&quot;startTutorial1&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="-26" name="Restart layout" sid="580270622861073" type="System" />
                     </actions>
                 </event-block>
                 <event-block sid="391354202052004">
