@@ -549,6 +549,9 @@
                         <action behavior="DragDrop" id="0" name="Set enabled" sid="334137624383183" type="NumberShape">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="180686263527309" type="NumberShape">
+                            <param id="0" name="Mode">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="250266048150759">
