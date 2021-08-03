@@ -37,7 +37,39 @@
                 <action id="0" name="Set text" sid="587448812252572" type="TextVersion">
                     <param id="0" name="Text">&quot;v&quot; &amp; GAME_VERSION</param>
                 </action>
+                <action id="6" name="Stop" sid="306130852133333" type="Audio">
+                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                </action>
             </actions>
+            <sub-events>
+                <event-block sid="524455676036195">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="979533309055051" type="NumberTarget">
+                            <param id="0" name="Unique ID">99</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="112967801091196" type="NumberTarget">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="522545580215576">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="747421423103649" type="platform">
+                            <param id="0" name="Unique ID">1054</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="11" name="Set collisions enabled" sid="874269901121484" type="platform">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="357112213809904" type="platform">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" sid="640629152270729" title="Setting up the Level Select Menu">
             <sub-events>
@@ -683,6 +715,10 @@
                             <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroupCurrent</param>
                             <param id="1" name="Visibility">1</param>
                         </action>
+                        <action id="0" name="Call function" sid="959169172877029" type="Function">
+                            <param id="0" name="Name">&quot;displayRandomBlurb&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="917249891906076">
@@ -704,6 +740,10 @@
                         <action id="-4" name="Set layer visible" sid="958432815436005" type="System">
                             <param id="0" name="Layer">&quot;Level Group &quot; &amp; levelGroupCurrent</param>
                             <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="712092619579584" type="Function">
+                            <param id="0" name="Name">&quot;displayRandomBlurb&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -910,5 +950,125 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="992812773824845">
+            <conditions>
+                <condition id="0" name="On function" sid="288445320717623" type="Function">
+                    <param id="0" name="Name">&quot;displayRandomBlurb&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="rand" sid="158968487624995" static="1" type="number">0</variable>
+                <event-block sid="797033991815927">
+                    <conditions />
+                    <actions>
+                        <action id="-9" name="Set value" sid="290343309900487" type="System">
+                            <param id="0" name="Variable">rand</param>
+                            <param id="1" name="Value">floor(random(0,7))</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="559613865190959">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="108750594242034" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="556715507572289" type="NormalText">
+                                    <param id="0" name="Text">&quot;&quot;&quot;Step by Step&quot;&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="381746744581313">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="305321145711222" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="114940326682253" type="NormalText">
+                                    <param id="0" name="Text">&quot;&quot;&quot;Trust the process&quot;&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="563112158246603">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="247910604426039" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="491507397336380" type="NormalText">
+                                    <param id="0" name="Text">&quot;&quot;&quot;Clone the red line&quot;&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="640996182154937">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="906103659613376" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="556824790599828" type="NormalText">
+                                    <param id="0" name="Text">&quot;&quot;&quot;Try for perfect stars!&quot;&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="830133377715251">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="752666782040748" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="872791501533334" type="NormalText">
+                                    <param id="0" name="Text">&quot;&quot;&quot;Experiment if you&apos;re not sure&quot;&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="281652646375192">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="248316543316731" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="274853192014300" type="NormalText">
+                                    <param id="0" name="Text">&quot;&quot;&quot;Isolate the red line&quot;&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="202950174019665">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="248918946658204" type="System">
+                                    <param id="0" name="Variable">rand</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="875331466044547" type="NormalText">
+                                    <param id="0" name="Text">&quot;&quot;&quot;Machines can be switched too&quot;&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

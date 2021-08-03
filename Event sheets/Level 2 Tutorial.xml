@@ -58,7 +58,7 @@
                                     <param id="0" name="Text">&quot;To add numbers, you need a machine&quot;</param>
                                 </action>
                                 <action id="0" name="Play" sid="558357639862007" type="Audio">
-                                    <param id="0" name="Audio file">TutorialVoice - Lvl2Part1</param>
+                                    <param id="0" name="Audio file">VoiceLvl2-p1</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -73,7 +73,7 @@
                                     <param id="0" name="Text">&quot;You can clone a symbol like any number&quot;</param>
                                 </action>
                                 <action id="0" name="Play" sid="108565968798965" type="Audio">
-                                    <param id="0" name="Audio file">TutorialVoice - Lvl2Part2</param>
+                                    <param id="0" name="Audio file">VoiceLvl2-p2</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -93,7 +93,7 @@
                                             <param id="0" name="Text">&quot;Tap and Hold the PLUS sign to make a machine&quot;</param>
                                         </action>
                                         <action id="0" name="Play" sid="870903128223519" type="Audio">
-                                            <param id="0" name="Audio file">TutorialVoice - Lvl2Part3</param>
+                                            <param id="0" name="Audio file">VoiceLvl2-p3</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -132,7 +132,7 @@
                                                     <param id="1" name="Effect">&quot;GlowVertical&quot;</param>
                                                 </action>
                                                 <action id="0" name="Play" sid="333940706503040" type="Audio">
-                                                    <param id="0" name="Audio file">TutorialVoice - Lvl2Part4</param>
+                                                    <param id="0" name="Audio file">VoiceLvl2-p4</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">0</param>
                                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -183,7 +183,7 @@
                                                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                         </action>
                                                         <action id="0" name="Play" sid="152392032168151" type="Audio">
-                                                            <param id="0" name="Audio file">TutorialVoice - Lvl2Part6</param>
+                                                            <param id="0" name="Audio file">VoiceLvl2-p5</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -214,7 +214,7 @@
                                                                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Play" sid="841278507921855" type="Audio">
-                                                                    <param id="0" name="Audio file">TutorialVoice - Lvl2Part7</param>
+                                                                    <param id="0" name="Audio file">VoiceLvl2-p6</param>
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">0</param>
                                                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -229,7 +229,7 @@
                                                                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Play" sid="807285964732288" type="Audio">
-                                                                    <param id="0" name="Audio file">TutorialVoice - Lvl2Part8</param>
+                                                                    <param id="0" name="Audio file">VoiceLvl2-p7</param>
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">0</param>
                                                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -244,7 +244,7 @@
                                                                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Play" sid="614839412627232" type="Audio">
-                                                                    <param id="0" name="Audio file">TutorialVoice - Lvl2Part9</param>
+                                                                    <param id="0" name="Audio file">VoiceLvl2-p8</param>
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">0</param>
                                                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -253,7 +253,13 @@
                                                                     <param id="0" name="Text">&quot;Place two numbers above the machine and press Play&quot;</param>
                                                                 </action>
                                                                 <action id="-16" name="Wait" sid="208583143739621" type="System">
-                                                                    <param id="0" name="Seconds">3</param>
+                                                                    <param id="0" name="Seconds">6</param>
+                                                                </action>
+                                                                <action id="0" name="Play" sid="207007421873823" type="Audio">
+                                                                    <param id="0" name="Audio file">VoiceLvl2-p9</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Set text" sid="344962662497280" type="TextInstructions">
                                                                     <param id="0" name="Text">&quot;Clone the Red Line to create a Draggable and Rotateable Platform&quot;</param>
@@ -263,26 +269,48 @@
                                                                 </action>
                                                                 <action behavior="FadeOut" id="1" name="Start fade" sid="956693371209345" type="TextInstructions" />
                                                                 <action behavior="FadeOut" id="1" name="Start fade" sid="793615001925489" type="TutorialBox" />
+                                                                <action id="-16" name="Wait" sid="221617610758950" type="System">
+                                                                    <param id="0" name="Seconds">2</param>
+                                                                </action>
                                                             </actions>
                                                             <sub-events>
-                                                                <event-block sid="586561066199603">
+                                                                <event-block sid="379348283571554">
                                                                     <conditions />
                                                                     <actions>
-                                                                        <action id="-16" name="Wait" sid="695375646066379" type="System">
-                                                                            <param id="0" name="Seconds">3</param>
+                                                                        <action id="6" name="Stop" sid="390345169011976" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                                         </action>
-                                                                        <action behavior="FadeIn" id="1" name="Start fade" sid="258473425053794" type="TextInstructions" />
-                                                                        <action id="0" name="Set text" sid="599798249720340" type="TextInstructions">
+                                                                        <action id="0" name="Play" sid="430134424209731" type="Audio">
+                                                                            <param id="0" name="Audio file">VoiceLvl1-p6</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
+                                                                        </action>
+                                                                        <action behavior="FadeIn" id="0" name="Restart fade" sid="614910095415849" type="TextInstructions" />
+                                                                        <action behavior="FadeIn" id="0" name="Restart fade" sid="340314174099643" type="TutorialBox" />
+                                                                        <action id="0" name="Set text" sid="858505806209278" type="TextInstructions">
                                                                             <param id="0" name="Text">&quot;The correct number must land on the red line. Restart the puzzle to try again.&quot;</param>
                                                                         </action>
-                                                                        <action behavior="Sine" id="0" name="Set active" sid="274272945890028" type="ControlButton">
+                                                                        <action behavior="Sine" id="0" name="Set active" sid="123870474942417" type="ControlButton">
                                                                             <param id="0" name="State">1</param>
                                                                         </action>
-                                                                        <action id="0" name="Play" sid="295003208921015" type="Audio">
+                                                                        <action id="0" name="Play" sid="731098214295000" type="Audio">
                                                                             <param id="0" name="Audio file">Bass-ic Error</param>
                                                                             <param id="2" name="Loop">0</param>
                                                                             <param id="3" name="Volume">0</param>
                                                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                        </action>
+                                                                        <action id="-16" name="Wait" sid="984143141456814" type="System">
+                                                                            <param id="0" name="Seconds">3</param>
+                                                                        </action>
+                                                                        <action id="6" name="Stop" sid="170357518528531" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="237256729723100" type="Audio">
+                                                                            <param id="0" name="Audio file">VoiceLvl1-p7</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
@@ -347,9 +375,6 @@
                         </action>
                         <action id="6" name="Stop" sid="236662873278120" type="Audio">
                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
-                        </action>
-                        <action disabled="1" id="-16" name="Wait" sid="254932070777375" type="System">
-                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Call function" sid="832565893299587" type="Function">
                             <param id="0" name="Name">&quot;startTutorial2&quot;</param>

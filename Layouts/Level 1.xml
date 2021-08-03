@@ -644,6 +644,15 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
+                        <behavior-instance type="FadeIn">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="FadeOut">
                             <properties>
                                 <active-at-start>No</active-at-start>
@@ -815,8 +824,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>201.817626953</x>
-                        <y>244.909179688</y>
+                        <x>199.338439941</x>
+                        <y>264.74395752</y>
                         <z>0</z>
                         <width>167.454956055</width>
                         <height>167.454971313</height>
@@ -841,7 +850,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>325</x>
-                        <y>370</y>
+                        <y>397.272399902</y>
                         <z>0</z>
                         <width>95.199790955</width>
                         <height>95.199790955</height>
@@ -870,8 +879,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>381.727478027</y>
+                        <x>155.040985107</x>
+                        <y>402.387817383</y>
                         <z>0</z>
                         <width>228.859069824</width>
                         <height>58.359062195</height>
@@ -900,8 +909,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>198.636413574</x>
-                        <y>106.72743988</y>
+                        <x>201.942428589</x>
+                        <y>92.677848816</y>
                         <z>0</z>
                         <width>284.545257568</width>
                         <height>82.909393311</height>
@@ -930,8 +939,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>209.908462524</x>
-                        <y>150.181747437</y>
+                        <x>207.429275513</x>
+                        <y>141.089279175</y>
                         <z>0</z>
                         <width>274</width>
                         <height>88</height>

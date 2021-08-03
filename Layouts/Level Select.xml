@@ -210,6 +210,19 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>No</active-on-start>
+                                <movement>Width</movement>
+                                <wave>Sine</wave>
+                                <period>2</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2312,8 +2325,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>196.320709229</x>
-                        <y>424.667510986</y>
+                        <x>190.535522461</x>
+                        <y>427.973510742</y>
                         <z>0</z>
                         <width>59.875087738</width>
                         <height>72.077964783</height>
@@ -2501,8 +2514,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>350.616821289</x>
-                        <y>405.868774414</y>
+                        <x>336.567901611</x>
+                        <y>414.133789063</y>
                         <z>0</z>
                         <width>190</width>
                         <height>25</height>
@@ -2774,6 +2787,36 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TextTitle" uid="95">
+                    <properties>
+                        <text>Rainbow Day Games - the green orbs</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial,-13.6,400,1</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Right</horizontal-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
+                        <hotspot>Top-right</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="NoSave" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>398.551269531</x>
+                        <y>451.097991943</y>
+                        <z>0</z>
+                        <width>319.866027832</width>
+                        <height>23</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects>
                 <effect-type name="AdjustHSL">
@@ -2829,36 +2872,6 @@
                         <height>23.294250488</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TextTitle" uid="315">
-                    <properties>
-                        <text>Rainbow Day Games - the green orbs</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-13.6,400,1</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Right</horizontal-alignment>
-                        <vertical-alignment>Bottom</vertical-alignment>
-                        <hotspot>Top-right</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>398.346496582</x>
-                        <y>493.000915527</y>
-                        <z>0</z>
-                        <width>319.866027832</width>
-                        <height>23</height>
-                        <depth>0</depth>
-                        <hotspotX>1</hotspotX>
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

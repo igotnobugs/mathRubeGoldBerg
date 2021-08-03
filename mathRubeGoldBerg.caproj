@@ -361,26 +361,26 @@
                     <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="578533327795081" speed="5">
                         <frame duration="1" hotspotX="0.498753" hotspotY="0.402948" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\PlusIcon.png">
                             <collision-poly>
-                                <point x="0.293255" y="0.292899" />
+                                <point x="0.288267" y="0.182334" />
                                 <point x="0.539589" y="0.00591716" />
                                 <point x="0.780059" y="0.298817" />
-                                <point x="0.994135" y="0.491124" />
-                                <point x="0.782991" y="0.686391" />
-                                <point x="0.539589" y="0.994083" />
+                                <point x="0.874434" y="0.407586" />
+                                <point x="0.703191" y="0.573369" />
+                                <point x="0.509664" y="0.802437" />
                                 <point x="0.293255" y="0.689349" />
-                                <point x="0.0058651" y="0.491124" />
+                                <point x="0.0831718" y="0.4125" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="339833593477880" speed="5">
                         <frame duration="1" hotspotX="0.506234" hotspotY="0.279188" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\MinusIcon.png">
                             <collision-poly>
-                                <point x="0.0775858" y="0.363402" />
-                                <point x="0.83908" y="0.345361" />
-                                <point x="0.951149" y="0.5" />
-                                <point x="0.712644" y="0.634021" />
-                                <point x="0.272989" y="0.649485" />
-                                <point x="0" y="0.5" />
+                                <point x="0.194793" y="0.0639097" />
+                                <point x="0.821624" y="0.0509448" />
+                                <point x="0.87883" y="0.322335" />
+                                <point x="0.715138" y="0.51727" />
+                                <point x="0.272989" y="0.522581" />
+                                <point x="0.117207" y="0.43401" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -388,26 +388,26 @@
                         <frame duration="1" hotspotX="0.503741" hotspotY="0.383292" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\MultiplyIcon.png">
                             <collision-poly>
                                 <point x="0.136364" y="0.088685" />
-                                <point x="0.551515" y="0.0672783" />
+                                <point x="0.728572" y="0.0181383" />
                                 <point x="0.842424" y="0.214067" />
                                 <point x="0.848485" y="0.489297" />
-                                <point x="0.930303" y="0.853211" />
-                                <point x="0.551515" y="0.816514" />
-                                <point x="0.2" y="0.825688" />
+                                <point x="0.783171" y="0.688592" />
+                                <point x="0.519096" y="0.629782" />
+                                <point x="0.204988" y="0.695467" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="224727166835765" speed="5">
                         <frame duration="1" hotspotX="0.501247" hotspotY="0.395577" original-source="C:\Users\sandr\OneDrive\Desktop\CAPSTN1-Assets\DivideIcon.png">
                             <collision-poly>
-                                <point x="0.255072" y="0.306122" />
+                                <point x="0.220159" y="0.24224" />
                                 <point x="0.507246" y="0.0408163" />
-                                <point x="0.75942" y="0.306122" />
-                                <point x="0.994203" y="0.510204" />
-                                <point x="0.727536" y="0.685131" />
-                                <point x="0.507246" y="0.973761" />
-                                <point x="0.286957" y="0.685131" />
-                                <point x="0.0057971" y="0.510204" />
+                                <point x="0.769395" y="0.279095" />
+                                <point x="0.909415" y="0.397182" />
+                                <point x="0.707586" y="0.545082" />
+                                <point x="0.46984" y="0.789486" />
+                                <point x="0.319376" y="0.53034" />
+                                <point x="0.0905851" y="0.446322" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -430,6 +430,11 @@
             </object-type>
             <object-type global="1" name="EqualBorder" sid="620886616886354">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="710210291394308">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842017227346489" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\ShorterRedBar.png">
@@ -645,10 +650,10 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="671352493548963" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\Art Assets\ReturnIcon.png">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.872" y="0.752" />
+                                <point x="0.084" y="0.772" />
+                                <point x="0.14" y="0.064" />
+                                <point x="0.852" y="0.08" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -793,6 +798,9 @@
             <object-type name="TutorialBox" sid="543314366537089">
                 <plugin id="Sprite" />
                 <behaviors>
+                    <behavior-type name="FadeIn" sid="923474386158630">
+                        <behavior id="Fade" />
+                    </behavior-type>
                     <behavior-type name="FadeOut" sid="955936215784494">
                         <behavior id="Fade" />
                     </behavior-type>
@@ -824,8 +832,8 @@
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineAdd.png">
                             <image-point name="TextNumber" x="0.491844" y="0.176667" />
                             <collision-poly>
-                                <point x="0.238394" y="0.306667" />
-                                <point x="0.769134" y="0.308889" />
+                                <point x="0.224592" y="0.0677781" />
+                                <point x="0.770389" y="0.0666667" />
                                 <point x="0.751568" y="0.846667" />
                                 <point x="0.225847" y="0.853333" />
                             </collision-poly>
@@ -835,8 +843,8 @@
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineSub.png">
                             <image-point name="TextNumber" x="0.491844" y="0.176667" />
                             <collision-poly>
-                                <point x="0.238394" y="0.306667" />
-                                <point x="0.769134" y="0.308889" />
+                                <point x="0.224592" y="0.0677781" />
+                                <point x="0.770389" y="0.0666667" />
                                 <point x="0.751568" y="0.846667" />
                                 <point x="0.225847" y="0.853333" />
                             </collision-poly>
@@ -846,8 +854,8 @@
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineMult.png">
                             <image-point name="TextNumber" x="0.491844" y="0.176667" />
                             <collision-poly>
-                                <point x="0.238394" y="0.306667" />
-                                <point x="0.769134" y="0.308889" />
+                                <point x="0.224592" y="0.0677781" />
+                                <point x="0.770389" y="0.0666667" />
                                 <point x="0.751568" y="0.846667" />
                                 <point x="0.225847" y="0.853333" />
                             </collision-poly>
@@ -857,8 +865,8 @@
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineDiv.png">
                             <image-point name="TextNumber" x="0.491844" y="0.176667" />
                             <collision-poly>
-                                <point x="0.238394" y="0.306667" />
-                                <point x="0.769134" y="0.308889" />
+                                <point x="0.224592" y="0.0677781" />
+                                <point x="0.770389" y="0.0666667" />
                                 <point x="0.751568" y="0.846667" />
                                 <point x="0.225847" y="0.853333" />
                             </collision-poly>
@@ -1266,28 +1274,28 @@
     </global-instances>
     <sounds-folder>
         <sound-folder name="Voice">
-            <file name="TutorialVoice - Lvl1Part1.ogg" />
-            <file name="TutorialVoice - Lvl1Part2.ogg" />
-            <file name="TutorialVoice - Lvl1Part3.ogg" />
-            <file name="TutorialVoice - Lvl1Part4.ogg" />
-            <file name="TutorialVoice - Lvl1Part5.ogg" />
-            <file name="TutorialVoice - Lvl2Part1.ogg" />
-            <file name="TutorialVoice - Lvl2Part2.ogg" />
-            <file name="TutorialVoice - Lvl2Part3.ogg" />
-            <file name="TutorialVoice - Lvl2Part4.ogg" />
             <file name="TutorialVoice - Lvl2Part5.ogg" />
-            <file name="TutorialVoice - Lvl2Part6.ogg" />
-            <file name="TutorialVoice - Lvl2Part7.ogg" />
-            <file name="TutorialVoice - Lvl2Part8.ogg" />
-            <file name="TutorialVoice - Lvl2Part9.ogg" />
-            <file name="TutorialVoice - Lvl3Part1.ogg" />
-            <file name="TutorialVoice - Lvl3Part2.ogg" />
-            <file name="TutorialVoice - Lvl3Part3.ogg" />
-            <file name="TutorialVoice - Lvl3Part4.ogg" />
-            <file name="TutorialVoice - Lvl3Part5.ogg" />
-            <file name="TutorialVoice - Lvl3Part6.ogg" />
-            <file name="TutorialVoice - Lvl3Part7.ogg" />
-            <file name="TutorialVoice - Lvl3Part8.ogg" />
+            <file name="VoiceLvl1-p1.ogg" />
+            <file name="VoiceLvl1-p2.ogg" />
+            <file name="VoiceLvl1-p3.ogg" />
+            <file name="VoiceLvl1-p4.ogg" />
+            <file name="VoiceLvl1-p5.ogg" />
+            <file name="VoiceLvl1-p6.ogg" />
+            <file name="VoiceLvl1-p7.ogg" />
+            <file name="VoiceLvl2-p1.ogg" />
+            <file name="VoiceLvl2-p10.ogg" />
+            <file name="VoiceLvl2-p2.ogg" />
+            <file name="VoiceLvl2-p3.ogg" />
+            <file name="VoiceLvl2-p4.ogg" />
+            <file name="VoiceLvl2-p5.ogg" />
+            <file name="VoiceLvl2-p6.ogg" />
+            <file name="VoiceLvl2-p7.ogg" />
+            <file name="VoiceLvl2-p8.ogg" />
+            <file name="VoiceLvl2-p9.ogg" />
+            <file name="VoiceLvl3-p1.ogg" />
+            <file name="VoiceLvl3-p2.ogg" />
+            <file name="VoiceLvl3-p3.ogg" />
+            <file name="VoiceLvl3-p4.ogg" />
         </sound-folder>
         <file name="Good Morning.ogg" />
         <file name="Nursery.ogg" />

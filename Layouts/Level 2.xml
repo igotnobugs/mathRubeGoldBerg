@@ -336,54 +336,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TextInstructions" uid="95">
-                    <properties>
-                        <text>You can only drop them in this Green Area</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-24,400,0</font>
-                        <color>102,102,51</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Center</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="NoSave" />
-                        <behavior-instance type="FadeIn">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>1</fade-in-time>
-                                <wait-time>2</wait-time>
-                                <fade-out-time>1</fade-out-time>
-                                <destroy>No</destroy>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="FadeOut">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
-                                <destroy>No</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>200</x>
-                        <y>356</y>
-                        <z>0</z>
-                        <width>374</width>
-                        <height>69</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -420,7 +372,83 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="platform" uid="52">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <isNew>false</isNew>
+                        <xPastPosition>185.85</xPastPosition>
+                        <yPastPosition>386.232</yPastPosition>
+                        <isLeftOfEquals>false</isLeftOfEquals>
+                        <WAITTRANSPOSE>true</WAITTRANSPOSE>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                        <behavior-instance type="DragDrop">
+                            <properties>
+                                <axes>Both</axes>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="NoSave" />
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.4</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="GlowHorizontal">
+                            <parameters>
+                                <intensity>0.5</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="GlowVertical">
+                            <parameters>
+                                <intensity>0.5</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="BlurHorizontal">
+                            <parameters>
+                                <intensity>0.25</intensity>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="BlurVertical">
+                            <parameters>
+                                <intensity>0.25</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>120.034469604</x>
+                        <y>379.019287109</y>
+                        <z>0</z>
+                        <width>190</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0.43115589</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="UI" sid="724622656921293">
@@ -644,6 +672,15 @@
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="NoSave" />
+                        <behavior-instance type="FadeIn">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>1</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="FadeOut">
                             <properties>
                                 <active-at-start>No</active-at-start>
@@ -753,8 +790,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>221.078475952</x>
-                        <y>414.492828369</y>
+                        <x>192.228790283</x>
+                        <y>305.40246582</y>
                         <z>0</z>
                         <width>373.091186523</width>
                         <height>67.181716919</height>

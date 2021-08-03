@@ -479,6 +479,9 @@
                 <action id="-15" name="Set visible" sid="949574519502656" type="ResultImage">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="6" name="Stop" sid="859889171881080" type="Audio">
+                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="329723191076872">

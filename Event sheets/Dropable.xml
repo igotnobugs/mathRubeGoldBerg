@@ -469,6 +469,9 @@
                                                             <param id="0" name="Variable">machineToTranspose</param>
                                                             <param id="1" name="Value">Machine.UID</param>
                                                         </action>
+                                                        <action id="-42" name="Signal" sid="359423222529926" type="System">
+                                                            <param id="0" name="Tag">&quot;SignalTransposed&quot;</param>
+                                                        </action>
                                                     </actions>
                                                     <sub-events>
                                                         <event-block sid="426625262405113">
@@ -585,6 +588,9 @@
                                                         <action id="-9" name="Set value" sid="759730081985538" type="System">
                                                             <param id="0" name="Variable">machineToTranspose</param>
                                                             <param id="1" name="Value">Machine.UID</param>
+                                                        </action>
+                                                        <action id="-42" name="Signal" sid="519438166450234" type="System">
+                                                            <param id="0" name="Tag">&quot;SignalTransposed&quot;</param>
                                                         </action>
                                                     </actions>
                                                     <sub-events>

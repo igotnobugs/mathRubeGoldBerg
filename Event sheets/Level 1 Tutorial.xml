@@ -58,13 +58,13 @@
                                     <param id="0" name="Text">&quot;To complete the equation&quot;</param>
                                 </action>
                                 <action id="0" name="Play" sid="339707809019220" type="Audio">
-                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part1</param>
+                                    <param id="0" name="Audio file">VoiceLvl1-p1</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="915451036756060" type="System">
-                                    <param id="0" name="Seconds">3</param>
+                                    <param id="0" name="Seconds">2</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -78,7 +78,7 @@
                                             <param id="0" name="Text">&quot;The correct number must drop in the red line&quot;</param>
                                         </action>
                                         <action id="0" name="Play" sid="580634154795344" type="Audio">
-                                            <param id="0" name="Audio file">TutorialVoice - Lvl1Part2</param>
+                                            <param id="0" name="Audio file">VoiceLvl1-p2</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -106,7 +106,7 @@
                                                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                 </action>
                                                 <action id="0" name="Play" sid="837360968540447" type="Audio">
-                                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part3</param>
+                                                    <param id="0" name="Audio file">VoiceLvl1-p3</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">0</param>
                                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -148,7 +148,7 @@
                                                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                         </action>
                                                         <action id="0" name="Play" sid="143104858844194" type="Audio">
-                                                            <param id="0" name="Audio file">TutorialVoice - Lvl1Part4</param>
+                                                            <param id="0" name="Audio file">VoiceLvl1-p4</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -179,7 +179,7 @@
                                                                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                                 </action>
                                                                 <action id="0" name="Play" sid="266078931222121" type="Audio">
-                                                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part5</param>
+                                                                    <param id="0" name="Audio file">VoiceLvl1-p5</param>
                                                                     <param id="2" name="Loop">0</param>
                                                                     <param id="3" name="Volume">0</param>
                                                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -203,14 +203,24 @@
                                                                 <action behavior="FadeOut" id="1" name="Start fade" sid="185077305137640" type="TextInstructions" />
                                                                 <action behavior="FadeOut" id="1" name="Start fade" sid="170273417799038" type="TutorialBox" />
                                                                 <action id="-16" name="Wait" sid="532009906147740" type="System">
-                                                                    <param id="0" name="Seconds">3</param>
+                                                                    <param id="0" name="Seconds">2</param>
                                                                 </action>
                                                             </actions>
                                                             <sub-events>
                                                                 <event-block sid="931878762776411">
                                                                     <conditions />
                                                                     <actions>
-                                                                        <action behavior="FadeIn" id="1" name="Start fade" sid="786461713419520" type="TextInstructions" />
+                                                                        <action id="6" name="Stop" sid="715549450049645" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="567747684903128" type="Audio">
+                                                                            <param id="0" name="Audio file">VoiceLvl1-p6</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
+                                                                        </action>
+                                                                        <action behavior="FadeIn" id="0" name="Restart fade" sid="786461713419520" type="TextInstructions" />
+                                                                        <action behavior="FadeIn" id="0" name="Restart fade" sid="735368649140199" type="TutorialBox" />
                                                                         <action id="0" name="Set text" sid="709532429748862" type="TextInstructions">
                                                                             <param id="0" name="Text">&quot;The correct number must land on the red line. Restart the puzzle to try again.&quot;</param>
                                                                         </action>
@@ -222,6 +232,18 @@
                                                                             <param id="2" name="Loop">0</param>
                                                                             <param id="3" name="Volume">0</param>
                                                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                        </action>
+                                                                        <action id="-16" name="Wait" sid="410283694465113" type="System">
+                                                                            <param id="0" name="Seconds">3</param>
+                                                                        </action>
+                                                                        <action id="6" name="Stop" sid="387882492589989" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="269163917288796" type="Audio">
+                                                                            <param id="0" name="Audio file">VoiceLvl1-p7</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
@@ -254,6 +276,23 @@
                         <action behavior="FadeOut" id="1" name="Start fade" sid="122431840993593" type="TextInstructions" />
                     </actions>
                 </event-block>
+                <event-block sid="433296136971305">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="500528738603843" type="TextInstructions">
+                            <param id="0" name="Unique ID">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="583211380647877" type="System">
+                            <param id="0" name="Tag">&quot;SignalMachineDropFailed&quot;</param>
+                        </action>
+                        <action behavior="FadeIn" id="1" name="Start fade" sid="580511885702306" type="TextInstructions" />
+                        <action id="-16" name="Wait" sid="426572561142558" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action behavior="FadeOut" id="1" name="Start fade" sid="266312930530390" type="TextInstructions" />
+                    </actions>
+                </event-block>
                 <event-block sid="244425131500615">
                     <conditions />
                     <actions>
@@ -269,9 +308,6 @@
                         </action>
                         <action id="6" name="Stop" sid="966122324426050" type="Audio">
                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
-                        </action>
-                        <action disabled="1" id="-16" name="Wait" sid="130200309963369" type="System">
-                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Call function" sid="462014624796203" type="Function">
                             <param id="0" name="Name">&quot;startTutorial1&quot;</param>

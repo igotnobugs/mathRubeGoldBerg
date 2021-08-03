@@ -64,17 +64,17 @@
                                 <action id="-16" name="Wait" sid="130782650249031" type="System">
                                     <param id="0" name="Seconds">1</param>
                                 </action>
-                                <action id="0" name="Set text" sid="831841335933889" type="TextInstructions">
-                                    <param id="0" name="Text">&quot;To make the numbers switch signs&quot;</param>
-                                </action>
-                                <action disabled="1" id="0" name="Play" sid="971069016241361" type="Audio">
-                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part1</param>
+                                <action id="0" name="Play" sid="202612155079070" type="Audio">
+                                    <param id="0" name="Audio file">VoiceLvl3-p1</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                 </action>
+                                <action id="0" name="Set text" sid="831841335933889" type="TextInstructions">
+                                    <param id="0" name="Text">&quot;To make the numbers (or machines) switch signs&quot;</param>
+                                </action>
                                 <action id="-16" name="Wait" sid="843617174256158" type="System">
-                                    <param id="0" name="Seconds">3</param>
+                                    <param id="0" name="Seconds">2</param>
                                 </action>
                             </actions>
                             <sub-events>
@@ -84,28 +84,34 @@
                                         <action id="6" name="Stop" sid="261997206313137" type="Audio">
                                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                         </action>
-                                        <action id="0" name="Set text" sid="937104319015270" type="TextInstructions">
-                                            <param id="0" name="Text">&quot;Simply drag them over to the other side of the equal sign&quot;</param>
-                                        </action>
-                                        <action disabled="1" id="0" name="Play" sid="315299488518164" type="Audio">
-                                            <param id="0" name="Audio file">TutorialVoice - Lvl1Part2</param>
+                                        <action id="0" name="Play" sid="347610973090943" type="Audio">
+                                            <param id="0" name="Audio file">VoiceLvl3-p2</param>
                                             <param id="2" name="Loop">0</param>
                                             <param id="3" name="Volume">0</param>
                                             <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                         </action>
-                                        <action id="-16" name="Wait" sid="185914399942224" type="System">
-                                            <param id="0" name="Seconds">3</param>
+                                        <action id="0" name="Set text" sid="937104319015270" type="TextInstructions">
+                                            <param id="0" name="Text">&quot;Simply drag them over to the other side of the equal sign&quot;</param>
+                                        </action>
+                                        <action behavior="Sine" id="0" name="Set active" sid="534526636182753" type="EqualBorder">
+                                            <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="117539496466364">
                                             <conditions />
                                             <actions>
+                                                <action id="-41" name="Wait for signal" sid="317647461183651" type="System">
+                                                    <param id="0" name="Tag">&quot;SignalTransposed&quot;</param>
+                                                </action>
+                                                <action behavior="Sine" id="0" name="Set active" sid="363527324823916" type="EqualBorder">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
                                                 <action id="6" name="Stop" sid="784829973601033" type="Audio">
                                                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                 </action>
-                                                <action disabled="1" id="0" name="Play" sid="233949197340704" type="Audio">
-                                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part3</param>
+                                                <action id="0" name="Play" sid="303025697469472" type="Audio">
+                                                    <param id="0" name="Audio file">VoiceLvl3-p3</param>
                                                     <param id="2" name="Loop">0</param>
                                                     <param id="3" name="Volume">0</param>
                                                     <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -113,8 +119,8 @@
                                                 <action id="0" name="Set text" sid="753191944829958" type="TextInstructions">
                                                     <param id="0" name="Text">&quot;This only happens during the Set-up phase&quot;</param>
                                                 </action>
-                                                <action id="-41" name="Wait for signal" sid="305847045122019" type="System">
-                                                    <param id="0" name="Tag">&quot;SignalNumberCloned&quot;</param>
+                                                <action id="-16" name="Wait" sid="137848938126461" type="System">
+                                                    <param id="0" name="Seconds">2</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
@@ -124,8 +130,8 @@
                                                         <action id="6" name="Stop" sid="974686870640371" type="Audio">
                                                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                         </action>
-                                                        <action disabled="1" id="0" name="Play" sid="526040083617354" type="Audio">
-                                                            <param id="0" name="Audio file">TutorialVoice - Lvl1Part4</param>
+                                                        <action id="0" name="Play" sid="919883996505724" type="Audio">
+                                                            <param id="0" name="Audio file">VoiceLvl3-p4</param>
                                                             <param id="2" name="Loop">0</param>
                                                             <param id="3" name="Volume">0</param>
                                                             <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
@@ -133,51 +139,58 @@
                                                         <action id="0" name="Set text" sid="670872232691505" type="TextInstructions">
                                                             <param id="0" name="Text">&quot;Good luck and Aim for the Stars!&quot;</param>
                                                         </action>
-                                                        <action id="-41" name="Wait for signal" sid="206320989281184" type="System">
-                                                            <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
-                                                        </action>
+                                                        <action behavior="FadeOut" id="1" name="Start fade" sid="363546699152777" type="TextInstructions" />
+                                                        <action behavior="FadeOut" id="1" name="Start fade" sid="715324485150787" type="TutorialBox" />
                                                     </actions>
                                                     <sub-events>
-                                                        <event-block sid="424452989840894">
+                                                        <event-block sid="978187999419054">
                                                             <conditions />
                                                             <actions>
-                                                                <action id="6" name="Stop" sid="313014465454348" type="Audio">
-                                                                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
-                                                                </action>
-                                                                <action disabled="1" id="0" name="Play" sid="130027881169990" type="Audio">
-                                                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part5</param>
-                                                                    <param id="2" name="Loop">0</param>
-                                                                    <param id="3" name="Volume">0</param>
-                                                                    <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
-                                                                </action>
-                                                                <action disabled="1" id="0" name="Set text" sid="690076991300122" type="TextInstructions">
-                                                                    <param id="0" name="Text">&quot;Play&quot; &amp; newline &amp; &quot;Tap the Play Button and see what happens&quot;</param>
-                                                                </action>
-                                                                <action id="-41" name="Wait for signal" sid="227643775816295" type="System">
+                                                                <action id="-41" name="Wait for signal" sid="127966381410694" type="System">
                                                                     <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
-                                                                </action>
-                                                                <action behavior="FadeOut" id="1" name="Start fade" sid="260586762465126" type="TextInstructions" />
-                                                                <action behavior="FadeOut" id="1" name="Start fade" sid="451846256268323" type="TutorialBox" />
-                                                                <action id="-16" name="Wait" sid="992777767553444" type="System">
-                                                                    <param id="0" name="Seconds">3</param>
                                                                 </action>
                                                             </actions>
                                                             <sub-events>
-                                                                <event-block sid="490114716936792">
+                                                                <event-block sid="834121872850296">
                                                                     <conditions />
                                                                     <actions>
-                                                                        <action behavior="FadeIn" id="1" name="Start fade" sid="175634316022928" type="TextInstructions" />
-                                                                        <action disabled="1" id="0" name="Set text" sid="548538669619368" type="TextInstructions">
+                                                                        <action id="-16" name="Wait" sid="560528265861324" type="System">
+                                                                            <param id="0" name="Seconds">4</param>
+                                                                        </action>
+                                                                        <action id="6" name="Stop" sid="253278415238880" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="228103398611841" type="Audio">
+                                                                            <param id="0" name="Audio file">VoiceLvl1-p6</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
+                                                                        </action>
+                                                                        <action behavior="FadeIn" id="0" name="Restart fade" sid="392546995323298" type="TextInstructions" />
+                                                                        <action behavior="FadeIn" id="0" name="Restart fade" sid="500275249665913" type="TutorialBox" />
+                                                                        <action id="0" name="Set text" sid="211029364805681" type="TextInstructions">
                                                                             <param id="0" name="Text">&quot;The correct number must land on the red line. Restart the puzzle to try again.&quot;</param>
                                                                         </action>
-                                                                        <action behavior="Sine" id="0" name="Set active" sid="238919845683533" type="ControlButton">
+                                                                        <action behavior="Sine" id="0" name="Set active" sid="993215173732125" type="ControlButton">
                                                                             <param id="0" name="State">1</param>
                                                                         </action>
-                                                                        <action id="0" name="Play" sid="754657297620216" type="Audio">
+                                                                        <action id="0" name="Play" sid="515768174066427" type="Audio">
                                                                             <param id="0" name="Audio file">Bass-ic Error</param>
                                                                             <param id="2" name="Loop">0</param>
                                                                             <param id="3" name="Volume">0</param>
                                                                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                        </action>
+                                                                        <action id="-16" name="Wait" sid="609328682212734" type="System">
+                                                                            <param id="0" name="Seconds">3</param>
+                                                                        </action>
+                                                                        <action id="6" name="Stop" sid="876230512364747" type="Audio">
+                                                                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="620105430931935" type="Audio">
+                                                                            <param id="0" name="Audio file">VoiceLvl1-p7</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
@@ -193,21 +206,38 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="121779158091124">
+                <event-block sid="460882390686497">
                     <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="782054375980882" type="TextInstructions">
-                            <param id="0" name="Unique ID">32</param>
+                        <condition id="-14" name="Pick by unique ID" sid="483470484407405" type="TextInstructions">
+                            <param id="0" name="Unique ID">51</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-41" name="Wait for signal" sid="576356764990595" type="System">
+                        <action id="-41" name="Wait for signal" sid="589966149321872" type="System">
                             <param id="0" name="Tag">&quot;SignalNumberDropFailed&quot;</param>
                         </action>
-                        <action behavior="FadeIn" id="1" name="Start fade" sid="174433147556930" type="TextInstructions" />
-                        <action id="-16" name="Wait" sid="666570293877931" type="System">
+                        <action behavior="FadeIn" id="1" name="Start fade" sid="593116556994596" type="TextInstructions" />
+                        <action id="-16" name="Wait" sid="642977690178602" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
-                        <action behavior="FadeOut" id="1" name="Start fade" sid="315053003832982" type="TextInstructions" />
+                        <action behavior="FadeOut" id="1" name="Start fade" sid="424011936546529" type="TextInstructions" />
+                    </actions>
+                </event-block>
+                <event-block sid="833523273251380">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="442641491098696" type="TextInstructions">
+                            <param id="0" name="Unique ID">51</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="244833858812887" type="System">
+                            <param id="0" name="Tag">&quot;SignalMachineDropFailed&quot;</param>
+                        </action>
+                        <action behavior="FadeIn" id="1" name="Start fade" sid="565227672784372" type="TextInstructions" />
+                        <action id="-16" name="Wait" sid="480475158981449" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action behavior="FadeOut" id="1" name="Start fade" sid="880698633552120" type="TextInstructions" />
                     </actions>
                 </event-block>
                 <event-block sid="100464005920380">
@@ -225,9 +255,6 @@
                         </action>
                         <action id="6" name="Stop" sid="581288566617849" type="Audio">
                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
-                        </action>
-                        <action disabled="1" id="-16" name="Wait" sid="106548039828374" type="System">
-                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Call function" sid="802512472250683" type="Function">
                             <param id="0" name="Name">&quot;startTutorial3&quot;</param>
