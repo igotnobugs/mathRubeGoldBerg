@@ -16,9 +16,6 @@
         <include>Main Event Sheet</include>
         <event-group description="" sid="531367633496005" title="Level 2 Tutorial">
             <sub-events>
-                <variable constant="0" name="FailedDrop" sid="162445845169985" static="1" type="number">0</variable>
-                <variable constant="0" name="isDoingTheAction" sid="879813752820110" static="1" type="number">0</variable>
-                <variable constant="0" name="IntroOngoing" sid="646291264236469" static="1" type="number">1</variable>
                 <event-block sid="489217479811384">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="260024868469966" type="System" />
@@ -255,6 +252,12 @@
                                                                 <action id="0" name="Set text" sid="139506432605472" type="TextInstructions">
                                                                     <param id="0" name="Text">&quot;Place two numbers above the machine and press Play&quot;</param>
                                                                 </action>
+                                                                <action id="-16" name="Wait" sid="208583143739621" type="System">
+                                                                    <param id="0" name="Seconds">3</param>
+                                                                </action>
+                                                                <action id="0" name="Set text" sid="344962662497280" type="TextInstructions">
+                                                                    <param id="0" name="Text">&quot;Clone the Red Line to create a Draggable and Rotateable Platform&quot;</param>
+                                                                </action>
                                                                 <action id="-41" name="Wait for signal" sid="157342816814277" type="System">
                                                                     <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
                                                                 </action>
@@ -329,22 +332,40 @@
                         <action behavior="FadeOut" id="1" name="Start fade" sid="265778717732921" type="TextInstructions" />
                     </actions>
                 </event-block>
-                <event-block sid="240010865353321">
+                <event-block sid="294086525675603">
                     <conditions />
                     <actions>
-                        <action id="-41" name="Wait for signal" sid="429347474989533" type="System">
+                        <action id="-41" name="Wait for signal" sid="868734597676810" type="System">
                             <param id="0" name="Tag">&quot;SignalPuzzleReset&quot;</param>
                         </action>
-                        <action behavior="Sine" id="0" name="Set active" sid="678582045531026" type="ControlButton">
+                        <action behavior="Sine" id="0" name="Set active" sid="410194290545729" type="ControlButton">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="-7" name="Set size" sid="857654930293731" type="ControlButton">
+                        <action id="-7" name="Set size" sid="491876896034898" type="ControlButton">
                             <param id="0" name="Width">80</param>
                             <param id="1" name="Height">80</param>
+                        </action>
+                        <action id="6" name="Stop" sid="236662873278120" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="254932070777375" type="System">
+                            <param id="0" name="Seconds">3</param>
                         </action>
                         <action id="0" name="Call function" sid="832565893299587" type="Function">
                             <param id="0" name="Name">&quot;startTutorial2&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="256326178077657" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="990971005840347">
+                    <conditions />
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="484814391376844" type="System">
+                            <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="251698757337373" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                         </action>
                     </actions>
                 </event-block>

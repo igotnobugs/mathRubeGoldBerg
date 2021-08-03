@@ -26,396 +26,226 @@
         <include>Main Event Sheet</include>
         <event-group description="" sid="896256663495028" title="Level 3 Tutorial">
             <sub-events>
-                <variable constant="0" name="FailedDrop" sid="646245024150493" static="1" type="number">0</variable>
-                <variable constant="0" name="isDoingTheAction" sid="931853280951433" static="1" type="number">0</variable>
-                <variable constant="0" name="IntroOngoing" sid="699025094631025" static="1" type="number">1</variable>
-                <event-block sid="756898397845453">
+                <event-block sid="914397724470084">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="190149269145969" type="System" />
+                        <condition id="-2" name="On start of layout" sid="249661593967879" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Set value" sid="193467793831584" type="System">
-                            <param id="0" name="Variable">FailedDrop</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="3" name="Set volume" sid="586387882488708" type="Audio">
+                            <param id="0" name="Tag">&quot;mainMusic&quot;</param>
+                            <param id="1" name="dB">-20</param>
                         </action>
-                        <action id="-9" name="Set value" sid="122308014166617" type="System">
-                            <param id="0" name="Variable">isDoingTheAction</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="0" name="Call function" sid="120460068005980" type="Function">
+                            <param id="0" name="Name">&quot;startTutorial3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-9" name="Set value" sid="321240125013105" type="System">
-                            <param id="0" name="Variable">IntroOngoing</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="937430186144106" type="System">
-                            <param id="0" name="Seconds">0.2</param>
+                    </actions>
+                </event-block>
+                <event-block sid="157356244622652">
+                    <conditions>
+                        <condition id="0" name="On function" sid="684274082216776" type="Function">
+                            <param id="0" name="Name">&quot;startTutorial3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="306386866276720" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <comment>111 - Take a look at the equation</comment>
-                        <event-block sid="515767225499168">
+                        <event-block sid="402027137711966">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="170208242590731" type="TextInstructions">
+                                <condition id="-14" name="Pick by unique ID" sid="275014562275048" type="TextInstructions">
                                     <param id="0" name="Unique ID">111</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="FadeIn" id="1" name="Start fade" sid="315814941368289" type="TextInstructions" />
-                                <action id="-16" name="Wait" sid="697848459286281" type="System">
+                                <action behavior="FadeIn" id="1" name="Start fade" sid="884682562635294" type="TextInstructions" />
+                                <action id="-16" name="Wait" sid="130782650249031" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="831841335933889" type="TextInstructions">
+                                    <param id="0" name="Text">&quot;To make the numbers switch signs&quot;</param>
+                                </action>
+                                <action disabled="1" id="0" name="Play" sid="971069016241361" type="Audio">
+                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="843617174256158" type="System">
                                     <param id="0" name="Seconds">3</param>
                                 </action>
-                                <action behavior="FadeOut" id="1" name="Start fade" sid="318093760482897" type="TextInstructions" />
-                            </actions>
-                        </event-block>
-                        <comment>112 - you need</comment>
-                        <event-block sid="721943421860523">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="237922102795109" type="TextInstructions">
-                                    <param id="0" name="Unique ID">112</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="955216005260050" type="System">
-                                    <param id="0" name="Seconds">4</param>
-                                </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="435348535641812">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="936735368094586" type="System">
-                                            <param id="0" name="Variable">isDoingTheAction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
+                                <event-block sid="564457373430503">
+                                    <conditions />
                                     <actions>
-                                        <action behavior="FadeIn" id="1" name="Start fade" sid="869670005388037" type="TextInstructions" />
-                                        <action id="-16" name="Wait" sid="816572607667109" type="System">
-                                            <param id="0" name="Seconds">5</param>
+                                        <action id="6" name="Stop" sid="261997206313137" type="Audio">
+                                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                         </action>
-                                        <action behavior="FadeOut" id="1" name="Start fade" sid="130655534672717" type="TextInstructions" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>109 - no minus sign</comment>
-                        <event-block sid="774801451765203">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="424527621817741" type="TextInstructions">
-                                    <param id="0" name="Unique ID">109</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="856604250618712" type="System">
-                                    <param id="0" name="Seconds">9</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="669320705238707">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="882077450208590" type="System">
-                                            <param id="0" name="Variable">isDoingTheAction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="FadeIn" id="1" name="Start fade" sid="337043261342524" type="TextInstructions" />
-                                        <action id="-16" name="Wait" sid="388278857990962" type="System">
-                                            <param id="0" name="Seconds">4</param>
+                                        <action id="0" name="Set text" sid="937104319015270" type="TextInstructions">
+                                            <param id="0" name="Text">&quot;Simply drag them over to the other side of the equal sign&quot;</param>
                                         </action>
-                                        <action behavior="FadeOut" id="1" name="Start fade" sid="842050136502193" type="TextInstructions" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>115 - but</comment>
-                        <event-block sid="405195526281333">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="444197747484845" type="TextInstructions">
-                                    <param id="0" name="Unique ID">115</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="950908677603958" type="System">
-                                    <param id="0" name="Seconds">13</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="951942288318343">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="193389827253068" type="System">
-                                            <param id="0" name="Variable">isDoingTheAction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="FadeIn" id="1" name="Start fade" sid="261524865353163" type="TextInstructions" />
-                                        <action id="-16" name="Wait" sid="149673598057977" type="System">
-                                            <param id="0" name="Seconds">4</param>
+                                        <action disabled="1" id="0" name="Play" sid="315299488518164" type="Audio">
+                                            <param id="0" name="Audio file">TutorialVoice - Lvl1Part2</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
                                         </action>
-                                        <action behavior="FadeOut" id="1" name="Start fade" sid="442346512708393" type="TextInstructions" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>52 - if you move</comment>
-                        <event-block sid="622653974162155">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="417978085559019" type="TextInstructions">
-                                    <param id="0" name="Unique ID">52</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="251532256969225" type="System">
-                                    <param id="0" name="Seconds">17</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="850171700559147">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="289472478442487" type="System">
-                                            <param id="0" name="Variable">isDoingTheAction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="FadeIn" id="1" name="Start fade" sid="330183928273518" type="TextInstructions" />
-                                        <action id="-16" name="Wait" sid="959511918135359" type="System">
-                                            <param id="0" name="Seconds">4</param>
+                                        <action id="-16" name="Wait" sid="185914399942224" type="System">
+                                            <param id="0" name="Seconds">3</param>
                                         </action>
-                                        <action behavior="FadeOut" id="1" name="Start fade" sid="970212418091362" type="TextInstructions" />
                                     </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>51 - switches signs</comment>
-                        <event-block sid="252716806418613">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="273988539537060" type="TextInstructions">
-                                    <param id="0" name="Unique ID">51</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="906899576024375" type="System">
-                                    <param id="0" name="Seconds">21</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="412874936062174">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="505819751894903" type="System">
-                                            <param id="0" name="Variable">isDoingTheAction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="FadeIn" id="1" name="Start fade" sid="436211426401449" type="TextInstructions" />
-                                        <action id="-16" name="Wait" sid="524459563715991" type="System">
-                                            <param id="0" name="Seconds">4</param>
-                                        </action>
-                                        <action behavior="FadeOut" id="1" name="Start fade" sid="647555736868339" type="TextInstructions" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>114 - drag a number</comment>
-                        <event-block sid="918974173615852">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="371103551874930" type="TextInstructions">
-                                    <param id="0" name="Unique ID">114</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-16" name="Wait" sid="333978777950697" type="System">
-                                    <param id="0" name="Seconds">25</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="936556714862432" type="System">
-                                    <param id="0" name="Variable">IntroOngoing</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="145598223889348">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="794259505008563" type="System">
-                                            <param id="0" name="Variable">isDoingTheAction</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">0</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="FadeIn" id="1" name="Start fade" sid="570251108591308" type="TextInstructions" />
-                                        <action id="-41" name="Wait for signal" sid="905925151422938" type="System">
-                                            <param id="0" name="Tag">&quot;SignalTransposed&quot;</param>
-                                        </action>
-                                        <action behavior="FadeOut" id="1" name="Start fade" sid="491815041624125" type="TextInstructions" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <comment>113 - Good luck</comment>
-                        <event-block sid="140966515562076">
-                            <conditions />
-                            <actions>
-                                <action id="-41" name="Wait for signal" sid="269679309794248" type="System">
-                                    <param id="0" name="Tag">&quot;SignalTransposed&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="445165480532984" type="System">
-                                    <param id="0" name="Variable">isDoingTheAction</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="424683560786634">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="127113725985031" type="TextInstructions">
-                                            <param id="0" name="Unique ID">113</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="FadeIn" id="1" name="Start fade" sid="419197900642980" type="TextInstructions" />
-                                        <action id="-16" name="Wait" sid="911680062251698" type="System">
-                                            <param id="0" name="Seconds">5</param>
-                                        </action>
-                                        <action behavior="FadeOut" id="1" name="Start fade" sid="460119048866544" type="TextInstructions" />
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="334039945869716">
-                            <conditions />
-                            <actions>
-                                <action id="-41" name="Wait for signal" sid="869248871849051" type="System">
-                                    <param id="0" name="Tag">&quot;SignalNumberCloned&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="467518007601877" type="System">
-                                    <param id="0" name="Variable">isDoingTheAction</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>26 - play</comment>
-                        <event-block sid="988759573173211">
-                            <conditions />
-                            <actions>
-                                <action id="-41" name="Wait for signal" sid="675112522336118" type="System">
-                                    <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="844677021948069">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="122453081011174" type="TextInstructions">
-                                            <param id="0" name="Unique ID">113</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="FadeOut" id="1" name="Start fade" sid="862971612723793" type="TextInstructions" />
-                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="117539496466364">
+                                            <conditions />
+                                            <actions>
+                                                <action id="6" name="Stop" sid="784829973601033" type="Audio">
+                                                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                </action>
+                                                <action disabled="1" id="0" name="Play" sid="233949197340704" type="Audio">
+                                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part3</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="753191944829958" type="TextInstructions">
+                                                    <param id="0" name="Text">&quot;This only happens during the Set-up phase&quot;</param>
+                                                </action>
+                                                <action id="-41" name="Wait for signal" sid="305847045122019" type="System">
+                                                    <param id="0" name="Tag">&quot;SignalNumberCloned&quot;</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="453710095408401">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action id="6" name="Stop" sid="974686870640371" type="Audio">
+                                                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                        </action>
+                                                        <action disabled="1" id="0" name="Play" sid="526040083617354" type="Audio">
+                                                            <param id="0" name="Audio file">TutorialVoice - Lvl1Part4</param>
+                                                            <param id="2" name="Loop">0</param>
+                                                            <param id="3" name="Volume">0</param>
+                                                            <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
+                                                        </action>
+                                                        <action id="0" name="Set text" sid="670872232691505" type="TextInstructions">
+                                                            <param id="0" name="Text">&quot;Good luck and Aim for the Stars!&quot;</param>
+                                                        </action>
+                                                        <action id="-41" name="Wait for signal" sid="206320989281184" type="System">
+                                                            <param id="0" name="Tag">&quot;SignalNumberDropped&quot;</param>
+                                                        </action>
+                                                    </actions>
+                                                    <sub-events>
+                                                        <event-block sid="424452989840894">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="6" name="Stop" sid="313014465454348" type="Audio">
+                                                                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                                </action>
+                                                                <action disabled="1" id="0" name="Play" sid="130027881169990" type="Audio">
+                                                                    <param id="0" name="Audio file">TutorialVoice - Lvl1Part5</param>
+                                                                    <param id="2" name="Loop">0</param>
+                                                                    <param id="3" name="Volume">0</param>
+                                                                    <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
+                                                                </action>
+                                                                <action disabled="1" id="0" name="Set text" sid="690076991300122" type="TextInstructions">
+                                                                    <param id="0" name="Text">&quot;Play&quot; &amp; newline &amp; &quot;Tap the Play Button and see what happens&quot;</param>
+                                                                </action>
+                                                                <action id="-41" name="Wait for signal" sid="227643775816295" type="System">
+                                                                    <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
+                                                                </action>
+                                                                <action behavior="FadeOut" id="1" name="Start fade" sid="260586762465126" type="TextInstructions" />
+                                                                <action behavior="FadeOut" id="1" name="Start fade" sid="451846256268323" type="TutorialBox" />
+                                                                <action id="-16" name="Wait" sid="992777767553444" type="System">
+                                                                    <param id="0" name="Seconds">3</param>
+                                                                </action>
+                                                            </actions>
+                                                            <sub-events>
+                                                                <event-block sid="490114716936792">
+                                                                    <conditions />
+                                                                    <actions>
+                                                                        <action behavior="FadeIn" id="1" name="Start fade" sid="175634316022928" type="TextInstructions" />
+                                                                        <action disabled="1" id="0" name="Set text" sid="548538669619368" type="TextInstructions">
+                                                                            <param id="0" name="Text">&quot;The correct number must land on the red line. Restart the puzzle to try again.&quot;</param>
+                                                                        </action>
+                                                                        <action behavior="Sine" id="0" name="Set active" sid="238919845683533" type="ControlButton">
+                                                                            <param id="0" name="State">1</param>
+                                                                        </action>
+                                                                        <action id="0" name="Play" sid="754657297620216" type="Audio">
+                                                                            <param id="0" name="Audio file">Bass-ic Error</param>
+                                                                            <param id="2" name="Loop">0</param>
+                                                                            <param id="3" name="Volume">0</param>
+                                                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="705821710193748">
+                <event-block sid="121779158091124">
                     <conditions>
-                        <condition id="-1" name="Every tick" sid="185218303801263" type="System" />
+                        <condition id="-14" name="Pick by unique ID" sid="782054375980882" type="TextInstructions">
+                            <param id="0" name="Unique ID">32</param>
+                        </condition>
                     </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="263107203122323">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="917107601104606" type="System">
-                                    <param id="0" name="Variable">isDoingTheAction</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                                <condition id="-14" name="Compare variable" sid="167508513338722" type="System">
-                                    <param id="0" name="Variable">IntroOngoing</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="153914333761534">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="790407065848456" type="TextInstructions">
-                                            <param id="0" name="Unique ID">111</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="120341802421094" type="TextInstructions">
-                                            <param id="0" name="Text">&quot;...&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="424118720320110">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="822288632877156" type="TextInstructions">
-                                            <param id="0" name="Unique ID">112</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="732177779536901" type="TextInstructions">
-                                            <param id="0" name="Text">&quot;...&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="532977128396676">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="375201096539266" type="TextInstructions">
-                                            <param id="0" name="Unique ID">109</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="792109029121250" type="TextInstructions">
-                                            <param id="0" name="Text">&quot;...&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="431043856900413">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="658903901518336" type="TextInstructions">
-                                            <param id="0" name="Unique ID">115</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="415350989088109" type="TextInstructions">
-                                            <param id="0" name="Text">&quot;...&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="834629400329429">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="423376461118469" type="TextInstructions">
-                                            <param id="0" name="Unique ID">52</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="877943273101660" type="TextInstructions">
-                                            <param id="0" name="Text">&quot;...&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="150994188148758">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="490058171164344" type="TextInstructions">
-                                            <param id="0" name="Unique ID">51</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Set text" sid="198489483383854" type="TextInstructions">
-                                            <param id="0" name="Text">&quot;...&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="576356764990595" type="System">
+                            <param id="0" name="Tag">&quot;SignalNumberDropFailed&quot;</param>
+                        </action>
+                        <action behavior="FadeIn" id="1" name="Start fade" sid="174433147556930" type="TextInstructions" />
+                        <action id="-16" name="Wait" sid="666570293877931" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action behavior="FadeOut" id="1" name="Start fade" sid="315053003832982" type="TextInstructions" />
+                    </actions>
+                </event-block>
+                <event-block sid="100464005920380">
+                    <conditions />
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="811438722766751" type="System">
+                            <param id="0" name="Tag">&quot;SignalPuzzleReset&quot;</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="706351282490728" type="ControlButton">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="116794305206693" type="ControlButton">
+                            <param id="0" name="Width">80</param>
+                            <param id="1" name="Height">80</param>
+                        </action>
+                        <action id="6" name="Stop" sid="581288566617849" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                        </action>
+                        <action disabled="1" id="-16" name="Wait" sid="106548039828374" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="0" name="Call function" sid="802512472250683" type="Function">
+                            <param id="0" name="Name">&quot;startTutorial3&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="425926973213299" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="190424307455693">
+                    <conditions />
+                    <actions>
+                        <action id="-41" name="Wait for signal" sid="306906461510305" type="System">
+                            <param id="0" name="Tag">&quot;SignalPuzzlePlay&quot;</param>
+                        </action>
+                        <action id="6" name="Stop" sid="705705358430414" type="Audio">
+                            <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

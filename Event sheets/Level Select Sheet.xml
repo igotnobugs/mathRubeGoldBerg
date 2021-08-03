@@ -356,7 +356,7 @@
                             <conditions>
                                 <condition id="-10" name="For" sid="715996281541241" type="System">
                                     <param id="0" name="Name">&quot;cycleLevelGroups&quot;</param>
-                                    <param id="1" name="Start index">1</param>
+                                    <param id="1" name="Start index">-1</param>
                                     <param id="2" name="End index">levelGroupMax</param>
                                 </condition>
                             </conditions>
@@ -536,27 +536,12 @@
                                 <action id="0" name="Set text" sid="357385581736975" type="TextShape">
                                     <param id="0" name="Text">NumberShape.number</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <comment>Clears the screen</comment>
-                <event-block sid="361105124137706">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="278983309429176" type="NumberShape" />
-                    </conditions>
-                    <actions>
-                        <action behavior="DragDrop" id="0" name="Set enabled" sid="334137624383183" type="NumberShape">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action behavior="Physics" id="27" name="Set enabled" sid="180686263527309" type="NumberShape">
-                            <param id="0" name="Mode">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="250266048150759">
-                            <conditions />
-                            <actions>
+                                <action behavior="DragDrop" id="0" name="Set enabled" sid="334137624383183" type="NumberShape">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Physics" id="27" name="Set enabled" sid="180686263527309" type="NumberShape">
+                                    <param id="0" name="Mode">1</param>
+                                </action>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="743942373964014" type="TextShape">
                                     <param id="0" name="Pin to">NumberShape</param>
                                     <param id="1" name="Mode">0</param>
@@ -567,6 +552,19 @@
                                     <param id="0" name="Opacity">100</param>
                                 </action>
                             </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Clears the screen</comment>
+                <event-block disabled="1" sid="361105124137706">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="278983309429176" type="NumberShape" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="250266048150759">
+                            <conditions />
+                            <actions />
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -620,7 +618,7 @@
                                 <condition id="-14" name="Compare variable" sid="272941292225970" type="System">
                                     <param id="0" name="Variable">levelGroupCurrent</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">-1</param>
                                 </condition>
                             </conditions>
                             <actions>

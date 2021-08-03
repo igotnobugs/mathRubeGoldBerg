@@ -285,7 +285,7 @@
                 </instance>
                 <instance type="TextShape" uid="992">
                     <properties>
-                        <text>9999999</text>
+                        <text>7</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Black,-26.4,900,0</font>
                         <color>0,0,0</color>
@@ -316,7 +316,7 @@
                 </instance>
                 <instance type="TextDisplay" uid="993">
                     <properties>
-                        <text>Text</text>
+                        <text>7</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-32,700,0</font>
                         <color>0,0,0</color>
