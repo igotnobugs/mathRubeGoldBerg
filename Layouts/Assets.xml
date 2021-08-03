@@ -220,6 +220,7 @@
                         <isFraction>false</isFraction>
                         <textUID>0</textUID>
                         <numPast>0</numPast>
+                        <lastModifier>0</lastModifier>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />

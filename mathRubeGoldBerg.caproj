@@ -21,6 +21,7 @@
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+        <plugin author="Scirra" id="progressbar" version="1">Progress bar</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
@@ -831,6 +832,7 @@
                     <animation framecount="1" loop="0" name="addition" pingpong="0" repeatcount="1" repeatto="0" sid="573080795158530" speed="5">
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineAdd.png">
                             <image-point name="TextNumber" x="0.491844" y="0.176667" />
+                            <image-point name="Output" x="0.500627" y="0.777778" />
                             <collision-poly>
                                 <point x="0.224592" y="0.0677781" />
                                 <point x="0.770389" y="0.0666667" />
@@ -842,6 +844,7 @@
                     <animation framecount="1" loop="0" name="subtraction" pingpong="0" repeatcount="1" repeatto="0" sid="610409258199748" speed="5">
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineSub.png">
                             <image-point name="TextNumber" x="0.491844" y="0.176667" />
+                            <image-point name="Output" x="0.500627" y="0.777778" />
                             <collision-poly>
                                 <point x="0.224592" y="0.0677781" />
                                 <point x="0.770389" y="0.0666667" />
@@ -853,6 +856,7 @@
                     <animation framecount="1" loop="0" name="multiplication" pingpong="0" repeatcount="1" repeatto="0" sid="193154203987214" speed="5">
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineMult.png">
                             <image-point name="TextNumber" x="0.491844" y="0.176667" />
+                            <image-point name="Output" x="0.500627" y="0.777778" />
                             <collision-poly>
                                 <point x="0.224592" y="0.0677781" />
                                 <point x="0.770389" y="0.0666667" />
@@ -864,6 +868,7 @@
                     <animation framecount="1" loop="0" name="division" pingpong="0" repeatcount="1" repeatto="0" sid="173224446937826" speed="5">
                         <frame duration="1" hotspotX="0.500627" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\MachineDiv.png">
                             <image-point name="TextNumber" x="0.491844" y="0.176667" />
+                            <image-point name="Output" x="0.500627" y="0.777778" />
                             <collision-poly>
                                 <point x="0.224592" y="0.0677781" />
                                 <point x="0.770389" y="0.0666667" />
@@ -883,6 +888,7 @@
                     <instance-variable name="isFraction" sid="508389316688392" type="boolean" />
                     <instance-variable name="textUID" sid="726188454392591" type="number" />
                     <instance-variable name="numPast" sid="761008604316938" type="number" />
+                    <instance-variable comment="last machine ignore" name="lastModifier" sid="701389067816144" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="968679404106537">
@@ -1071,6 +1077,17 @@
                 </behavior-type>
             </behaviors>
             <texture />
+        </object-type>
+        <object-type name="Banner" sid="394269951245788">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="861746605537982" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\admin\Desktop\loading-logo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ProgressBar" sid="530122869424185">
+            <plugin id="progressbar" />
         </object-type>
     </object-folder>
     <families>

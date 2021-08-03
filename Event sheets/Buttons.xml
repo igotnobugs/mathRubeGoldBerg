@@ -85,6 +85,16 @@
                                         </action>
                                     </actions>
                                     <sub-events>
+                                        <event-block sid="237705498687120">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="722220211450782" type="System">
+                                                    <param id="0" name="Object">Dropable</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Pin" id="1" name="Unpin" sid="863057179948094" type="Dropable" />
+                                            </actions>
+                                        </event-block>
                                         <event-block sid="458011102497834">
                                             <conditions>
                                                 <condition behavior="Physics" id="1" name="Compare velocity" sid="232881600123776" type="NumberShape">
@@ -489,7 +499,7 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="389902543048131" type="ZoneDrop">
                                     <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">20</param>
+                                    <param id="1" name="X co-ordinate">0</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -503,12 +513,16 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="276944385750267">
+                        <event-block any="1" sid="728527565069576">
                             <conditions>
                                 <condition id="1" name="On any touch end" sid="259021263297225" type="Touch" />
+                                <condition id="-1" name="Compare X" sid="601270347495714" type="ZoneDrop">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">400</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="339027280571725" type="System">
+                                <action id="-9" name="Set value" sid="884290570188889" type="System">
                                     <param id="0" name="Variable">isDragging</param>
                                     <param id="1" name="Value">0</param>
                                 </action>

@@ -694,6 +694,9 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-14" inverted="1" name="Pick by unique ID" sid="506670521892468" type="Machine">
+                            <param id="0" name="Unique ID">NumberShape.lastModifier</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -743,9 +746,16 @@
                                     <param id="0" name="X component">0</param>
                                     <param id="1" name="Y component">0</param>
                                 </action>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="910946060903944" type="NumberShape">
+                                    <param id="0" name="Angular velocity">0</param>
+                                </action>
                                 <action id="-4" name="Set position to another object" sid="948830913559166" type="NumberShape">
                                     <param id="0" name="Object">Machine</param>
-                                    <param id="1" name="Image point (optional)">0</param>
+                                    <param id="1" name="Image point (optional)">&quot;output&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="556206226134024" type="NumberShape">
+                                    <param id="0" name="Instance variable">lastModifier</param>
+                                    <param id="1" name="Value">Machine.UID</param>
                                 </action>
                             </actions>
                             <sub-events>

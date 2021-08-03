@@ -11,16 +11,16 @@
         <variable comment="is automatically counted based on the number of buttons" constant="0" name="numberOfLevels" sid="245093674660638" static="0" type="number">0</variable>
         <variable constant="1" name="levelGroupMax" sid="391541195235073" static="0" type="number">7</variable>
         <comment>When Game is loaded, create save used to Reset the game, and load the save created from playing if version is curret</comment>
-        <event-block sid="182472866135035">
+        <event-block sid="281823854816168">
             <conditions>
-                <condition id="-25" name="On loader layout complete" sid="455622497253749" type="System" />
+                <condition id="-25" name="On loader layout complete" sid="367745154545922" type="System" />
             </conditions>
             <actions>
-                <action id="-36" name="Save" sid="540221803130050" type="System">
+                <action id="-36" name="Save" sid="119937314328455" type="System">
                     <param id="0" name="Slot">&quot;mathRGBreset&quot;</param>
                 </action>
-                <action id="-21" name="Reset global variables" sid="488235862936683" type="System" />
-                <action id="-37" name="Load" sid="681887516272041" type="System">
+                <action id="-21" name="Reset global variables" sid="495478443198508" type="System" />
+                <action id="-37" name="Load" sid="239638542114876" type="System">
                     <param id="0" name="Slot">&quot;mathRGBsave&quot;</param>
                 </action>
             </actions>
@@ -66,6 +66,9 @@
                         </action>
                         <action behavior="Physics" id="27" name="Set enabled" sid="357112213809904" type="platform">
                             <param id="0" name="Mode">0</param>
+                        </action>
+                        <action behavior="DragDrop" id="0" name="Set enabled" sid="271785479360484" type="platform">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -885,6 +888,9 @@
                     <conditions>
                         <condition id="3" name="On touched object" sid="925802974858276" type="Touch">
                             <param id="0" name="Object">NumberTarget</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="297046247087504" type="NumberTarget">
+                            <param id="0" name="Unique ID">69</param>
                         </condition>
                     </conditions>
                     <actions>
