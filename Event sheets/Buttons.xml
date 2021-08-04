@@ -15,6 +15,22 @@
                             <param id="0" name="Variable">WAIT</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="4" name="Set animation" sid="660558917803557" type="ControlButton">
+                            <param id="0" name="Animation">&quot;Play&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Rotate" id="1" name="Set acceleration" sid="543838457402782" type="ControlButton">
+                            <param id="0" name="Acceleration">0</param>
+                        </action>
+                        <action behavior="Rotate" id="0" name="Set speed" sid="920370134447018" type="ControlButton">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="191816053789783" type="ControlButton">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="562168944705576" type="ControlButton">
+                            <param id="0" name="State">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="561358096297674">
@@ -133,14 +149,41 @@
                                                 <action behavior="Rotate" id="1" name="Set acceleration" sid="805747104720086" type="ControlButton">
                                                     <param id="0" name="Acceleration">0</param>
                                                 </action>
-                                                <action behavior="Rotate" id="0" name="Set speed" sid="887406790578834" type="ControlButton">
-                                                    <param id="0" name="Speed">90</param>
-                                                </action>
-                                                <action id="-9" name="Set value" sid="456629795504558" type="System">
-                                                    <param id="0" name="Variable">WAIT</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
                                             </actions>
+                                            <sub-events>
+                                                <event-block sid="241007522634132">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="840875472693891" type="System">
+                                                            <param id="0" name="Variable">isFinished</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Rotate" id="0" name="Set speed" sid="887406790578834" type="ControlButton">
+                                                            <param id="0" name="Speed">90</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="899524619360494" type="System">
+                                                            <param id="0" name="Variable">WAIT</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="671756684854609">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="740353523082787" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action behavior="Rotate" id="0" name="Set speed" sid="566399957489615" type="ControlButton">
+                                                            <param id="0" name="Speed">0</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="456629795504558" type="System">
+                                                            <param id="0" name="Variable">WAIT</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
@@ -236,6 +279,10 @@
                                                         </action>
                                                         <action id="-8" name="Set angle" sid="209108546162234" type="NumberShape">
                                                             <param id="0" name="Angle">0</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="836239646892632" type="NumberShape">
+                                                            <param id="0" name="Instance variable">lastModifier</param>
+                                                            <param id="1" name="Value">0</param>
                                                         </action>
                                                     </actions>
                                                     <sub-events>

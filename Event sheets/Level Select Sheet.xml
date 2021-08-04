@@ -40,6 +40,10 @@
                 <action id="6" name="Stop" sid="306130852133333" type="Audio">
                     <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                 </action>
+                <action id="-35" name="Set layer transparent" sid="525672781955901" type="System">
+                    <param id="0" name="Layer">&quot;UI&quot;</param>
+                    <param id="1" name="Mode">1</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="524455676036195">

@@ -422,7 +422,11 @@
                                 </condition>
                                 <condition behavior="DragDrop" id="0" name="Is dragging" sid="574414343147629" type="Machine" />
                             </conditions>
-                            <actions />
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="523196681528558" type="EqualBorder">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
                             <sub-events>
                                 <event-block sid="764162167710003">
                                     <conditions>
@@ -900,7 +904,11 @@
                     <conditions>
                         <condition behavior="DragDrop" id="2" name="On drop" sid="330478710481973" type="Machine" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="267356920298750" type="EqualBorder">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="793957253248742">
                             <conditions>

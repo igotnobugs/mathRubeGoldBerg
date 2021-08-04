@@ -120,7 +120,7 @@
                                                     <param id="0" name="Text">&quot;This only happens during the Set-up phase&quot;</param>
                                                 </action>
                                                 <action id="-16" name="Wait" sid="137848938126461" type="System">
-                                                    <param id="0" name="Seconds">2</param>
+                                                    <param id="0" name="Seconds">3</param>
                                                 </action>
                                             </actions>
                                             <sub-events>
@@ -138,6 +138,9 @@
                                                         </action>
                                                         <action id="0" name="Set text" sid="670872232691505" type="TextInstructions">
                                                             <param id="0" name="Text">&quot;Good luck and Aim for the Stars!&quot;</param>
+                                                        </action>
+                                                        <action id="-16" name="Wait" sid="910748918655436" type="System">
+                                                            <param id="0" name="Seconds">2</param>
                                                         </action>
                                                         <action behavior="FadeOut" id="1" name="Start fade" sid="363546699152777" type="TextInstructions" />
                                                         <action behavior="FadeOut" id="1" name="Start fade" sid="715324485150787" type="TutorialBox" />

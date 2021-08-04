@@ -1053,7 +1053,7 @@
         <object-type global="1" name="levelVarsArray" sid="274723328699179">
             <plugin id="Arr" />
         </object-type>
-        <object-type name="Wall" sid="399696003336458">
+        <object-type global="1" name="Wall" sid="399696003336458">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="935189955314791">
@@ -1154,6 +1154,7 @@
         <family name="NoSaveSprites" plugin-id="Sprite" sid="481627958709162">
             <members>
                 <member>Back</member>
+                <member>Banner</member>
                 <member>ButtonNextLevel</member>
                 <member>ControlButton</member>
                 <member>EqualBorder</member>
@@ -1175,6 +1176,7 @@
                 <member>TitleSprite</member>
                 <member>TutorialBox</member>
                 <member>UIStarPerfectNeeded</member>
+                <member>Wall</member>
                 <member>ZoneDrop</member>
             </members>
             <behaviors>
