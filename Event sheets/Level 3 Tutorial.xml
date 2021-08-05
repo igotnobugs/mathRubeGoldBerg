@@ -122,11 +122,26 @@
                                                 <action id="-16" name="Wait" sid="137848938126461" type="System">
                                                     <param id="0" name="Seconds">3</param>
                                                 </action>
+                                                <action id="6" name="Stop" sid="938169171851400" type="Audio">
+                                                    <param id="0" name="Tag">&quot;tutVoice&quot;</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="531545292743536" type="Audio">
+                                                    <param id="0" name="Audio file">VoiceLvl2-p9</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;tutVoice&quot;</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="128697144992293" type="TextInstructions">
+                                                    <param id="0" name="Text">&quot;Clone the Red Line to create a Draggable and Rotateable Platform&quot;</param>
+                                                </action>
                                             </actions>
                                             <sub-events>
                                                 <event-block sid="453710095408401">
                                                     <conditions />
                                                     <actions>
+                                                        <action id="-41" name="Wait for signal" sid="995871593992521" type="System">
+                                                            <param id="0" name="Tag">&quot;SignalGirderCloned&quot;</param>
+                                                        </action>
                                                         <action id="6" name="Stop" sid="974686870640371" type="Audio">
                                                             <param id="0" name="Tag">&quot;tutVoice&quot;</param>
                                                         </action>
