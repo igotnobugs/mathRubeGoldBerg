@@ -1127,6 +1127,7 @@
                 <instance-variable name="yPastPosition" sid="722733430913112" type="number" />
                 <instance-variable name="isLeftOfEquals" sid="598287890338153" type="boolean" />
                 <instance-variable name="WAITTRANSPOSE" sid="956488218652146" type="boolean" />
+                <instance-variable name="actionCost" sid="703159600707115" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Pin" sid="142161754742323">

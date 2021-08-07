@@ -314,24 +314,34 @@
                                                         </event-block>
                                                     </sub-events>
                                                 </event-block>
+                                                <event-block sid="897464025960418">
+                                                    <conditions>
+                                                        <condition id="-11" name="For Each" sid="104882121161415" type="System">
+                                                            <param id="0" name="Object">Machine</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="868193114389159">
+                                                            <conditions />
+                                                            <actions>
+                                                                <action id="-10" name="Set value" sid="406496001025581" type="Machine">
+                                                                    <param id="0" name="Instance variable">modifierNumber</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                                <action id="0" name="Call function" sid="772948919060148" type="Function">
+                                                                    <param id="0" name="Name">&quot;changeTextMachine&quot;</param>
+                                                                    <param id="1" name="Parameter {n}">Machine.textMachineUID{###}&quot;...&quot;</param>
+                                                                </action>
+                                                                <action id="-13" name="Set boolean" sid="752045950517754" type="Machine">
+                                                                    <param id="0" name="Instance variable">hasModifier</param>
+                                                                    <param id="1" name="Value">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
                                             </sub-events>
-                                        </event-block>
-                                        <event-block sid="868193114389159">
-                                            <conditions />
-                                            <actions>
-                                                <action id="-10" name="Set value" sid="406496001025581" type="Machine">
-                                                    <param id="0" name="Instance variable">modifierNumber</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                                <action id="0" name="Call function" sid="772948919060148" type="Function">
-                                                    <param id="0" name="Name">&quot;changeTextMachine&quot;</param>
-                                                    <param id="1" name="Parameter {n}">Machine.textMachineUID{###}&quot;...&quot;</param>
-                                                </action>
-                                                <action id="-13" name="Set boolean" sid="752045950517754" type="Machine">
-                                                    <param id="0" name="Instance variable">hasModifier</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
                                         </event-block>
                                         <event-block sid="398654652638035">
                                             <conditions />

@@ -169,7 +169,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
-                        <actionCost>0</actionCost>
+                        <actionCost>1</actionCost>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>true</anyNumber>
                         <targetNumber>-1</targetNumber>
@@ -485,7 +485,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
-                        <actionCost>0</actionCost>
+                        <actionCost>1</actionCost>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
                         <targetNumber>3</targetNumber>

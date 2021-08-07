@@ -347,7 +347,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
-                        <actionCost>0</actionCost>
+                        <actionCost>1</actionCost>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
                         <targetNumber>1</targetNumber>
@@ -2203,6 +2203,7 @@
                         <yPastPosition>0</yPastPosition>
                         <isLeftOfEquals>false</isLeftOfEquals>
                         <WAITTRANSPOSE>true</WAITTRANSPOSE>
+                        <actionCost>0</actionCost>
                         <number>46</number>
                         <dropZoneUID>0</dropZoneUID>
                         <isNewlyChanged>false</isNewlyChanged>
@@ -2286,6 +2287,7 @@
                         <yPastPosition>0</yPastPosition>
                         <isLeftOfEquals>false</isLeftOfEquals>
                         <WAITTRANSPOSE>true</WAITTRANSPOSE>
+                        <actionCost>0</actionCost>
                         <machineType></machineType>
                         <hasModifier>false</hasModifier>
                         <modifierNumber>0</modifierNumber>
@@ -2349,7 +2351,7 @@
                     </properties>
                     <instance-variables>
                         <sharedVariableText></sharedVariableText>
-                        <actionCost>0</actionCost>
+                        <actionCost>1</actionCost>
                         <letGameDecide>false</letGameDecide>
                         <anyNumber>false</anyNumber>
                         <targetNumber>1</targetNumber>
@@ -2467,6 +2469,7 @@
                         <yPastPosition>0</yPastPosition>
                         <isLeftOfEquals>false</isLeftOfEquals>
                         <WAITTRANSPOSE>true</WAITTRANSPOSE>
+                        <actionCost>0</actionCost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />

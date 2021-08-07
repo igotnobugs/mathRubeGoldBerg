@@ -120,6 +120,7 @@
                         <yPastPosition>0</yPastPosition>
                         <isLeftOfEquals>false</isLeftOfEquals>
                         <WAITTRANSPOSE>true</WAITTRANSPOSE>
+                        <actionCost>0</actionCost>
                         <machineType></machineType>
                         <hasModifier>false</hasModifier>
                         <modifierNumber>0</modifierNumber>
@@ -214,6 +215,7 @@
                         <yPastPosition>0</yPastPosition>
                         <isLeftOfEquals>false</isLeftOfEquals>
                         <WAITTRANSPOSE>true</WAITTRANSPOSE>
+                        <actionCost>0</actionCost>
                         <number>0</number>
                         <dropZoneUID>0</dropZoneUID>
                         <isNewlyChanged>false</isNewlyChanged>
@@ -431,6 +433,7 @@
                         <yPastPosition>0</yPastPosition>
                         <isLeftOfEquals>false</isLeftOfEquals>
                         <WAITTRANSPOSE>true</WAITTRANSPOSE>
+                        <actionCost>0</actionCost>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
