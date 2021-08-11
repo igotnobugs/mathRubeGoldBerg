@@ -750,12 +750,12 @@
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
+                                <action behavior="Physics" id="9" name="Set angular velocity" sid="910946060903944" type="NumberShape">
+                                    <param id="0" name="Angular velocity">0</param>
+                                </action>
                                 <action behavior="Physics" id="15" name="Set velocity" sid="180571234168550" type="NumberShape">
                                     <param id="0" name="X component">0</param>
                                     <param id="1" name="Y component">0</param>
-                                </action>
-                                <action behavior="Physics" id="9" name="Set angular velocity" sid="910946060903944" type="NumberShape">
-                                    <param id="0" name="Angular velocity">0</param>
                                 </action>
                                 <action id="-4" name="Set position to another object" sid="948830913559166" type="NumberShape">
                                     <param id="0" name="Object">Machine</param>

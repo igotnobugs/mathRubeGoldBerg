@@ -2231,7 +2231,7 @@
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0.2</angular-damping>
-                                <bullet>No</bullet>
+                                <bullet>Yes</bullet>
                                 <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>

@@ -970,16 +970,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512831600737306" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\Girder.png">
-                            <collision-poly>
-                                <point x="0.00572082" y="0.0434783" />
-                                <point x="0.5" y="0" />
-                                <point x="0.994279" y="0.0434783" />
-                                <point x="0.994279" y="0.956522" />
-                                <point x="0.5" y="0.991304" />
-                                <point x="0.00572082" y="0.956522" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\UserFiles\Assets\Art Assets-20210715T100211Z-001\Girder.png" />
                     </animation>
                 </animation-folder>
             </object-type>
